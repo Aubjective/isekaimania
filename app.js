@@ -76,7 +76,7 @@ function renderJobImage(job, name, detail = false) {
 function rarityStars(rarity) { return '⭐'.repeat(Math.max(0, Number(rarity) || 0)); }
 
 function routeHash(section, key = '') {
-    return `#${section}${key ? `/${encodeURIComponent(key)}` : ''}`;
+    return `#/${section}${key ? `/${encodeURIComponent(key)}` : ''}`;
 }
 function navigateHash(section, key = '') {
     const target = routeHash(section, key);
@@ -91,7 +91,7 @@ function decodedRouteKey(parts) {
 }
 function handleHashRoute() {
     if (!wiki.ready) return;
-    const raw = window.location.hash.replace(/^#/, '').trim();
+    const raw = window.location.hash.replace(/^#\/?/, '').trim();
     if (!raw) {
         loadView('Home', true);
         return;
