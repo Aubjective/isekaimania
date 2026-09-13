@@ -3,7 +3,8 @@ const wiki = {
     ui: {},
     home: {},
     characters: [],
-    characterLocalisation: new Map()
+    characterLocalisation: new Map(),
+    currentView: 'Home'
 };
 
 const links = {
@@ -24,6 +25,7 @@ function toggleMenu() {
 }
 
 function setActiveView(view) {
+    wiki.currentView = view;
     document.querySelectorAll('.menu-item[data-view]').forEach(item => {
         item.classList.toggle('active', item.dataset.view === view);
     });
@@ -34,16 +36,35 @@ function ui(key, fallback = '') {
     return wiki.ui[key] || fallback;
 }
 
+function characterLocale(key) {
+    const row = wiki.characterLocalisation.get(key) || {};
+    return row[wiki.locale] || row.en || {};
+}
+
 function characterText(key, field = 'Name') {
-    const row = wiki.characterLocalisation.get(key);
-    if (!row) return key;
-    const localized = row[wiki.locale] || row.en || {};
+    const localized = characterLocale(key);
     return localized[field] || (field === 'Name' ? key : '');
 }
 
 function traitLink(traitKey) {
     if (!traitKey) return '';
-    return `<span class="link" data-trait-key="${escapeHtml(traitKey)}" title="${escapeHtml(ui('traitComingSoon', 'Trait details will be connected through localisation data.'))}">${escapeHtml(traitKey)}</span>`;
+    return `<span class="link trait-link" data-trait-key="${escapeHtml(traitKey)}" title="${escapeHtml(ui('traitComingSoon', 'Trait details will be connected through localisation data.'))}">${escapeHtml(traitKey)}</span>`;
+}
+
+function renderTravelLevel(travel = {}) {
+    const order = ['Land', 'Forest', 'Mountain', 'Sea', 'Hot', 'Cold'];
+    return order
+        .filter(key => travel[key] !== undefined)
+        .map(key => `<span class="travel-ref" data-travel-key="${escapeHtml(key)}">${escapeHtml(key)}-${escapeHtml(travel[key])}</span>`)
+        .join('<span class="travel-separator"> · </span>');
+}
+
+function renderCharacterImage(character, name, detail = false) {
+    const key = character.SpriteKey || character.CharacterKey;
+    const sizeClass = detail ? 'character-image-detail' : 'character-image-list';
+    return `<div class="character-image-slot ${sizeClass}">
+        <img src="sprites/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'">
+    </div>`;
 }
 
 function renderHome() {
@@ -64,48 +85,100 @@ function renderHome() {
         </div>`;
 }
 
-function renderCharacters() {
-    if (!wiki.characters.length) {
-        return `
-            <div class="header-card"><h1>${escapeHtml(ui('characters', 'Characters'))}</h1></div>
-            <div class="card empty-state">
-                <p>${escapeHtml(ui('charactersEmpty', 'Character data will be added from Isekaimania Sheets.'))}</p>
-                <p>${escapeHtml(ui('charactersReady', 'The page is already structured for localized names, stories, traits, and future sprite files.'))}</p>
-            </div>`;
-    }
+function characterSearchText(character) {
+    const key = character.CharacterKey;
+    return [
+        key,
+        characterText(key, 'Name'),
+        character.Gender,
+        character.Faction,
+        character.Role,
+        character.TraitKey1,
+        character.TraitKey2,
+        character.TraitKey3,
+        characterText(key, 'Time'),
+        characterText(key, 'Background')
+    ].filter(Boolean).join(' ').toLowerCase();
+}
 
+function renderCharacters() {
     const cards = wiki.characters.map(character => {
         const key = character.CharacterKey;
         const name = characterText(key, 'Name');
-        const traits = [character.TraitKey1, character.TraitKey2, character.TraitKey3].filter(Boolean);
-        const traitHtml = traits.map(traitLink).join(' · ');
-        const sprite = character.SpriteKey
-            ? `<div class="character-sprite"><img src="sprites/${encodeURIComponent(character.SpriteKey)}.png" alt="${escapeHtml(name)}" onerror="this.parentElement.style.display='none'"></div>`
-            : '';
-        return `
-            <article class="card character-card" data-key="${escapeHtml(key)}">
-                ${sprite}
-                <h2 class="character-name">${escapeHtml(name)}</h2>
-                <div class="info-list">
-                    <div class="info-row"><div class="info-label">${escapeHtml(ui('gender', 'Gender'))}:</div><div class="info-value">${escapeHtml(character.Gender || '')}</div></div>
-                    <div class="info-row"><div class="info-label">${escapeHtml(ui('faction', 'Faction'))}:</div><div class="info-value">${escapeHtml(character.Faction || '')}</div></div>
-                    ${traitHtml ? `<div class="info-row"><div class="info-label">${escapeHtml(ui('traits', 'Traits'))}:</div><div class="info-value">${traitHtml}</div></div>` : ''}
-                </div>
-            </article>`;
+        return `<article class="card character-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(characterSearchText(character))}" onclick="loadCharacterDetail(this.dataset.key)">
+            ${renderCharacterImage(character, name, false)}
+            <h2 class="character-name">${escapeHtml(name)}</h2>
+        </article>`;
     }).join('');
 
-    return `
-        <div class="header-card">
+    return `<div class="header-card">
             <h1>${escapeHtml(ui('characters', 'Characters'))}</h1>
             <p><strong>${wiki.characters.length} ${escapeHtml(ui('entries', 'entries'))}</strong></p>
+            <input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}">
         </div>
-        <div class="grid">${cards}</div>`;
+        <div class="grid" id="characterGrid">${cards}</div>`;
+}
+
+function infoRow(label, valueHtml) {
+    return `<div class="info-row"><div class="info-label">${escapeHtml(label)}:</div><div class="info-value">${valueHtml}</div></div>`;
+}
+
+function loadCharacterDetail(key) {
+    const character = wiki.characters.find(item => item.CharacterKey === key);
+    if (!character) return;
+
+    const name = characterText(key, 'Name');
+    const time = characterText(key, 'Time');
+    const background = characterText(key, 'Background');
+    const travel = renderTravelLevel(character.TravelLevel);
+
+    const basicInfo = [
+        infoRow(ui('character', 'Character'), escapeHtml(name)),
+        infoRow(ui('gender', 'Gender'), escapeHtml(character.Gender || '')),
+        infoRow(ui('faction', 'Faction'), escapeHtml(character.Faction || '')),
+        infoRow(ui('role', 'Role'), escapeHtml(character.Role || '')),
+        infoRow(ui('trait1', 'Trait 1'), traitLink(character.TraitKey1)),
+        infoRow(ui('trait2', 'Trait 2'), traitLink(character.TraitKey2)),
+        infoRow(ui('trait3', 'Trait 3'), traitLink(character.TraitKey3)),
+        infoRow(ui('travelLevel', 'Travel Level'), travel)
+    ].join('');
+
+    const story = [time ? `<strong>${escapeHtml(time)}</strong>` : '', background ? escapeHtml(background) : '']
+        .filter(Boolean)
+        .join(' <span class="story-separator">·</span> ');
+
+    document.getElementById('content').innerHTML = `
+        <button class="back-btn" onclick="loadView('Characters')">← ${escapeHtml(ui('back', 'Back'))}</button>
+        <div class="detail-stack">
+            <div class="card detail-title-card">
+                ${renderCharacterImage(character, name, true)}
+                <h3>${escapeHtml(name)}</h3>
+            </div>
+            <div class="card detail-section basic-info-card">
+                <h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2>
+                <div class="info-list">${basicInfo}</div>
+            </div>
+            ${story ? `<div class="card story-card"><p>${story}</p></div>` : ''}
+        </div>`;
+    window.scrollTo(0, 0);
+}
+
+function attachCharacterSearch() {
+    const input = document.getElementById('searchInput');
+    if (!input) return;
+    input.addEventListener('input', () => {
+        const term = input.value.toLowerCase().trim();
+        document.querySelectorAll('.character-card').forEach(card => {
+            card.style.display = !term || (card.dataset.search || '').includes(term) ? '' : 'none';
+        });
+    });
 }
 
 function loadView(view) {
     setActiveView(view);
     const content = document.getElementById('content');
     content.innerHTML = view === 'Characters' ? renderCharacters() : renderHome();
+    if (view === 'Characters') attachCharacterSearch();
     window.scrollTo(0, 0);
 }
 
@@ -127,10 +200,8 @@ async function init() {
     wiki.home = current.home || {};
 
     wiki.characters = await loadJson('data/characters.json', []);
-    const characterLoc = await loadJson('data/characters_localisation.json', []);
-    characterLoc.forEach(row => {
-        if (row.CharacterKey) wiki.characterLocalisation.set(row.CharacterKey, row);
-    });
+    const characterLoc = await loadJson('data/characters_localisation.json', {});
+    Object.entries(characterLoc).forEach(([key, value]) => wiki.characterLocalisation.set(key, value));
 
     document.querySelectorAll('[data-ui]').forEach(node => {
         const key = node.dataset.ui;
