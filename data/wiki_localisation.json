@@ -3,11 +3,17 @@
     "ui": {
       "home": "Home",
       "characters": "Characters",
+      "jobs": "Jobs",
       "entries": "entries",
       "search": "Search...",
       "back": "Back",
       "basicInfo": "Basic Info",
+      "moreInfo": "More Info",
+      "requires": "Requires",
+      "craftsInto": "Crafts Into",
       "character": "Character",
+      "job": "Job",
+      "rarity": "Rarity",
       "gender": "Gender",
       "faction": "Faction",
       "role": "Role",
@@ -15,7 +21,11 @@
       "trait2": "Trait 2",
       "trait3": "Trait 3",
       "travelLevel": "Travel Level",
-      "traitComingSoon": "Trait details will be connected through localisation data."
+      "passiveSkill": "Passive Skill",
+      "activeSkill": "Active Skill",
+      "boostType": "Boost Type",
+      "traitComingSoon": "Trait details will be connected through localisation data.",
+      "skillComingSoon": "Skill details will be connected when skill pages are added."
     },
     "home": {
       "title": "Isekaimania - Overworld RPG",
