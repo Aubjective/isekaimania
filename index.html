@@ -15,7 +15,7 @@
             <div class="nav-logo nav-logo-placeholder" aria-label="Isekaimania">I</div>
 
             <select id="langSelect" aria-label="Language">
-                <option value="index.html" selected>🇬🇧 English</option>
+                <option value="en" selected>🇬🇧 English</option>
             </select>
 
             <div class="game-info">
@@ -25,59 +25,17 @@
             </div>
 
             <hr>
-            <a href="#home" class="menu-link active-link">🏠 Home</a>
-            <div class="menu-item future-item">🧑 Characters</div>
-            <div class="menu-item future-item">👹 Monsters</div>
-            <div class="menu-item future-item">⚔️ Jobs</div>
-            <div class="menu-item future-item">✨ Skills</div>
-            <div class="menu-item future-item">🗡️ Equipment</div>
-            <div class="menu-item future-item">🎒 Items</div>
+            <div class="menu-item" data-view="Home" onclick="loadView('Home')">🏠 <span data-ui="home">Home</span></div>
+            <div class="menu-item" data-view="Characters" onclick="loadView('Characters')">🧑 <span data-ui="characters">Characters</span></div>
             <hr>
             <a href="https://play.google.com/store/apps/details?id=com.aubjective.isekaimania" target="_blank" rel="noopener noreferrer" class="menu-link">▶️ Google Play</a>
             <a href="https://discord.gg/6U5FNFVrwb" target="_blank" rel="noopener noreferrer" class="menu-link">💬 Join Discord</a>
         </nav>
 
-        <main id="content">
-            <section id="home" class="home-card card">
-                <h1>🔥 Isekaimania Wiki</h1>
-
-                <p class="home-lead"><strong>Reincarnate into monsters and explore ever-changing Isekai worlds in this offline single-player fantasy RPG.</strong></p>
-
-                <p>Isekaimania is an offline roguelite RPG, gacha RPG, idle RPG, and overworld adventure game where every run begins with a new setup. Choose your character, reincarnate into a monster, select a job, equip gear and items, then enter generated world maps filled with quests, events, enemies, treasures, and bosses.</p>
-
-                <h2>Build your adventure your way</h2>
-                <ul class="feature-list">
-                    <li>Collect and reincarnate into 250+ monsters</li>
-                    <li>Choose from 10+ characters and 50+ jobs</li>
-                    <li>Explore generated 3x3 to 5x5 overworld maps</li>
-                    <li>Complete main quests, short stories, and boss battles in each adventure</li>
-                    <li>Fight tactical team battles by queuing skills, managing mana, and reading enemy actions</li>
-                    <li>Send crews on expeditions to earn idle rewards, materials, and fragments over time</li>
-                    <li>Play offline in a single-player RPG experience with no PvP or ranking pressure</li>
-                </ul>
-
-                <p>Every adventure gives you new choices. Pick the right monster, job, gear, and items. Adapt to the map, defeat the main boss, collect rewards, and prepare for the next world.</p>
-
-                <p>Isekaimania is free-to-play friendly, with optional in-app purchases and a remove ads option.</p>
-
-                <p class="home-closing"><strong>Enter the Isekai. Reincarnate into monsters. Build your run. Explore new worlds. Fight tactical battles. Grow stronger every adventure.</strong></p>
-            </section>
-        </main>
+        <main id="content"><h1>Loading Wiki Data...</h1></main>
     </div>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById('main-nav').classList.toggle('open');
-        }
-
-        document.addEventListener('click', function (event) {
-            if (window.innerWidth > 768) return;
-            const nav = document.getElementById('main-nav');
-            const hamburger = document.querySelector('.hamburger');
-            if (!nav.contains(event.target) && !hamburger.contains(event.target)) {
-                nav.classList.remove('open');
-            }
-        });
-    </script>
+    <script>window.ISEKAIMANIA_LOCALE = 'en';</script>
+    <script src="app.js"></script>
 </body>
 </html>
