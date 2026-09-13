@@ -1,1 +1,122 @@
-[]
+[
+  {
+    "ID": 1,
+    "CharacterKey": "Ishida Ren",
+    "Gender": "Male",
+    "Faction": "Hero",
+    "Role": "Caster",
+    "TraitKey1": "Strategic",
+    "TraitKey2": "Self Discipline",
+    "TraitKey3": "Patience",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 1, "Sea": 0, "Hot": 0, "Cold": 0 },
+    "SpriteKey": "Ishida Ren"
+  },
+  {
+    "ID": 2,
+    "CharacterKey": "Chun Li",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Combatant",
+    "TraitKey1": "Agile",
+    "TraitKey2": "Upright",
+    "TraitKey3": "Stalwart",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 1, "Sea": 0, "Hot": 1, "Cold": 0 },
+    "SpriteKey": "Chun Li"
+  },
+  {
+    "ID": 3,
+    "CharacterKey": "Serena Valen",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Controller",
+    "TraitKey1": "Self Discipline",
+    "TraitKey2": "Stalwart",
+    "TraitKey3": "Loyal",
+    "TravelLevel": { "Land": 2, "Forest": 1, "Mountain": 0, "Sea": 0, "Hot": 0, "Cold": 0 },
+    "SpriteKey": "Serena Valen"
+  },
+  {
+    "ID": 4,
+    "CharacterKey": "Selina Valen",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Combatant",
+    "TraitKey1": "Impulsive",
+    "TraitKey2": "Passionate",
+    "TraitKey3": "Swift",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 1, "Sea": 0, "Hot": 0, "Cold": 0 },
+    "SpriteKey": "Selina Valen"
+  },
+  {
+    "ID": 5,
+    "CharacterKey": "Leilani Mahelona",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Preserver",
+    "TraitKey1": "Curious",
+    "TraitKey2": "Scholarly",
+    "TraitKey3": "Patience",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 0, "Sea": 1, "Hot": 1, "Cold": 0 },
+    "SpriteKey": "Leilani Mahelona"
+  },
+  {
+    "ID": 6,
+    "CharacterKey": "Robert Weston",
+    "Gender": "Male",
+    "Faction": "Hero",
+    "Role": "Caster",
+    "TraitKey1": "Lucky",
+    "TraitKey2": "Intuitive",
+    "TraitKey3": "Impulsive",
+    "TravelLevel": { "Land": 1, "Forest": 0, "Mountain": 1, "Sea": 0, "Hot": 1, "Cold": 1 },
+    "SpriteKey": "Robert Weston"
+  },
+  {
+    "ID": 7,
+    "CharacterKey": "Patricia Vaughn",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Guardian",
+    "TraitKey1": "Resilient",
+    "TraitKey2": "Self Discipline",
+    "TraitKey3": "Stalwart",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 1, "Sea": 0, "Hot": 0, "Cold": 1 },
+    "SpriteKey": "Patricia Vaughn"
+  },
+  {
+    "ID": 8,
+    "CharacterKey": "Jennifer Vale",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Controller",
+    "TraitKey1": "Sharp Witted",
+    "TraitKey2": "Nimble",
+    "TraitKey3": "Vicious",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 0, "Sea": 1, "Hot": 0, "Cold": 0 },
+    "SpriteKey": "Jennifer Vale"
+  },
+  {
+    "ID": 9,
+    "CharacterKey": "Linda Maren",
+    "Gender": "Female",
+    "Faction": "Hero",
+    "Role": "Preserver",
+    "TraitKey1": "Passionate",
+    "TraitKey2": "Impulsive",
+    "TraitKey3": "Dominant",
+    "TravelLevel": { "Land": 1, "Forest": 0, "Mountain": 0, "Sea": 1, "Hot": 0, "Cold": 1 },
+    "SpriteKey": "Linda Maren"
+  },
+  {
+    "ID": 10,
+    "CharacterKey": "Nolan Ardent",
+    "Gender": "Male",
+    "Faction": "Hero",
+    "Role": "Guardian",
+    "TraitKey1": "Upright",
+    "TraitKey2": "Compassion",
+    "TraitKey3": "Resilient",
+    "TravelLevel": { "Land": 1, "Forest": 1, "Mountain": 1, "Sea": 0, "Hot": 0, "Cold": 0 },
+    "SpriteKey": "Nolan Ardent"
+  }
+]
