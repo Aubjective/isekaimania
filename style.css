@@ -92,10 +92,12 @@ a, .link { color: #00ffdd; font-weight: 500; }
 .home-closing { color: #ffd700; }
 .home-discord { margin-top: 22px; }
 .entity-list-card { min-height: 255px; display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; }
-.character-image-slot, .job-image-slot { display: flex; align-items: center; justify-content: center; width: 100%; border: 1px dashed rgba(160,216,255,0.28); border-radius: 12px; background: rgba(0,0,0,0.08); }
-.character-image-list, .job-image-list { min-height: 105px; }
-.character-image-detail, .job-image-detail { min-height: 180px; max-width: 360px; margin: 0 auto 16px; }
-.character-image-slot img, .job-image-slot img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.character-image-slot, .job-image-slot, .entity-image-slot { display: flex; align-items: center; justify-content: center; width: 100%; border: 1px dashed rgba(160,216,255,0.28); border-radius: 12px; background: rgba(0,0,0,0.08); }
+.character-image-list, .job-image-list, .entity-image-list { min-height: 96px; margin-bottom: 15px; }
+.character-image-list img, .job-image-list img, .entity-image-list img { max-width: 80px; max-height: 90px; }
+.character-image-detail, .job-image-detail, .entity-image-detail { min-height: 130px; margin: 0 auto 12px; }
+.character-image-detail img, .job-image-detail img, .entity-image-detail img { max-width: 120px; max-height: 120px; }
+.character-image-slot img, .job-image-slot img, .entity-image-slot img { display: block; width: auto; height: auto; object-fit: contain; }
 .search-input { width: min(680px, 100%); margin-top: 10px; padding: 12px 14px; background: #0f1b4d; color: var(--text); border: 1px solid #4660a8; border-radius: 10px; outline: none; font-size: 1rem; }
 .search-input:focus { border-color: var(--accent); box-shadow: 0 0 10px rgba(0,204,255,0.25); }
 .back-btn { margin: 0 0 20px; padding: 10px 16px; background: #1a2a66; color: #b0d0ff; border: 1px solid #334477; border-radius: 10px; cursor: pointer; }
@@ -150,7 +152,6 @@ a, .link { color: #00ffdd; font-weight: 500; }
     .card { padding: 20px; }
     .entity-list-card { min-height: 230px; }
     .info-row { grid-template-columns: minmax(0, var(--field-label-width)) minmax(0, 1fr); }
-    .character-image-detail, .job-image-detail { min-height: 150px; }
     .warp-ring { width: 16px; height: 16px; margin: -8px 0 0 -8px; }
     .warp-particle { width: 4px; height: 4px; margin: -2px 0 0 -2px; }
 }
