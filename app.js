@@ -6,7 +6,8 @@ const wiki = {
     characterLocalisation: new Map(),
     jobs: [],
     jobLocalisation: new Map(),
-    currentView: 'Home'
+    currentView: 'Home',
+    ready: false
 };
 
 const links = { discord: 'https://discord.gg/AKvAd3xpb' };
@@ -74,6 +75,50 @@ function renderJobImage(job, name, detail = false) {
 }
 function rarityStars(rarity) { return '⭐'.repeat(Math.max(0, Number(rarity) || 0)); }
 
+function routeHash(section, key = '') {
+    return `#${section}${key ? `/${encodeURIComponent(key)}` : ''}`;
+}
+function navigateHash(section, key = '') {
+    const target = routeHash(section, key);
+    if (window.location.hash === target) return false;
+    window.location.hash = target;
+    return true;
+}
+function decodedRouteKey(parts) {
+    if (!parts.length) return '';
+    try { return decodeURIComponent(parts.join('/')); }
+    catch (error) { return ''; }
+}
+function handleHashRoute() {
+    if (!wiki.ready) return;
+    const raw = window.location.hash.replace(/^#/, '').trim();
+    if (!raw) {
+        loadView('Home', true);
+        return;
+    }
+
+    const parts = raw.split('/');
+    const section = String(parts.shift() || '').toLowerCase();
+    const key = decodedRouteKey(parts);
+
+    if (section === 'characters') {
+        if (key && wiki.characters.some(item => item.CharacterKey === key)) loadCharacterDetail(key, true);
+        else loadView('Characters', true);
+        return;
+    }
+    if (section === 'jobs') {
+        if (key && wiki.jobs.some(item => item.JobKey === key)) loadJobDetail(key, true);
+        else loadView('Jobs', true);
+        return;
+    }
+    if (section === 'home') {
+        loadView('Home', true);
+        return;
+    }
+
+    loadView('Home', true);
+}
+
 function renderHome() {
     const h = wiki.home;
     const features = Array.isArray(h.features) ? h.features.map(item => `<li>${escapeHtml(item)}</li>`).join('') : '';
@@ -109,9 +154,11 @@ function renderCharacters() {
     }).join('');
     return `<div class="header-card"><h1>${escapeHtml(ui('characters', 'Characters'))}</h1><p><strong>${wiki.characters.length} ${escapeHtml(ui('entries', 'entries'))}</strong></p><input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}"></div><div class="grid" id="characterGrid">${cards}</div>`;
 }
-function loadCharacterDetail(key) {
+function loadCharacterDetail(key, fromRoute = false) {
     const character = wiki.characters.find(item => item.CharacterKey === key);
     if (!character) return;
+    if (!fromRoute && navigateHash('characters', key)) return;
+
     const name = characterText(key, 'Name');
     const time = characterText(key, 'Time');
     const background = characterText(key, 'Background');
@@ -126,6 +173,7 @@ function loadCharacterDetail(key) {
         infoRow(ui('travelLevel', 'Travel Level'), renderTravelLevel(character.TravelLevel))
     ].join('');
     const story = [time ? `<strong>${escapeHtml(time)}</strong>` : '', background ? escapeHtml(background) : ''].filter(Boolean).join(' <span class="story-separator">·</span> ');
+    setActiveView('Characters');
     document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('Characters')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card">${renderCharacterImage(character, name, true)}<h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div>${story ? `<div class="card story-card"><p>${story}</p></div>` : ''}</div>`;
     window.scrollTo(0, 0);
 }
@@ -146,15 +194,18 @@ function renderCraftRecipe(job) {
     if (!prereqs.length) return '';
     return `<div class="craft-row">${prereqs.map(jobLink).join('<span class="craft-plus">+</span>')}<span class="craft-arrow">→</span>${jobLink(job.JobKey)}</div>`;
 }
-function loadJobDetail(key) {
+function loadJobDetail(key, fromRoute = false) {
     const job = wiki.jobs.find(item => item.JobKey === key);
     if (!job) return;
+    if (!fromRoute && navigateHash('jobs', key)) return;
+
     const name = jobText(key);
     const boostValue = job.BoostType ? `${escapeHtml(job.BoostType)}${job.Amount !== '' && job.Amount !== undefined ? ` <span class="boost-separator">·</span> ${escapeHtml(job.Amount)}` : ''}` : '';
     const basicInfo = [infoRow(ui('job', 'Job'), escapeHtml(name)), infoRow(ui('rarity', 'Rarity'), escapeHtml(rarityStars(job.Rarity))), infoRow(ui('role', 'Role'), escapeHtml(job.Role || '')), boostValue ? infoRow(ui('boostType', 'Boost Type'), boostValue) : ''].join('');
     const moreInfo = [job.PassiveSkillKey ? infoRow(ui('passiveSkill', 'Passive Skill'), skillLink(job.PassiveSkillKey)) : '', job.ActiveSkillKey ? infoRow(ui('activeSkill', 'Active Skill'), skillLink(job.ActiveSkillKey)) : ''].join('');
     const requiresRecipe = renderCraftRecipe(job);
     const craftsInto = wiki.jobs.filter(candidate => Array.isArray(candidate.PrerequisiteJobs) && candidate.PrerequisiteJobs.includes(key)).map(renderCraftRecipe).filter(Boolean).join('');
+    setActiveView('Jobs');
     document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('Jobs')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card">${renderJobImage(job, name, true)}<h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div>${moreInfo ? `<div class="card detail-section"><h2>${escapeHtml(ui('moreInfo', 'More Info'))}</h2><div class="info-list">${moreInfo}</div></div>` : ''}${requiresRecipe ? `<div class="card detail-section"><h2>${escapeHtml(ui('requires', 'Requires'))}</h2><div class="craft-list">${requiresRecipe}</div></div>` : ''}${craftsInto ? `<div class="card detail-section"><h2>${escapeHtml(ui('craftsInto', 'Crafts Into'))}</h2><div class="craft-list">${craftsInto}</div></div>` : ''}</div>`;
     window.scrollTo(0, 0);
 }
@@ -167,7 +218,10 @@ function attachListSearch(cardSelector) {
         document.querySelectorAll(cardSelector).forEach(card => { card.style.display = !term || (card.dataset.search || '').includes(term) ? '' : 'none'; });
     });
 }
-function loadView(view) {
+function loadView(view, fromRoute = false) {
+    const routeSection = view === 'Characters' ? 'characters' : view === 'Jobs' ? 'jobs' : 'home';
+    if (!fromRoute && navigateHash(routeSection)) return;
+
     setActiveView(view);
     const content = document.getElementById('content');
     if (view === 'Characters') { content.innerHTML = renderCharacters(); attachListSearch('.character-card'); }
@@ -231,7 +285,8 @@ async function init() {
     const jobLoc = await loadJson('data/jobs_localisation.json', {});
     Object.entries(jobLoc).forEach(([key, value]) => wiki.jobLocalisation.set(key, value));
     document.querySelectorAll('[data-ui]').forEach(node => { const key = node.dataset.ui; node.textContent = ui(key, node.textContent); });
-    loadView('Home');
+    wiki.ready = true;
+    handleHashRoute();
 }
 
 let lastGoldenTrailAt = 0;
@@ -253,5 +308,6 @@ document.addEventListener('click', event => {
     const hamburger = document.querySelector('.hamburger');
     if (!nav.contains(event.target) && !hamburger.contains(event.target)) nav.classList.remove('open');
 });
+window.addEventListener('hashchange', handleHashRoute);
 
 init();
