@@ -50,19 +50,18 @@ function renderHome() {
     const h = wiki.home;
     const features = Array.isArray(h.features) ? h.features.map(item => `<li>${escapeHtml(item)}</li>`).join('') : '';
 
-    return `
-        <h1>🔥 ${escapeHtml(h.title || 'Isekaimania - Overworld RPG')}</h1>
-        <section class="home-card card">
+    return `<h1>🔥 ${escapeHtml(h.title || 'Isekaimania - Overworld RPG')}</h1>
+        <div class="home-card">
             <h2>${escapeHtml(h.aboutTitle || 'About this game')}</h2>
-            <p class="home-lead"><strong>${escapeHtml(h.lead || '')}</strong></p>
+            <p><strong>${escapeHtml(h.lead || '')}</strong></p>
             <p>${escapeHtml(h.intro || '')}</p>
-            <h2>${escapeHtml(h.featureTitle || 'Build your adventure your way:')}</h2>
+            <h3>${escapeHtml(h.featureTitle || 'Build your adventure your way:')}</h3>
             <ul class="feature-list">${features}</ul>
             <p>${escapeHtml(h.adventure || '')}</p>
             <p>${escapeHtml(h.freeToPlay || '')}</p>
-            <p class="home-closing"><strong>${escapeHtml(h.closing || '')}</strong></p>
-            <p><strong>${escapeHtml(h.joinDiscord || 'Join our Discord:')}</strong> <a href="${links.discord}" target="_blank" rel="noopener noreferrer">${links.discord}</a></p>
-        </section>`;
+            <p><strong>${escapeHtml(h.closing || '')}</strong></p>
+            <p class="home-discord"><strong>${escapeHtml(h.joinDiscord || 'Join our Discord:')}</strong> <a href="${links.discord}" target="_blank" rel="noopener noreferrer">${links.discord}</a></p>
+        </div>`;
 }
 
 function renderCharacters() {
@@ -87,9 +86,11 @@ function renderCharacters() {
             <article class="card character-card" data-key="${escapeHtml(key)}">
                 ${sprite}
                 <h2 class="character-name">${escapeHtml(name)}</h2>
-                <div class="info-row"><div class="info-label">${escapeHtml(ui('gender', 'Gender'))}:</div><div>${escapeHtml(character.Gender || '')}</div></div>
-                <div class="info-row"><div class="info-label">${escapeHtml(ui('faction', 'Faction'))}:</div><div>${escapeHtml(character.Faction || '')}</div></div>
-                ${traitHtml ? `<div class="info-row"><div class="info-label">${escapeHtml(ui('traits', 'Traits'))}:</div><div>${traitHtml}</div></div>` : ''}
+                <div class="info-list">
+                    <div class="info-row"><div class="info-label">${escapeHtml(ui('gender', 'Gender'))}:</div><div class="info-value">${escapeHtml(character.Gender || '')}</div></div>
+                    <div class="info-row"><div class="info-label">${escapeHtml(ui('faction', 'Faction'))}:</div><div class="info-value">${escapeHtml(character.Faction || '')}</div></div>
+                    ${traitHtml ? `<div class="info-row"><div class="info-label">${escapeHtml(ui('traits', 'Traits'))}:</div><div class="info-value">${traitHtml}</div></div>` : ''}
+                </div>
             </article>`;
     }).join('');
 
