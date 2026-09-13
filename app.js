@@ -6,17 +6,12 @@ const wiki = {
     characterLocalisation: new Map()
 };
 
-const links = {
-    developer: 'https://play.google.com/store/apps/dev?id=4996140693365022946',
-    googlePlay: 'https://play.google.com/store/apps/details?id=com.aubjective.isekaimania&hl=en'
-};
-
 function escapeHtml(value) {
     return String(value ?? '')
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
+        .replace(/\"/g, '&quot;')
         .replace(/'/g, '&#039;');
 }
 
@@ -50,18 +45,10 @@ function traitLink(traitKey) {
 function renderHome() {
     const h = wiki.home;
     const features = Array.isArray(h.features) ? h.features.map(item => `<li>${escapeHtml(item)}</li>`).join('') : '';
-    const developer = h.developer
-        ? `<a href="${links.developer}" target="_blank" rel="noopener noreferrer">${escapeHtml(h.developer)}</a>`
-        : '';
 
     return `
         <h1>🔥 ${escapeHtml(h.title || 'Isekaimania - Overworld RPG')}</h1>
         <section class="home-card card">
-            <div class="home-game-meta">
-                ${developer ? `<div class="home-developer">${developer}</div>` : ''}
-                ${h.monetization ? `<div class="home-monetization">${escapeHtml(h.monetization)}</div>` : ''}
-                <div><a href="${links.googlePlay}" target="_blank" rel="noopener noreferrer">Google Play</a></div>
-            </div>
             <h2>${escapeHtml(h.aboutTitle || 'About this game')}</h2>
             <p class="home-lead"><strong>${escapeHtml(h.lead || '')}</strong></p>
             <p>${escapeHtml(h.intro || '')}</p>
