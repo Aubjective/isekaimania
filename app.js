@@ -209,6 +209,27 @@ function createWarpBurst(x, y) {
     window.setTimeout(() => burst.remove(), 720);
 }
 
+function createGoldenTrail(x, y) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const particle = document.createElement('span');
+    particle.className = 'golden-trail';
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    particle.style.setProperty('--trail-x', `${(Math.random() - 0.5) * 18}px`);
+    particle.style.setProperty('--trail-y', `${-10 - Math.random() * 16}px`);
+    document.body.appendChild(particle);
+    window.setTimeout(() => particle.remove(), 680);
+}
+
+function activateCardWash(target) {
+    const card = target instanceof Element ? target.closest('.card') : null;
+    if (!card) return;
+    card.classList.remove('is-warp-active');
+    void card.offsetWidth;
+    card.classList.add('is-warp-active');
+    window.setTimeout(() => card.classList.remove('is-warp-active'), 850);
+}
+
 async function loadJson(path, fallback) {
     try {
         const response = await fetch(path);
@@ -238,9 +259,19 @@ async function init() {
     loadView('Home');
 }
 
+let lastGoldenTrailAt = 0;
+document.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse' || !event.isPrimary) return;
+    const now = performance.now();
+    if (now - lastGoldenTrailAt < 34) return;
+    lastGoldenTrailAt = now;
+    createGoldenTrail(event.clientX, event.clientY);
+}, { passive: true });
+
 document.addEventListener('pointerdown', event => {
     if (!event.isPrimary) return;
     createWarpBurst(event.clientX, event.clientY);
+    activateCardWash(event.target);
 }, { passive: true });
 
 document.addEventListener('click', event => {
