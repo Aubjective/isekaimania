@@ -6,6 +6,10 @@ const wiki = {
     characterLocalisation: new Map()
 };
 
+const links = {
+    discord: 'https://discord.gg/AKvAd3xpb'
+};
+
 function escapeHtml(value) {
     return String(value ?? '')
         .replace(/&/g, '&amp;')
@@ -57,6 +61,7 @@ function renderHome() {
             <p>${escapeHtml(h.adventure || '')}</p>
             <p>${escapeHtml(h.freeToPlay || '')}</p>
             <p class="home-closing"><strong>${escapeHtml(h.closing || '')}</strong></p>
+            <p><strong>${escapeHtml(h.joinDiscord || 'Join our Discord:')}</strong> <a href="${links.discord}" target="_blank" rel="noopener noreferrer">${links.discord}</a></p>
         </section>`;
 }
 
