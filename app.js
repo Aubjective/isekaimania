@@ -63,12 +63,14 @@ function renderTravelLevel(travel = {}) {
 function renderCharacterImage(character, name, detail = false) {
     const key = character.SpriteKey || character.CharacterKey;
     const sizeClass = detail ? 'character-image-detail' : 'character-image-list';
-    return `<div class="character-image-slot ${sizeClass}"><img src="charactersprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'"></div>`;
+    const loading = detail ? 'eager' : 'lazy';
+    return `<div class="character-image-slot ${sizeClass}"><img src="charactersprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" loading="${loading}" decoding="async" onerror="this.style.display='none'"></div>`;
 }
 function renderJobImage(job, name, detail = false) {
     const key = job.SpriteKey || job.JobKey;
     const sizeClass = detail ? 'job-image-detail' : 'job-image-list';
-    return `<div class="job-image-slot ${sizeClass}"><img src="jobsprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'"></div>`;
+    const loading = detail ? 'eager' : 'lazy';
+    return `<div class="job-image-slot ${sizeClass}"><img src="jobsprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" loading="${loading}" decoding="async" onerror="this.style.display='none'"></div>`;
 }
 function rarityStars(rarity) { return '⭐'.repeat(Math.max(0, Number(rarity) || 0)); }
 
