@@ -12,11 +12,13 @@
       "traitComingSoon": "Trait details will be connected through localisation data."
     },
     "home": {
-      "title": "Isekaimania Wiki",
+      "title": "Isekaimania - Overworld RPG",
+      "developer": "AUBJECTIVE TECHNOLOGY LTD.",
+      "monetization": "Contains ads • In-app purchases",
       "aboutTitle": "About this game",
       "lead": "Reincarnate into monsters and explore ever-changing Isekai worlds in this offline single-player fantasy RPG.",
       "intro": "Isekaimania is an offline roguelite RPG, gacha RPG, idle RPG, and overworld adventure game where every run begins with a new setup. Choose your character, reincarnate into a monster, select a job, equip gear and items, then enter generated world maps filled with quests, events, enemies, treasures, and bosses.",
-      "featureTitle": "FEATURES",
+      "featureTitle": "Build your adventure your way:",
       "features": [
         "Collect and reincarnate into 250+ monsters",
         "Choose from 10+ characters and 50+ jobs",
