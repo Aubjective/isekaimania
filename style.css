@@ -47,7 +47,75 @@ a, .link { color: #00ffdd; font-weight: 500; }
 .home-closing { color: #ffd700; }
 .home-discord { margin-top: 22px; }
 .character-name { color: #ffd700; margin: 14px 0 0; text-align: center; }
-.character-card { min-height: 190px; display: flex; flex-direction: column; justify-content: center; align-items: stretch; }
+.character-card {
+    min-height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    overflow: hidden;
+    isolation: isolate;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), 0 0 0 rgba(245, 221, 111, 0);
+}
+.character-card > * { position: relative; z-index: 2; }
+.character-card::before {
+    content: '';
+    position: absolute;
+    inset: -35%;
+    border: 0;
+    border-radius: 0;
+    background:
+        linear-gradient(115deg,
+            rgba(255, 221, 112, 0.04) 0%,
+            rgba(174, 255, 219, 0.18) 22%,
+            rgba(255, 226, 126, 0.28) 43%,
+            rgba(145, 255, 215, 0.19) 62%,
+            rgba(255, 214, 90, 0.13) 82%,
+            rgba(174, 255, 219, 0.04) 100%);
+    background-size: 260% 260%;
+    animation: isekaiWash 5.5s linear infinite;
+    z-index: 0;
+    opacity: 0.78;
+    filter: blur(10px);
+    pointer-events: none;
+    transform: rotate(-6deg);
+}
+.character-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0;
+    background:
+        radial-gradient(circle at 12% 82%, rgba(255, 233, 143, 0.95) 0 2px, transparent 3px),
+        radial-gradient(circle at 28% 68%, rgba(255, 216, 91, 0.90) 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 47% 88%, rgba(255, 239, 167, 0.95) 0 2px, transparent 3px),
+        radial-gradient(circle at 65% 72%, rgba(255, 220, 106, 0.90) 0 1.5px, transparent 2.5px),
+        radial-gradient(circle at 78% 91%, rgba(255, 236, 151, 0.92) 0 2px, transparent 3px),
+        radial-gradient(circle at 91% 75%, rgba(255, 213, 80, 0.86) 0 1.5px, transparent 2.5px);
+    filter: drop-shadow(0 0 5px rgba(255, 218, 92, 0.8));
+}
+.character-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(204, 255, 218, 0.72);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45), 0 0 22px rgba(164, 255, 216, 0.18), 0 0 18px rgba(255, 219, 102, 0.14);
+}
+.character-card:hover::before { opacity: 1; }
+@keyframes isekaiWash {
+    0% { background-position: 180% 40%; transform: rotate(-6deg) translate3d(-3%, 0, 0); }
+    50% { background-position: 20% 60%; transform: rotate(-6deg) translate3d(3%, -1%, 0); }
+    100% { background-position: -140% 40%; transform: rotate(-6deg) translate3d(-3%, 0, 0); }
+}
+@keyframes goldenMotes {
+    0% { opacity: 0; transform: translate3d(0, 18px, 0) scale(0.75); }
+    18% { opacity: 0.9; }
+    65% { opacity: 0.75; }
+    100% { opacity: 0; transform: translate3d(-8px, -52px, 0) scale(1.15); }
+}
+@media (hover: hover) and (pointer: fine) {
+    .character-card:hover::after { animation: goldenMotes 1.9s ease-out infinite; }
+}
 .character-image-slot { display: flex; align-items: center; justify-content: center; width: 100%; border: 1px dashed rgba(160,216,255,0.28); border-radius: 12px; background: rgba(0,0,0,0.08); }
 .character-image-list { min-height: 105px; }
 .character-image-detail { min-height: 180px; max-width: 360px; margin: 0 auto 16px; }
@@ -149,4 +217,6 @@ a, .link { color: #00ffdd; font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) {
     .warp-burst { display: none !important; }
+    .character-card::before { animation: none; background-position: 50% 50%; }
+    .character-card::after { animation: none !important; opacity: 0 !important; }
 }
