@@ -1,0 +1,34 @@
+{
+  "en": {
+    "ui": {
+      "home": "Home",
+      "characters": "Characters",
+      "entries": "entries",
+      "gender": "Gender",
+      "faction": "Faction",
+      "traits": "Traits",
+      "charactersEmpty": "Character data will be added from Isekaimania Sheets.",
+      "charactersReady": "The page is already structured for localized names, stories, traits, and future sprite files.",
+      "traitComingSoon": "Trait details will be connected through localisation data."
+    },
+    "home": {
+      "title": "Isekaimania Wiki",
+      "aboutTitle": "About this game",
+      "lead": "Reincarnate into monsters and explore ever-changing Isekai worlds in this offline single-player fantasy RPG.",
+      "intro": "Isekaimania is an offline roguelite RPG, gacha RPG, idle RPG, and overworld adventure game where every run begins with a new setup. Choose your character, reincarnate into a monster, select a job, equip gear and items, then enter generated world maps filled with quests, events, enemies, treasures, and bosses.",
+      "featureTitle": "FEATURES",
+      "features": [
+        "Collect and reincarnate into 250+ monsters",
+        "Choose from 10+ characters and 50+ jobs",
+        "Explore generated 3x3 to 5x5 overworld maps",
+        "Complete main quests, short stories, and boss battles in each adventure",
+        "Fight tactical team battles by queuing skills, managing mana, and reading enemy actions",
+        "Send crews on expeditions to earn idle rewards, materials, and fragments over time",
+        "Play offline in a single-player RPG experience with no PvP or ranking pressure"
+      ],
+      "adventure": "Every adventure gives you new choices. Pick the right monster, job, gear, and items. Adapt to the map, defeat the main boss, collect rewards, and prepare for the next world.",
+      "freeToPlay": "Isekaimania is free-to-play friendly, with optional in-app purchases and a remove ads option.",
+      "closing": "Enter the Isekai. Reincarnate into monsters. Build your run. Explore new worlds. Fight tactical battles. Grow stronger every adventure."
+    }
+  }
+}
