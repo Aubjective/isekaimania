@@ -4,6 +4,8 @@ const wiki = {
     home: {},
     characters: [],
     characterLocalisation: new Map(),
+    jobs: [],
+    jobLocalisation: new Map(),
     currentView: 'Home'
 };
 
@@ -36,6 +38,10 @@ function ui(key, fallback = '') {
     return wiki.ui[key] || fallback;
 }
 
+function infoRow(label, valueHtml, extraClass = '') {
+    return `<div class="info-row ${extraClass}"><div class="info-label">${escapeHtml(label)}:</div><div class="info-value">${valueHtml}</div></div>`;
+}
+
 function characterLocale(key) {
     const row = wiki.characterLocalisation.get(key) || {};
     return row[wiki.locale] || row.en || {};
@@ -46,9 +52,24 @@ function characterText(key, field = 'Name') {
     return localized[field] || (field === 'Name' ? key : '');
 }
 
+function jobText(key) {
+    const row = wiki.jobLocalisation.get(key) || {};
+    return row[wiki.locale] || row.en || key;
+}
+
 function traitLink(traitKey) {
     if (!traitKey) return '';
-    return `<span class="link trait-link" data-trait-key="${escapeHtml(traitKey)}" title="${escapeHtml(ui('traitComingSoon', 'Trait details will be connected through localisation data.'))}">${escapeHtml(traitKey)}</span>`;
+    return `<span class="link trait-link" data-trait-key="${escapeHtml(traitKey)}" title="${escapeHtml(ui('traitComingSoon', 'Trait details will be connected through localisation data.'))}" onclick="event.stopPropagation()">${escapeHtml(traitKey)}</span>`;
+}
+
+function skillLink(skillKey) {
+    if (!skillKey) return '';
+    return `<span class="link skill-link" data-skill-key="${escapeHtml(skillKey)}" title="${escapeHtml(ui('skillComingSoon', 'Skill details will be connected when skill pages are added.'))}" onclick="event.stopPropagation()">${escapeHtml(skillKey)}</span>`;
+}
+
+function jobLink(jobKey) {
+    if (!jobKey) return '';
+    return `<span class="link job-link" data-job-key="${escapeHtml(jobKey)}" onclick="event.stopPropagation(); loadJobDetail(this.dataset.jobKey)">${escapeHtml(jobText(jobKey))}</span>`;
 }
 
 function renderTravelLevel(travel = {}) {
@@ -65,6 +86,19 @@ function renderCharacterImage(character, name, detail = false) {
     return `<div class="character-image-slot ${sizeClass}">
         <img src="sprites/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'">
     </div>`;
+}
+
+function renderJobImage(job, name, detail = false) {
+    const key = job.SpriteKey || job.JobKey;
+    const sizeClass = detail ? 'job-image-detail' : 'job-image-list';
+    return `<div class="job-image-slot ${sizeClass}">
+        <img src="jobsprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" onerror="this.style.display='none'">
+    </div>`;
+}
+
+function rarityStars(rarity) {
+    const count = Math.max(0, Number(rarity) || 0);
+    return '⭐'.repeat(count);
 }
 
 function renderHome() {
@@ -105,9 +139,15 @@ function renderCharacters() {
     const cards = wiki.characters.map(character => {
         const key = character.CharacterKey;
         const name = characterText(key, 'Name');
-        return `<article class="card character-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(characterSearchText(character))}" onclick="loadCharacterDetail(this.dataset.key)">
+        const previewInfo = [
+            infoRow(ui('character', 'Character'), escapeHtml(name), 'entity-primary-row'),
+            infoRow(ui('gender', 'Gender'), escapeHtml(character.Gender || '')),
+            infoRow(ui('faction', 'Faction'), escapeHtml(character.Faction || '')),
+            infoRow(ui('role', 'Role'), escapeHtml(character.Role || ''))
+        ].join('');
+        return `<article class="card character-card entity-list-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(characterSearchText(character))}" onclick="loadCharacterDetail(this.dataset.key)">
             ${renderCharacterImage(character, name, false)}
-            <h2 class="character-name">${escapeHtml(name)}</h2>
+            <div class="info-list list-info">${previewInfo}</div>
         </article>`;
     }).join('');
 
@@ -117,10 +157,6 @@ function renderCharacters() {
             <input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}">
         </div>
         <div class="grid" id="characterGrid">${cards}</div>`;
-}
-
-function infoRow(label, valueHtml) {
-    return `<div class="info-row"><div class="info-label">${escapeHtml(label)}:</div><div class="info-value">${valueHtml}</div></div>`;
 }
 
 function loadCharacterDetail(key) {
@@ -163,12 +199,98 @@ function loadCharacterDetail(key) {
     window.scrollTo(0, 0);
 }
 
-function attachCharacterSearch() {
+function jobSearchText(job) {
+    return [
+        job.JobKey,
+        jobText(job.JobKey),
+        job.Role,
+        job.PassiveSkillKey,
+        job.ActiveSkillKey,
+        job.BoostType,
+        ...(job.PrerequisiteJobs || [])
+    ].filter(Boolean).join(' ').toLowerCase();
+}
+
+function renderJobs() {
+    const cards = wiki.jobs.map(job => {
+        const name = jobText(job.JobKey);
+        const previewInfo = [
+            infoRow(ui('job', 'Job'), escapeHtml(name), 'entity-primary-row'),
+            infoRow(ui('rarity', 'Rarity'), escapeHtml(rarityStars(job.Rarity))),
+            infoRow(ui('role', 'Role'), escapeHtml(job.Role || ''))
+        ].join('');
+        return `<article class="card job-card entity-list-card" data-key="${escapeHtml(job.JobKey)}" data-search="${escapeHtml(jobSearchText(job))}" onclick="loadJobDetail(this.dataset.key)">
+            ${renderJobImage(job, name, false)}
+            <div class="info-list list-info">${previewInfo}</div>
+        </article>`;
+    }).join('');
+
+    return `<div class="header-card">
+            <h1>${escapeHtml(ui('jobs', 'Jobs'))}</h1>
+            <p><strong>${wiki.jobs.length} ${escapeHtml(ui('entries', 'entries'))}</strong></p>
+            <input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}">
+        </div>
+        <div class="grid" id="jobGrid">${cards}</div>`;
+}
+
+function renderCraftRecipe(job) {
+    const prereqs = Array.isArray(job.PrerequisiteJobs) ? job.PrerequisiteJobs.filter(Boolean) : [];
+    if (!prereqs.length) return '';
+    return `<div class="craft-row">${prereqs.map(jobLink).join('<span class="craft-plus">+</span>')}<span class="craft-arrow">→</span>${jobLink(job.JobKey)}</div>`;
+}
+
+function loadJobDetail(key) {
+    const job = wiki.jobs.find(item => item.JobKey === key);
+    if (!job) return;
+
+    const name = jobText(key);
+    const boostValue = job.BoostType
+        ? `${escapeHtml(job.BoostType)}${job.Amount !== '' && job.Amount !== undefined ? ` <span class="boost-separator">·</span> ${escapeHtml(job.Amount)}` : ''}`
+        : '';
+
+    const basicInfo = [
+        infoRow(ui('job', 'Job'), escapeHtml(name)),
+        infoRow(ui('rarity', 'Rarity'), escapeHtml(rarityStars(job.Rarity))),
+        infoRow(ui('role', 'Role'), escapeHtml(job.Role || '')),
+        boostValue ? infoRow(ui('boostType', 'Boost Type'), boostValue) : ''
+    ].join('');
+
+    const moreInfo = [
+        job.PassiveSkillKey ? infoRow(ui('passiveSkill', 'Passive Skill'), skillLink(job.PassiveSkillKey)) : '',
+        job.ActiveSkillKey ? infoRow(ui('activeSkill', 'Active Skill'), skillLink(job.ActiveSkillKey)) : ''
+    ].join('');
+
+    const requiresRecipe = renderCraftRecipe(job);
+    const craftsInto = wiki.jobs
+        .filter(candidate => Array.isArray(candidate.PrerequisiteJobs) && candidate.PrerequisiteJobs.includes(key))
+        .map(renderCraftRecipe)
+        .filter(Boolean)
+        .join('');
+
+    document.getElementById('content').innerHTML = `
+        <button class="back-btn" onclick="loadView('Jobs')">← ${escapeHtml(ui('back', 'Back'))}</button>
+        <div class="detail-stack">
+            <div class="card detail-title-card">
+                ${renderJobImage(job, name, true)}
+                <h3>${escapeHtml(name)}</h3>
+            </div>
+            <div class="card detail-section basic-info-card">
+                <h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2>
+                <div class="info-list">${basicInfo}</div>
+            </div>
+            ${moreInfo ? `<div class="card detail-section"><h2>${escapeHtml(ui('moreInfo', 'More Info'))}</h2><div class="info-list">${moreInfo}</div></div>` : ''}
+            ${requiresRecipe ? `<div class="card detail-section"><h2>${escapeHtml(ui('requires', 'Requires'))}</h2><div class="craft-list">${requiresRecipe}</div></div>` : ''}
+            ${craftsInto ? `<div class="card detail-section"><h2>${escapeHtml(ui('craftsInto', 'Crafts Into'))}</h2><div class="craft-list">${craftsInto}</div></div>` : ''}
+        </div>`;
+    window.scrollTo(0, 0);
+}
+
+function attachListSearch(cardSelector) {
     const input = document.getElementById('searchInput');
     if (!input) return;
     input.addEventListener('input', () => {
         const term = input.value.toLowerCase().trim();
-        document.querySelectorAll('.character-card').forEach(card => {
+        document.querySelectorAll(cardSelector).forEach(card => {
             card.style.display = !term || (card.dataset.search || '').includes(term) ? '' : 'none';
         });
     });
@@ -177,8 +299,15 @@ function attachCharacterSearch() {
 function loadView(view) {
     setActiveView(view);
     const content = document.getElementById('content');
-    content.innerHTML = view === 'Characters' ? renderCharacters() : renderHome();
-    if (view === 'Characters') attachCharacterSearch();
+    if (view === 'Characters') {
+        content.innerHTML = renderCharacters();
+        attachListSearch('.character-card');
+    } else if (view === 'Jobs') {
+        content.innerHTML = renderJobs();
+        attachListSearch('.job-card');
+    } else {
+        content.innerHTML = renderHome();
+    }
     window.scrollTo(0, 0);
 }
 
@@ -250,6 +379,10 @@ async function init() {
     wiki.characters = await loadJson('data/characters.json', []);
     const characterLoc = await loadJson('data/characters_localisation.json', {});
     Object.entries(characterLoc).forEach(([key, value]) => wiki.characterLocalisation.set(key, value));
+
+    wiki.jobs = await loadJson('data/jobs.json', []);
+    const jobLoc = await loadJson('data/jobs_localisation.json', {});
+    Object.entries(jobLoc).forEach(([key, value]) => wiki.jobLocalisation.set(key, value));
 
     document.querySelectorAll('[data-ui]').forEach(node => {
         const key = node.dataset.ui;
