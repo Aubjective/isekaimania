@@ -43,41 +43,43 @@ main { flex: 1; padding: 30px 40px; min-width: 0; }
 .card::before {
     content: '';
     position: absolute;
-    inset: -35%;
+    inset: -30%;
     border-radius: 0;
     background: linear-gradient(115deg,
-        rgba(255, 221, 112, 0.03) 0%,
-        rgba(174, 255, 219, 0.18) 22%,
-        rgba(255, 226, 126, 0.30) 43%,
-        rgba(145, 255, 215, 0.20) 62%,
-        rgba(255, 214, 90, 0.14) 82%,
-        rgba(174, 255, 219, 0.03) 100%);
-    background-size: 260% 260%;
+        rgba(255, 217, 86, 0.10) 0%,
+        rgba(173, 255, 219, 0.42) 20%,
+        rgba(255, 226, 116, 0.58) 42%,
+        rgba(139, 255, 209, 0.44) 62%,
+        rgba(255, 202, 63, 0.34) 82%,
+        rgba(173, 255, 219, 0.10) 100%);
+    background-size: 250% 250%;
     z-index: 0;
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(7px) saturate(1.18);
     pointer-events: none;
     transform: rotate(-6deg);
 }
 .card:hover::before,
 .card.is-warp-active::before {
-    opacity: 1;
-    animation: isekaiWash 2.8s linear infinite;
+    opacity: 0.96;
+    animation: isekaiWash 2.5s linear infinite;
 }
 .card:hover {
-    border-color: rgba(204, 255, 218, 0.72);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.45), 0 0 22px rgba(164,255,216,0.18), 0 0 18px rgba(255,219,102,0.14);
+    border-color: rgba(218, 255, 225, 0.92);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.48), 0 0 28px rgba(157,255,210,0.28), 0 0 24px rgba(255,214,80,0.24);
 }
-.character-card:hover { transform: translateY(-6px); }
+.character-card:hover, .job-card:hover { transform: translateY(-6px); }
 @keyframes isekaiWash {
-    0% { background-position: 180% 40%; transform: rotate(-6deg) translate3d(-3%,0,0); }
-    50% { background-position: 20% 60%; transform: rotate(-6deg) translate3d(3%,-1%,0); }
-    100% { background-position: -140% 40%; transform: rotate(-6deg) translate3d(-3%,0,0); }
+    0% { background-position: 180% 40%; transform: rotate(-6deg) translate3d(-4%,0,0); }
+    50% { background-position: 20% 60%; transform: rotate(-6deg) translate3d(4%,-1%,0); }
+    100% { background-position: -140% 40%; transform: rotate(-6deg) translate3d(-4%,0,0); }
 }
 .info-list { display: flex; flex-direction: column; gap: var(--row-gap); }
 .info-row { display: grid; grid-template-columns: minmax(0, var(--field-label-width)) minmax(0, 1fr); column-gap: var(--field-gap); align-items: start; line-height: 1.45; min-width: 0; margin: 0; }
 .info-label { color: var(--label); font-weight: 600; min-width: 0; }
 .info-value { min-width: 0; overflow-wrap: anywhere; }
+.entity-primary-row .info-value { color: #ffd700; font-weight: 700; }
+.list-info { margin-top: 16px; }
 h1 { text-align: center; color: #ffd700; margin: 10px 0 25px; font-size: 2.2rem; text-shadow: 0 0 15px #00ccff; }
 h2 { color: var(--label); }
 a, .link { color: #00ffdd; font-weight: 500; }
@@ -89,12 +91,11 @@ a, .link { color: #00ffdd; font-weight: 500; }
 .feature-list { line-height: 1.7; }
 .home-closing { color: #ffd700; }
 .home-discord { margin-top: 22px; }
-.character-name { color: #ffd700; margin: 14px 0 0; text-align: center; }
-.character-card { min-height: 190px; display: flex; flex-direction: column; justify-content: center; align-items: stretch; }
-.character-image-slot { display: flex; align-items: center; justify-content: center; width: 100%; border: 1px dashed rgba(160,216,255,0.28); border-radius: 12px; background: rgba(0,0,0,0.08); }
-.character-image-list { min-height: 105px; }
-.character-image-detail { min-height: 180px; max-width: 360px; margin: 0 auto 16px; }
-.character-image-slot img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
+.entity-list-card { min-height: 255px; display: flex; flex-direction: column; justify-content: flex-start; align-items: stretch; }
+.character-image-slot, .job-image-slot { display: flex; align-items: center; justify-content: center; width: 100%; border: 1px dashed rgba(160,216,255,0.28); border-radius: 12px; background: rgba(0,0,0,0.08); }
+.character-image-list, .job-image-list { min-height: 105px; }
+.character-image-detail, .job-image-detail { min-height: 180px; max-width: 360px; margin: 0 auto 16px; }
+.character-image-slot img, .job-image-slot img { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; }
 .search-input { width: min(680px, 100%); margin-top: 10px; padding: 12px 14px; background: #0f1b4d; color: var(--text); border: 1px solid #4660a8; border-radius: 10px; outline: none; font-size: 1rem; }
 .search-input:focus { border-color: var(--accent); box-shadow: 0 0 10px rgba(0,204,255,0.25); }
 .back-btn { margin: 0 0 20px; padding: 10px 16px; background: #1a2a66; color: #b0d0ff; border: 1px solid #334477; border-radius: 10px; cursor: pointer; }
@@ -107,9 +108,11 @@ a, .link { color: #00ffdd; font-weight: 500; }
 .detail-section h2 { margin-top: 0; }
 .basic-info-card .info-row { grid-template-columns: minmax(0, var(--field-label-width)) minmax(0, 1fr); }
 .story-card p { margin: 0; line-height: 1.75; }
-.story-separator { color: #7fcfff; padding: 0 0.2em; }
+.story-separator, .travel-separator, .boost-separator { color: #7fcfff; padding: 0 0.2em; }
 .travel-ref { white-space: nowrap; }
-.travel-separator { color: #7fcfff; }
+.craft-list { display: flex; flex-direction: column; gap: 10px; }
+.craft-row { display: flex; align-items: baseline; flex-wrap: wrap; gap: 7px; line-height: 1.55; min-width: 0; }
+.craft-plus, .craft-arrow { color: var(--text); font-weight: 600; }
 .empty-state { max-width: 900px; margin: 20px auto; cursor: default; }
 
 .golden-trail {
@@ -145,8 +148,9 @@ a, .link { color: #00ffdd; font-weight: 500; }
     main { padding-top: 90px; padding-left: 15px; padding-right: 15px; }
     .grid { grid-template-columns: 1fr; }
     .card { padding: 20px; }
+    .entity-list-card { min-height: 230px; }
     .info-row { grid-template-columns: minmax(0, var(--field-label-width)) minmax(0, 1fr); }
-    .character-image-detail { min-height: 150px; }
+    .character-image-detail, .job-image-detail { min-height: 150px; }
     .warp-ring { width: 16px; height: 16px; margin: -8px 0 0 -8px; }
     .warp-particle { width: 4px; height: 4px; margin: -2px 0 0 -2px; }
 }
