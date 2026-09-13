@@ -71,7 +71,7 @@ function renderHome() {
     const h = wiki.home;
     const features = Array.isArray(h.features) ? h.features.map(item => `<li>${escapeHtml(item)}</li>`).join('') : '';
 
-    return `<h1>🔥 ${escapeHtml(h.title || 'Isekaimania - Overworld RPG')}</h1>
+    return `<h1>🌀 ${escapeHtml(h.title || 'Isekaimania - Overworld RPG')}</h1>
         <div class="home-card">
             <h2>${escapeHtml(h.aboutTitle || 'About this game')}</h2>
             <p><strong>${escapeHtml(h.lead || '')}</strong></p>
@@ -182,6 +182,33 @@ function loadView(view) {
     window.scrollTo(0, 0);
 }
 
+function createWarpBurst(x, y) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const burst = document.createElement('span');
+    burst.className = 'warp-burst';
+    burst.style.left = `${x}px`;
+    burst.style.top = `${y}px`;
+
+    const ringInner = document.createElement('span');
+    ringInner.className = 'warp-ring warp-ring-inner';
+    const ringOuter = document.createElement('span');
+    ringOuter.className = 'warp-ring warp-ring-outer';
+    burst.append(ringInner, ringOuter);
+
+    for (let i = 0; i < 6; i += 1) {
+        const particle = document.createElement('span');
+        particle.className = 'warp-particle';
+        particle.style.setProperty('--warp-angle', `${i * 60}deg`);
+        particle.style.setProperty('--warp-distance', `${26 + (i % 3) * 6}px`);
+        particle.style.setProperty('--warp-delay', `${i * 12}ms`);
+        burst.appendChild(particle);
+    }
+
+    document.body.appendChild(burst);
+    window.setTimeout(() => burst.remove(), 720);
+}
+
 async function loadJson(path, fallback) {
     try {
         const response = await fetch(path);
@@ -210,6 +237,11 @@ async function init() {
 
     loadView('Home');
 }
+
+document.addEventListener('pointerdown', event => {
+    if (!event.isPrimary) return;
+    createWarpBurst(event.clientX, event.clientY);
+}, { passive: true });
 
 document.addEventListener('click', event => {
     if (window.innerWidth > 768) return;
