@@ -1,1 +1,72 @@
-[]
+{
+  "Ishida Ren": {
+    "en": {
+      "Name": "Ishida Ren",
+      "Time": "Japan - 2019 (Reiwa 1)",
+      "Background": "Ishida Ren was a disciplined high school student in Tokyo, known for diligence and analytical thinking rather than natural brilliance. He relied on preparation to manage uncertainty, often trusting established assumptions even in unfamiliar situations. On September 9, 2019, after Typhoon Faxai, he sheltered beneath roadside metal roofing during a sudden storm, believing it to be safe. A lightning strike hit nearby infrastructure, electrocuting him instantly."
+    }
+  },
+  "Chun Li": {
+    "en": {
+      "Name": "Chun Li",
+      "Time": "China - 1853 CE (Qing Dynasty, Xianfeng 3)",
+      "Background": "Chun Li was born into a martial family in Foshan, Guangdong, training in southern kung fu from childhood. She valued restraint and moral conduct. In 1853, during a Taiping Rebellion raid on nearby villages, she was ordered to delay rebel forces to allow civilian evacuation. Knowing support was uncertain, she chose to hold her ground alone until overwhelmed."
+    }
+  },
+  "Serena Valen": {
+    "en": {
+      "Name": "Serena Valen",
+      "Time": "England - 1388 CE (Late Plantagenet Period)",
+      "Background": "Serena Valen was a knight serving northern England during Anglo-Scottish border wars. Trained in command and fortification defense, she valued order and responsibility. In 1388, following the Battle of Otterburn, Scottish forces raided border fortresses. Serena organized a structured evacuation and remained behind, ensuring all units withdrew before coordinating the final retreat when the gate collapsed."
+    }
+  },
+  "Selina Valen": {
+    "en": {
+      "Name": "Selina Valen",
+      "Time": "England - 1388 CE (Late Plantagenet Period)",
+      "Background": "Selina Valen fought alongside her sister during the same border campaigns. Passionate and impulsive, she favored rapid strikes over formation discipline. During the post-Otterburn retreat, she pursued a withdrawing enemy unit without orders. The force turned out to be a decoy. She was killed in the ambush before aid arrived."
+    }
+  },
+  "Leilani Mahelona": {
+    "en": {
+      "Name": "Leilani Mahelona",
+      "Time": "Solomon Islands - 2016 CE",
+      "Background": "Leilani Mahelona was a Melanesian field researcher documenting pre-Lapita coastal sites. In April 2016, while surveying Malaita Island, a cyclone approached. Aware of the risk, she chose to remain to finish recording newly exposed artifacts before tidal loss. The storm surge collapsed the shoreline. She was swept away, and her body was never recovered."
+    }
+  },
+  "Robert Weston": {
+    "en": {
+      "Name": "Robert Weston",
+      "Time": "United States - 1892 CE",
+      "Background": "Robert Weston was a self-taught adventurer during the American mining boom, known for relying on luck more than planning. Frequently lost but rarely discouraged, he wandered from claim to claim on instinct alone. In 1892, near Deadwood, South Dakota, he stumbled upon an abandoned gold shaft he believed safe. While celebrating inside, a decayed support beam collapsed, killing him instantly, ending a life that had survived far greater dangers."
+    }
+  },
+  "Patricia Vaughn": {
+    "en": {
+      "Name": "Patricia Vaughn",
+      "Time": "Holy Roman Empire (Saxony) - 1361 CE",
+      "Background": "Patricia Vaughn was a mercenary in Saxony during a succession conflict of the Holy Roman Empire. In 1361, after defending city walls for days without rest, fighting ceased. During night watch, she chose to remain at her post despite exhaustion and untreated wounds. She collapsed quietly."
+    }
+  },
+  "Jennifer Vale": {
+    "en": {
+      "Name": "Jennifer Vale",
+      "Time": "Republic of Venice - 1514 CE",
+      "Background": "Jennifer Vale operated in Venice’s port districts as a thief and smuggler. In 1514, she joined a spice warehouse robbery near the Arsenal. Trusting her partner’s plan, she had no reason to suspect betrayal. Her partner secretly traded her identity to guards for immunity. When exits were sealed, Jennifer was captured and executed without trial."
+    }
+  },
+  "Linda Maren": {
+    "en": {
+      "Name": "Linda Maren",
+      "Time": "Denmark-Norway - 1582 CE",
+      "Background": "Linda Maren commanded an armed Danish merchant vessel carrying valuable cargo across the North Sea. Known for personally leading her crew against raiders, she refused to surrender when pirates attacked near the Jutland coast. Linda ordered an immediate counterattack during a gathering storm. Her crew prevailed, securing both the ship and its cargo."
+    }
+  },
+  "Nolan Ardent": {
+    "en": {
+      "Name": "Nolan Ardent",
+      "Time": "France - 1396 CE (Hundred Years’ War)",
+      "Background": "Nolan Ardent was a French knight serving near Calais during the Hundred Years’ War. Earlier in 1396, he spared a wounded English soldier after a skirmish. During a later retreat, Nolan was struck down from behind by the same man. Witnesses reported he chose not to resist."
+    }
+  }
+}
