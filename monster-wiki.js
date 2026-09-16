@@ -108,7 +108,7 @@ function renderMonsterLoot(monster) {
         items ? infoRow(ui('itemLoots', 'Item Loots'), items) : '',
         equipment ? infoRow(ui('equipmentLoots', 'Equipment Loots'), equipment) : ''
     ].join('');
-    return `<div class="card detail-section"><h2>${escapeHtml(ui('loot', 'Loot'))}</h2><div class="info-list">${rows}</div><p class="monster-loot-note">${escapeHtml(ui('lootSeriesNote', 'Each listed entry is a possible loot result. Quantities are shown with ×. Repeated entries are preserved from the source data.'))}</p></div>`;
+    return `<div class="card detail-section"><h2>${escapeHtml(ui('loot', 'Loot'))}</h2><div class="info-list">${rows}</div><p class="monster-loot-note">${escapeHtml(ui('lootSeriesNote', 'Each listed entry is a possible loot result. Quantities are shown with ×.'))}</p></div>`;
 }
 
 function loadMonsterDetail(key, fromRoute = false) {
