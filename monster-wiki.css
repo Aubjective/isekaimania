@@ -2,3 +2,21 @@
 .monster-ref-separator { color: #7fcfff; padding: 0 0.18em; }
 .monster-loot-note { margin: 16px 0 0; color: #b0d0ff; font-size: 0.92rem; line-height: 1.5; }
 .future-reference { cursor: pointer; }
+
+.enemy-team-note { margin: 0 0 14px; color: #b0d0ff; font-size: 0.92rem; line-height: 1.5; }
+.enemy-team-grid { display: grid; gap: 12px; }
+.enemy-team-card { border: 1px solid rgba(127, 207, 255, 0.22); border-radius: 12px; padding: 13px 14px; background: rgba(7, 27, 49, 0.38); }
+.enemy-team-title { font-weight: 700; margin-bottom: 9px; }
+.enemy-team-slots { display: grid; gap: 8px; }
+.enemy-team-slot { padding-top: 8px; border-top: 1px solid rgba(127, 207, 255, 0.12); }
+.enemy-team-slot:first-child { padding-top: 0; border-top: 0; }
+.enemy-team-slot-main { display: flex; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+.enemy-team-slot-number { color: #7fcfff; font-size: 0.82rem; min-width: 46px; }
+.enemy-team-level { color: #b0d0ff; font-size: 0.86rem; }
+.enemy-slot-overrides { margin: 5px 0 0 54px; display: flex; flex-wrap: wrap; gap: 5px 14px; color: #c9dcf7; font-size: 0.86rem; line-height: 1.45; }
+.enemy-slot-overrides strong { color: #ffd66b; }
+.enemy-team-monster-link { cursor: pointer; }
+
+@media (max-width: 560px) {
+    .enemy-slot-overrides { margin-left: 0; }
+}
