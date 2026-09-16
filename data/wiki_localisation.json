@@ -34,7 +34,7 @@
       "loot": "Loot",
       "itemLoots": "Item Loots",
       "equipmentLoots": "Equipment Loots",
-      "lootSeriesNote": "Each listed entry is a possible loot result. Repeated entries are preserved from the source data.",
+      "lootSeriesNote": "Each listed entry is a possible loot result. Quantities are shown with ×.",
       "trait1": "Trait 1",
       "trait2": "Trait 2",
       "trait3": "Trait 3",
