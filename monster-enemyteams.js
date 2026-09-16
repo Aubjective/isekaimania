@@ -84,6 +84,16 @@ function enemyMonsterLink(key) {
     return `<span class="link enemy-team-monster-link" data-monster-key="${escapeHtml(key)}" onclick="event.stopPropagation(); loadMonsterDetail(this.dataset.monsterKey)">${escapeHtml(name)}</span>`;
 }
 
+function enemyPositionLabel(slot) {
+    const positionKeys = {
+        1: ['left', 'Left'],
+        2: ['center', 'Center'],
+        3: ['right', 'Right']
+    };
+    const position = positionKeys[Number(slot)];
+    return position ? ui(position[0], position[1]) : `${ui('slot', 'Slot')} ${slot}`;
+}
+
 function renderEnemyTeam(team) {
     const teamId = team[0];
     const teamKey = team[1];
@@ -93,7 +103,7 @@ function renderEnemyTeam(team) {
         const monsterKey = enemy[1];
         const level = enemy[2];
         const levelText = level !== null && level !== undefined && level !== '' ? `<span class="enemy-team-level">${escapeHtml(level)}</span>` : '';
-        return `<div class="enemy-team-slot"><div class="enemy-team-slot-main"><span class="enemy-team-slot-number">${escapeHtml(ui('slot', 'Slot'))} ${escapeHtml(slot)}</span>${enemyMonsterLink(monsterKey)}${levelText}</div>${enemySlotOverrides(enemy)}</div>`;
+        return `<div class="enemy-team-slot"><div class="enemy-team-slot-main"><span class="enemy-team-slot-number">${escapeHtml(enemyPositionLabel(slot))}</span>${enemyMonsterLink(monsterKey)}${levelText}</div>${enemySlotOverrides(enemy)}</div>`;
     }).join('');
 
     return `<div class="enemy-team-card" data-team-id="${escapeHtml(teamId)}" data-team-key="${escapeHtml(teamKey)}"><div class="enemy-team-title"><span class="link future-reference enemy-team-link" data-reference-type="enemy-team" data-reference-key="${escapeHtml(teamKey)}" title="${escapeHtml(ui('enemyTeamComingSoon', 'Enemy Team detail pages can be connected later.'))}" onclick="event.stopPropagation()">${escapeHtml(enemyTeamText(teamKey))}</span></div><div class="enemy-team-slots">${slots}</div></div>`;
