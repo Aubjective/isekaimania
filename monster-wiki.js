@@ -74,7 +74,7 @@ function renderMonsters() {
             infoRow(ui('race', 'Race'), escapeHtml(monster.Race || '')),
             infoRow(ui('element', 'Element'), escapeHtml(monster.Element || 'None'))
         ].join('');
-        return `<article class="card monster-card entity-list-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(monsterSearchText(monster))}" onclick="loadMonsterDetail(this.dataset.key)"><div class="monster-list-mark" aria-hidden="true">👾</div><div class="info-list list-info">${previewInfo}</div></article>`;
+        return `<article class="card monster-card entity-list-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(monsterSearchText(monster))}" onclick="loadMonsterDetail(this.dataset.key)"><div class="info-list list-info">${previewInfo}</div></article>`;
     }).join('');
     return `<div class="header-card"><h1>${escapeHtml(ui('monsters', 'Monsters'))}</h1><p><strong>${wiki.monsters.length} ${escapeHtml(ui('entries', 'entries'))}</strong></p><input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}"></div><div class="grid" id="monsterGrid">${cards}</div>`;
 }
@@ -123,7 +123,7 @@ function loadMonsterDetail(key, fromRoute = false) {
     ].join('');
 
     setActiveView('Monsters');
-    document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('Monsters')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card monster-title-card"><div class="monster-detail-mark" aria-hidden="true">👾</div><h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div><div class="card detail-section"><h2>${escapeHtml(ui('mainStats', 'Main Stats'))}</h2><div class="info-list">${statInfo}</div></div>${renderMonsterSkills(monster)}${renderMonsterLoot(monster)}</div>`;
+    document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('Monsters')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card monster-title-card"><h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div><div class="card detail-section"><h2>${escapeHtml(ui('mainStats', 'Main Stats'))}</h2><div class="info-list">${statInfo}</div></div>${renderMonsterSkills(monster)}${renderMonsterLoot(monster)}</div>`;
     window.scrollTo(0, 0);
 }
 
