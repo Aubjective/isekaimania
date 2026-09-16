@@ -27,6 +27,28 @@ function renderReferenceList(keys, type) {
     return list.map(key => futureReferenceLink(type, key)).join('<span class="monster-ref-separator"> · </span>');
 }
 
+// Loot cells use ItemKey-N as quantity syntax. Keep the raw sheet token in JSON,
+// but resolve the clickable reference to the exact base item/equipment key here.
+function parseLootToken(token) {
+    const raw = String(token || '').trim();
+    if (!raw) return null;
+    const match = raw.match(/^(.*?)-(\d+)$/);
+    if (match && match[1].trim()) return { key: match[1].trim(), quantity: Number(match[2]), raw, valid: true };
+    if (/^-\d+$/.test(raw)) return { key: '', quantity: Number(raw.slice(1)), raw, valid: false };
+    return { key: raw, quantity: 1, raw, valid: true };
+}
+
+function renderLootReferenceList(tokens, type) {
+    const list = Array.isArray(tokens) ? tokens.map(parseLootToken).filter(Boolean) : [];
+    return list.map(entry => {
+        if (!entry.valid || !entry.key) {
+            return `<span class="monster-invalid-ref" title="${escapeHtml(ui('malformedLoot', 'Malformed source loot token.'))}">${escapeHtml(entry.raw)}</span>`;
+        }
+        const quantity = entry.quantity > 1 ? `<span class="loot-quantity">×${escapeHtml(entry.quantity)}</span>` : '';
+        return `${futureReferenceLink(type, entry.key)}${quantity}`;
+    }).join('<span class="monster-ref-separator"> · </span>');
+}
+
 function monsterSearchText(monster) {
     return [
         monster.MonsterKey,
@@ -69,14 +91,14 @@ function renderMonsterSkills(monster) {
 }
 
 function renderMonsterLoot(monster) {
-    const items = renderReferenceList(monster.ItemLootKeys, 'item');
-    const equipment = renderReferenceList(monster.EquipmentLootKeys, 'equipment');
+    const items = renderLootReferenceList(monster.ItemLootKeys, 'item');
+    const equipment = renderLootReferenceList(monster.EquipmentLootKeys, 'equipment');
     if (!items && !equipment) return '';
     const rows = [
         items ? infoRow(ui('itemLoots', 'Item Loots'), items) : '',
         equipment ? infoRow(ui('equipmentLoots', 'Equipment Loots'), equipment) : ''
     ].join('');
-    return `<div class="card detail-section"><h2>${escapeHtml(ui('loot', 'Loot'))}</h2><div class="info-list">${rows}</div><p class="monster-loot-note">${escapeHtml(ui('lootSeriesNote', 'Each listed entry is a possible loot result. Repeated entries are preserved from the source data.'))}</p></div>`;
+    return `<div class="card detail-section"><h2>${escapeHtml(ui('loot', 'Loot'))}</h2><div class="info-list">${rows}</div><p class="monster-loot-note">${escapeHtml(ui('lootSeriesNote', 'Each listed entry is a possible loot result. Quantities are shown with ×. Repeated entries are preserved from the source data.'))}</p></div>`;
 }
 
 function loadMonsterDetail(key, fromRoute = false) {
