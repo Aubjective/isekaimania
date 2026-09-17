@@ -1,0 +1,16 @@
+{
+  "parts": [
+    "data/chests/001-050.json",
+    "data/chests/051-081.json"
+  ],
+  "localisationParts": [
+    "data/chests/localisation/001-050.json",
+    "data/chests/localisation/051-081.json"
+  ],
+  "lootPoolChances": {
+    "Common": 40,
+    "Rare": 30,
+    "Epic": 20,
+    "Legendary": 10
+  }
+}
