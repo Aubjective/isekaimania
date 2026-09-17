@@ -66,12 +66,39 @@ function renderItemDescription(item) {
     return `<div class="card detail-section item-description-card"><h2>${escapeHtml(ui('description', 'Description'))}</h2>${description ? `<p class="item-description-text">${escapeHtml(description)}</p>` : ''}${units ? `<div class="item-unit-list">${units}</div>` : ''}</div>`;
 }
 
+function itemCraftRow(key, quantity) {
+    const amount = Number(quantity);
+    const quantityText = Number.isFinite(amount) && amount > 1 ? `<span class="item-craft-quantity">×${escapeHtml(amount)}</span>` : '';
+    return `<div class="item-craft-row">${itemReferenceLink(key)}${quantityText}</div>`;
+}
+
 function renderCraftedFrom(item) {
     const materials = Array.isArray(item.CraftMaterials) ? item.CraftMaterials : [];
     const content = materials.length
-        ? materials.map(material => `<div class="item-craft-row">${itemReferenceLink(material.ItemKey)}${Number(material.Quantity) > 1 ? `<span class="item-craft-quantity">×${escapeHtml(material.Quantity)}</span>` : ''}</div>`).join('')
+        ? materials.map(material => itemCraftRow(material.ItemKey, material.Quantity)).join('')
         : `<div class="item-none">${escapeHtml(ui('none', 'None'))}</div>`;
     return `<div class="card detail-section item-crafted-from"><h2>${escapeHtml(ui('craftedFrom', 'Crafted From'))}</h2><div class="item-craft-list">${content}</div></div>`;
+}
+
+function craftsIntoForItem(itemKey) {
+    const results = [];
+    wiki.items.forEach(candidate => {
+        const materials = Array.isArray(candidate.CraftMaterials) ? candidate.CraftMaterials : [];
+        materials.forEach(material => {
+            if (material.ItemKey === itemKey) {
+                results.push({ ItemKey: candidate.ItemKey, Quantity: material.Quantity });
+            }
+        });
+    });
+    return results;
+}
+
+function renderCraftsInto(item) {
+    const results = craftsIntoForItem(item.ItemKey);
+    const content = results.length
+        ? results.map(result => itemCraftRow(result.ItemKey, result.Quantity)).join('')
+        : `<div class="item-none">${escapeHtml(ui('none', 'None'))}</div>`;
+    return `<div class="card detail-section item-crafts-into"><h2>${escapeHtml(ui('craftsInto', 'Crafts Into'))}</h2><div class="item-craft-list">${content}</div></div>`;
 }
 
 function itemSearchText(item) {
@@ -120,7 +147,7 @@ function loadItemDetail(key, fromRoute = false) {
     ].join('');
 
     setActiveView('Items');
-    document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('Items')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card item-title-card">${renderItemImage(item, name, true)}<h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div>${renderItemDescription(item)}${renderCraftedFrom(item)}</div>`;
+    document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('Items')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card item-title-card">${renderItemImage(item, name, true)}<h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div>${renderItemDescription(item)}${renderCraftedFrom(item)}${renderCraftsInto(item)}</div>`;
     window.scrollTo(0, 0);
 }
 
