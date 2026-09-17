@@ -66,10 +66,13 @@ function renderItemDescription(item) {
     return `<div class="card detail-section item-description-card"><h2>${escapeHtml(ui('description', 'Description'))}</h2>${description ? `<p class="item-description-text">${escapeHtml(description)}</p>` : ''}${units ? `<div class="item-unit-list">${units}</div>` : ''}</div>`;
 }
 
-function itemCraftRow(key, quantity) {
+function itemCraftRow(key, quantity, referenceType = 'item') {
     const amount = Number(quantity);
     const quantityText = Number.isFinite(amount) && amount > 1 ? `<span class="item-craft-quantity">×${escapeHtml(amount)}</span>` : '';
-    return `<div class="item-craft-row">${itemReferenceLink(key)}${quantityText}</div>`;
+    const reference = referenceType === 'equipment' && typeof equipmentReferenceLink === 'function'
+        ? equipmentReferenceLink(key)
+        : itemReferenceLink(key);
+    return `<div class="item-craft-row">${reference}${quantityText}</div>`;
 }
 
 function renderCraftedFrom(item) {
@@ -85,18 +88,24 @@ function craftsIntoForItem(itemKey) {
     wiki.items.forEach(candidate => {
         const materials = Array.isArray(candidate.CraftMaterials) ? candidate.CraftMaterials : [];
         materials.forEach(material => {
-            if (material.ItemKey === itemKey) {
-                results.push({ ItemKey: candidate.ItemKey, Quantity: material.Quantity });
-            }
+            if (material.ItemKey === itemKey) results.push({ Type: 'item', Key: candidate.ItemKey, Quantity: material.Quantity });
         });
     });
+    if (Array.isArray(wiki.equipments)) {
+        wiki.equipments.forEach(candidate => {
+            const materials = Array.isArray(candidate.CraftMaterials) ? candidate.CraftMaterials : [];
+            materials.forEach(material => {
+                if (material.Key === itemKey) results.push({ Type: 'equipment', Key: candidate.EquipmentKey, Quantity: material.Quantity });
+            });
+        });
+    }
     return results;
 }
 
 function renderCraftsInto(item) {
     const results = craftsIntoForItem(item.ItemKey);
     const content = results.length
-        ? results.map(result => itemCraftRow(result.ItemKey, result.Quantity)).join('')
+        ? results.map(result => itemCraftRow(result.Key, result.Quantity, result.Type)).join('')
         : `<div class="item-none">${escapeHtml(ui('none', 'None'))}</div>`;
     return `<div class="card detail-section item-crafts-into"><h2>${escapeHtml(ui('craftsInto', 'Crafts Into'))}</h2><div class="item-craft-list">${content}</div></div>`;
 }
