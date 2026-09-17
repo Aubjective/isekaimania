@@ -1,0 +1,9 @@
+.equipment-card:hover { transform: translateY(-6px); }
+.equipment-description-text { margin: 0; color: #e7f1ff; line-height: 1.65; }
+.equipment-unit-list { margin-top: 14px; display: grid; gap: 8px; }
+.equipment-unit-line { color: #cfe4ff; line-height: 1.5; }
+.equipment-unit-separator { color: #7fcfff; padding: 0 0.22em; }
+.equipment-craft-list { display: grid; gap: 8px; }
+.equipment-craft-row { display: flex; align-items: baseline; gap: 0.3em; flex-wrap: wrap; }
+.equipment-craft-quantity { color: #ffd700; font-weight: 700; white-space: nowrap; }
+.equipment-none, .equipment-unresolved-ref { color: #9fb5d4; }
