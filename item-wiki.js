@@ -66,19 +66,26 @@ function renderItemDescription(item) {
     return `<div class="card detail-section item-description-card"><h2>${escapeHtml(ui('description', 'Description'))}</h2>${description ? `<p class="item-description-text">${escapeHtml(description)}</p>` : ''}${units ? `<div class="item-unit-list">${units}</div>` : ''}</div>`;
 }
 
-function itemCraftRow(key, quantity, referenceType = 'item') {
+function itemCraftReference(key, referenceType = 'item') {
+    if (referenceType === 'equipment' && typeof equipmentReferenceLink === 'function') return equipmentReferenceLink(key);
+    return itemReferenceLink(key);
+}
+
+function itemRecipePart(key, quantity, referenceType = 'item') {
     const amount = Number(quantity);
-    const quantityText = Number.isFinite(amount) && amount > 1 ? `<span class="item-craft-quantity">×${escapeHtml(amount)}</span>` : '';
-    const reference = referenceType === 'equipment' && typeof equipmentReferenceLink === 'function'
-        ? equipmentReferenceLink(key)
-        : itemReferenceLink(key);
-    return `<div class="item-craft-row">${reference}${quantityText}</div>`;
+    const quantityText = Number.isFinite(amount) && amount > 1 ? `<span class="item-craft-quantity"> ×${escapeHtml(amount)}</span>` : '';
+    return `${itemCraftReference(key, referenceType)}${quantityText}`;
+}
+
+function renderItemRecipeLine(materials, resultKey, resultType = 'item') {
+    const ingredients = materials.map(material => itemRecipePart(material.Key, material.Quantity, material.Type)).join('<span class="item-recipe-plus"> + </span>');
+    return `<div class="item-craft-row item-recipe-line">${ingredients}<span class="item-recipe-arrow"> → </span>${itemCraftReference(resultKey, resultType)}</div>`;
 }
 
 function renderCraftedFrom(item) {
     const materials = Array.isArray(item.CraftMaterials) ? item.CraftMaterials : [];
     const content = materials.length
-        ? materials.map(material => itemCraftRow(material.ItemKey, material.Quantity)).join('')
+        ? renderItemRecipeLine(materials.map(material => ({ Key: material.ItemKey, Quantity: material.Quantity, Type: 'item' })), item.ItemKey, 'item')
         : `<div class="item-none">${escapeHtml(ui('none', 'None'))}</div>`;
     return `<div class="card detail-section item-crafted-from"><h2>${escapeHtml(ui('craftedFrom', 'Crafted From'))}</h2><div class="item-craft-list">${content}</div></div>`;
 }
@@ -87,16 +94,28 @@ function craftsIntoForItem(itemKey) {
     const results = [];
     wiki.items.forEach(candidate => {
         const materials = Array.isArray(candidate.CraftMaterials) ? candidate.CraftMaterials : [];
-        materials.forEach(material => {
-            if (material.ItemKey === itemKey) results.push({ Type: 'item', Key: candidate.ItemKey, Quantity: material.Quantity });
-        });
+        if (materials.some(material => material.ItemKey === itemKey)) {
+            results.push({
+                Type: 'item',
+                Key: candidate.ItemKey,
+                Materials: materials.map(material => ({ Key: material.ItemKey, Quantity: material.Quantity, Type: 'item' }))
+            });
+        }
     });
     if (Array.isArray(wiki.equipments)) {
         wiki.equipments.forEach(candidate => {
             const materials = Array.isArray(candidate.CraftMaterials) ? candidate.CraftMaterials : [];
-            materials.forEach(material => {
-                if (material.Key === itemKey) results.push({ Type: 'equipment', Key: candidate.EquipmentKey, Quantity: material.Quantity });
-            });
+            if (materials.some(material => material.Key === itemKey)) {
+                results.push({
+                    Type: 'equipment',
+                    Key: candidate.EquipmentKey,
+                    Materials: materials.map(material => ({
+                        Key: material.Key,
+                        Quantity: material.Quantity,
+                        Type: typeof equipmentByKey === 'function' && equipmentByKey(material.Key) ? 'equipment' : 'item'
+                    }))
+                });
+            }
         });
     }
     return results;
@@ -105,7 +124,7 @@ function craftsIntoForItem(itemKey) {
 function renderCraftsInto(item) {
     const results = craftsIntoForItem(item.ItemKey);
     const content = results.length
-        ? results.map(result => itemCraftRow(result.Key, result.Quantity, result.Type)).join('')
+        ? results.map(result => renderItemRecipeLine(result.Materials, result.Key, result.Type)).join('')
         : `<div class="item-none">${escapeHtml(ui('none', 'None'))}</div>`;
     return `<div class="card detail-section item-crafts-into"><h2>${escapeHtml(ui('craftsInto', 'Crafts Into'))}</h2><div class="item-craft-list">${content}</div></div>`;
 }
