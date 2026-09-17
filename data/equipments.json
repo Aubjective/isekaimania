@@ -1,0 +1,12 @@
+{
+  "parts": [
+    "data/equipments/001-050.json",
+    "data/equipments/051-100.json",
+    "data/equipments/101-126.json"
+  ],
+  "localisationParts": [
+    "data/equipments/localisation/001-050.json",
+    "data/equipments/localisation/051-100.json",
+    "data/equipments/localisation/101-126.json"
+  ]
+}
