@@ -1,0 +1,9 @@
+.item-card:hover { transform: translateY(-6px); }
+.item-description-text { margin: 0; color: #e7f1ff; line-height: 1.65; }
+.item-unit-list { margin-top: 14px; display: grid; gap: 8px; }
+.item-unit-line { color: #cfe4ff; line-height: 1.5; }
+.item-unit-separator { color: #7fcfff; padding: 0 0.22em; }
+.item-craft-list { display: grid; gap: 8px; }
+.item-craft-row { display: flex; align-items: baseline; gap: 0.3em; flex-wrap: wrap; }
+.item-craft-quantity { color: #ffd700; font-weight: 700; white-space: nowrap; }
+.item-none { color: #9fb5d4; }
