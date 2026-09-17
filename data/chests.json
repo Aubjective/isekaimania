@@ -1,11 +1,15 @@
 {
   "parts": [
-    "data/chests/001-050.json",
-    "data/chests/051-081.json"
+    "data/chests/001-020.json",
+    "data/chests/021-040.json",
+    "data/chests/041-060.json",
+    "data/chests/061-081.json"
   ],
   "localisationParts": [
-    "data/chests/localisation/001-050.json",
-    "data/chests/localisation/051-081.json"
+    "data/chests/localisation/001-020.json",
+    "data/chests/localisation/021-040.json",
+    "data/chests/localisation/041-060.json",
+    "data/chests/localisation/061-081.json"
   ],
   "lootPoolChances": {
     "Common": 40,
