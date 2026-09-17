@@ -1,0 +1,14 @@
+{
+  "parts": [
+    "data/items/001-050.json",
+    "data/items/051-100.json",
+    "data/items/101-150.json",
+    "data/items/151-187.json"
+  ],
+  "localisationParts": [
+    "data/items/localisation/001-050.json",
+    "data/items/localisation/051-100.json",
+    "data/items/localisation/101-150.json",
+    "data/items/localisation/151-187.json"
+  ]
+}
