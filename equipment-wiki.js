@@ -71,16 +71,21 @@ function equipmentCraftReference(key) {
     return `<span class="equipment-unresolved-ref">${escapeHtml(key)}</span>`;
 }
 
-function equipmentCraftRow(key, quantity) {
+function equipmentRecipePart(key, quantity) {
     const amount = Number(quantity);
-    const quantityText = Number.isFinite(amount) && amount > 1 ? `<span class="equipment-craft-quantity">×${escapeHtml(amount)}</span>` : '';
-    return `<div class="equipment-craft-row">${equipmentCraftReference(key)}${quantityText}</div>`;
+    const quantityText = Number.isFinite(amount) && amount > 1 ? `<span class="equipment-craft-quantity"> ×${escapeHtml(amount)}</span>` : '';
+    return `${equipmentCraftReference(key)}${quantityText}`;
+}
+
+function renderEquipmentRecipeLine(materials, resultKey) {
+    const ingredients = materials.map(material => equipmentRecipePart(material.Key, material.Quantity)).join('<span class="equipment-recipe-plus"> + </span>');
+    return `<div class="equipment-craft-row equipment-recipe-line">${ingredients}<span class="equipment-recipe-arrow"> → </span>${equipmentReferenceLink(resultKey)}</div>`;
 }
 
 function renderEquipmentCraftedFrom(equipment) {
     const materials = Array.isArray(equipment.CraftMaterials) ? equipment.CraftMaterials : [];
     const content = materials.length
-        ? materials.map(material => equipmentCraftRow(material.Key, material.Quantity)).join('')
+        ? renderEquipmentRecipeLine(materials, equipment.EquipmentKey)
         : `<div class="equipment-none">${escapeHtml(ui('none', 'None'))}</div>`;
     return `<div class="card detail-section"><h2>${escapeHtml(ui('craftedFrom', 'Crafted From'))}</h2><div class="equipment-craft-list">${content}</div></div>`;
 }
@@ -88,9 +93,10 @@ function renderEquipmentCraftedFrom(equipment) {
 function craftsIntoForEquipment(equipmentKey) {
     const results = [];
     wiki.equipments.forEach(candidate => {
-        (candidate.CraftMaterials || []).forEach(material => {
-            if (material.Key === equipmentKey) results.push({ EquipmentKey: candidate.EquipmentKey, Quantity: material.Quantity });
-        });
+        const materials = Array.isArray(candidate.CraftMaterials) ? candidate.CraftMaterials : [];
+        if (materials.some(material => material.Key === equipmentKey)) {
+            results.push({ EquipmentKey: candidate.EquipmentKey, Materials: materials });
+        }
     });
     return results;
 }
@@ -98,7 +104,7 @@ function craftsIntoForEquipment(equipmentKey) {
 function renderEquipmentCraftsInto(equipment) {
     const results = craftsIntoForEquipment(equipment.EquipmentKey);
     const content = results.length
-        ? results.map(result => equipmentCraftRow(result.EquipmentKey, result.Quantity)).join('')
+        ? results.map(result => renderEquipmentRecipeLine(result.Materials, result.EquipmentKey)).join('')
         : `<div class="equipment-none">${escapeHtml(ui('none', 'None'))}</div>`;
     return `<div class="card detail-section"><h2>${escapeHtml(ui('craftsInto', 'Crafts Into'))}</h2><div class="equipment-craft-list">${content}</div></div>`;
 }
