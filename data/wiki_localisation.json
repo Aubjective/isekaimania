@@ -68,7 +68,14 @@
       "traitComingSoon": "Trait details will be connected through localisation data.",
       "skillComingSoon": "Skill details will be connected when skill pages are added.",
       "itemComingSoon": "Item details will be connected when item pages are added.",
-      "equipmentComingSoon": "Equipment details will be connected when equipment pages are added."
+      "equipmentComingSoon": "Equipment details will be connected when equipment pages are added.",
+      "chests": "Chests",
+      "chest": "Chest",
+      "expGain": "EXP Gain",
+      "coinsGain": "Coins Gain",
+      "fixedItems": "Fixed Items",
+      "randomCount": "Random Count",
+      "chestLootNote": "Random rewards are selected from the rarity pools below."
     },
     "home": {
       "title": "Isekaimania - Overworld RPG",
