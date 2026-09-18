@@ -1,0 +1,9 @@
+.chest-card:hover { transform: translateY(-6px); }
+.chest-reward-entry { display: inline-flex; align-items: baseline; gap: 0.22em; flex-wrap: wrap; }
+.chest-reward-quantity { color: #ffd700; font-weight: 700; white-space: nowrap; }
+.chest-reward-separator { color: #7fcfff; padding: 0 0.24em; }
+.chest-loot-note { margin: 0 0 14px; color: #9fb5d4; line-height: 1.55; }
+.chest-loot-list { display: grid; gap: 12px; }
+.chest-loot-tier { padding: 12px 14px; border: 1px solid rgba(127, 207, 255, 0.16); border-radius: 10px; background: rgba(8, 20, 38, 0.38); }
+.chest-loot-heading { margin-bottom: 7px; }
+.chest-loot-rewards { color: #cfe4ff; line-height: 1.65; }
