@@ -1,0 +1,9 @@
+.passive-skill-card:hover { transform: translateY(-6px); }
+.passive-skill-unit { padding: 12px 0; border-top: 1px solid rgba(127, 207, 255, 0.14); }
+.passive-skill-unit:first-of-type { border-top: 0; padding-top: 0; }
+.passive-skill-unit:last-of-type { padding-bottom: 0; }
+.passive-skill-unit-label { margin-bottom: 6px; color: #ffd700; font-weight: 700; }
+.passive-skill-unit-line { color: #cfe4ff; line-height: 1.6; }
+.passive-skill-unit-separator, .passive-skill-ref-separator { color: #7fcfff; padding: 0 0.24em; }
+.passive-skill-none { color: #9fb5d4; }
+.passive-skill-used-by .info-value { line-height: 1.65; }
