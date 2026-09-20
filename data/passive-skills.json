@@ -1,0 +1,15 @@
+{
+  "parts": [
+    "data/passive-skills/001-025.json",
+    "data/passive-skills/026-050.json",
+    "data/passive-skills/051-100.json",
+    "data/passive-skills/101-132.json"
+  ],
+  "localisationParts": [
+    "data/passive-skills/localisation/001-025.json",
+    "data/passive-skills/localisation/026-050.json",
+    "data/passive-skills/localisation/051-100.json",
+    "data/passive-skills/localisation/101-132.json"
+  ],
+  "descriptionLocalisation": "data/active-skills/description-localisation.json"
+}
