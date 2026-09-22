@@ -29,9 +29,9 @@ main { flex: 1; padding: 30px 40px; min-width: 0; }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; align-items: stretch; }
 .card { background: var(--card); padding: 26px; border-radius: 16px; border: 2px solid #334477; box-shadow: 0 6px 20px rgba(0,0,0,0.4); transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease; cursor: pointer; position: relative; overflow: hidden; isolation: isolate; }
 .card > * { position: relative; z-index: 2; }
-.card::before { content: ''; position: absolute; inset: -30%; border-radius: 0; background: linear-gradient(115deg, rgba(255,214,102,0.08) 0%, rgba(255,214,102,0.34) 24%, rgba(120,235,255,0.48) 50%, rgba(255,214,102,0.34) 76%, rgba(120,235,255,0.10) 100%); background-size: 230% 230%; z-index: 0; opacity: 0; filter: blur(6px) saturate(1.05); pointer-events: none; transform: rotate(-6deg); }
-.card:hover::before, .card.is-warp-active::before { opacity: 0.82; animation: isekaiWash 2.6s linear infinite; }
-.card:hover { border-color: rgba(255,226,150,0.92); box-shadow: 0 12px 30px rgba(0,0,0,0.48), 0 0 24px rgba(255,214,102,0.22), 0 0 20px rgba(120,235,255,0.18); }
+.card::before { content: ''; position: absolute; inset: -30%; border-radius: 0; background: linear-gradient(115deg, rgba(255,210,31,0.08) 0%, rgba(255,210,31,0.58) 28%, rgba(84,255,184,0.72) 50%, rgba(255,210,31,0.58) 72%, rgba(84,255,184,0.08) 100%); background-size: 230% 230%; z-index: 0; opacity: 0; filter: blur(6px) saturate(1.22); pointer-events: none; transform: rotate(-6deg); }
+.card:hover::before, .card.is-warp-active::before { opacity: 0.90; animation: isekaiWash 2.6s linear infinite; }
+.card:hover { border-color: rgba(255,226,92,0.95); box-shadow: 0 12px 30px rgba(0,0,0,0.48), 0 0 30px rgba(255,210,31,0.34), 0 0 26px rgba(84,255,184,0.30); }
 .character-card:hover, .job-card:hover { transform: translateY(-6px); }
 @keyframes isekaiWash { 0% { background-position: 180% 40%; transform: rotate(-6deg) translate3d(-4%,0,0); } 50% { background-position: 20% 60%; transform: rotate(-6deg) translate3d(4%,-1%,0); } 100% { background-position: -140% 40%; transform: rotate(-6deg) translate3d(-4%,0,0); } }
 .info-list { display: flex; flex-direction: column; gap: var(--row-gap); }
