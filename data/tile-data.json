@@ -1,0 +1,12 @@
+{
+  "parts": [
+    "data/tile-data/001-050.json",
+    "data/tile-data/051-100.json",
+    "data/tile-data/101-140.json"
+  ],
+  "localisationParts": [
+    "data/tile-data/localisation/001-050.json",
+    "data/tile-data/localisation/051-100.json",
+    "data/tile-data/localisation/101-140.json"
+  ]
+}
