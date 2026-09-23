@@ -1,8 +1,19 @@
 {
   "parts": [
-    "data/tile-data/001-050.json",
-    "data/tile-data/051-100.json",
-    "data/tile-data/101-140.json"
+    "data/tile-data/001-010.json",
+    "data/tile-data/011-020.json",
+    "data/tile-data/021-030.json",
+    "data/tile-data/031-040.json",
+    "data/tile-data/041-050.json",
+    "data/tile-data/051-060.json",
+    "data/tile-data/061-070.json",
+    "data/tile-data/071-080.json",
+    "data/tile-data/081-090.json",
+    "data/tile-data/091-100.json",
+    "data/tile-data/101-110.json",
+    "data/tile-data/111-120.json",
+    "data/tile-data/121-130.json",
+    "data/tile-data/131-140.json"
   ],
   "localisationParts": [
     "data/tile-data/localisation/001-050.json",
