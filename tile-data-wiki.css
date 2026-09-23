@@ -1,0 +1,32 @@
+.tile-data-card .info-value,
+.tile-data-card .info-label {
+    min-width: 0;
+}
+
+.tile-reference-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 0;
+}
+
+.tile-ref-separator {
+    margin: 0 6px;
+    opacity: 0.55;
+}
+
+.tile-empty-slot,
+.tile-none {
+    opacity: 0.62;
+}
+
+.tile-data-title-card .entity-image-slot img {
+    image-rendering: auto;
+}
+
+.tile-enemy-teams .info-value,
+.tile-loots .info-value,
+.tile-merchant .info-value,
+.tile-more-info .info-value {
+    line-height: 1.7;
+}
