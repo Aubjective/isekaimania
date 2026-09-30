@@ -25,7 +25,7 @@ function renderTileDataImage(tile, name, detail = false) {
     const key = tile.SpriteKey || tile.TileDataKey;
     const sizeClass = detail ? 'entity-image-detail' : 'entity-image-list';
     const loading = detail ? 'eager' : 'lazy';
-    return `<div class="entity-image-slot ${sizeClass}"><img src="tilesprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" loading="${loading}" decoding="async" onerror="this.style.display='none'"></div>`;
+    return `<div class="entity-image-slot ${sizeClass}"><img src="tiledatasprite/${encodeURIComponent(key)}.png" alt="${escapeHtml(name)}" loading="${loading}" decoding="async" onerror="this.style.display='none'"></div>`;
 }
 
 function tileDataReferenceLink(key) {
