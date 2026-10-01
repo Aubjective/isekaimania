@@ -17,6 +17,7 @@ function tileAreaValue(value) {
     return value === null || value === undefined || value === '' ? `<span class="tile-none">${escapeHtml(ui('none', 'None'))}</span>` : escapeHtml(value);
 }
 
+// TileData identity controls localisation/click-through. SpriteKey controls image and footprint.
 function tileAreaSpriteMeta(tileKey) {
     const tile = typeof tileDataByKey === 'function' ? tileDataByKey(tileKey) : null;
     const spriteKey = tile && tile.SpriteKey ? tile.SpriteKey : tileKey;
@@ -31,7 +32,8 @@ function tileAreaSpriteMeta(tileKey) {
     };
 }
 
-function tileAreaFootprintFits(area, row, col, tileKey, width, height) {
+// A multi-cell footprint belongs to the reusable sprite, not the TileData display/name key.
+function tileAreaFootprintFits(area, row, col, spriteKey, width, height) {
     if (row + height > 12 || col + width > 12) return false;
     const grid = Array.isArray(area.Grid) ? area.Grid : [];
     const keys = Array.isArray(area.Tiles) ? area.Tiles : [];
@@ -41,7 +43,7 @@ function tileAreaFootprintFits(area, row, col, tileKey, width, height) {
             if (!grid[r]) return false;
             const tileIndex = grid[r][c];
             const currentTileKey = tileIndex === null || tileIndex === undefined ? '' : keys[tileIndex] || '';
-            if (currentTileKey !== tileKey) return false;
+            if (!currentTileKey || tileAreaSpriteMeta(currentTileKey).spriteKey !== spriteKey) return false;
         }
     }
     return true;
@@ -60,7 +62,7 @@ function renderTileAreaMap(area) {
             if (!key) continue;
 
             const meta = tileAreaSpriteMeta(key);
-            const canSpan = tileAreaFootprintFits(area, row, col, key, meta.width, meta.height);
+            const canSpan = tileAreaFootprintFits(area, row, col, meta.spriteKey, meta.width, meta.height);
             const width = canSpan ? meta.width : 1;
             const height = canSpan ? meta.height : 1;
 
