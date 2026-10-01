@@ -6,7 +6,7 @@
   {"SpriteKey":"SeashorePink","File":"SeashorePink.png","Area":"N/A","Width":1,"Height":1},
   {"SpriteKey":"Sea","File":"Sea.png","Area":"N/A","Width":1,"Height":1},
   {"SpriteKey":"DeepSea","File":"DeepSea.png","Area":"N/A","Width":1,"Height":1},
-  {"SpriteKey":"GrassLandA","File":"GrassLandA.png","Area":"2×2","Width":2,"Height":2},
+  {"SpriteKey":"GrassLandA","File":"GrassLandA.png","Area":"N/A","Width":1,"Height":1},
   {"SpriteKey":"GrassLandB","File":"GrassLandB.png","Area":"2×2","Width":2,"Height":2},
   {"SpriteKey":"GrassLandC","File":"GrassLandC.png","Area":"2×2","Width":2,"Height":2},
   {"SpriteKey":"MudLand","File":"MudLand.png","Area":"2×2","Width":2,"Height":2},
