@@ -1,0 +1,69 @@
+.tile-area-map-wrap {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.35rem;
+}
+
+.tile-area-map {
+    --tile-area-cell-size: clamp(24px, 6vw, 48px);
+    display: grid;
+    grid-template-columns: repeat(12, var(--tile-area-cell-size));
+    grid-template-rows: repeat(12, var(--tile-area-cell-size));
+    width: max-content;
+    min-width: calc(var(--tile-area-cell-size) * 12);
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tile-area-cell {
+    position: relative;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: transparent;
+    cursor: default;
+}
+
+.tile-area-cell-link {
+    cursor: pointer;
+}
+
+.tile-area-cell img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+}
+
+.tile-area-cell-link:hover,
+.tile-area-cell-link:focus-visible {
+    z-index: 2;
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+}
+
+.tile-area-fallback {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    font-size: clamp(5px, 1vw, 9px);
+    line-height: 1.05;
+    text-align: center;
+    overflow: hidden;
+    word-break: break-word;
+    opacity: 0.55;
+}
+
+.tile-area-map-card {
+    overflow: hidden;
+}
