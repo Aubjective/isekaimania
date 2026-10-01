@@ -1,0 +1,12 @@
+[
+  {"SpriteKey":"DeepSea","File":"DeepSea.png","Width":1,"Height":1},
+  {"SpriteKey":"GrassLandA","File":"GrassLandA.png","Width":1,"Height":1},
+  {"SpriteKey":"GrassLandB","File":"GrassLandB.png","Width":1,"Height":1},
+  {"SpriteKey":"Sea","File":"Sea.png","Width":1,"Height":1},
+  {"SpriteKey":"Seashore","File":"Seashore.png","Width":1,"Height":1},
+  {"SpriteKey":"SeashoreBlue","File":"SeashoreBlue.png","Width":1,"Height":1},
+  {"SpriteKey":"SeashoreGreen","File":"SeashoreGreen.png","Width":1,"Height":1},
+  {"SpriteKey":"SeashorePink","File":"SeashorePink.png","Width":1,"Height":1},
+  {"SpriteKey":"SeashoreRed","File":"SeashoreRed.png","Width":1,"Height":1},
+  {"SpriteKey":"Town","File":"Town.png","Width":2,"Height":2}
+]
