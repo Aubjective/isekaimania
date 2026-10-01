@@ -31,7 +31,7 @@ function tileAreaSpriteMeta(tileKey) {
     };
 }
 
-function tileAreaFootprintFits(area, row, col, spriteKey, width, height) {
+function tileAreaFootprintFits(area, row, col, tileKey, width, height) {
     if (row + height > 12 || col + width > 12) return false;
     const grid = Array.isArray(area.Grid) ? area.Grid : [];
     const keys = Array.isArray(area.Tiles) ? area.Tiles : [];
@@ -40,8 +40,8 @@ function tileAreaFootprintFits(area, row, col, spriteKey, width, height) {
         for (let c = col; c < col + width; c += 1) {
             if (!grid[r]) return false;
             const tileIndex = grid[r][c];
-            const tileKey = tileIndex === null || tileIndex === undefined ? '' : keys[tileIndex] || '';
-            if (!tileKey || tileAreaSpriteMeta(tileKey).spriteKey !== spriteKey) return false;
+            const currentTileKey = tileIndex === null || tileIndex === undefined ? '' : keys[tileIndex] || '';
+            if (currentTileKey !== tileKey) return false;
         }
     }
     return true;
@@ -60,7 +60,7 @@ function renderTileAreaMap(area) {
             if (!key) continue;
 
             const meta = tileAreaSpriteMeta(key);
-            const canSpan = tileAreaFootprintFits(area, row, col, meta.spriteKey, meta.width, meta.height);
+            const canSpan = tileAreaFootprintFits(area, row, col, key, meta.width, meta.height);
             const width = canSpan ? meta.width : 1;
             const height = canSpan ? meta.height : 1;
 
