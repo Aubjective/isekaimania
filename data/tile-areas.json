@@ -1,0 +1,12 @@
+{
+  "parts": [
+    "data/tile-areas/001-010.json",
+    "data/tile-areas/011-020.json",
+    "data/tile-areas/021-030.json",
+    "data/tile-areas/031-040.json",
+    "data/tile-areas/041-050.json",
+    "data/tile-areas/051-060.json",
+    "data/tile-areas/061-070.json",
+    "data/tile-areas/071-077.json"
+  ]
+}
