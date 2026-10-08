@@ -104,7 +104,10 @@
       "no": "No",
       "enemyTeam": "Enemy Team",
       "teamId": "Team ID",
-      "members": "Members"
+      "members": "Members",
+      "tileAreaLocationUniversal": "Universal",
+      "tileAreaLocationOuter": "Outer",
+      "tileAreaLocationInner": "Inner"
     },
     "home": {
       "title": "Isekaimania - Overworld RPG",
