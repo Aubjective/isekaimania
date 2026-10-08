@@ -107,7 +107,10 @@
       "members": "Members",
       "tileAreaLocationUniversal": "Universal",
       "tileAreaLocationOuter": "Outer",
-      "tileAreaLocationInner": "Inner"
+      "tileAreaLocationInner": "Inner",
+      "tileAreaLocationUniversalDescription": "Can appear anywhere on the map.",
+      "tileAreaLocationOuterDescription": "Appears along the outside edge of the map.",
+      "tileAreaLocationInnerDescription": "Appears in the inner area of the map."
     },
     "home": {
       "title": "Isekaimania - Overworld RPG",
