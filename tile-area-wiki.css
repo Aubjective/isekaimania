@@ -5,7 +5,7 @@
 }
 
 .tile-area-map {
-    --tile-area-cell-size: clamp(24px, 6vw, 48px);
+    --tile-area-cell-size: min(32px, calc((100vw - 48px) / 12));
     display: grid;
     grid-template-columns: repeat(12, var(--tile-area-cell-size));
     grid-template-rows: repeat(12, var(--tile-area-cell-size));
