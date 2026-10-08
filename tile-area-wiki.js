@@ -17,6 +17,32 @@ function tileAreaValue(value) {
     return value === null || value === undefined || value === '' ? `<span class="tile-none">${escapeHtml(ui('none', 'None'))}</span>` : escapeHtml(value);
 }
 
+// Location codes stay in source data; display text comes from UI localisation.
+const tileAreaLocationMeta = {
+    U: ['tileAreaLocationUniversal', 'Universal', 'tileAreaLocationUniversalDescription', 'Can appear anywhere on the map.'],
+    O: ['tileAreaLocationOuter', 'Outer', 'tileAreaLocationOuterDescription', 'Appears along the outside edge of the map.'],
+    I: ['tileAreaLocationInner', 'Inner', 'tileAreaLocationInnerDescription', 'Appears in the inner area of the map.']
+};
+function tileAreaLocationText(code) {
+    const meta = tileAreaLocationMeta[String(code || '').toUpperCase()];
+    return meta ? ui(meta[0], meta[1]) : code;
+}
+function tileAreaLocationDisplay(code, detail = false) {
+    if (code === null || code === undefined || code === '') return tileAreaValue(code);
+    const meta = tileAreaLocationMeta[String(code).toUpperCase()];
+    const name = escapeHtml(tileAreaLocationText(code));
+    if (!detail || !meta) return name;
+    const description = escapeHtml(ui(meta[2], meta[3]));
+    return `<span class="tile-area-location-help"><button type="button" class="tile-area-location-trigger link" aria-expanded="false" onclick="event.stopPropagation();toggleTileAreaLocationHelp(this)">${name} <span aria-hidden="true">ⓘ</span></button><span class="tile-area-location-tooltip" role="status" hidden>${description}</span></span>`;
+}
+function toggleTileAreaLocationHelp(button) {
+    const tooltip = button.nextElementSibling;
+    const show = tooltip.hidden;
+    document.querySelectorAll('.tile-area-location-tooltip').forEach(el => { el.hidden = true; el.previousElementSibling.setAttribute('aria-expanded', 'false'); });
+    tooltip.hidden = !show;
+    button.setAttribute('aria-expanded', String(show));
+}
+
 // TileData identity controls localisation/click-through. SpriteKey controls image and footprint.
 function tileAreaSpriteMeta(tileKey) {
     const tile = typeof tileDataByKey === 'function' ? tileDataByKey(tileKey) : null;
@@ -109,7 +135,7 @@ function renderTileAreaPreview(area) {
 }
 
 function tileAreaSearchText(area) {
-    return [area.ID, area.Location, area.Type, area.WorldLevel].filter(value => value !== null && value !== undefined).join(' ').toLowerCase();
+    return [area.ID, area.Location, tileAreaLocationText(area.Location), area.Type, area.WorldLevel].filter(value => value !== null && value !== undefined).join(' ').toLowerCase();
 }
 
 function renderTileAreaList() {
@@ -117,7 +143,7 @@ function renderTileAreaList() {
         const id = Number(area.ID);
         const rows = [
             infoRow(ui('tileArea', 'Tile Area'), escapeHtml(id), 'entity-primary-row'),
-            infoRow(ui('location', 'Location'), tileAreaValue(area.Location)),
+            infoRow(ui('location', 'Location'), tileAreaLocationDisplay(area.Location)),
             infoRow(ui('type', 'Type'), tileAreaValue(area.Type)),
             infoRow(ui('worldLevel', 'World Level'), tileAreaValue(area.WorldLevel))
         ].join('');
@@ -134,7 +160,7 @@ function loadTileAreaDetail(id, fromRoute = false) {
 
     const basicInfo = [
         infoRow(ui('tileArea', 'Tile Area'), escapeHtml(area.ID)),
-        infoRow(ui('location', 'Location'), tileAreaValue(area.Location)),
+        infoRow(ui('location', 'Location'), tileAreaLocationDisplay(area.Location, true)),
         infoRow(ui('type', 'Type'), tileAreaValue(area.Type)),
         infoRow(ui('worldLevel', 'World Level'), tileAreaValue(area.WorldLevel))
     ].join('');
