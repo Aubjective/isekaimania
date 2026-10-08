@@ -82,6 +82,32 @@ function renderTileAreaMap(area) {
     return `<div class="tile-area-map-wrap"><div class="tile-area-map" role="grid" aria-label="${escapeHtml(ui('tileAreaMap', 'Tile Area Map'))}">${cells.join('')}</div></div>`;
 }
 
+// Lightweight, non-interactive card preview; uses the same sprite/footprint rules as the detail map.
+function renderTileAreaPreview(area) {
+    const grid = Array.isArray(area.Grid) ? area.Grid : [];
+    const covered = Array.from({ length: 12 }, () => Array(12).fill(false));
+    const cells = [];
+
+    for (let row = 0; row < 12; row += 1) {
+        for (let col = 0; col < 12; col += 1) {
+            if (covered[row][col]) continue;
+            const tileIndex = grid[row] && grid[row][col] !== undefined ? grid[row][col] : null;
+            const key = tileIndex === null || tileIndex === undefined ? '' : (area.Tiles || [])[tileIndex] || '';
+            if (!key) continue;
+
+            const meta = tileAreaSpriteMeta(key);
+            const canSpan = tileAreaFootprintFits(area, row, col, meta.spriteKey, meta.width, meta.height);
+            const width = canSpan ? meta.width : 1;
+            const height = canSpan ? meta.height : 1;
+            for (let r = row; r < row + height; r += 1) {
+                for (let c = col; c < col + width; c += 1) covered[r][c] = true;
+            }
+            cells.push(`<span class="tile-area-preview-cell" style="grid-column:${col + 1} / span ${width};grid-row:${row + 1} / span ${height}"><img src="tiledatasprite/${encodeURIComponent(meta.file)}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></span>`);
+        }
+    }
+    return `<div class="tile-area-preview" aria-hidden="true">${cells.join('')}</div>`;
+}
+
 function tileAreaSearchText(area) {
     return [area.ID, area.Location, area.Type, area.WorldLevel].filter(value => value !== null && value !== undefined).join(' ').toLowerCase();
 }
@@ -95,7 +121,7 @@ function renderTileAreaList() {
             infoRow(ui('type', 'Type'), tileAreaValue(area.Type)),
             infoRow(ui('worldLevel', 'World Level'), tileAreaValue(area.WorldLevel))
         ].join('');
-        return `<article class="card tile-area-card entity-list-card" data-id="${id}" data-search="${escapeHtml(tileAreaSearchText(area))}" onclick="loadTileAreaDetail(this.dataset.id)"><div class="info-list list-info">${rows}</div></article>`;
+        return `<article class="card tile-area-card entity-list-card" data-id="${id}" data-search="${escapeHtml(tileAreaSearchText(area))}" onclick="loadTileAreaDetail(this.dataset.id)"><div class="tile-area-card-preview">${renderTileAreaPreview(area)}</div><div class="info-list list-info">${rows}</div></article>`;
     }).join('');
 
     return `<div class="header-card"><h1>${escapeHtml(ui('tileAreas', 'Tile Areas'))}</h1><p><strong>${wiki.tileAreas.length} ${escapeHtml(ui('entries', 'entries'))}</strong></p><input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}"></div><div class="grid" id="tileAreaGrid">${cards}</div>`;
