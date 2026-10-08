@@ -1,0 +1,84 @@
+{
+  "groupKey": "MainQuestAggressiveGoblins",
+  "questCount": 6,
+  "quests": [
+    {
+      "key": "MainQuestAggressiveGoblinsTheKidnap",
+      "questType": "Main",
+      "questGroup": "MainQuestAggressiveGoblins",
+      "questOrder": 1,
+      "descriptionKey": "MainQuestAggressiveGoblinsTheKidnapDescription",
+      "descriptionVariables": "13-GoblinLandA",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|ReceiveQuest-MainQuestRescueTheLittleSister",
+      "mapGradeLimitation": "D-C",
+      "mainQuestRequireMapArea": "13-14",
+      "mapSizeAvailable": "3-4"
+    },
+    {
+      "key": "MainQuestRescueTheLittleSister",
+      "questType": "Standard",
+      "questGroup": "MainQuestAggressiveGoblins",
+      "questOrder": 2,
+      "descriptionKey": "MainQuestRescueTheLittleSisterDescription",
+      "descriptionVariables": "14-GoblinMountain",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-1500|GainCoin-8000|GainEquipment-Silver Bow-1|ReceiveQuest-MainQuestAggressiveGoblinsTheUnfinishedRescue",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null
+    },
+    {
+      "key": "MainQuestAggressiveGoblinsTheUnfinishedRescue",
+      "questType": "Standard",
+      "questGroup": "MainQuestAggressiveGoblins",
+      "questOrder": 3,
+      "descriptionKey": "MainQuestAggressiveGoblinsTheUnfinishedRescueDescription",
+      "descriptionVariables": "13-BeginnerTownHero",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|ReceiveQuest-MainQuestAggressiveGoblinsSeashoreInfiltration",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null
+    },
+    {
+      "key": "MainQuestAggressiveGoblinsSeashoreInfiltration",
+      "questType": "Standard",
+      "questGroup": "MainQuestAggressiveGoblins",
+      "questOrder": 4,
+      "descriptionKey": "MainQuestAggressiveGoblinsSeashoreInfiltrationDescription",
+      "descriptionVariables": "GoblinCamp-14",
+      "completeCondition": "DefeatDungeonArena-GoblinCamp-1",
+      "completeOutcome": "GainEXP-2000|GainCoin-15000|ReceiveQuest-MainQuestTheKidnapSpeakWithTheLeader",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null
+    },
+    {
+      "key": "MainQuestTheKidnapSpeakWithTheLeader",
+      "questType": "Standard",
+      "questGroup": "MainQuestAggressiveGoblins",
+      "questOrder": 5,
+      "descriptionKey": "MainQuestTheKidnapSpeakWithTheLeaderDescription",
+      "descriptionVariables": "GoblinLandB-14",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|ReceiveQuest-MainQuestAggressiveGoblinsReportBackToTheVillage",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null
+    },
+    {
+      "key": "MainQuestAggressiveGoblinsReportBackToTheVillage",
+      "questType": "Standard",
+      "questGroup": "MainQuestAggressiveGoblins",
+      "questOrder": 6,
+      "descriptionKey": "MainQuestAggressiveGoblinsReportBackToTheVillageDescription",
+      "descriptionVariables": "BeginnerTownHero-13",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-25000|GameOver-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null
+    }
+  ]
+}
