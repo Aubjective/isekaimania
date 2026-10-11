@@ -110,7 +110,16 @@
       "tileAreaLocationInner": "Inner",
       "tileAreaLocationUniversalDescription": "Can appear anywhere on the map.",
       "tileAreaLocationOuterDescription": "Appears along the outside edge of the map.",
-      "tileAreaLocationInnerDescription": "Appears in the inner area of the map."
+      "tileAreaLocationInnerDescription": "Appears in the inner area of the map.",
+      "mainQuests": "Main Quests",
+      "quests": "Quests",
+      "quest": "Quest",
+      "mapGradeLimitation": "Map Grade Limitation",
+      "mainQuestRequireMapArea": "Required Map Areas",
+      "mapSizeAvailable": "Map Size Available",
+      "getFragment": "Get Fragment",
+      "completeCondition": "Completion Requirements",
+      "completeOutcome": "Completion Outcome"
     },
     "home": {
       "title": "Isekaimania - Overworld RPG",
