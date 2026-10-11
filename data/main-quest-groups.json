@@ -1,0 +1,77 @@
+[
+  {
+    "key": "MainQuestAggressiveGoblins",
+    "questCount": 6,
+    "file": "MainQuestAggressiveGoblins.json"
+  },
+  {
+    "key": "MainQuestBaronMabonTheSilentSignal",
+    "questCount": 5,
+    "file": "MainQuestBaronMabonTheSilentSignal.json"
+  },
+  {
+    "key": "MainQuestCockatriceTheRestlessRooster",
+    "questCount": 8,
+    "file": "MainQuestCockatriceTheRestlessRooster.json"
+  },
+  {
+    "key": "MainQuestEarthGolemTheShiftingFoundation",
+    "questCount": 5,
+    "file": "MainQuestEarthGolemTheShiftingFoundation.json"
+  },
+  {
+    "key": "MainQuestFireGolemTheBurningMountain",
+    "questCount": 5,
+    "file": "MainQuestFireGolemTheBurningMountain.json"
+  },
+  {
+    "key": "MainQuestFurbyRadiantSakuraGrove",
+    "questCount": 3,
+    "file": "MainQuestFurbyRadiantSakuraGrove.json"
+  },
+  {
+    "key": "MainQuestIceGolemTheSilentGlacier",
+    "questCount": 6,
+    "file": "MainQuestIceGolemTheSilentGlacier.json"
+  },
+  {
+    "key": "MainQuestLuffbyTheBlockedPath",
+    "questCount": 3,
+    "file": "MainQuestLuffbyTheBlockedPath.json"
+  },
+  {
+    "key": "MainQuestNatureGolemTheForestThatRemembers",
+    "questCount": 6,
+    "file": "MainQuestNatureGolemTheForestThatRemembers.json"
+  },
+  {
+    "key": "MainQuestPirateStoryReclaimFromThePirates",
+    "questCount": 6,
+    "file": "MainQuestPirateStoryReclaimFromThePirates.json"
+  },
+  {
+    "key": "MainQuestSlimeStoryTheGelatinousInvasion",
+    "questCount": 5,
+    "file": "MainQuestSlimeStoryTheGelatinousInvasion.json"
+  },
+  {
+    "key": "MainQuestTheElementalEquilibrium",
+    "questCount": 10,
+    "file": "MainQuestTheElementalEquilibrium.json"
+  },
+  {
+    "key": "MainQuestThunderGolemTheStormWithoutNorth",
+    "questCount": 5,
+    "file": "MainQuestThunderGolemTheStormWithoutNorth.json"
+  },
+  {
+    "key": "MainQuestTutorial",
+    "questCount": 4,
+    "file": "MainQuestTutorial.json"
+  },
+  {
+    "key": "MainQuestWindGolemTheBrokenSkyway",
+    "questCount": 5,
+    "file": "MainQuestWindGolemTheBrokenSkyway.json"
+  }
+]
