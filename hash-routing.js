@@ -13,6 +13,7 @@
         ['chests', 'Chests'],
         ['tiles', 'TileData'],
         ['tileareas', 'TileAreas'],
+        ['mainquests', 'MainQuests'],
         ['enemyteams', 'Monsters']
     ]);
 
