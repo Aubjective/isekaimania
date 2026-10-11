@@ -58,6 +58,21 @@ function mainQuestImage(quest) {
     const label = mainQuestReference(key);
     return '<div class="main-quest-image"><img src="' + folder + '/' + encodeURIComponent(key) + '.png" alt="" loading="lazy" onerror="this.style.display=\'none\'">' + label + '</div>';
 }
+function mainQuestGroupSprite(group, detail = false) {
+    const quests = (group.quests || []).slice().sort((a,b) => Number(a.questorder)-Number(b.questorder));
+    const quest = quests.find(q => q.mainQuestImage && q.mainQuestImageType);
+    if (!quest) return '';
+    const type = String(quest.mainQuestImageType).toLowerCase();
+    const folder = {monster:'monstersprite',item:'itemsprite',equipment:'equipmentsprite',chest:'chestsprite'}[type];
+    if (!folder) return '';
+    const key = quest.mainQuestImage;
+    const record = type === 'monster' && Array.isArray(wiki.monsters) ? wiki.monsters.find(m => m.MonsterKey === key) :
+        type === 'item' && typeof itemByKey === 'function' ? itemByKey(key) :
+        type === 'equipment' && typeof equipmentByKey === 'function' ? equipmentByKey(key) :
+        type === 'chest' && typeof chestByKey === 'function' ? chestByKey(key) : null;
+    const sprite = record && record.SpriteKey ? record.SpriteKey : key;
+    return '<div class="main-quest-hero-image ' + (detail ? 'main-quest-hero-detail' : 'main-quest-hero-list') + '"><img src="' + folder + '/' + encodeURIComponent(sprite) + '.png" alt="" loading="lazy" onerror="this.style.display=\'none\'"></div>';
+}
 function mainQuestQuestCard(q) {
     const title = mainQuestName(q.key) || ui('quest','Quest');
     const info = [
@@ -76,7 +91,7 @@ function mainQuestQuestCard(q) {
     return '<article class="card detail-section main-quest-entry" id="quest-' + encodeURIComponent(q.key) + '"><h2>' + escapeHtml(ui('quest','Quest')) + ' ' + escapeHtml(q.questorder) + ': ' + escapeHtml(title) + '</h2>' + mainQuestImage(q) + (info ? '<h3>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h3><div class="info-list">' + info + '</div>' : '') + (description ? '<h3>' + escapeHtml(ui('description','Description')) + '</h3><p>' + localizedDescription + '</p>' : '') + (q.completeCondition ? '<h3>' + escapeHtml(ui('completeCondition','Completion Requirements')) + '</h3><div>' + mainQuestTokens(q.completeCondition) + '</div>' : '') + (q.completeOutcome ? '<h3>' + escapeHtml(ui('completeOutcome','Completion Outcome')) + '</h3><div>' + mainQuestTokens(q.completeOutcome) + '</div>' : '') + '</article>';
 }
 function renderMainQuestList() {
-    const cards = wiki.mainQuestGroups.map(g => '<article class="card entity-list-card main-quest-list-card" data-search="' + escapeHtml(mainQuestName(g.key).toLowerCase()) + '" onclick="loadMainQuestDetail(this.dataset.key)" data-key="' + escapeHtml(g.key) + '"><h3>' + escapeHtml(mainQuestName(g.key) || ui('mainQuests','Main Quests')) + '</h3><p>' + escapeHtml(g.questCount) + ' ' + escapeHtml(ui('quests','Quests')) + '</p></article>').join('');
+    const cards = wiki.mainQuestGroups.map(g => '<article class="card entity-list-card main-quest-list-card" data-search="' + escapeHtml(mainQuestName(g.key).toLowerCase()) + '" onclick="loadMainQuestDetail(this.dataset.key)" data-key="' + escapeHtml(g.key) + '">' + mainQuestGroupSprite(g) + '<h3>' + escapeHtml(mainQuestName(g.key) || ui('mainQuests','Main Quests')) + '</h3><p>' + escapeHtml(g.questCount) + ' ' + escapeHtml(ui('quests','Quests')) + '</p></article>').join('');
     return '<div class="header-card"><h1>' + escapeHtml(ui('mainQuests','Main Quests')) + '</h1><p>' + wiki.mainQuestGroups.length + ' ' + escapeHtml(ui('entries','entries')) + '</p><input type="text" id="searchInput" class="search-input" placeholder="' + escapeHtml(ui('search','Search...')) + '"></div><div class="grid">' + cards + '</div>';
 }
 function loadMainQuestDetail(key, fromRoute=false, questKey='') {
