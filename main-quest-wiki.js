@@ -31,7 +31,7 @@ function mainQuestReference(key) {
     if (typeof itemByKey === 'function' && itemByKey(key)) return itemReferenceLink(key);
     if (typeof chestByKey === 'function' && chestByKey(key)) return '<a href="' + routeHash('chests',key) + '">' + escapeHtml(chestText(key)) + '</a>';
     if (typeof tileAreaById === 'function' && /^\d+$/.test(String(key)) && tileAreaById(key)) return '<a href="' + routeHash('tileareas',key) + '">' + escapeHtml(ui('tileArea','Tile Area') + ' ' + key) + '</a>';
-    return escapeHtml(mainQuestName(key) || key);
+    return escapeHtml(mainQuestName(key) || String(key).replace(/([a-z])([A-Z])/g, '$1 $2'));
 }
 function mainQuestTokens(value) {
     if (value === null || value === undefined || value === '') return '';
@@ -68,9 +68,10 @@ function mainQuestQuestCard(q) {
     ].filter(Boolean).join('');
     const description = mainQuestName(q.extraDescr);
     const variables = String(q.extraDescrVariables || '').split('-');
-    const localizedDescription = description.replace(/\\{(\\d+)\\}/g, (match, index) => {
+    const localizedDescription = description.replace(/\{(\d+)\}/g, (match, index) => {
         const value = variables[Number(index)];
-        return value === undefined ? escapeHtml(match) : mainQuestReference(value);
+        if (value === undefined) return escapeHtml(ui('unknown', 'Unknown'));
+        return mainQuestReference(value);
     });
     return '<article class="card detail-section main-quest-entry" id="quest-' + encodeURIComponent(q.key) + '"><h2>' + escapeHtml(ui('quest','Quest')) + ' ' + escapeHtml(q.questorder) + ': ' + escapeHtml(title) + '</h2>' + mainQuestImage(q) + (info ? '<h3>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h3><div class="info-list">' + info + '</div>' : '') + (description ? '<h3>' + escapeHtml(ui('description','Description')) + '</h3><p>' + localizedDescription + '</p>' : '') + (q.completeCondition ? '<h3>' + escapeHtml(ui('completeCondition','Completion Requirements')) + '</h3><div>' + mainQuestTokens(q.completeCondition) + '</div>' : '') + (q.completeOutcome ? '<h3>' + escapeHtml(ui('completeOutcome','Completion Outcome')) + '</h3><div>' + mainQuestTokens(q.completeOutcome) + '</div>' : '') + '</article>';
 }
@@ -114,6 +115,7 @@ const mainQuestPromise=(async()=>{
         const group=await loadJson('data/'+entry.file,{quests:[]});
         return {...entry,quests:group.quests||[]};
     }));
+    await Promise.allSettled([typeof tileDataPromise !== 'undefined' ? tileDataPromise : Promise.resolve(), typeof itemDataPromise !== 'undefined' ? itemDataPromise : Promise.resolve(), typeof equipmentDataPromise !== 'undefined' ? equipmentDataPromise : Promise.resolve(), typeof monstersDataPromise !== 'undefined' ? monstersDataPromise : Promise.resolve()]);
     wiki.mainQuestReady=true;
     if(wiki.ready && window.location.hash.toLowerCase().startsWith('#/mainquests'))handleHashRoute();
 })();
