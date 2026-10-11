@@ -99,7 +99,7 @@ function loadMainQuestDetail(key, fromRoute=false, questKey='') {
     if (!group) return;
     if (!fromRoute && navigateHash('mainquests',key)) return;
     setActiveView('MainQuests');
-    document.getElementById('content').innerHTML = '<button class="back-btn" onclick="loadView(\'MainQuests\')">← ' + escapeHtml(ui('back','Back')) + '</button><div class="detail-stack"><div class="card detail-title-card"><h2>' + escapeHtml(mainQuestName(key) || ui('mainQuests','Main Quests')) + '</h2><p>' + group.quests.length + ' ' + escapeHtml(ui('quests','Quests')) + '</p></div>' + group.quests.slice().sort((a,b)=>Number(a.questorder)-Number(b.questorder)).map(mainQuestQuestCard).join('') + '</div>';
+    document.getElementById('content').innerHTML = '<button class="back-btn" onclick="loadView(\'MainQuests\')">← ' + escapeHtml(ui('back','Back')) + '</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card">' + mainQuestGroupSprite(group,true) + '<h2>' + escapeHtml(mainQuestName(key) || ui('mainQuests','Main Quests')) + '</h2><p>' + group.quests.length + ' ' + escapeHtml(ui('quests','Quests')) + '</p></div>' + group.quests.slice().sort((a,b)=>Number(a.questorder)-Number(b.questorder)).map(mainQuestQuestCard).join('') + '</div>';
     if (questKey) { const node=document.getElementById('quest-'+questKey); if(node) node.scrollIntoView(); }
     else window.scrollTo(0,0);
 }
