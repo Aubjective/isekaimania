@@ -80,12 +80,6 @@ function mainQuestGroupSprite(group, detail = false) {
 }
 function mainQuestQuestCard(q) {
     const title = mainQuestName(q.key) || ui('quest','Quest');
-    const info = [
-        q.mapGradeLimitation ? infoRow(ui('mapGradeLimitation','Map Grade Limitation'),escapeHtml(q.mapGradeLimitation)) : '',
-        q.mainQuestRequireMapArea ? infoRow(ui('mainQuestRequireMapArea','Required Map Areas'),String(q.mainQuestRequireMapArea).split('-').map(mainQuestReference).join(' · ')) : '',
-        q.mapSizeAvailable ? infoRow(ui('mapSizeAvailable','Map Size Available'),escapeHtml(q.mapSizeAvailable)) : '',
-        q.getFragment ? infoRow(ui('getFragment','Get Fragment'),mainQuestTokens(q.getFragment)) : ''
-    ].filter(Boolean).join('');
     const description = mainQuestName(q.extraDescr);
     const variables = String(q.extraDescrVariables || '').split('-');
     const localizedDescription = description.replace(/\{(\d+)\}/g, (match, index) => {
@@ -93,7 +87,22 @@ function mainQuestQuestCard(q) {
         if (value === undefined) return escapeHtml(ui('unknown', 'Unknown'));
         return mainQuestReference(value);
     });
-    return '<article class="card detail-section main-quest-entry" id="quest-' + encodeURIComponent(q.key) + '"><h2>' + escapeHtml(ui('quest','Quest')) + ' ' + escapeHtml(q.questorder) + ': ' + escapeHtml(title) + '</h2>' + (info ? '<h3>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h3><div class="info-list">' + info + '</div>' : '') + (description ? '<h3>' + escapeHtml(ui('description','Description')) + '</h3><p>' + localizedDescription + '</p>' : '') + (q.completeCondition ? '<h3>' + escapeHtml(ui('completeCondition','Completion Requirements')) + '</h3><div>' + mainQuestTokens(q.completeCondition) + '</div>' : '') + (q.completeOutcome ? '<h3>' + escapeHtml(ui('completeOutcome','Completion Outcome')) + '</h3><div>' + mainQuestTokens(q.completeOutcome) + '</div>' : '') + '</article>';
+    return '<article class="card detail-section main-quest-entry" id="quest-' + encodeURIComponent(q.key) + '"><h2>' + escapeHtml(ui('quest','Quest')) + ' ' + escapeHtml(q.questorder) + ': ' + escapeHtml(title) + '</h2>' + (description ? '<h3>' + escapeHtml(ui('description','Description')) + '</h3><p>' + localizedDescription + '</p>' : '') + (q.completeCondition ? '<h3>' + escapeHtml(ui('completeCondition','Completion Requirements')) + '</h3><div>' + mainQuestTokens(q.completeCondition) + '</div>' : '') + (q.completeOutcome ? '<h3>' + escapeHtml(ui('completeOutcome','Completion Outcome')) + '</h3><div>' + mainQuestTokens(q.completeOutcome) + '</div>' : '') + '</article>';
+}
+function mainQuestGroupBasicInfo(group) {
+    const quests = group.quests || [];
+    const fields = [
+        ['mapGradeLimitation', 'Map Grade Limitation', value => escapeHtml(value)],
+        ['mainQuestRequireMapArea', 'Required Map Areas', value => String(value).split('-').map(mainQuestReference).join(' · ')],
+        ['mapSizeAvailable', 'Map Size Available', value => escapeHtml(value)],
+        ['getFragment', 'Get Fragment', value => mainQuestTokens(value)]
+    ];
+    const rows = fields.map(([field, fallback, render]) => {
+        const values = [...new Set(quests.map(q => q[field]).filter(value => value !== null && value !== undefined && value !== '').map(String))];
+        if (!values.length) return '';
+        return infoRow(ui(field, fallback), values.map(render).join(' · '));
+    }).filter(Boolean).join('');
+    return rows ? '<div class="card detail-section main-quest-group-info"><h2>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h2><div class="info-list">' + rows + '</div></div>' : '';
 }
 function renderMainQuestList() {
     const cards = wiki.mainQuestGroups.map(g => '<article class="card entity-list-card main-quest-list-card" data-search="' + escapeHtml(mainQuestName(g.key).toLowerCase()) + '" onclick="loadMainQuestDetail(this.dataset.key)" data-key="' + escapeHtml(g.key) + '">' + mainQuestGroupSprite(g) + '<h3>' + escapeHtml(mainQuestName(g.key) || ui('mainQuests','Main Quests')) + '</h3><p>' + escapeHtml(g.questCount) + ' ' + escapeHtml(ui('quests','Quests')) + '</p></article>').join('');
@@ -104,7 +113,7 @@ function loadMainQuestDetail(key, fromRoute=false, questKey='') {
     if (!group) return;
     if (!fromRoute && navigateHash('mainquests',key)) return;
     setActiveView('MainQuests');
-    document.getElementById('content').innerHTML = '<button class="back-btn" onclick="loadView(\'MainQuests\')">← ' + escapeHtml(ui('back','Back')) + '</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card">' + mainQuestGroupSprite(group,true) + '<h2>' + escapeHtml(mainQuestName(key) || ui('mainQuests','Main Quests')) + '</h2><p>' + group.quests.length + ' ' + escapeHtml(ui('quests','Quests')) + '</p></div>' + group.quests.slice().sort((a,b)=>Number(a.questorder)-Number(b.questorder)).map(mainQuestQuestCard).join('') + '</div>';
+    document.getElementById('content').innerHTML = '<button class="back-btn" onclick="loadView(\'MainQuests\')">← ' + escapeHtml(ui('back','Back')) + '</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card">' + mainQuestGroupSprite(group,true) + '<h2>' + escapeHtml(mainQuestName(key) || ui('mainQuests','Main Quests')) + '</h2><p>' + group.quests.length + ' ' + escapeHtml(ui('quests','Quests')) + '</p></div>' + mainQuestGroupBasicInfo(group) + group.quests.slice().sort((a,b)=>Number(a.questorder)-Number(b.questorder)).map(mainQuestQuestCard).join('') + '</div>';
     if (questKey) { const node=document.getElementById('quest-'+questKey); if(node) node.scrollIntoView(); }
     else window.scrollTo(0,0);
 }
