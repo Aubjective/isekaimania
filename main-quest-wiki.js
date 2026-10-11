@@ -93,7 +93,7 @@ function mainQuestGroupBasicInfo(group) {
     const quests = group.quests || [];
     const fields = [
         ['mapGradeLimitation', 'Map Grade Limitation', value => escapeHtml(value)],
-        ['mainQuestRequireMapArea', 'Required Map Areas', value => String(value).split('-').map(mainQuestReference).join(' · ')],
+        ['mainQuestRequireMapArea', 'Required Map Areas', value => String(value).split('-').map(id => '<a href="' + routeHash('tileareas', id.trim()) + '">' + escapeHtml(ui('tileArea', 'Tile Area') + ' ' + id.trim()) + '</a>').join(' · ')],
         ['mapSizeAvailable', 'Map Size Available', value => escapeHtml(value)],
         ['getFragment', 'Get Fragment', value => String(value).split('-').map(key => mainQuestReference(key.trim())).filter(Boolean).join(' · ')]
     ];
