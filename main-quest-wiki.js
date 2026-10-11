@@ -36,8 +36,11 @@ function mainQuestReference(key) {
 function mainQuestTokens(value) {
     if (value === null || value === undefined || value === '') return '';
     return String(value).split('|').map(token => {
-        // Internal encounter-history checks are retained in source JSON, never shown to players.
-        if (/^EncounteredBefore(?:-|$)/i.test(token.trim())) return '';
+        // Present encounter-history prerequisites in human language; preserve the raw JSON.
+        if (/^EncounteredBefore(?:-|$)/i.test(token.trim())) {
+            const reference = token.trim().slice('EncounteredBefore-'.length);
+            return escapeHtml(ui('previouslyEncountered', 'Previously encountered')) + ': ' + mainQuestReference(reference);
+        }
         const parts = token.split('-'), action = parts.shift();
         const templates = wiki.mainQuestLocalisation[action] || {};
         const template = templates[wiki.locale] || templates.en || '';
