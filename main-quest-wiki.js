@@ -67,7 +67,12 @@ function mainQuestQuestCard(q) {
         q.getFragment ? infoRow(ui('getFragment','Get Fragment'),mainQuestTokens(q.getFragment)) : ''
     ].filter(Boolean).join('');
     const description = mainQuestName(q.extraDescr);
-    return '<article class="card detail-section main-quest-entry" id="quest-' + encodeURIComponent(q.key) + '"><h2>' + escapeHtml(ui('quest','Quest')) + ' ' + escapeHtml(q.questorder) + ': ' + escapeHtml(title) + '</h2>' + mainQuestImage(q) + (info ? '<h3>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h3><div class="info-list">' + info + '</div>' : '') + (description ? '<h3>' + escapeHtml(ui('description','Description')) + '</h3><p>' + escapeHtml(description) + '</p>' : '') + (q.extraDescrVariables ? '<div class="main-quest-details">' + mainQuestTokens(q.extraDescrVariables) + '</div>' : '') + (q.completeCondition ? '<h3>' + escapeHtml(ui('completeCondition','Completion Requirements')) + '</h3><div>' + mainQuestTokens(q.completeCondition) + '</div>' : '') + (q.completeOutcome ? '<h3>' + escapeHtml(ui('completeOutcome','Completion Outcome')) + '</h3><div>' + mainQuestTokens(q.completeOutcome) + '</div>' : '') + '</article>';
+    const variables = String(q.extraDescrVariables || '').split('-');
+    const localizedDescription = description.replace(/\\{(\\d+)\\}/g, (match, index) => {
+        const value = variables[Number(index)];
+        return value === undefined ? escapeHtml(match) : mainQuestReference(value);
+    });
+    return '<article class="card detail-section main-quest-entry" id="quest-' + encodeURIComponent(q.key) + '"><h2>' + escapeHtml(ui('quest','Quest')) + ' ' + escapeHtml(q.questorder) + ': ' + escapeHtml(title) + '</h2>' + mainQuestImage(q) + (info ? '<h3>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h3><div class="info-list">' + info + '</div>' : '') + (description ? '<h3>' + escapeHtml(ui('description','Description')) + '</h3><p>' + localizedDescription + '</p>' : '') + (q.completeCondition ? '<h3>' + escapeHtml(ui('completeCondition','Completion Requirements')) + '</h3><div>' + mainQuestTokens(q.completeCondition) + '</div>' : '') + (q.completeOutcome ? '<h3>' + escapeHtml(ui('completeOutcome','Completion Outcome')) + '</h3><div>' + mainQuestTokens(q.completeOutcome) + '</div>' : '') + '</article>';
 }
 function renderMainQuestList() {
     const cards = wiki.mainQuestGroups.map(g => '<article class="card entity-list-card main-quest-list-card" data-search="' + escapeHtml(mainQuestName(g.key).toLowerCase()) + '" onclick="loadMainQuestDetail(this.dataset.key)" data-key="' + escapeHtml(g.key) + '"><h3>' + escapeHtml(mainQuestName(g.key) || ui('mainQuests','Main Quests')) + '</h3><p>' + escapeHtml(g.questCount) + ' ' + escapeHtml(ui('quests','Quests')) + '</p></article>').join('');
