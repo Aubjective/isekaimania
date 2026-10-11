@@ -11,3 +11,11 @@
 .main-quest-entry .main-quest-image { display:flex; align-items:center; gap:12px; margin:12px 0; }
 .main-quest-entry .main-quest-image img { width:76px; height:76px; object-fit:contain; }
 .main-quest-entry .main-quest-details { margin:12px 0; }
+
+/* Group sprite is above the localized title on both list and detail cards. */
+.main-quest-list-card { text-align:center; }
+.main-quest-title-card { display:flex; flex-direction:column; align-items:center; text-align:center; }
+.main-quest-hero-image { display:flex; align-items:center; justify-content:center; margin:0 auto 12px; }
+.main-quest-hero-list { width:112px; height:112px; }
+.main-quest-hero-detail { width:150px; height:150px; }
+.main-quest-hero-image img { width:100%; height:100%; object-fit:contain; }
