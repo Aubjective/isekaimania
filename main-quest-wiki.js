@@ -95,7 +95,7 @@ function mainQuestGroupBasicInfo(group) {
         ['mapGradeLimitation', 'Map Grade Limitation', value => escapeHtml(value)],
         ['mainQuestRequireMapArea', 'Required Map Areas', value => String(value).split('-').map(mainQuestReference).join(' · ')],
         ['mapSizeAvailable', 'Map Size Available', value => escapeHtml(value)],
-        ['getFragment', 'Get Fragment', value => mainQuestTokens(value)]
+        ['getFragment', 'Get Fragment', value => String(value).split('-').map(key => mainQuestReference(key.trim())).filter(Boolean).join(' · ')]
     ];
     const rows = fields.map(([field, fallback, render]) => {
         const values = [...new Set(quests.map(q => q[field]).filter(value => value !== null && value !== undefined && value !== '').map(String))];
