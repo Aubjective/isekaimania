@@ -36,6 +36,8 @@ function mainQuestReference(key) {
 function mainQuestTokens(value) {
     if (value === null || value === undefined || value === '') return '';
     return String(value).split('|').map(token => {
+        // Internal encounter-history checks are retained in source JSON, never shown to players.
+        if (/^EncounteredBefore(?:-|$)/i.test(token.trim())) return '';
         const parts = token.split('-'), action = parts.shift();
         const templates = wiki.mainQuestLocalisation[action] || {};
         const template = templates[wiki.locale] || templates.en || '';
@@ -48,7 +50,7 @@ function mainQuestTokens(value) {
             return escapeHtml(action.replace(/([a-z])([A-Z])/g,'$1 $2')) + ': ' + mainQuestReference(parts.join('-')) + (quantity ? ' ×' + escapeHtml(quantity) : '');
         }
         return escapeHtml(action.replace(/([a-z])([A-Z])/g,'$1 $2')) + (parts.length ? ': ' + parts.map(mainQuestReference).join(' · ') : '');
-    }).join('<span class="main-quest-separator"> · </span>');
+    }).filter(Boolean).join('<span class="main-quest-separator"> · </span>');
 }
 function mainQuestImage(quest) {
     const key = quest.mainQuestImage, type = String(quest.mainQuestImageType||'').toLowerCase();
