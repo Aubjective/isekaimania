@@ -1,0 +1,13 @@
+/* Scoped to Main Quests: existing wiki tabs remain unchanged. */
+.main-quest-list-card { cursor:pointer; padding:20px; }
+.main-quest-list-card h3 { margin:0 0 10px; }
+.main-quest-list-card p { margin:0; opacity:.75; }
+.main-quest-entry { overflow-wrap:anywhere; }
+.main-quest-entry h2 { margin-top:0; }
+.main-quest-entry h3 { margin:18px 0 8px; font-size:1rem; }
+.main-quest-entry .info-list { margin-bottom:12px; }
+.main-quest-entry a { color:inherit; text-decoration:underline; text-underline-offset:3px; }
+.main-quest-entry .main-quest-separator { opacity:.55; padding:0 6px; }
+.main-quest-entry .main-quest-image { display:flex; align-items:center; gap:12px; margin:12px 0; }
+.main-quest-entry .main-quest-image img { width:76px; height:76px; object-fit:contain; }
+.main-quest-entry .main-quest-details { margin:12px 0; }
