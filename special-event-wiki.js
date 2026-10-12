@@ -42,7 +42,15 @@ function specialEventQuestCard(q) {
     const title=specialEventText(q.key)||q.key.replace(/([a-z])([A-Z])/g,'$1 $2');
     const template=specialEventText(q.extraDescr);
     const variables=String(q.extraDescrVariables||'').split('-');
-    const description=template ? template.split(/(\{\d+\})/g).map(part=>{
+    // Source localisation is missing three shared description templates.
+    // Provide a clearly English-only, source-key-derived objective rather than hiding guidance.
+    const missingTemplates = {
+        DefeatTeamAndReportToAtArea: 'Defeat {2} at {1} in area {0}, then report to {3}.',
+        DefeatAmountMonsterAndReportToAtArea: 'Defeat {2} at {1} in area {0}, then report to {3}.',
+        DefeatAndRetrieveAtArea: 'Defeat {2} at {1} in area {0} and retrieve the required item.'
+    };
+    const effectiveTemplate = template || missingTemplates[q.extraDescr] || '';
+    const description=effectiveTemplate ? effectiveTemplate.split(/(\\{\\d+\\})/g).map(part=>{
         const match=/^\{(\d+)\}$/.exec(part);
         return match ? specialEventReference(variables[Number(match[1])]||'') : escapeHtml(part);
     }).join('') : '';
