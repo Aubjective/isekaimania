@@ -66,14 +66,14 @@ function specialEventStageCard(stage, group, index) {
     const npcs=unique(rows.map(step=>step.eventNpcName));
     const battles=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>token.startsWith('FightTeam-')).map(token=>token.slice(10))));
     const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|GainCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
-    const conditions=unique(rows.filter(step=>step.type==='Standard'||step.type==='Resolve').flatMap(step=>refs(step.eventCondition)));
-    const questCards=received.map(key=>group.quests.find(q=>q.key===key)).filter(Boolean).map(specialEventQuestCard).join('');
+
+    const questCards=group.quests.filter(q=>received.includes(q.key) || (!group.stages.some(st=>(st.questKeysReceived||[]).includes(q.key)) && (completed.includes(q.key) || (index===0 && !group.stages.some(st=>(st.questKeysCompleted||[]).includes(q.key)))))).map(specialEventQuestCard).join('');
     const title=specialEventText(stage.key)||stage.key.replace(/([a-z])([A-Z])/g,'$1 $2');
     const info=[];
     if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
     if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
     if(battles.length)info.push('<p><strong>Battle:</strong> '+battles.map(specialEventReference).join(' · ')+'</p>');
-    if(conditions.length)info.push('<details><summary>Stage conditions</summary><p>'+conditions.map(escapeHtml).join(' · ')+'</p></details>');
+    // Internal trigger conditions are retained in JSON, but not exposed as raw game logic.
     if(actions.length)info.push('<p><strong>Other outcomes:</strong> '+actions.map(specialEventOutcome).join(' · ')+'</p>');
     if(completed.length)info.push('<p><strong>'+escapeHtml(ui('questComplete','Quest complete'))+':</strong> '+completed.map(specialEventReference).join(' · ')+'</p>');
     return '<section class="card detail-section special-event-stage" id="stage-'+encodeURIComponent(stage.key)+'"><h2>Stage '+(index+1)+': '+escapeHtml(title)+'</h2>'+info.join('')+questCards+'</section>';
