@@ -1,0 +1,26 @@
+{
+  "key": "BringAliceToTown",
+  "quests": [
+    {
+      "id": "47",
+      "key": "QuestBringAliceToTown1",
+      "questType": "Standard",
+      "questGroup": "BringAliceToTown",
+      "questorder": "1",
+      "extraDescr": "BringWhoToWhereIn",
+      "extraDescrVariables": "Alice-CastleHero-10",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-300|GainItem-Portal Scroll-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
