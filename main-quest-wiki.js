@@ -79,7 +79,7 @@ function mainQuestGroupSprite(group, detail = false) {
     return '<div class="main-quest-hero-image ' + (detail ? 'main-quest-hero-detail' : 'main-quest-hero-list') + '"><img src="' + folder + '/' + encodeURIComponent(sprite) + '.png" alt="" loading="lazy" onerror="this.style.display=\'none\'"></div>';
 }
 function mainQuestQuestCard(q) {
-    const title = mainQuestName(q.key) || ui('quest','Quest');
+    const title = mainQuestName(q.key) || mainQuestName(q.questGroup) || ui('quest','Quest');
     const description = mainQuestName(q.extraDescr);
     const variables = String(q.extraDescrVariables || '').split('-');
     const localizedDescription = description.replace(/\{(\d+)\}/g, (match, index) => {
