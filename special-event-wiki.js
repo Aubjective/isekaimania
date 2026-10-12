@@ -1,0 +1,92 @@
+// Special Events are sourced only from Standard Quest rows outside Main Quest groups.
+// The SpecialEvents dialogue/setup sheet is intentionally not published.
+wiki.specialEventGroups = [];
+wiki.specialEventLocalisation = {};
+wiki.specialEventsReady = false;
+const specialEventPreviousRoute = handleHashRoute;
+const specialEventPreviousView = loadView;
+window.removeEventListener('hashchange', specialEventPreviousRoute);
+
+function specialEventText(key) {
+    const row = wiki.specialEventLocalisation[key] || {};
+    return row[wiki.locale] || row.en || '';
+}
+function specialEventGroup(key) { return wiki.specialEventGroups.find(group => group.key === key); }
+function specialEventReference(key) {
+    if (!key) return '';
+    const value = String(key).trim();
+    const group = specialEventGroup(value);
+    if (group) return '<a href="' + routeHash('specialevents',value) + '">' + escapeHtml(specialEventText(value) || value.replace(/([a-z])([A-Z])/g,'$1 $2')) + '</a>';
+    for (const g of wiki.specialEventGroups) {
+        if ((g.quests || []).some(q=>q.key===value)) return '<a href="' + routeHash('specialevents',g.key) + '/' + encodeURIComponent(value) + '">' + escapeHtml(specialEventText(value) || value.replace(/([a-z])([A-Z])/g,'$1 $2')) + '</a>';
+    }
+    if (/^\d+$/.test(value)) return '<a href="' + routeHash('tileareas',value) + '">' + escapeHtml(ui('tileArea','Tile Area') + ' ' + value) + '</a>';
+    return mainQuestReference(value);
+}
+function specialEventOutcome(raw) {
+    if (!raw) return '';
+    return String(raw).split('|').map(token=>{
+        const parts=token.split('-'), action=parts.shift();
+        if (action==='GainEXP'||action==='GainCoin') return escapeHtml((action==='GainEXP'?'EXP':'Coins')+': '+Number(parts[0]||0).toLocaleString());
+        if (action==='GainItem'||action==='GainEquipment'||action==='GainChest') {
+            const count=parts.pop(); return escapeHtml(action==='GainItem'?'Item':action==='GainEquipment'?'Equipment':'Chest')+': '+specialEventReference(parts.join('-'))+' ×'+escapeHtml(count||'1');
+        }
+        if (action==='ReceiveQuest'||action==='CompleteQuest') return escapeHtml(action==='ReceiveQuest'?'Next Quest':'Complete Quest')+': '+specialEventReference(parts.join('-'));
+        if (action==='RevealArea') return escapeHtml(ui('tileArea','Tile Area'))+': '+specialEventReference(parts[0]);
+        if (action==='GainJob') return escapeHtml(ui('jobs','Jobs'))+': '+specialEventReference(parts.join('-'));
+        if (action==='GameOver') return escapeHtml(ui('questComplete','Quest complete'));
+        return mainQuestTokens(token);
+    }).filter(Boolean).join(' · ');
+}
+function specialEventQuestCard(q) {
+    const title=specialEventText(q.key)||q.key.replace(/([a-z])([A-Z])/g,'$1 $2');
+    const template=specialEventText(q.extraDescr);
+    const variables=String(q.extraDescrVariables||'').split('-');
+    const description=template ? template.split(/(\{\d+\})/g).map(part=>{
+        const match=/^\{(\d+)\}$/.exec(part);
+        return match ? specialEventReference(variables[Number(match[1])]||'') : escapeHtml(part);
+    }).join('') : '';
+    return '<article class="card detail-section main-quest-entry" id="quest-'+encodeURIComponent(q.key)+'"><h2>'+escapeHtml(ui('quest','Quest'))+' '+escapeHtml(q.questorder)+': '+escapeHtml(title)+'</h2>'+(description?'<h3>'+escapeHtml(ui('description','Description'))+'</h3><p>'+description+'</p>':'')+(q.completeOutcome?'<h3>'+escapeHtml(ui('completeOutcome','Completion Outcome'))+'</h3><div>'+specialEventOutcome(q.completeOutcome)+'</div>':'')+'</article>';
+}
+function renderSpecialEventList() {
+    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+g.questCount+' '+escapeHtml(ui('quests','Quests'))+'</p></article>').join('');
+    return '<div class="header-card"><h1>'+escapeHtml(ui('specialEvents','Special Events'))+'</h1><p>'+wiki.specialEventGroups.length+' '+escapeHtml(ui('entries','entries'))+'</p><input type="text" id="searchInput" class="search-input" placeholder="'+escapeHtml(ui('search','Search...'))+'"></div><div class="grid">'+cards+'</div>';
+}
+function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
+    const group=specialEventGroup(key);if(!group)return;
+    if(!fromRoute&&navigateHash('specialevents',key))return;
+    setActiveView('SpecialEvents');
+    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+group.quests.length+' '+escapeHtml(ui('quests','Quests'))+'</p></div>'+group.quests.slice().sort((a,b)=>Number(a.questorder)-Number(b.questorder)).map(specialEventQuestCard).join('')+'</div>';
+    if(questKey){const node=document.getElementById('quest-'+questKey);if(node)node.scrollIntoView();}else window.scrollTo(0,0);
+}
+function specialEventRoute() {
+    const parts=window.location.hash.replace(/^#\/?/,'').split('/');
+    if(parts[0].toLowerCase()!=='specialevents')return false;
+    setActiveView('SpecialEvents');
+    if(!wiki.specialEventsReady){document.getElementById('content').innerHTML='<h2>'+escapeHtml(ui('loading','Loading...'))+'</h2>';return true;}
+    const key=parts[1]?decodeURIComponent(parts[1]):'';
+    if(key&&specialEventGroup(key))loadSpecialEventDetail(key,true,parts[2]?decodeURIComponent(parts[2]):'');
+    else loadView('SpecialEvents',true);
+    return true;
+}
+handleHashRoute=function(){if(!wiki.ready)return;if(specialEventRoute())return;specialEventPreviousRoute();};
+loadView=function(view,fromRoute=false){
+    if(view!=='SpecialEvents')return specialEventPreviousView(view,fromRoute);
+    if(!fromRoute&&navigateHash('specialevents'))return;
+    setActiveView('SpecialEvents');
+    document.getElementById('content').innerHTML=wiki.specialEventsReady?renderSpecialEventList():'<h2>'+escapeHtml(ui('loading','Loading...'))+'</h2>';
+    if(wiki.specialEventsReady)attachListSearch('.main-quest-list-card');
+    window.scrollTo(0,0);
+};
+window.addEventListener('hashchange',handleHashRoute);
+const specialEventPromise=(async()=>{
+    const [index,localisation]=await Promise.all([loadJson('data/special-event-groups.json',[]),loadJson('data/special-event-localisation.json',{})]);
+    wiki.specialEventLocalisation=localisation;
+    wiki.specialEventGroups=await Promise.all(index.map(async entry=>{
+        const group=await loadJson('data/'+entry.file,{quests:[]});
+        return {...entry,quests:group.quests||[]};
+    }));
+    await Promise.allSettled([typeof mainQuestPromise!=='undefined'?mainQuestPromise:Promise.resolve(),typeof tileDataPromise!=='undefined'?tileDataPromise:Promise.resolve(),typeof itemDataPromise!=='undefined'?itemDataPromise:Promise.resolve(),typeof equipmentDataPromise!=='undefined'?equipmentDataPromise:Promise.resolve()]);
+    wiki.specialEventsReady=true;
+    if(wiki.ready&&window.location.hash.toLowerCase().startsWith('#/specialevents'))handleHashRoute();
+})();
