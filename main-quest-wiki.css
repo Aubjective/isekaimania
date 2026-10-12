@@ -19,3 +19,6 @@
 .main-quest-hero-list { width:112px; height:112px; }
 .main-quest-hero-detail { width:150px; height:150px; }
 .main-quest-hero-image img { width:100%; height:100%; object-fit:contain; }
+
+/* Text-only Special Events cards do not reserve sprite height. */
+.main-quest-list-card:not(:has(.main-quest-hero-image)) { min-height: 0; height: auto; }
