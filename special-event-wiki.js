@@ -47,7 +47,7 @@ function specialEventStageCard(stage, group, index) {
     const costs=outcomes.filter(t=>/^(LostItem|LoseItem|LoseCoin|LostCoin)-/.test(t));
     const encounters=rows.filter(row=>row.type==='Standard');
     const location=unique(encounters.flatMap(row=>[row.tileDataPicker,row.tileData,row.tileArea]));
-    const npcs=unique(rows.map(row=>row.eventNpcName));
+    const npcs=unique(encounters.map(row=>row.eventNpcName).filter(name=>name && String(name).toUpperCase()!=='PLAYER' && String(name).toUpperCase()!=='NULL'));
     const received=stage.questKeysReceived||[];
     const completed=stage.questKeysCompleted||[];
     const relevant=stage.display ? stage.display.show : !!(encounters.length || outcomes.some(t=>!/^(ReceiveQuest|CompleteQuest)-/.test(t)));
@@ -64,7 +64,8 @@ function specialEventStageCard(stage, group, index) {
     const battles=unique(outcomes.filter(t=>/^(FightTeam|StartBattle|Battle)-/.test(t)).map(t=>t.split('-').slice(1).join('-')));
     const subject=items.length?items.map(p=>specialEventReference(p.key)+(p.count&&p.count!=='1'?' ×'+escapeHtml(p.count):'')).join(', '):'';
     const first=encounters[0]||rows[0]||{};
-    const title=subject?'Obtain '+items.map(p=>label(p.key)).join(', '):battles.length?'Defeat '+battles.map(label).join(', '):specialEventText(stage.key)||label(stage.key);
+    const stageName=specialEventText(stage.key) || (stage.key===group.key || /^\\d+$/.test(stage.key.slice(group.key.length)) ? label(group.key) : label(stage.key.replace(/\\d+$/,'')));
+    const title=subject?'Obtain '+items.map(p=>label(p.key)).join(', '):battles.length?'Defeat '+battles.map(label).join(', '):stageName;
     const info=[];
     if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
     if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
