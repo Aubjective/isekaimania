@@ -7,3 +7,13 @@
 .passive-skill-unit-separator, .passive-skill-ref-separator { color: #7fcfff; padding: 0 0.24em; }
 .passive-skill-none { color: #9fb5d4; }
 .passive-skill-used-by .info-value { line-height: 1.65; }
+
+/* Passive skills are text-only: override the shared sprite-card minimum height. */
+#passiveSkillGrid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 270px), 1fr)); gap: 14px; align-items: stretch; }
+#passiveSkillGrid .passive-skill-card { min-height: 0; padding: 19px 20px; border-radius: 14px; }
+#passiveSkillGrid .passive-skill-card .info-list { gap: 5px; }
+#passiveSkillGrid .passive-skill-card .info-row { grid-template-columns: minmax(0, 112px) minmax(0, 1fr); column-gap: 12px; }
+#passiveSkillGrid .passive-skill-card .entity-primary-row { margin-bottom: 6px; }
+#passiveSkillGrid .passive-skill-card .entity-primary-row .info-value { font-weight: 800; }
+@media (max-width: 768px) { #passiveSkillGrid { grid-template-columns: repeat(auto-fill, minmax(min(100%, 245px), 1fr)); gap: 12px; } #passiveSkillGrid .passive-skill-card { padding: 17px; } }
+@media (max-width: 480px) { #passiveSkillGrid { grid-template-columns: 1fr; } }
