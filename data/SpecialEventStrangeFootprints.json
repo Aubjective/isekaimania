@@ -1,0 +1,47 @@
+{
+  "key": "StrangeFootprints",
+  "quests": [
+    {
+      "id": "63",
+      "key": "QuestStrangeFootprints1",
+      "questType": "Standard",
+      "questGroup": "StrangeFootprints",
+      "questorder": "1",
+      "extraDescr": "QuestStrangeFootprintsDescription1",
+      "extraDescrVariables": "SlimeSeashore-50",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-3000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "64",
+      "key": "QuestStrangeFootprints2",
+      "questType": "Standard",
+      "questGroup": "StrangeFootprints",
+      "questorder": "2",
+      "extraDescr": "QuestStrangeFootprintsDescription2",
+      "extraDescrVariables": "SlimeSeashore-50",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-5000|GainItem-Cooked Oyster-2",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
