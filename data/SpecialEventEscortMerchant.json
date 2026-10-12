@@ -1,0 +1,47 @@
+{
+  "key": "EscortMerchant",
+  "quests": [
+    {
+      "id": "88",
+      "key": "QuestEscortMerchant1",
+      "questType": "Standard",
+      "questGroup": "EscortMerchant",
+      "questorder": "1",
+      "extraDescr": "QuestEscortMerchantDescription1",
+      "extraDescrVariables": "52",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-2000|GainItem-Magnet-3",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "89",
+      "key": "QuestEscortMerchant2",
+      "questType": "Standard",
+      "questGroup": "EscortMerchant",
+      "questorder": "2",
+      "extraDescr": "QuestEscortMerchantDescription2",
+      "extraDescrVariables": "10",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-3000|GainEquipment-Leather Armor-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
