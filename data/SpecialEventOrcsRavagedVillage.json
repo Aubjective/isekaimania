@@ -1,0 +1,26 @@
+{
+  "key": "OrcsRavagedVillage",
+  "quests": [
+    {
+      "id": "59",
+      "key": "QuestOrcCaveLeaderGuard1",
+      "questType": "Standard",
+      "questGroup": "OrcsRavagedVillage",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": "HaveItem-Oyster-3",
+      "completeOutcome": "GainCoin-5000|GainEquipment-Silver Axe-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
