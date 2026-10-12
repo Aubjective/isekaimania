@@ -1,0 +1,26 @@
+{
+  "key": "VampireIncidents",
+  "quests": [
+    {
+      "id": "54",
+      "key": "QuestVampire1",
+      "questType": "Standard",
+      "questGroup": "VampireIncidents",
+      "questorder": "1",
+      "extraDescr": "DefeatTeamAtArea",
+      "extraDescrVariables": "1-Bloodthirsters-42",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-8000|GainItem-Greater Stat Enhancer-2",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
