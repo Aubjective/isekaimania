@@ -1,0 +1,26 @@
+{
+  "key": "LearnGuard",
+  "quests": [
+    {
+      "id": "62",
+      "key": "QuestLearnGuard1",
+      "questType": "Standard",
+      "questGroup": "LearnGuard",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|GainActiveSkill-Guard",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
