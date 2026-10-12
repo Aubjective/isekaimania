@@ -1,5 +1,4 @@
-// Special Events are sourced only from Standard Quest rows outside Main Quest groups.
-// The SpecialEvents dialogue/setup sheet is intentionally not published.
+// Special Events are stage-first; quests are optional and embedded at their receive stages.
 wiki.specialEventGroups = [];
 wiki.specialEventLocalisation = {};
 wiki.specialEventsReady = false;
@@ -50,14 +49,37 @@ function specialEventQuestCard(q) {
         DefeatAndRetrieveAtArea: 'Defeat {2} at {1} in area {0} and retrieve the required item.'
     };
     const effectiveTemplate = template || missingTemplates[q.extraDescr] || '';
-    const description=effectiveTemplate ? effectiveTemplate.split(/(\\{\\d+\\})/g).map(part=>{
+    const description=effectiveTemplate ? effectiveTemplate.split(/(\{\d+\})/g).map(part=>{
         const match=/^\{(\d+)\}$/.exec(part);
         return match ? specialEventReference(variables[Number(match[1])]||'') : escapeHtml(part);
     }).join('') : '';
     return '<article class="card detail-section main-quest-entry" id="quest-'+encodeURIComponent(q.key)+'"><h2>'+escapeHtml(ui('quest','Quest'))+' '+escapeHtml(q.questorder)+': '+escapeHtml(title)+'</h2>'+(description?'<h3>'+escapeHtml(ui('description','Description'))+'</h3><p>'+description+'</p>':'')+(q.completeOutcome?'<h3>'+escapeHtml(ui('completeOutcome','Completion Outcome'))+'</h3><div>'+specialEventOutcome(q.completeOutcome)+'</div>':'')+'</article>';
 }
+function specialEventStageCard(stage, group, index) {
+    const first=stage.steps.find(step=>step.type==='Standard') || stage.steps[0] || {};
+    const rows=stage.steps;
+    const received=stage.questKeysReceived || [];
+    const completed=stage.questKeysCompleted || [];
+    const refs=(raw)=>String(raw||'').split('|').filter(Boolean);
+    const unique=(items)=>[...new Set(items.filter(Boolean))];
+    const location=unique(rows.filter(step=>step.type==='Standard').flatMap(step=>[step.tileDataPicker,step.tileData,step.tileArea]));
+    const npcs=unique(rows.map(step=>step.eventNpcName));
+    const battles=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>token.startsWith('FightTeam-')).map(token=>token.slice(10))));
+    const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|GainCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
+    const conditions=unique(rows.filter(step=>step.type==='Standard'||step.type==='Resolve').flatMap(step=>refs(step.eventCondition)));
+    const questCards=received.map(key=>group.quests.find(q=>q.key===key)).filter(Boolean).map(specialEventQuestCard).join('');
+    const title=specialEventText(stage.key)||stage.key.replace(/([a-z])([A-Z])/g,'$1 $2');
+    const info=[];
+    if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
+    if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
+    if(battles.length)info.push('<p><strong>Battle:</strong> '+battles.map(specialEventReference).join(' · ')+'</p>');
+    if(conditions.length)info.push('<details><summary>Stage conditions</summary><p>'+conditions.map(escapeHtml).join(' · ')+'</p></details>');
+    if(actions.length)info.push('<p><strong>Other outcomes:</strong> '+actions.map(specialEventOutcome).join(' · ')+'</p>');
+    if(completed.length)info.push('<p><strong>'+escapeHtml(ui('questComplete','Quest complete'))+':</strong> '+completed.map(specialEventReference).join(' · ')+'</p>');
+    return '<section class="card detail-section special-event-stage" id="stage-'+encodeURIComponent(stage.key)+'"><h2>Stage '+(index+1)+': '+escapeHtml(title)+'</h2>'+info.join('')+questCards+'</section>';
+}
 function renderSpecialEventList() {
-    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+g.questCount+' '+escapeHtml(ui('quests','Quests'))+'</p></article>').join('');
+    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+g.stageCount+' Stages · '+g.questCount+' '+escapeHtml(ui('quests','Quests'))+'</p></article>').join('');
     return '<div class="header-card"><h1>'+escapeHtml(ui('specialEvents','Special Events'))+'</h1><p>'+wiki.specialEventGroups.length+' '+escapeHtml(ui('entries','entries'))+'</p><input type="text" id="searchInput" class="search-input" placeholder="'+escapeHtml(ui('search','Search...'))+'"></div><div class="grid">'+cards+'</div>';
 }
 function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
@@ -88,12 +110,9 @@ loadView=function(view,fromRoute=false){
 };
 window.addEventListener('hashchange',handleHashRoute);
 const specialEventPromise=(async()=>{
-    const [index,localisation]=await Promise.all([loadJson('data/special-event-groups.json',[]),loadJson('data/special-event-localisation.json',{})]);
+    const [stageData,localisation]=await Promise.all([loadJson('data/special-event-stages.json',{groups:[]}),loadJson('data/special-event-localisation.json',{})]);
     wiki.specialEventLocalisation=localisation;
-    wiki.specialEventGroups=await Promise.all(index.map(async entry=>{
-        const group=await loadJson('data/'+entry.file,{quests:[]});
-        return {...entry,quests:group.quests||[]};
-    }));
+    wiki.specialEventGroups=stageData.groups || [];
     await Promise.allSettled([typeof mainQuestPromise!=='undefined'?mainQuestPromise:Promise.resolve(),typeof tileDataPromise!=='undefined'?tileDataPromise:Promise.resolve(),typeof itemDataPromise!=='undefined'?itemDataPromise:Promise.resolve(),typeof equipmentDataPromise!=='undefined'?equipmentDataPromise:Promise.resolve()]);
     wiki.specialEventsReady=true;
     if(wiki.ready&&window.location.hash.toLowerCase().startsWith('#/specialevents'))handleHashRoute();
