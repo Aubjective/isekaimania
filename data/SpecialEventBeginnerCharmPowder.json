@@ -1,0 +1,26 @@
+{
+  "key": "BeginnerCharmPowder",
+  "quests": [
+    {
+      "id": "195",
+      "key": "QuestCharmPowder",
+      "questType": "Standard",
+      "questGroup": "BeginnerCharmPowder",
+      "questorder": "1",
+      "extraDescr": "QuestCharmPowderDescription",
+      "extraDescrVariables": "Charm Powder",
+      "completeCondition": "CoinAbove-1000|HaveItem-Shell Fragments-2",
+      "completeOutcome": "GainItem-Charm Powder-1|LoseCoin-1000|LostItem-Shell Fragments-2",
+      "mapGradeLimitation": "E-D-C-B-A",
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
