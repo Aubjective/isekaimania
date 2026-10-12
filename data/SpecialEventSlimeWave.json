@@ -1,0 +1,26 @@
+{
+  "key": "SlimeWave",
+  "quests": [
+    {
+      "id": "46",
+      "key": "QuestSlimeWave1",
+      "questType": "Standard",
+      "questGroup": "SlimeWave",
+      "questorder": "1",
+      "extraDescr": "DefeatAmountMonsterAndReportToAtArea",
+      "extraDescrVariables": "11-KingdomSlimeLand-Slime-OldVillager-5",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-350|GainCoin-5000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
