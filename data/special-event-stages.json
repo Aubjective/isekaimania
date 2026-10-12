@@ -219,7 +219,11 @@
           "questKeysReceived": [
             "QuestLostAdventurer1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "LostAdventurer2",
@@ -295,7 +299,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         },
         {
           "key": "LostAdventurer3",
@@ -444,7 +452,11 @@
           ],
           "questKeysCompleted": [
             "QuestLostAdventurer1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "LostAdventurer4",
@@ -499,7 +511,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestLostAdventurer2"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -537,7 +553,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         },
         {
           "key": "TheGreatHunt2",
@@ -590,7 +610,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         },
         {
           "key": "TheGreatHunt3",
@@ -620,7 +644,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -726,7 +754,11 @@
           "questKeysReceived": [
             "QuestLostPet1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "LostPet2",
@@ -756,7 +788,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         },
         {
           "key": "LostPet3",
@@ -859,7 +895,11 @@
           ],
           "questKeysCompleted": [
             "QuestLostPet1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         },
         {
           "key": "LostPet4",
@@ -914,7 +954,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestLostPet2"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -1066,7 +1110,11 @@
           "questKeysReceived": [
             "QuestLetterErrand1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "LetterErrand2",
@@ -1169,7 +1217,11 @@
           ],
           "questKeysCompleted": [
             "QuestLetterErrand1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -1300,7 +1352,11 @@
           "questKeysReceived": [
             "QuestEquipmentMaterial1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "EquipmentMaterial2",
@@ -1355,7 +1411,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestEquipmentMaterial1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -1486,7 +1546,11 @@
           "questKeysReceived": [
             "QuestWildMonster1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         }
       ]
     },
@@ -1640,7 +1704,11 @@
           "questKeysReceived": [
             "QuestHelpingTheNun1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         },
         {
           "key": "HelpingTheNun2",
@@ -1718,7 +1786,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestHelpingTheNun1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -1872,7 +1944,11 @@
           "questKeysReceived": [
             "QuestSlimeWave1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "SlimeWave2",
@@ -1927,7 +2003,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestSlimeWave1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -2058,7 +2138,11 @@
           "questKeysReceived": [
             "QuestBringAliceToTown1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "BringAliceToTown2",
@@ -2136,7 +2220,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestBringAliceToTown1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -2290,7 +2378,11 @@
           "questKeysReceived": [
             "QuestTheGemstonesQuest1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "TheGemstonesQuest2",
@@ -2412,7 +2504,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         },
         {
           "key": "TheGemstonesQuest3",
@@ -2467,7 +2563,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestTheGemstonesQuest1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -2552,7 +2652,11 @@
           "questKeysReceived": [
             "QuestWhatIs1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "WhatIs2",
@@ -2651,7 +2755,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         },
         {
           "key": "WhatIs3",
@@ -2729,7 +2837,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestWhatIs1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -2976,7 +3088,11 @@
           ],
           "questKeysCompleted": [
             "QuestFortuneLuck"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "FortuneExp",
@@ -3031,7 +3147,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestFortuneExp"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -3254,7 +3374,11 @@
           "questKeysReceived": [
             "QuestVampire1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "Vampire2",
@@ -3447,7 +3571,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestVampire1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -3601,7 +3729,11 @@
           "questKeysReceived": [
             "QuestUndeadIncidents1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "UndeadIncidents2",
@@ -3631,7 +3763,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         },
         {
           "key": "UndeadIncidents3",
@@ -3709,7 +3845,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestUndeadIncidents1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -3793,7 +3933,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -3969,7 +4113,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -4076,7 +4224,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -4344,7 +4496,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -4474,7 +4630,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -4582,7 +4742,11 @@
           "questKeysReceived": [
             "QuestGetShip1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         }
       ]
     },
@@ -4736,7 +4900,11 @@
           "questKeysReceived": [
             "QuestSalamanderNest1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "SalamanderNest2",
@@ -4814,7 +4982,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestSalamanderNest1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -4968,7 +5140,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestRingOfMermaid1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -5053,7 +5229,11 @@
           "questKeysReceived": [
             "QuestVampireManorKey1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "VampireManorKey2",
@@ -5292,7 +5472,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestVampireManorKey1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -5399,7 +5583,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -5483,7 +5671,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         },
         {
           "key": "CapJackArenaToken2",
@@ -5513,7 +5705,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": false,
+            "kind": "progression"
+          }
         }
       ]
     },
@@ -5621,7 +5817,11 @@
           "questKeysReceived": [
             "QuestOrcCaveLeaderGuard1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "OrcsRavagedVillage2",
@@ -5676,7 +5876,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestOrcCaveLeaderGuard1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -5784,7 +5988,11 @@
           "questKeysReceived": [
             "QuestOrcsHuntingGroundGuard1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "OrcsHuntingGroundGuard2",
@@ -5839,7 +6047,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestOrcsHuntingGroundGuard1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -5923,7 +6135,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6007,7 +6223,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6091,7 +6311,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6129,7 +6353,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": false,
+            "kind": "progression"
+          }
         },
         {
           "key": "UniversalBuyMaterial",
@@ -6205,7 +6433,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6243,7 +6475,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": false,
+            "kind": "progression"
+          }
         },
         {
           "key": "UniversalBuyItem",
@@ -6319,7 +6555,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6357,7 +6597,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": false,
+            "kind": "progression"
+          }
         },
         {
           "key": "UniversalBuyEquip",
@@ -6433,7 +6677,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6564,7 +6812,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestLearnHeal1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6695,7 +6947,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestLearnGuard1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -6893,7 +7149,11 @@
           "questKeysReceived": [
             "QuestStrangeFootprints1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "StrangeFootprints2",
@@ -7042,7 +7302,11 @@
           ],
           "questKeysCompleted": [
             "QuestStrangeFootprints1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "StrangeFootprints3",
@@ -7120,7 +7384,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestStrangeFootprints2"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -7297,7 +7565,11 @@
           ],
           "questKeysCompleted": [
             "QuestEscortMerchant1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "EscortMerchant3",
@@ -7444,7 +7716,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestEscortMerchant2"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         },
         {
           "key": "EscortMerchant1",
@@ -7522,7 +7798,11 @@
           "questKeysReceived": [
             "QuestEscortMerchant1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         }
       ]
     },
@@ -7722,7 +8002,11 @@
           "questKeysReceived": [
             "QuestBrokenSignpost1"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "BrokenSignpost2",
@@ -7846,7 +8130,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestBrokenSignpost1"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -8163,7 +8451,11 @@
           ],
           "questKeysCompleted": [
             "QuestFindAnOilLamp"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         }
       ]
     },
@@ -8638,7 +8930,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -8769,7 +9065,11 @@
           "questKeysReceived": [
             "QuestCharmPowder"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         }
       ]
     },
@@ -9060,7 +9360,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -9167,7 +9471,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -9346,7 +9654,11 @@
           ],
           "questKeysCompleted": [
             "QuestHelpMermaid"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -9477,7 +9789,11 @@
           "questKeysReceived": [
             "QuestSnowCastleRestlessNight"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "SnowCastleRestlessNight2",
@@ -9555,7 +9871,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestSnowCastleRestlessNight"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -9663,7 +9983,11 @@
           "questKeysReceived": [
             "QuestRoadsideCampDelayedDeparture"
           ],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "interaction"
+          }
         },
         {
           "key": "RoadsideCampDelayedDeparture2",
@@ -9741,7 +10065,11 @@
           "questKeysReceived": [],
           "questKeysCompleted": [
             "QuestRoadsideCampDelayedDeparture"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -9917,7 +10245,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -10232,7 +10564,11 @@
           ],
           "questKeysCompleted": [
             "QuestDryadPineGroveTheLivingCut"
-          ]
+          ],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         },
         {
           "key": "QuestDryadPineGroveTheRestlessGrove",
@@ -10377,7 +10713,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": false,
+            "kind": "progression"
+          }
         }
       ]
     },
@@ -10484,7 +10824,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -10959,7 +11303,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "encounter"
+          }
         }
       ]
     },
@@ -11135,7 +11483,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -11311,7 +11663,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -11487,7 +11843,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -11663,7 +12023,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -11839,7 +12203,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -12015,7 +12383,11 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     },
@@ -12191,9 +12563,17 @@
             }
           ],
           "questKeysReceived": [],
-          "questKeysCompleted": []
+          "questKeysCompleted": [],
+          "display": {
+            "show": true,
+            "kind": "obtain-item"
+          }
         }
       ]
     }
-  ]
+  ],
+  "presentation": {
+    "mode": "objectives-only",
+    "notes": "Source quest records, stage rows, conditions and dialogue are retained for fidelity. Quest cards and dialogue-only follow-ups are not displayed."
+  }
 }
