@@ -120,7 +120,7 @@ function renderPassiveSkills() {
             infoRow(ui('type', 'Type'), escapeHtml(readableSkillValue(skill.Type) || '—')),
             infoRow(ui('element', 'Element'), escapeHtml(typeof skillTokenText === 'function' ? skillTokenText(skill.Element || 'None') : readableSkillValue(skill.Element || 'None')))
         ].join('');
-        return `<article class="card passive-skill-card entity-list-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(passiveSkillSearchText(skill))}" onclick="loadPassiveSkillDetail(this.dataset.key)">${renderPassiveSkillImage(skill, name)}<div class="info-list list-info">${previewInfo}</div></article>`;
+        return `<article class="card passive-skill-card entity-list-card" data-key="${escapeHtml(key)}" data-search="${escapeHtml(passiveSkillSearchText(skill))}" onclick="loadPassiveSkillDetail(this.dataset.key)"><div class="info-list list-info">${previewInfo}</div></article>`;
     }).join('');
     return `<div class="header-card"><h1>${escapeHtml(ui('passiveSkills', 'Passive Skills'))}</h1><p><strong>${wiki.passiveSkills.length} ${escapeHtml(ui('entries', 'entries'))}</strong></p><input type="text" id="searchInput" class="search-input" placeholder="${escapeHtml(ui('search', 'Search...'))}" aria-label="${escapeHtml(ui('search', 'Search...'))}"></div><div class="grid" id="passiveSkillGrid">${cards}</div>`;
 }
@@ -138,7 +138,7 @@ function loadPassiveSkillDetail(key, fromRoute = false) {
     ].join('');
 
     setActiveView('PassiveSkills');
-    document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('PassiveSkills')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card passive-skill-title-card">${renderPassiveSkillImage(skill, name, true)}<h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div>${renderPassiveSkillUsedBy(skill)}${renderPassiveSkillDescription(skill)}</div>`;
+    document.getElementById('content').innerHTML = `<button class="back-btn" onclick="loadView('PassiveSkills')">← ${escapeHtml(ui('back', 'Back'))}</button><div class="detail-stack"><div class="card detail-title-card passive-skill-title-card"><h3>${escapeHtml(name)}</h3></div><div class="card detail-section basic-info-card"><h2>${escapeHtml(ui('basicInfo', 'Basic Info'))}</h2><div class="info-list">${basicInfo}</div></div>${renderPassiveSkillUsedBy(skill)}${renderPassiveSkillDescription(skill)}</div>`;
     window.scrollTo(0, 0);
 }
 
