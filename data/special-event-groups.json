@@ -1,152 +1,374 @@
 [
   {
+    "file": "SpecialEventLostAdventurer.json",
     "key": "LostAdventurer",
-    "questCount": 2,
-    "file": "SpecialEventLostAdventurer.json"
+    "stageCount": 4,
+    "objectiveCount": 4,
+    "questCount": 2
   },
   {
+    "key": "TheGreatHunt",
+    "stageCount": 3,
+    "objectiveCount": 3,
+    "questCount": 0
+  },
+  {
+    "file": "SpecialEventLostPet.json",
     "key": "LostPet",
-    "questCount": 2,
-    "file": "SpecialEventLostPet.json"
+    "stageCount": 4,
+    "objectiveCount": 4,
+    "questCount": 2
   },
   {
+    "file": "SpecialEventLetterErrand.json",
     "key": "LetterErrand",
-    "questCount": 2,
-    "file": "SpecialEventLetterErrand.json"
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 2
   },
   {
+    "file": "SpecialEventEquipmentMaterial.json",
     "key": "EquipmentMaterial",
-    "questCount": 1,
-    "file": "SpecialEventEquipmentMaterial.json"
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventWildMonster.json",
     "key": "WildMonster",
-    "questCount": 1,
-    "file": "SpecialEventWildMonster.json"
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
   },
   {
-    "key": "SlimeWave",
-    "questCount": 1,
-    "file": "SpecialEventSlimeWave.json"
-  },
-  {
-    "key": "BringAliceToTown",
-    "questCount": 1,
-    "file": "SpecialEventBringAliceToTown.json"
-  },
-  {
-    "key": "TheGemstonesQuest",
-    "questCount": 1,
-    "file": "SpecialEventTheGemstonesQuest.json"
-  },
-  {
+    "file": "SpecialEventHelpingTheNun.json",
     "key": "HelpingTheNun",
-    "questCount": 1,
-    "file": "SpecialEventHelpingTheNun.json"
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
-    "key": "Fortune",
-    "questCount": 2,
-    "file": "SpecialEventFortune.json"
+    "file": "SpecialEventSlimeWave.json",
+    "key": "SlimeWave",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
-    "key": "LightForTheForest",
-    "questCount": 1,
-    "file": "SpecialEventLightForTheForest.json"
+    "file": "SpecialEventBringAliceToTown.json",
+    "key": "BringAliceToTown",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventTheGemstonesQuest.json",
+    "key": "TheGemstonesQuest",
+    "stageCount": 3,
+    "objectiveCount": 3,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventWhatIs.json",
     "key": "WhatIs",
-    "questCount": 1,
-    "file": "SpecialEventWhatIs.json"
+    "stageCount": 3,
+    "objectiveCount": 3,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventFortune.json",
+    "key": "Fortune",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 2
+  },
+  {
+    "file": "SpecialEventVampireIncidents.json",
     "key": "VampireIncidents",
-    "questCount": 1,
-    "file": "SpecialEventVampireIncidents.json"
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventUndeadIncidents.json",
     "key": "UndeadIncidents",
-    "questCount": 1,
-    "file": "SpecialEventUndeadIncidents.json"
+    "stageCount": 3,
+    "objectiveCount": 3,
+    "questCount": 1
   },
   {
-    "key": "SalamanderNest",
-    "questCount": 1,
-    "file": "SpecialEventSalamanderNest.json"
+    "key": "WhereIsCastle",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
   },
   {
-    "key": "RingOfMermaid",
-    "questCount": 1,
-    "file": "SpecialEventRingOfMermaid.json"
+    "key": "MysteriousOneEye",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
   },
   {
-    "key": "VampireManorKey",
-    "questCount": 1,
-    "file": "SpecialEventVampireManorKey.json"
+    "key": "TheVampWarning",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
   },
   {
-    "key": "OrcsRavagedVillage",
-    "questCount": 1,
-    "file": "SpecialEventOrcsRavagedVillage.json"
+    "key": "TheThunderForest",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
   },
   {
-    "key": "OrcsHuntingGroundGuard",
-    "questCount": 1,
-    "file": "SpecialEventOrcsHuntingGroundGuard.json"
+    "key": "GetBoat",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
   },
   {
-    "key": "LearnHeal",
-    "questCount": 1,
-    "file": "SpecialEventLearnHeal.json"
-  },
-  {
-    "key": "LearnGuard",
-    "questCount": 1,
-    "file": "SpecialEventLearnGuard.json"
-  },
-  {
-    "key": "StrangeFootprints",
-    "questCount": 2,
-    "file": "SpecialEventStrangeFootprints.json"
-  },
-  {
-    "key": "BrokenSignpost",
-    "questCount": 1,
-    "file": "SpecialEventBrokenSignpost.json"
-  },
-  {
+    "file": "SpecialEventGetShip.json",
     "key": "GetShip",
-    "questCount": 1,
-    "file": "SpecialEventGetShip.json"
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventSalamanderNest.json",
+    "key": "SalamanderNest",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventRingOfMermaid.json",
+    "key": "RingOfMermaid",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventVampireManorKey.json",
+    "key": "VampireManorKey",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
+  },
+  {
+    "key": "CapJackDungeonMap",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "CapJackArenaToken",
+    "stageCount": 2,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "file": "SpecialEventOrcsRavagedVillage.json",
+    "key": "OrcsRavagedVillage",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventOrcsHuntingGroundGuard.json",
+    "key": "OrcsHuntingGroundGuard",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
+  },
+  {
+    "key": "UniversalSellMaterial",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "UniversalSellItem",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "UniversalSellEquip",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "UniversalBuyMaterial",
+    "stageCount": 2,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "UniversalBuyItem",
+    "stageCount": 2,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "UniversalBuyEquip",
+    "stageCount": 2,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "file": "SpecialEventLearnHeal.json",
+    "key": "LearnHeal",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventLearnGuard.json",
+    "key": "LearnGuard",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventStrangeFootprints.json",
+    "key": "StrangeFootprints",
+    "stageCount": 3,
+    "objectiveCount": 3,
+    "questCount": 2
+  },
+  {
+    "file": "SpecialEventEscortMerchant.json",
     "key": "EscortMerchant",
-    "questCount": 2,
-    "file": "SpecialEventEscortMerchant.json"
+    "stageCount": 3,
+    "objectiveCount": 3,
+    "questCount": 2
   },
   {
+    "file": "SpecialEventBrokenSignpost.json",
+    "key": "BrokenSignpost",
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
+  },
+  {
+    "file": "SpecialEventLightForTheForest.json",
+    "key": "LightForTheForest",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
+  },
+  {
+    "key": "ChoiceOfSurvival",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "file": "SpecialEventBeginnerCharmPowder.json",
     "key": "BeginnerCharmPowder",
-    "questCount": 1,
-    "file": "SpecialEventBeginnerCharmPowder.json"
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
   },
   {
+    "key": "ElementSubstances",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "GetSilverIngot",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "file": "SpecialEventHelpMermaid.json",
     "key": "HelpMermaid",
-    "questCount": 1,
-    "file": "SpecialEventHelpMermaid.json"
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventSnowCastleRestlessNight.json",
     "key": "SnowCastleRestlessNight",
-    "questCount": 1,
-    "file": "SpecialEventSnowCastleRestlessNight.json"
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
+    "file": "SpecialEventRoadsideCampDelayedDeparture.json",
     "key": "RoadsideCampDelayedDeparture",
-    "questCount": 1,
-    "file": "SpecialEventRoadsideCampDelayedDeparture.json"
+    "stageCount": 2,
+    "objectiveCount": 2,
+    "questCount": 1
   },
   {
+    "key": "TheClimbersLostLine",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "file": "SpecialEventDryadPineGroveIncident.json",
     "key": "DryadPineGroveIncident",
-    "questCount": 2,
-    "file": "SpecialEventDryadPineGroveIncident.json"
+    "stageCount": 2,
+    "objectiveCount": 1,
+    "questCount": 2
+  },
+  {
+    "key": "CommonHouseSalvagedTravelGear",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "TooBrightToStudy",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "PoisonInThePuddle",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "WaterproofingFailure",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "TheGlowingWreckage",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "TracksUnderTheSnow",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "TheSmokingCrate",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "TheAbandonedHerbBasket",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
+  },
+  {
+    "key": "TheEmptyHuntingCamp",
+    "stageCount": 1,
+    "objectiveCount": 1,
+    "questCount": 0
   }
 ]
