@@ -1,0 +1,26 @@
+{
+  "key": "RingOfMermaid",
+  "quests": [
+    {
+      "id": "57",
+      "key": "QuestRingOfMermaid1",
+      "questType": "Standard",
+      "questGroup": "RingOfMermaid",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": "DefeatTeam-DeepSeaWardens-1",
+      "completeOutcome": "GainEXP-1000|GainEquipment-Ring of Mermaid-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
