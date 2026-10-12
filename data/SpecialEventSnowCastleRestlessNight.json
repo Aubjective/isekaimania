@@ -1,0 +1,26 @@
+{
+  "key": "SnowCastleRestlessNight",
+  "quests": [
+    {
+      "id": "209",
+      "key": "QuestSnowCastleRestlessNight",
+      "questType": "Standard",
+      "questGroup": "SnowCastleRestlessNight",
+      "questorder": "1",
+      "extraDescr": "QuestSnowCastleRestlessNightDescription",
+      "extraDescrVariables": "SnowCastleHero-Ice Lion",
+      "completeCondition": null,
+      "completeOutcome": "GainItem-Trained Wolves-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": "SnowCastleHero",
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
