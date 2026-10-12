@@ -181,42 +181,6 @@
     "questCount": 1
   },
   {
-    "key": "UniversalSellMaterial",
-    "stageCount": 1,
-    "objectiveCount": 1,
-    "questCount": 0
-  },
-  {
-    "key": "UniversalSellItem",
-    "stageCount": 1,
-    "objectiveCount": 1,
-    "questCount": 0
-  },
-  {
-    "key": "UniversalSellEquip",
-    "stageCount": 1,
-    "objectiveCount": 1,
-    "questCount": 0
-  },
-  {
-    "key": "UniversalBuyMaterial",
-    "stageCount": 2,
-    "objectiveCount": 1,
-    "questCount": 0
-  },
-  {
-    "key": "UniversalBuyItem",
-    "stageCount": 2,
-    "objectiveCount": 1,
-    "questCount": 0
-  },
-  {
-    "key": "UniversalBuyEquip",
-    "stageCount": 2,
-    "objectiveCount": 1,
-    "questCount": 0
-  },
-  {
     "file": "SpecialEventLearnHeal.json",
     "key": "LearnHeal",
     "stageCount": 1,
