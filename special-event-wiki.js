@@ -55,66 +55,61 @@ function specialEventQuestCard(q) {
     }).join('') : '';
     return '<article class="card detail-section main-quest-entry" id="quest-'+encodeURIComponent(q.key)+'"><h2>'+escapeHtml(ui('quest','Quest'))+' '+escapeHtml(q.questorder)+': '+escapeHtml(title)+'</h2>'+(description?'<h3>'+escapeHtml(ui('description','Description'))+'</h3><p>'+description+'</p>':'')+(q.completeOutcome?'<h3>'+escapeHtml(ui('completeOutcome','Completion Outcome'))+'</h3><div>'+specialEventOutcome(q.completeOutcome)+'</div>':'')+'</article>';
 }
+// Convert source event branches into one player-facing objective per actionable stage.
 function specialEventStageCard(stage, group, index) {
-    const first=stage.steps.find(step=>step.type==='Standard') || stage.steps[0] || {};
-    const rows=stage.steps;
-    const received=stage.questKeysReceived || [];
-    const completed=stage.questKeysCompleted || [];
-    const refs=(raw)=>String(raw||'').split('|').filter(Boolean);
-    const unique=(items)=>[...new Set(items.filter(Boolean))];
-    const location=unique(rows.filter(step=>step.type==='Standard').flatMap(step=>[step.tileDataPicker,step.tileData,step.tileArea]));
-    const npcs=unique(rows.map(step=>step.eventNpcName));
-    const battles=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>token.startsWith('FightTeam-')).map(token=>token.slice(10))));
-    const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|LostItem|GainCoin|LoseCoin|LostCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
-    const trades=rows.filter(step=>refs(step.eventOutcome).some(token=>token.startsWith('LostItem-')) && refs(step.eventOutcome).some(token=>token.startsWith('GainItem-'))).map(step=>{
-        const lost=refs(step.eventOutcome).filter(token=>token.startsWith('LostItem-')).map(token=>{
-            const parts=token.slice(9).split('-'),count=parts.pop();
-            return specialEventReference(parts.join('-'))+' ×'+escapeHtml(count);
-        }).join(', ');
-        const gained=refs(step.eventOutcome).filter(token=>token.startsWith('GainItem-')).map(token=>{
-            const parts=token.slice(9).split('-'),count=parts.pop();
-            return specialEventReference(parts.join('-'))+' ×'+escapeHtml(count);
-        }).join(', ');
-        return '<p><strong>Trade:</strong> Give '+lost+' to receive '+gained+'.</p>';
-    });
-
+    const rows=stage.steps || [];
+    const tokens=raw=>String(raw||'').split('|').filter(Boolean);
+    const unique=values=>[...new Set(values.filter(Boolean))];
+    const outcomes=rows.flatMap(row=>tokens(row.eventOutcome));
+    const gains=outcomes.filter(t=>/^(GainItem|GainEquipment|GainChest|GainCoin|GainEXP|GainJob|RevealArea|ReceiveQuest|CompleteQuest)-/.test(t));
+    const costs=outcomes.filter(t=>/^(LostItem|LoseItem|LoseCoin|LostCoin)-/.test(t));
+    const encounters=rows.filter(row=>row.type==='Standard');
+    const location=unique(encounters.flatMap(row=>[row.tileDataPicker,row.tileData,row.tileArea]));
+    const npcs=unique(rows.map(row=>row.eventNpcName));
+    const received=stage.questKeysReceived||[];
+    const completed=stage.questKeysCompleted||[];
     const questCards=group.quests.filter(q=>received.includes(q.key) || (!group.stages.some(st=>(st.questKeysReceived||[]).includes(q.key)) && (completed.includes(q.key) || (index===0 && !group.stages.some(st=>(st.questKeysCompleted||[]).includes(q.key)))))).map(specialEventQuestCard).join('');
-    const title=specialEventText(stage.key)||stage.key.replace(/([a-z])([A-Z])/g,'$1 $2');
-    const coinPurchase=rows.find(step=>refs(step.eventOutcome).some(token=>token.startsWith('LoseCoin-')) && refs(step.eventOutcome).some(token=>token.startsWith('GainItem-')));
-    const purchases=coinPurchase ? (()=>{
-        const cost=refs(coinPurchase.eventOutcome).find(token=>token.startsWith('LoseCoin-')).slice(9);
-        const item=refs(coinPurchase.eventOutcome).find(token=>token.startsWith('GainItem-')).slice(9).split('-');
-        const count=item.pop();
-        return '<p><strong>Purchase:</strong> Pay '+escapeHtml(Number(cost).toLocaleString())+' Coins to receive '+specialEventReference(item.join('-'))+' ×'+escapeHtml(count)+'.</p>';
-    })() : '';
-    const options=unique(rows.filter(step=>step.optionText).map(step=>specialEventText(step.optionText)||step.optionText.replace(/([a-z])([A-Z])/g,'$1 $2')));
-    const isClosing=rows.every(step=>step.type==='FollowUp' && !step.eventOutcome) && rows.some(step=>String(step.endDialog).toUpperCase()==='TRUE');
-    const previous=group.stages.slice(0,index).flatMap(st=>st.steps);
-    const continuation=rows.filter(step=>step.optionId).map(step=>previous.find(prev=>String(prev.id)===String(step.optionId))).filter(Boolean);
-
+    const relevant=!!(encounters.length || outcomes.length || questCards || rows.some(row=>row.type==='Resolve' && row.eventOutcome));
+    // A follow-up containing only acknowledgement/exit dialogue is not a gameplay stage.
+    if(!relevant)return '';
+    const label=key=>specialEventText(key)||String(key).replace(/([a-z])([A-Z])/g,'$1 $2');
+    const parsed=token=>{const parts=token.split('-');const kind=parts.shift();const count=parts.pop();return {kind,key:parts.join('-'),count};};
+    const items=gains.filter(t=>/^(GainItem|GainEquipment|GainChest)-/.test(t)).map(parsed);
+    const payments=costs.map(t=>{
+        const p=parsed(t);
+        if(p.kind==='LoseCoin'||p.kind==='LostCoin')return Number(p.key||p.count).toLocaleString()+' Coins';
+        return specialEventReference(p.key)+' ×'+escapeHtml(p.count||'1');
+    });
+    const battles=unique(outcomes.filter(t=>/^(FightTeam|StartBattle|Battle)-/.test(t)).map(t=>t.split('-').slice(1).join('-')));
+    const subject=items.length?items.map(p=>specialEventReference(p.key)+(p.count&&p.count!=='1'?' ×'+escapeHtml(p.count):'')).join(', '):'';
+    const first=encounters[0]||rows[0]||{};
+    const title=subject?'Obtain '+items.map(p=>label(p.key)).join(', '):battles.length?'Defeat '+battles.map(label).join(', '):specialEventText(stage.key)||label(stage.key);
     const info=[];
     if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
     if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
-    if(battles.length)info.push('<p><strong>Battle:</strong> '+battles.map(specialEventReference).join(' · ')+'</p>');
-    // Internal trigger conditions are retained in JSON, but not exposed as raw game logic.
-    if(trades.length)info.push(...trades);
-    if(purchases)info.push(purchases);
-    if(options.length)info.push('<p><strong>Choices:</strong> '+options.map(escapeHtml).join(' · ')+'</p>');
-    if(isClosing)info.push('<p>This stage concludes the interaction'+(continuation.length?' after the previous choice':'')+'.</p>');
-    const otherActions=actions.filter(token=>(!trades.length && !purchases) || !/^(GainItem|LostItem|LoseCoin)-/.test(token));
-    if(otherActions.length)info.push('<p><strong>Other outcomes:</strong> '+otherActions.map(specialEventOutcome).join(' · ')+'</p>');
+    if(payments.length)info.push('<p><strong>Requirement:</strong> '+payments.join(' · ')+'</p>');
+    let objective='';
+    if(subject) objective=(npcs.length?'Obtain ':'Collect ')+subject+(npcs.length?' from '+npcs.map(specialEventReference).join(', '):'')+(payments.length?' in exchange for '+payments.join(', '):'')+'.';
+    else if(battles.length)objective='Defeat '+battles.map(specialEventReference).join(', ')+'.';
+    else if(received.length)objective='Receive '+received.map(specialEventReference).join(', ')+'.';
+    else if(completed.length)objective='Complete '+completed.map(specialEventReference).join(', ')+'.';
+    else if(location.length)objective='Visit '+location.map(specialEventReference).join(' · ')+(npcs.length?' and speak with '+npcs.map(specialEventReference).join(', '):'')+'.';
+    if(objective)info.push('<p><strong>Objective:</strong> '+objective+'</p>');
+    const rewards=gains.filter(t=>!/^(ReceiveQuest|CompleteQuest)-/.test(t) && !items.some(p=>t===p.kind+'-'+p.key+'-'+p.count));
+    if(items.length)info.push('<p><strong>Reward:</strong> '+subject+'</p>');
+    if(rewards.length)info.push('<p><strong>Other rewards:</strong> '+rewards.map(specialEventOutcome).join(' · ')+'</p>');
     if(completed.length)info.push('<p><strong>'+escapeHtml(ui('questComplete','Quest complete'))+':</strong> '+completed.map(specialEventReference).join(' · ')+'</p>');
     return '<section class="card detail-section special-event-stage" id="stage-'+encodeURIComponent(stage.key)+'"><h2>Stage '+(index+1)+': '+escapeHtml(title)+'</h2>'+info.join('')+questCards+'</section>';
 }
 function renderSpecialEventList() {
-    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+g.stageCount+' Stages · '+g.questCount+' '+escapeHtml(ui('quests','Quests'))+'</p></article>').join('');
+    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+g.stages.filter((stage,i)=>specialEventStageCard(stage,g,i)).length+' Objectives · '+g.questCount+' '+escapeHtml(ui('quests','Quests'))+'</p></article>').join('');
     return '<div class="header-card"><h1>'+escapeHtml(ui('specialEvents','Special Events'))+'</h1><p>'+wiki.specialEventGroups.length+' '+escapeHtml(ui('entries','entries'))+'</p><input type="text" id="searchInput" class="search-input" placeholder="'+escapeHtml(ui('search','Search...'))+'"></div><div class="grid">'+cards+'</div>';
 }
 function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
     const group=specialEventGroup(key);if(!group)return;
     if(!fromRoute&&navigateHash('specialevents',key))return;
     setActiveView('SpecialEvents');
-    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+group.stages.length+' Stages · '+group.quests.length+' '+escapeHtml(ui('quests','Quests'))+'</p></div>'+group.stages.map((stage,i)=>specialEventStageCard(stage,group,i)).join('')+'</div>';
+    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+group.stages.filter((stage,i)=>specialEventStageCard(stage,group,i)).length+' Objectives · '+group.quests.length+' '+escapeHtml(ui('quests','Quests'))+'</p></div>'+group.stages.map((stage,i)=>specialEventStageCard(stage,group,i)).filter(Boolean).map((html,i)=>html.replace(/<h2>Stage \\d+:/,'<h2>Stage '+(i+1)+':')).join('')+'</div>';
     if(questKey){const node=document.getElementById('quest-'+questKey);if(node)node.scrollIntoView();}else window.scrollTo(0,0);
 }
 function specialEventRoute() {
