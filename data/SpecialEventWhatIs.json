@@ -1,0 +1,26 @@
+{
+  "key": "WhatIs",
+  "quests": [
+    {
+      "id": "53",
+      "key": "QuestWhatIs1",
+      "questType": "Standard",
+      "questGroup": "WhatIs",
+      "questorder": "1",
+      "extraDescr": "InvestigateAndReportAtArea",
+      "extraDescrVariables": "KingdomForest-9-Guard-Castle-10",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-3000|GainItem-Candle-3",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
