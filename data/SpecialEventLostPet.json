@@ -1,0 +1,47 @@
+{
+  "key": "LostPet",
+  "quests": [
+    {
+      "id": "40",
+      "key": "QuestLostPet1",
+      "questType": "Standard",
+      "questGroup": "LostPet",
+      "questorder": "1",
+      "extraDescr": "QuestLostPet1Description",
+      "extraDescrVariables": "49-SlimeLandB",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-1000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "41",
+      "key": "QuestLostPet2",
+      "questType": "Standard",
+      "questGroup": "LostPet",
+      "questorder": "2",
+      "extraDescr": "QuestLostPet2Description",
+      "extraDescrVariables": "BeginnerTownHero-68",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-300|GainItem-Wooden Wheel-4",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
