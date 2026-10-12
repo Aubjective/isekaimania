@@ -1,0 +1,47 @@
+{
+  "key": "LetterErrand",
+  "quests": [
+    {
+      "id": "42",
+      "key": "QuestLetterErrand1",
+      "questType": "Standard",
+      "questGroup": "LetterErrand",
+      "questorder": "1",
+      "extraDescr": "RetriveItemAtIn",
+      "extraDescrVariables": "Letter-Castle-34",
+      "completeCondition": null,
+      "completeOutcome": null,
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "43",
+      "key": "QuestLetterErrand2",
+      "questType": "Standard",
+      "questGroup": "LetterErrand",
+      "questorder": "2",
+      "extraDescr": "DeliverSomethingToAtWhere",
+      "extraDescrVariables": "Mary Letter-Mary-BeginnerTownHero-8",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-3000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
