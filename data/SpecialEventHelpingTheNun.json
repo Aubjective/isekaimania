@@ -1,0 +1,26 @@
+{
+  "key": "HelpingTheNun",
+  "quests": [
+    {
+      "id": "49",
+      "key": "QuestHelpingTheNun1",
+      "questType": "Standard",
+      "questGroup": "HelpingTheNun",
+      "questorder": "1",
+      "extraDescr": "DeliverSomethingTo",
+      "extraDescrVariables": "High Nun Necklace-Castle",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-5000|GainItem-Tent-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
