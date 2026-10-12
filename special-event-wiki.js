@@ -1,4 +1,4 @@
-// Special Events are stage-first; quests are optional and embedded at their receive stages.
+// Special Events display localized objectives only; source quest and dialogue records remain in JSON.
 wiki.specialEventGroups = [];
 wiki.specialEventLocalisation = {};
 wiki.specialEventsReady = false;
@@ -64,8 +64,8 @@ function specialEventStageCard(stage, group, index) {
     const battles=unique(outcomes.filter(t=>/^(FightTeam|StartBattle|Battle)-/.test(t)).map(t=>t.split('-').slice(1).join('-')));
     const subject=items.length?items.map(p=>specialEventReference(p.key)+(p.count&&p.count!=='1'?' ×'+escapeHtml(p.count):'')).join(', '):'';
     const first=encounters[0]||rows[0]||{};
-    const stageName=specialEventText(stage.key) || (stage.key===group.key || /^\d+$/.test(stage.key.slice(group.key.length)) ? label(group.key) : label(stage.key.replace(/\d+$/,'')));
-    const title=subject?'Obtain '+items.map(p=>label(p.key)).join(', '):battles.length?'Defeat '+battles.map(label).join(', '):stageName;
+    const stageName=specialEventText(stage.key) || specialEventText(group.key) || (stage.key===group.key ? label(group.key) : label(stage.key.replace(/\d+$/,'')));
+    const title=stageName;
     const info=[];
     if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
     if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
