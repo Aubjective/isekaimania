@@ -1,0 +1,26 @@
+{
+  "key": "BrokenSignpost",
+  "quests": [
+    {
+      "id": "65",
+      "key": "QuestBrokenSignpost1",
+      "questType": "Standard",
+      "questGroup": "BrokenSignpost",
+      "questorder": "1",
+      "extraDescr": "QuestBrokenSignpostDescription1",
+      "extraDescrVariables": "67-5-Wood-2-Iron Ingot",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-600|GainCoin-10000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
