@@ -47,7 +47,7 @@ function specialEventStageCard(stage, group, index) {
     const costs=outcomes.filter(t=>/^(LostItem|LoseItem|LoseCoin|LostCoin)-/.test(t));
     const encounters=rows.filter(row=>row.type==='Standard');
     const location=unique(encounters.flatMap(row=>[row.tileDataPicker,row.tileData,row.tileArea]));
-    const npcs=unique(encounters.map(row=>row.eventNpcName).filter(name=>name && String(name).toUpperCase()!=='PLAYER' && String(name).toUpperCase()!=='NULL'));
+    const npcs=unique(encounters.filter(row=>row.imageType==='NPC').map(row=>row.eventNpcName).filter(name=>name && String(name).toUpperCase()!=='PLAYER'));
     const received=stage.questKeysReceived||[];
     const completed=stage.questKeysCompleted||[];
     const relevant=stage.display ? stage.display.show : !!(encounters.length || outcomes.some(t=>!/^(ReceiveQuest|CompleteQuest)-/.test(t)));
