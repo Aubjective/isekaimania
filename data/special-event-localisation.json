@@ -5871,5 +5871,474 @@
     "zh-Hant": "在區域{1}的{0}與{2}檢查舊軍需記錄並取得{3}。隨後進入區域{5}的{4}，擊敗{6}，再返回{0}。",
     "ja": "エリア{1}の{0}で{2}と共に旧兵站記録を調べ、{3}を手に入れる。エリア{5}の{4}に入り、{6}を倒してから{0}へ戻る。",
     "ru": ""
+  },
+  "LostAdventurer1": {
+    "en": "Lost Adventurer 1",
+    "zh": "迷失的冒险者1",
+    "zh-Hant": "迷失的冒險者1",
+    "ja": "迷子の冒険者1",
+    "ru": "Пропавший искатель приключений 1"
+  },
+  "LostAdventurer2": {
+    "en": "Lost Adventurer",
+    "zh": "迷失的冒险者",
+    "zh-Hant": "迷失的冒險者",
+    "ja": "迷子の冒険者",
+    "ru": "Пропавший искатель приключений"
+  },
+  "LostAdventurer3": {
+    "en": "Lost Adventurer",
+    "zh": "迷失的冒险者",
+    "zh-Hant": "迷失的冒險者",
+    "ja": "迷子の冒険者",
+    "ru": "Пропавший искатель приключений"
+  },
+  "LostAdventurer4": {
+    "en": "Lost Adventurer 2",
+    "zh": "迷失的冒险者2",
+    "zh-Hant": "迷失的冒險者2",
+    "ja": "迷子の冒険者2",
+    "ru": "Пропавший искатель приключений 2"
+  },
+  "TheGreatHunt1": {
+    "en": "The Great Hunt",
+    "zh": "伟大的狩猎",
+    "zh-Hant": "偉大的狩獵",
+    "ja": "大いなる狩り",
+    "ru": "Великая охота"
+  },
+  "TheGreatHunt2": {
+    "en": "The Great Hunt",
+    "zh": "伟大的狩猎",
+    "zh-Hant": "偉大的狩獵",
+    "ja": "大いなる狩り",
+    "ru": "Великая охота"
+  },
+  "TheGreatHunt3": {
+    "en": "The Great Hunt",
+    "zh": "伟大的狩猎",
+    "zh-Hant": "偉大的狩獵",
+    "ja": "大いなる狩り",
+    "ru": "Великая охота"
+  },
+  "LostPet1": {
+    "en": "Lost Pet 1",
+    "zh": "丢失的宠物1",
+    "zh-Hant": "遺失的寵物1",
+    "ja": "迷子のペット1",
+    "ru": "Пропавший питомец 1"
+  },
+  "LostPet2": {
+    "en": "Lost Pet",
+    "zh": "走失的宠物",
+    "zh-Hant": "走失的寵物",
+    "ja": "迷子のペット",
+    "ru": "Пропавший питомец"
+  },
+  "LostPet3": {
+    "en": "Lost Pet",
+    "zh": "走失的宠物",
+    "zh-Hant": "走失的寵物",
+    "ja": "迷子のペット",
+    "ru": "Пропавший питомец"
+  },
+  "LostPet4": {
+    "en": "Lost Pet 2",
+    "zh": "丢失的宠物2",
+    "zh-Hant": "遺失的寵物2",
+    "ja": "迷子のペット2",
+    "ru": "Пропавший питомец 2"
+  },
+  "LetterErrand1": {
+    "en": "Receive the Letter",
+    "zh": "领取信件",
+    "zh-Hant": "領取信件",
+    "ja": "手紙を受け取ろう",
+    "ru": "Получить письмо"
+  },
+  "LetterErrand2": {
+    "en": "Letter Errand",
+    "zh": "信件差事",
+    "zh-Hant": "信件差事",
+    "ja": "手紙の届け物",
+    "ru": "Поручение с письмом"
+  },
+  "EquipmentMaterial1": {
+    "en": "Gather Equipment Materials",
+    "zh": "收集装备材料",
+    "zh-Hant": "收集裝備材料",
+    "ja": "装備素材を集めよう",
+    "ru": "Сбор материалов для снаряжения"
+  },
+  "EquipmentMaterial2": {
+    "en": "Gather Equipment Materials",
+    "zh": "收集装备材料",
+    "zh-Hant": "收集裝備材料",
+    "ja": "装備素材を集めよう",
+    "ru": "Сбор материалов для снаряжения"
+  },
+  "WildMonster1": {
+    "en": "Clearing Wild Monsters 1",
+    "zh": "清理野外怪物 1",
+    "zh-Hant": "清理野外怪物 1",
+    "ja": "野生モンスター討伐1",
+    "ru": "Зачистка диких монстров 1"
+  },
+  "HelpingTheNun1": {
+    "en": "Delivering the Necklace",
+    "zh": "护送项链",
+    "zh-Hant": "護送項鍊",
+    "ja": "首飾りの配達",
+    "ru": "Доставка ожерелья"
+  },
+  "HelpingTheNun2": {
+    "en": "Delivering the Necklace",
+    "zh": "护送项链",
+    "zh-Hant": "護送項鍊",
+    "ja": "首飾りの配達",
+    "ru": "Доставка ожерелья"
+  },
+  "SlimeWave1": {
+    "en": "Stop the Slime Wave",
+    "zh": "阻止史莱姆浪潮",
+    "zh-Hant": "阻止史萊姆浪潮",
+    "ja": "スライムの波を止めろ",
+    "ru": "Остановить волну слаймов"
+  },
+  "SlimeWave2": {
+    "en": "Stop the Slime Wave",
+    "zh": "阻止史莱姆浪潮",
+    "zh-Hant": "阻止史萊姆浪潮",
+    "ja": "スライムの波を止めろ",
+    "ru": "Остановить волну слаймов"
+  },
+  "BringAliceToTown1": {
+    "en": "Escort Alice to Town",
+    "zh": "护送爱丽丝进城",
+    "zh-Hant": "护送爱丽丝进城",
+    "ja": "アリスを町まで護衛",
+    "ru": "Сопроводить Алису в город"
+  },
+  "BringAliceToTown2": {
+    "en": "Escort Alice to Town",
+    "zh": "护送爱丽丝进城",
+    "zh-Hant": "护送爱丽丝进城",
+    "ja": "アリスを町まで護衛",
+    "ru": "Сопроводить Алису в город"
+  },
+  "TheGemstonesQuest1": {
+    "en": "The Weapon Merchant’s Gem Request",
+    "zh": "武器商人的宝石委托",
+    "zh-Hant": "武器商人的寶石委託",
+    "ja": "武器商人の宝石依頼",
+    "ru": "Просьба торговца оружием о самоцветах"
+  },
+  "TheGemstonesQuest2": {
+    "en": "The Gemstones Quest",
+    "zh": "宝石任务",
+    "zh-Hant": "寶石任務",
+    "ja": "宝石のクエスト",
+    "ru": "Задание о самоцветах"
+  },
+  "TheGemstonesQuest3": {
+    "en": "The Weapon Merchant’s Gem Request",
+    "zh": "武器商人的宝石委托",
+    "zh-Hant": "武器商人的寶石委託",
+    "ja": "武器商人の宝石依頼",
+    "ru": "Просьба торговца оружием о самоцветах"
+  },
+  "WhatIs1": {
+    "en": "What Is That Noise?",
+    "zh": "那是什么声音？",
+    "zh-Hant": "那是什麼聲音？",
+    "ja": "あの音は何？",
+    "ru": "Что это за шум?"
+  },
+  "WhatIs2": {
+    "en": "What Is That?",
+    "zh": "那是什么？",
+    "zh-Hant": "那是什麼？",
+    "ja": "あれは何？",
+    "ru": "Что это?"
+  },
+  "WhatIs3": {
+    "en": "What Is That Noise?",
+    "zh": "那是什么声音？",
+    "zh-Hant": "那是什麼聲音？",
+    "ja": "あの音は何？",
+    "ru": "Что это за шум?"
+  },
+  "FortuneLuck": {
+    "en": "Fortune",
+    "zh": "运势",
+    "zh-Hant": "運勢",
+    "ja": "運勢",
+    "ru": "Судьба"
+  },
+  "FortuneExp": {
+    "en": "Fortune Exp",
+    "zh": "成长的馈赠",
+    "zh-Hant": "成長的饋贈",
+    "ja": "成長の贈り物",
+    "ru": "Дар опыта"
+  },
+  "Vampire1": {
+    "en": "The Vampire Threat",
+    "zh": "吸血鬼的威胁",
+    "zh-Hant": "吸血鬼的威脅",
+    "ja": "吸血鬼の脅威",
+    "ru": "Угроза вампира"
+  },
+  "Vampire2": {
+    "en": "The Vampire Threat",
+    "zh": "吸血鬼的威胁",
+    "zh-Hant": "吸血鬼的威脅",
+    "ja": "吸血鬼の脅威",
+    "ru": "Угроза вампира"
+  },
+  "UndeadIncidents1": {
+    "en": "Investigate the Undead Incidents",
+    "zh": "调查亡灵事件",
+    "zh-Hant": "調查亡靈事件",
+    "ja": "アンデッド事件の調査",
+    "ru": "Расследование происшествий с нежитью"
+  },
+  "UndeadIncidents2": {
+    "en": "Undead Incidents",
+    "zh": "亡灵事件",
+    "zh-Hant": "亡靈事件",
+    "ja": "アンデッド事件",
+    "ru": "Происшествия с нежитью"
+  },
+  "UndeadIncidents3": {
+    "en": "Investigate the Undead Incidents",
+    "zh": "调查亡灵事件",
+    "zh-Hant": "調查亡靈事件",
+    "ja": "アンデッド事件の調査",
+    "ru": "Расследование происшествий с нежитью"
+  },
+  "GetBoat1": {
+    "en": "Get Boat",
+    "zh": "获取小船",
+    "zh-Hant": "取得小船",
+    "ja": "舟を手に入れよう",
+    "ru": "Получить лодку"
+  },
+  "GetShip1": {
+    "en": "Get Ship",
+    "zh": "获取舰船",
+    "zh-Hant": "取得艦船",
+    "ja": "船を手に入れよう",
+    "ru": "Получить корабль"
+  },
+  "SalamanderNest1": {
+    "en": "Protect the Salamander Eggs",
+    "zh": "保护火蜥蜴蛋",
+    "zh-Hant": "保護火蜥蜴蛋",
+    "ja": "サラマンダーの卵を守れ",
+    "ru": "Защитить яйца саламандр"
+  },
+  "SalamanderNest2": {
+    "en": "Protect the Salamander Eggs",
+    "zh": "保护火蜥蜴蛋",
+    "zh-Hant": "保護火蜥蜴蛋",
+    "ja": "サラマンダーの卵を守れ",
+    "ru": "Защитить яйца саламандр"
+  },
+  "RingOfMermaid1": {
+    "en": "The Mermaid's Respect",
+    "zh": "美人鱼的敬意",
+    "zh-Hant": "美人魚的敬意",
+    "ja": "人魚の敬意",
+    "ru": "Уважение русалки"
+  },
+  "VampireManorKey1": {
+    "en": "Recover the Stolen Key",
+    "zh": "夺回失窃的钥匙",
+    "zh-Hant": "奪回失竊的鑰匙",
+    "ja": "盗まれた鍵を取り戻せ",
+    "ru": "Вернуть украденный ключ"
+  },
+  "VampireManorKey2": {
+    "en": "Recover the Stolen Key",
+    "zh": "夺回失窃的钥匙",
+    "zh-Hant": "奪回失竊的鑰匙",
+    "ja": "盗まれた鍵を取り戻せ",
+    "ru": "Вернуть украденный ключ"
+  },
+  "CapJackDungeonMap1": {
+    "en": "Captain Jack Dungeon Map",
+    "zh": "杰克船长地牢地图",
+    "zh-Hant": "傑克船長地牢地圖",
+    "ja": "ジャック船長のダンジョン地図",
+    "ru": "Карта подземелья капитана Джека"
+  },
+  "CapJackArenaToken1": {
+    "en": "Captain Jack Arena Token",
+    "zh": "杰克船长竞技场令牌",
+    "zh-Hant": "傑克船長競技場令牌",
+    "ja": "ジャック船長の闘技場印章",
+    "ru": "Жетон арены капитана Джека"
+  },
+  "CapJackArenaToken2": {
+    "en": "Captain Jack Arena Token",
+    "zh": "杰克船长竞技场令牌",
+    "zh-Hant": "傑克船長競技場令牌",
+    "ja": "ジャック船長の闘技場印章",
+    "ru": "Жетон арены капитана Джека"
+  },
+  "OrcsRavagedVillage1": {
+    "en": "Feed the Orc Guard",
+    "zh": "喂饱兽人守卫",
+    "zh-Hant": "餵飽獸人守衛",
+    "ja": "オークの衛兵に食事を",
+    "ru": "Накормить орка-стража"
+  },
+  "OrcsRavagedVillage2": {
+    "en": "Feed the Orc Guard",
+    "zh": "喂饱兽人守卫",
+    "zh-Hant": "餵飽獸人守衛",
+    "ja": "オークの衛兵に食事を",
+    "ru": "Накормить орка-стража"
+  },
+  "OrcsHuntingGroundGuard1": {
+    "en": "A Blade for the Guard",
+    "zh": "守卫的短刀",
+    "zh-Hant": "守衛的短刀",
+    "ja": "衛兵のための刃",
+    "ru": "Клинок для стража"
+  },
+  "OrcsHuntingGroundGuard2": {
+    "en": "A Blade for the Guard",
+    "zh": "守卫的短刀",
+    "zh-Hant": "守衛的短刀",
+    "ja": "衛兵のための刃",
+    "ru": "Клинок для стража"
+  },
+  "LearnHeal1": {
+    "en": "Learn Heal",
+    "zh": "学习治疗",
+    "zh-Hant": "學習治療",
+    "ja": "回復を学ぼう",
+    "ru": "Научиться исцелению"
+  },
+  "LearnGuard1": {
+    "en": "Learn Guard",
+    "zh": "学习防御",
+    "zh-Hant": "學習防禦",
+    "ja": "防御を学ぼう",
+    "ru": "Научиться защите"
+  },
+  "StrangeFootprints1": {
+    "en": "Strange Footprints 1",
+    "zh": "奇怪的脚印1",
+    "zh-Hant": "奇怪的腳印1",
+    "ja": "奇妙な足跡1",
+    "ru": "Странные следы 1"
+  },
+  "StrangeFootprints2": {
+    "en": "Strange Footprints",
+    "zh": "奇怪的脚印",
+    "zh-Hant": "奇怪的腳印",
+    "ja": "奇妙な足跡",
+    "ru": "Странные следы"
+  },
+  "StrangeFootprints3": {
+    "en": "Strange Footprints 2",
+    "zh": "奇怪的脚印2",
+    "zh-Hant": "奇怪的腳印2",
+    "ja": "奇妙な足跡2",
+    "ru": "Странные следы 2"
+  },
+  "EscortMerchant2": {
+    "en": "Escort the Merchant",
+    "zh": "护送商人",
+    "zh-Hant": "護送商人",
+    "ja": "商人の護衛",
+    "ru": "Сопроводить торговца"
+  },
+  "EscortMerchant3": {
+    "en": "Escort Merchant 2",
+    "zh": "护送商人2",
+    "zh-Hant": "護送商人2",
+    "ja": "商人の護衛2",
+    "ru": "Сопровождение торговца 2"
+  },
+  "EscortMerchant1": {
+    "en": "Escort Merchant 1",
+    "zh": "护送商人1",
+    "zh-Hant": "護送商人1",
+    "ja": "商人の護衛1",
+    "ru": "Сопровождение торговца 1"
+  },
+  "BrokenSignpost1": {
+    "en": "Broken Signpost 1",
+    "zh": "倒下的路标1",
+    "zh-Hant": "倒下的路標1",
+    "ja": "壊れた道標1",
+    "ru": "Сломанный указатель 1"
+  },
+  "BrokenSignpost2": {
+    "en": "Broken Signpost 1",
+    "zh": "倒下的路标1",
+    "zh-Hant": "倒下的路標1",
+    "ja": "壊れた道標1",
+    "ru": "Сломанный указатель 1"
+  },
+  "FindAnOilLamp": {
+    "en": "Finding an Oil Lamp",
+    "zh": "寻找油灯",
+    "zh-Hant": "尋找油燈",
+    "ja": "オイルランプ探し",
+    "ru": "Поиски масляной лампы"
+  },
+  "ChoosePouch": {
+    "en": "A Choice of Survival",
+    "zh": "生存的选择",
+    "zh-Hant": "生存的選擇",
+    "ja": "生き延びるための選択",
+    "ru": "Выбор ради выживания"
+  },
+  "SnowCastleRestlessNight1": {
+    "en": "A Restless Night",
+    "zh": "不宁之夜",
+    "zh-Hant": "不寧之夜",
+    "ja": "落ち着かない夜",
+    "ru": "Беспокойная ночь"
+  },
+  "SnowCastleRestlessNight2": {
+    "en": "A Restless Night",
+    "zh": "不宁之夜",
+    "zh-Hant": "不寧之夜",
+    "ja": "落ち着かない夜",
+    "ru": "Беспокойная ночь"
+  },
+  "RoadsideCampDelayedDeparture1": {
+    "en": "A Delayed Departure",
+    "zh": "迟迟未启程",
+    "zh-Hant": "遲遲未啟程",
+    "ja": "遅れた出発",
+    "ru": "Задержанный отъезд"
+  },
+  "RoadsideCampDelayedDeparture2": {
+    "en": "A Delayed Departure",
+    "zh": "迟迟未启程",
+    "zh-Hant": "遲遲未啟程",
+    "ja": "遅れた出発",
+    "ru": "Задержанный отъезд"
+  },
+  "TheClimbersLostLine1": {
+    "en": "The Climber's Lost Line",
+    "zh": "攀登者遗失的绳索",
+    "zh-Hant": "攀登者遺失的繩索",
+    "ja": "登山者が失くしたロープ",
+    "ru": "Потерянная верёвка альпиниста"
+  },
+  "CommonHouseSalvagedLeather": {
+    "en": "Salvaged Travel Gear",
+    "zh": "回收的旅行装备",
+    "zh-Hant": "回收的旅行裝備",
+    "ja": "回収された旅の装備",
+    "ru": "Возвращённое походное снаряжение"
   }
 }
