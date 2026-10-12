@@ -65,7 +65,7 @@ function specialEventStageCard(stage, group, index) {
     const location=unique(rows.filter(step=>step.type==='Standard').flatMap(step=>[step.tileDataPicker,step.tileData,step.tileArea]));
     const npcs=unique(rows.map(step=>step.eventNpcName));
     const battles=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>token.startsWith('FightTeam-')).map(token=>token.slice(10))));
-    const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|LostItem|GainCoin|LostCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
+    const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|LostItem|GainCoin|LoseCoin|LostCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
     const trades=rows.filter(step=>refs(step.eventOutcome).some(token=>token.startsWith('LostItem-')) && refs(step.eventOutcome).some(token=>token.startsWith('GainItem-'))).map(step=>{
         const lost=refs(step.eventOutcome).filter(token=>token.startsWith('LostItem-')).map(token=>{
             const parts=token.slice(9).split('-'),count=parts.pop();
@@ -80,13 +80,28 @@ function specialEventStageCard(stage, group, index) {
 
     const questCards=group.quests.filter(q=>received.includes(q.key) || (!group.stages.some(st=>(st.questKeysReceived||[]).includes(q.key)) && (completed.includes(q.key) || (index===0 && !group.stages.some(st=>(st.questKeysCompleted||[]).includes(q.key)))))).map(specialEventQuestCard).join('');
     const title=specialEventText(stage.key)||stage.key.replace(/([a-z])([A-Z])/g,'$1 $2');
+    const coinPurchase=rows.find(step=>refs(step.eventOutcome).some(token=>token.startsWith('LoseCoin-')) && refs(step.eventOutcome).some(token=>token.startsWith('GainItem-')));
+    const purchases=coinPurchase ? (()=>{
+        const cost=refs(coinPurchase.eventOutcome).find(token=>token.startsWith('LoseCoin-')).slice(9);
+        const item=refs(coinPurchase.eventOutcome).find(token=>token.startsWith('GainItem-')).slice(9).split('-');
+        const count=item.pop();
+        return '<p><strong>Purchase:</strong> Pay '+escapeHtml(Number(cost).toLocaleString())+' Coins to receive '+specialEventReference(item.join('-'))+' ×'+escapeHtml(count)+'.</p>';
+    })() : '';
+    const options=unique(rows.filter(step=>step.optionText).map(step=>specialEventText(step.optionText)||step.optionText.replace(/([a-z])([A-Z])/g,'$1 $2')));
+    const isClosing=rows.every(step=>step.type==='FollowUp' && !step.eventOutcome) && rows.some(step=>String(step.endDialog).toUpperCase()==='TRUE');
+    const previous=group.stages.slice(0,index).flatMap(st=>st.steps);
+    const continuation=rows.filter(step=>step.optionId).map(step=>previous.find(prev=>String(prev.id)===String(step.optionId))).filter(Boolean);
+
     const info=[];
     if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
     if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
     if(battles.length)info.push('<p><strong>Battle:</strong> '+battles.map(specialEventReference).join(' · ')+'</p>');
     // Internal trigger conditions are retained in JSON, but not exposed as raw game logic.
     if(trades.length)info.push(...trades);
-    const otherActions=actions.filter(token=>!trades.length || !/^(GainItem|LostItem)-/.test(token));
+    if(purchases)info.push(purchases);
+    if(options.length)info.push('<p><strong>Choices:</strong> '+options.map(escapeHtml).join(' · ')+'</p>');
+    if(isClosing)info.push('<p>This stage concludes the interaction'+(continuation.length?' after the previous choice':'')+'.</p>');
+    const otherActions=actions.filter(token=>(!trades.length && !purchases) || !/^(GainItem|LostItem|LoseCoin)-/.test(token));
     if(otherActions.length)info.push('<p><strong>Other outcomes:</strong> '+otherActions.map(specialEventOutcome).join(' · ')+'</p>');
     if(completed.length)info.push('<p><strong>'+escapeHtml(ui('questComplete','Quest complete'))+':</strong> '+completed.map(specialEventReference).join(' · ')+'</p>');
     return '<section class="card detail-section special-event-stage" id="stage-'+encodeURIComponent(stage.key)+'"><h2>Stage '+(index+1)+': '+escapeHtml(title)+'</h2>'+info.join('')+questCards+'</section>';
