@@ -1,0 +1,26 @@
+{
+  "key": "TheGemstonesQuest",
+  "quests": [
+    {
+      "id": "48",
+      "key": "QuestTheGemstonesQuest1",
+      "questType": "Standard",
+      "questGroup": "TheGemstonesQuest",
+      "questorder": "1",
+      "extraDescr": "QuestTheGemstonesQuest1Description",
+      "extraDescrVariables": "TheGems-56-WeaponMerchant-Castle-10",
+      "completeCondition": null,
+      "completeOutcome": "GainItem-Water Substance-1|GainItem-Fire Substance-1|GainItem-Earth Substance-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
