@@ -1,0 +1,26 @@
+{
+  "key": "UndeadIncidents",
+  "quests": [
+    {
+      "id": "55",
+      "key": "QuestUndeadIncidents1",
+      "questType": "Standard",
+      "questGroup": "UndeadIncidents",
+      "questorder": "1",
+      "extraDescr": "DefeatTeamAndReportToAtArea",
+      "extraDescrVariables": "61-DarkMountainDarkNormal-WalkingDead-OldVillager",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-999|GainCoin-4444",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
