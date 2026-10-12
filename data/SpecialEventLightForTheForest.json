@@ -1,0 +1,26 @@
+{
+  "key": "LightForTheForest",
+  "quests": [
+    {
+      "id": "52",
+      "key": "QuestFindAnOilLamp",
+      "questType": "Standard",
+      "questGroup": "LightForTheForest",
+      "questorder": "1",
+      "extraDescr": "QuestFindAnOilLampDescription",
+      "extraDescrVariables": "Oil Lamp-Herbward Lantern-2 <sprite name=Silver>-BeginnerTownHero",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|GainItem-Herbward Lantern-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
