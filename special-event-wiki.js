@@ -65,7 +65,18 @@ function specialEventStageCard(stage, group, index) {
     const location=unique(rows.filter(step=>step.type==='Standard').flatMap(step=>[step.tileDataPicker,step.tileData,step.tileArea]));
     const npcs=unique(rows.map(step=>step.eventNpcName));
     const battles=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>token.startsWith('FightTeam-')).map(token=>token.slice(10))));
-    const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|GainCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
+    const actions=unique(rows.flatMap(step=>refs(step.eventOutcome).filter(token=>/^(GainItem|LostItem|GainCoin|LostCoin|GainEXP|GainJobPoints|GainEquipment|GainChest|RevealArea)-/.test(token))));
+    const trades=rows.filter(step=>refs(step.eventOutcome).some(token=>token.startsWith('LostItem-')) && refs(step.eventOutcome).some(token=>token.startsWith('GainItem-'))).map(step=>{
+        const lost=refs(step.eventOutcome).filter(token=>token.startsWith('LostItem-')).map(token=>{
+            const parts=token.slice(9).split('-'),count=parts.pop();
+            return specialEventReference(parts.join('-'))+' ×'+escapeHtml(count);
+        }).join(', ');
+        const gained=refs(step.eventOutcome).filter(token=>token.startsWith('GainItem-')).map(token=>{
+            const parts=token.slice(9).split('-'),count=parts.pop();
+            return specialEventReference(parts.join('-'))+' ×'+escapeHtml(count);
+        }).join(', ');
+        return '<p><strong>Trade:</strong> Give '+lost+' to receive '+gained+'.</p>';
+    });
 
     const questCards=group.quests.filter(q=>received.includes(q.key) || (!group.stages.some(st=>(st.questKeysReceived||[]).includes(q.key)) && (completed.includes(q.key) || (index===0 && !group.stages.some(st=>(st.questKeysCompleted||[]).includes(q.key)))))).map(specialEventQuestCard).join('');
     const title=specialEventText(stage.key)||stage.key.replace(/([a-z])([A-Z])/g,'$1 $2');
@@ -74,7 +85,9 @@ function specialEventStageCard(stage, group, index) {
     if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
     if(battles.length)info.push('<p><strong>Battle:</strong> '+battles.map(specialEventReference).join(' · ')+'</p>');
     // Internal trigger conditions are retained in JSON, but not exposed as raw game logic.
-    if(actions.length)info.push('<p><strong>Other outcomes:</strong> '+actions.map(specialEventOutcome).join(' · ')+'</p>');
+    if(trades.length)info.push(...trades);
+    const otherActions=actions.filter(token=>!trades.length || !/^(GainItem|LostItem)-/.test(token));
+    if(otherActions.length)info.push('<p><strong>Other outcomes:</strong> '+otherActions.map(specialEventOutcome).join(' · ')+'</p>');
     if(completed.length)info.push('<p><strong>'+escapeHtml(ui('questComplete','Quest complete'))+':</strong> '+completed.map(specialEventReference).join(' · ')+'</p>');
     return '<section class="card detail-section special-event-stage" id="stage-'+encodeURIComponent(stage.key)+'"><h2>Stage '+(index+1)+': '+escapeHtml(title)+'</h2>'+info.join('')+questCards+'</section>';
 }
