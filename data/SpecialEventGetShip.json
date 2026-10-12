@@ -1,0 +1,26 @@
+{
+  "key": "GetShip",
+  "quests": [
+    {
+      "id": "66",
+      "key": "QuestGetShip1",
+      "questType": "Standard",
+      "questGroup": "GetShip",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": "HaveItem-Gold Ingot-3|HaveItem-Boat-1",
+      "completeOutcome": "GainItem-Ship-1|LostItem-Gold Ingot-3|LostItem-Boat-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
