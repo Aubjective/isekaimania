@@ -1,0 +1,26 @@
+{
+  "key": "HelpMermaid",
+  "quests": [
+    {
+      "id": "197",
+      "key": "QuestHelpMermaid",
+      "questType": "Standard",
+      "questGroup": "HelpMermaid",
+      "questorder": "1",
+      "extraDescr": "QuestHelpMermaidDescription",
+      "extraDescrVariables": "Jellyfish-4",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-400",
+      "mapGradeLimitation": "E-D-C-B-A",
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
