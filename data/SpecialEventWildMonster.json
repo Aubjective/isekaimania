@@ -1,0 +1,26 @@
+{
+  "key": "WildMonster",
+  "quests": [
+    {
+      "id": "45",
+      "key": "QuestWildMonster1",
+      "questType": "Standard",
+      "questGroup": "WildMonster",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": "DefeatAreaMonster-15-5",
+      "completeOutcome": "GainEXP-750|GainItem-Leather-5",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
