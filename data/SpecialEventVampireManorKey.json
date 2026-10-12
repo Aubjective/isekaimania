@@ -1,0 +1,26 @@
+{
+  "key": "VampireManorKey",
+  "quests": [
+    {
+      "id": "58",
+      "key": "QuestVampireManorKey1",
+      "questType": "Standard",
+      "questGroup": "VampireManorKey",
+      "questorder": "1",
+      "extraDescr": "DefeatAndRetrieveAtArea",
+      "extraDescrVariables": "BanditsGrassLandB-12-Thin Bandit-Vampire Manor Key",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|GainCoin-3000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
