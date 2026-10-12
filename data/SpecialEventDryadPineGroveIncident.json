@@ -1,0 +1,47 @@
+{
+  "key": "DryadPineGroveIncident",
+  "quests": [
+    {
+      "id": "265",
+      "key": "QuestDryadPineGroveTheLivingCut",
+      "questType": "Standard",
+      "questGroup": "DryadPineGroveIncident",
+      "questorder": "1",
+      "extraDescr": "QuestDryadPineGroveTheLivingCutDescription",
+      "extraDescrVariables": "21",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-1000|RevealArea-78|ReceiveQuest-QuestDryadPineGroveTheRestlessGrove",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "266",
+      "key": "QuestDryadPineGroveTheRestlessGrove",
+      "questType": "Standard",
+      "questGroup": "DryadPineGroveIncident",
+      "questorder": "2",
+      "extraDescr": "QuestDryadPineGroveTheRestlessGroveDescription",
+      "extraDescrVariables": "Living Pineheart-DryadPineGroveDungeon-78",
+      "completeCondition": "DefeatTeam-Dryad Princess-1|EncounteredBefore-1152-1",
+      "completeOutcome": "LostItem-Living Pineheart-1|GainEXP-3000|GainCoin-5000|GainEquipment-Verdara Armor-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
