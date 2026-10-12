@@ -86,7 +86,7 @@ function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
     const group=specialEventGroup(key);if(!group)return;
     if(!fromRoute&&navigateHash('specialevents',key))return;
     setActiveView('SpecialEvents');
-    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+group.quests.length+' '+escapeHtml(ui('quests','Quests'))+'</p></div>'+group.quests.slice().sort((a,b)=>Number(a.questorder)-Number(b.questorder)).map(specialEventQuestCard).join('')+'</div>';
+    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+group.stages.length+' Stages · '+group.quests.length+' '+escapeHtml(ui('quests','Quests'))+'</p></div>'+group.stages.map((stage,i)=>specialEventStageCard(stage,group,i)).join('')+'</div>';
     if(questKey){const node=document.getElementById('quest-'+questKey);if(node)node.scrollIntoView();}else window.scrollTo(0,0);
 }
 function specialEventRoute() {
