@@ -1,0 +1,26 @@
+{
+  "key": "OrcsHuntingGroundGuard",
+  "quests": [
+    {
+      "id": "60",
+      "key": "QuestOrcsHuntingGroundGuard1",
+      "questType": "Standard",
+      "questGroup": "OrcsHuntingGroundGuard",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": "HaveEquipment-Silver Dagger-1",
+      "completeOutcome": "GainCoin-5000|GainEquipment-Silver Shield-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
