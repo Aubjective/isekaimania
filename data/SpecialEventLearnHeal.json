@@ -1,0 +1,26 @@
+{
+  "key": "LearnHeal",
+  "quests": [
+    {
+      "id": "61",
+      "key": "QuestLearnHeal1",
+      "questType": "Standard",
+      "questGroup": "LearnHeal",
+      "questorder": "1",
+      "extraDescr": null,
+      "extraDescrVariables": null,
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-500|GainActiveSkill-Cure",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
