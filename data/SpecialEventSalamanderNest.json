@@ -1,0 +1,26 @@
+{
+  "key": "SalamanderNest",
+  "quests": [
+    {
+      "id": "56",
+      "key": "QuestSalamanderNest1",
+      "questType": "Standard",
+      "questGroup": "SalamanderNest",
+      "questorder": "1",
+      "extraDescr": "QuestSalamanderNest1Description",
+      "extraDescrVariables": "Fire Lion-FireBurningLandNormal",
+      "completeCondition": null,
+      "completeOutcome": "GainEquipment-Ring of Salamander-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": "SalamanderNest",
+      "specialeventRateupTileArea": "19"
+    }
+  ]
+}
