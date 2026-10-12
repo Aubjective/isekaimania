@@ -1,0 +1,47 @@
+{
+  "key": "Fortune",
+  "quests": [
+    {
+      "id": "50",
+      "key": "QuestFortuneLuck",
+      "questType": "Standard",
+      "questGroup": "Fortune",
+      "questorder": "1",
+      "extraDescr": "HaveItem",
+      "extraDescrVariables": "3-Fire Stone",
+      "completeCondition": null,
+      "completeOutcome": "GainCoin-1500",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "51",
+      "key": "QuestFortuneExp",
+      "questType": "Standard",
+      "questGroup": "Fortune",
+      "questorder": "2",
+      "extraDescr": "DefeatTeamAt",
+      "extraDescrVariables": "1-Fire Lion-FireBurningLandNormal",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-750",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
