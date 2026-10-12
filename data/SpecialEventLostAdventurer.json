@@ -1,0 +1,47 @@
+{
+  "key": "LostAdventurer",
+  "quests": [
+    {
+      "id": "38",
+      "key": "QuestLostAdventurer1",
+      "questType": "Standard",
+      "questGroup": "LostAdventurer",
+      "questorder": "1",
+      "extraDescr": "QuestLostAdventurer1Description",
+      "extraDescrVariables": "KingdomLandB-11",
+      "completeCondition": null,
+      "completeOutcome": "GainEXP-150|GainCoin-1000",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    },
+    {
+      "id": "39",
+      "key": "QuestLostAdventurer2",
+      "questType": "Standard",
+      "questGroup": "LostAdventurer",
+      "questorder": "2",
+      "extraDescr": "ReturnToAndReportTo",
+      "extraDescrVariables": "Castle-10-Mary",
+      "completeCondition": null,
+      "completeOutcome": "GainItem-Iron Ingot-5",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
