@@ -1,0 +1,26 @@
+{
+  "key": "EquipmentMaterial",
+  "quests": [
+    {
+      "id": "44",
+      "key": "QuestEquipmentMaterial1",
+      "questType": "Standard",
+      "questGroup": "EquipmentMaterial",
+      "questorder": "1",
+      "extraDescr": "CollectItemAndGiveTo",
+      "extraDescrVariables": "3-Fire Stone-Blacksmith-Castle-34",
+      "completeCondition": null,
+      "completeOutcome": "GainEquipment-Silver Sword-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
