@@ -1,0 +1,26 @@
+{
+  "key": "RoadsideCampDelayedDeparture",
+  "quests": [
+    {
+      "id": "210",
+      "key": "QuestRoadsideCampDelayedDeparture",
+      "questType": "Standard",
+      "questGroup": "RoadsideCampDelayedDeparture",
+      "questorder": "1",
+      "extraDescr": "QuestRoadsideCampDelayedDepartureDescription",
+      "extraDescrVariables": "RoadsideCamp-Kingdom Lancer",
+      "completeCondition": "HaveMonster-Kingdom Lancer-1|EncounteredBefore-903-1",
+      "completeOutcome": "GainEXP-500|GainItem-Wagon-1",
+      "mapGradeLimitation": null,
+      "mainQuestRequireMapArea": null,
+      "mapSizeAvailable": null,
+      "mainQuestImage": null,
+      "mainQuestImageType": null,
+      "locked": "FALSE",
+      "unlockQuestId": null,
+      "getFragment": null,
+      "specialeventRateupTileData": null,
+      "specialeventRateupTileArea": null
+    }
+  ]
+}
