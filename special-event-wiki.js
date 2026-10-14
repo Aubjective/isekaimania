@@ -37,48 +37,52 @@ function specialEventOutcome(raw) {
         return mainQuestTokens(token);
     }).filter(Boolean).join(' · ');
 }
-// Convert source event branches into one player-facing objective per actionable stage.
+// Display only source-backed, localized quest objectives; event rows supply context.
+function specialEventObjective(quest) {
+    if (!quest) return '';
+    const meta = quest.objectiveDisplay || {};
+    const key = meta.descriptionKey || quest.extraDescr;
+    const description = key ? specialEventText(key) : '';
+    if (description) {
+        const values = String(quest.extraDescrVariables || '').split('-');
+        return description.replace(/\\{(\\d+)\\}/g, (match, i) =>
+            values[Number(i)] === undefined ? match : specialEventReference(values[Number(i)]));
+    }
+    const conditions = meta.conditionTokens || String(quest.completeCondition || '').split('|').filter(Boolean);
+    return conditions.map(token => {
+        const parts = token.split('-');
+        const key = parts.shift();
+        const template = specialEventText(key);
+        if (!template) return '';
+        if (!/\\{\\d+\\}/.test(template)) return escapeHtml(template);
+        return template.replace(/\\{(\\d+)\\}/g, (match, i) =>
+            parts[Number(i)] === undefined ? match : specialEventReference(parts[Number(i)]));
+    }).filter(Boolean).join(' · ');
+}
 function specialEventStageCard(stage, group, index) {
-    const rows=stage.steps || [];
-    const tokens=raw=>String(raw||'').split('|').filter(Boolean);
-    const unique=values=>[...new Set(values.filter(Boolean))];
-    const outcomes=rows.flatMap(row=>tokens(row.eventOutcome));
-    const gains=outcomes.filter(t=>/^(GainItem|GainEquipment|GainChest|GainCoin|GainEXP|GainJob|RevealArea|ReceiveQuest|CompleteQuest)-/.test(t));
-    const costs=outcomes.filter(t=>/^(LostItem|LoseItem|LoseCoin|LostCoin)-/.test(t));
-    const encounters=rows.filter(row=>row.type==='Standard');
-    const location=unique(encounters.flatMap(row=>[row.tileDataPicker,row.tileData,row.tileArea]));
-    const npcs=unique(encounters.filter(row=>row.imageType==='NPC').map(row=>row.eventNpcName).filter(name=>name && String(name).toUpperCase()!=='PLAYER'));
-    const received=stage.questKeysReceived||[];
-    const completed=stage.questKeysCompleted||[];
-    const relevant=stage.display ? stage.display.show : !!(encounters.length || outcomes.some(t=>!/^(ReceiveQuest|CompleteQuest)-/.test(t)));
-    // A follow-up containing only acknowledgement/exit dialogue is not a gameplay stage.
-    if(!relevant)return '';
-    const label=key=>specialEventText(key)||String(key).replace(/([a-z])([A-Z])/g,'$1 $2');
-    const parsed=token=>{const parts=token.split('-');const kind=parts.shift();const count=parts.pop();return {kind,key:parts.join('-'),count};};
-    const items=gains.filter(t=>/^(GainItem|GainEquipment|GainChest)-/.test(t)).map(parsed);
-    const payments=costs.map(t=>{
-        const p=parsed(t);
-        if(p.kind==='LoseCoin'||p.kind==='LostCoin')return Number(p.key||p.count).toLocaleString()+' Coins';
-        return specialEventReference(p.key)+' ×'+escapeHtml(p.count||'1');
-    });
-    const battles=unique(outcomes.filter(t=>/^(FightTeam|StartBattle|Battle)-/.test(t)).map(t=>t.split('-').slice(1).join('-')));
-    const subject=items.length?items.map(p=>specialEventReference(p.key)+(p.count&&p.count!=='1'?' ×'+escapeHtml(p.count):'')).join(', '):'';
-    const first=encounters[0]||rows[0]||{};
-    const stageName=specialEventText(stage.key) || specialEventText(group.key) || (stage.key===group.key ? label(group.key) : label(stage.key.replace(/\d+$/,'')));
-    const title=stageName;
-    const info=[];
-    if(location.length)info.push('<p><strong>'+escapeHtml(ui('location','Location'))+':</strong> '+location.map(specialEventReference).join(' · ')+'</p>');
-    if(npcs.length)info.push('<p><strong>NPC:</strong> '+npcs.map(specialEventReference).join(' · ')+'</p>');
-    if(payments.length)info.push('<p><strong>Requirement:</strong> '+payments.join(' · ')+'</p>');
-    let objective='';
-    if(subject) objective=(npcs.length?'Obtain ':'Collect ')+subject+(npcs.length?' from '+npcs.map(specialEventReference).join(', '):'')+(payments.length?' in exchange for '+payments.join(', '):'')+'.';
-    else if(battles.length)objective='Defeat '+battles.map(specialEventReference).join(', ')+'.';
-    else if(location.length)objective='Visit '+location.map(specialEventReference).join(' · ')+(npcs.length?' and speak with '+npcs.map(specialEventReference).join(', '):'')+'.';
-    if(objective)info.push('<p><strong>Objective:</strong> '+objective+'</p>');
-    const rewards=gains.filter(t=>!/^(ReceiveQuest|CompleteQuest)-/.test(t) && !items.some(p=>t===p.kind+'-'+p.key+'-'+p.count));
-    if(items.length)info.push('<p><strong>Reward:</strong> '+subject+'</p>');
-    if(rewards.length)info.push('<p><strong>Other rewards:</strong> '+rewards.map(specialEventOutcome).join(' · ')+'</p>');
-    return '<section class="card detail-section special-event-stage" id="stage-'+encodeURIComponent(stage.key)+'"><h2>Stage '+(index+1)+': '+escapeHtml(title)+'</h2>'+info.join('')+'</section>';
+    if (stage.display && !stage.display.show) return '';
+    const rows = stage.steps || [];
+    const active = rows.filter(row => row.type === 'Standard' || row.type === 'Resolve');
+    const unique = values => [...new Set(values.filter(Boolean))];
+    const location = unique(active.flatMap(row => [row.tileDataPicker, row.tileData, row.tileArea]));
+    const npcs = unique(active.filter(row => row.imageType === 'NPC' || (row.type === 'Resolve' && row.eventNpcName && row.eventNpcName !== 'PLAYER'))
+        .map(row => row.eventNpcName).filter(name => name && name !== 'PLAYER'));
+    const title = specialEventText(stage.key) || specialEventText(group.key) || stage.key;
+    const questKey = stage.display && stage.display.objectiveQuestKey;
+    const quest = (group.quests || []).find(q => q.key === questKey);
+    // Show each quest objective once, at the stage where it is received.
+    const firstQuestStage = quest && group.stages.find(s => (s.questKeysReceived || []).includes(quest.key));
+    const showObjective = quest && (!firstQuestStage || firstQuestStage.key === stage.key);
+    const objective = showObjective ? specialEventObjective(quest) : '';
+    const outcomes = rows.flatMap(row => String(row.eventOutcome || '').split('|')).filter(Boolean);
+    const rewards = outcomes.filter(token => /^(GainItem|GainEquipment|GainChest|GainCoin|GainEXP|GainJobPoints)-/.test(token));
+    const info = [];
+    if (location.length) info.push('<p><strong>' + escapeHtml(ui('location','Location')) + ':</strong> ' + location.map(specialEventReference).join(' · ') + '</p>');
+    if (npcs.length) info.push('<p><strong>' + escapeHtml(ui('npc','NPC')) + ':</strong> ' + npcs.map(specialEventReference).join(' · ') + '</p>');
+    if (objective) info.push('<p><strong>' + escapeHtml(ui('objective','Objective')) + ':</strong> ' + objective + '</p>');
+    if (rewards.length) info.push('<p><strong>' + escapeHtml(ui('reward','Reward')) + ':</strong> ' + rewards.map(specialEventOutcome).join(' · ') + '</p>');
+    if (!info.length) return '';
+    return '<section class="card detail-section special-event-stage" id="stage-' + encodeURIComponent(stage.key) + '"><h2>' + escapeHtml(ui('stage','Stage')) + ' ' + (index+1) + ': ' + escapeHtml(title) + '</h2>' + info.join('') + '</section>';
 }
 function renderSpecialEventList() {
     const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+g.stages.filter((stage,i)=>specialEventStageCard(stage,g,i)).length+' Objectives'+'</p></article>').join('');
