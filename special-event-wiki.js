@@ -33,6 +33,7 @@ function specialEventOutcome(raw) {
         if (action==='ReceiveQuest'||action==='CompleteQuest') return escapeHtml(action==='ReceiveQuest'?'Next Quest':'Complete Quest')+': '+specialEventReference(parts.join('-'));
         if (action==='RevealArea') return escapeHtml(ui('tileArea','Tile Area'))+': '+specialEventReference(parts[0]);
         if (action==='GainJob') return escapeHtml(ui('jobs','Jobs'))+': '+specialEventReference(parts.join('-'));
+        if (action==='GainJobPoints') return escapeHtml(ui('jobPoints','Job Points'))+': '+escapeHtml(parts.join('-'));
         if (action==='GameOver') return escapeHtml(ui('questComplete','Quest complete'));
         return mainQuestTokens(token);
     }).filter(Boolean).join(' · ');
@@ -74,11 +75,14 @@ function specialEventStageCard(stage, group, index) {
     // Show each quest objective once, at the stage where it is received.
     const firstQuestStage = quest && group.stages.find(s => (s.questKeysReceived || []).includes(quest.key));
     const showObjective = quest && (
-        (stage.questKeysCompleted || []).includes(quest.key) && !(stage.questKeysReceived || []).includes(quest.key)
-        || (stage.questKeysReceived || []).includes(quest.key)
-        || !firstQuestStage
+        (stage.questKeysReceived || []).includes(quest.key)
+        || (!firstQuestStage)
     );
-    let objective = showObjective ? specialEventObjective(quest) : '';
+    // A quest description belongs to the quest-receipt stage, not its completion stage.
+    // If the quest was received in an earlier stage, do not repeat its description.
+    const receivedElsewhere = quest && group.stages.some(other => other.key !== stage.key && (other.questKeysReceived || []).includes(quest.key));
+    const completionStage = quest && (stage.questKeysCompleted || []).includes(quest.key);
+    let objective = quest && (showObjective && !receivedElsewhere || completionStage && firstQuestStage && firstQuestStage.key !== stage.key && !(firstQuestStage.display && firstQuestStage.display.objectiveQuestKey === quest.key)) ? specialEventObjective(quest) : '';
     // Event-only battles: reuse the already translated DefeatTeam template.
     if (!objective) {
         const battle = rows.flatMap(row => String(row.eventOutcome || '').split('|'))
