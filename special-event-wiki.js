@@ -41,22 +41,23 @@ function specialEventOutcome(raw) {
 function specialEventObjective(quest) {
     if (!quest) return '';
     const meta = quest.objectiveDisplay || {};
-    const key = meta.descriptionKey || quest.extraDescr;
-    const description = key ? specialEventText(key) : '';
+    const descriptionKey = quest.extraDescr || meta.descriptionKey;
+    const description = descriptionKey ? specialEventText(descriptionKey) : '';
     if (description) {
         const values = String(quest.extraDescrVariables || '').split('-');
-        return description.replace(/\{(\d+)\}/g, (match, i) =>
+        const resolved = description.replace(/\{(\d+)\}/g, (match, i) =>
             values[Number(i)] === undefined ? match : specialEventReference(values[Number(i)]));
+        if (!/\{\d+\}/.test(resolved)) return resolved;
     }
-    const conditions = meta.conditionTokens || String(quest.completeCondition || '').split('|').filter(Boolean);
+    const conditions = String(quest.completeCondition || '').split('|').filter(Boolean);
     return conditions.map(token => {
         const parts = token.split('-');
-        const key = parts.shift();
-        const template = specialEventText(key);
+        const action = parts.shift();
+        const template = specialEventText(action);
         if (!template) return '';
-        if (!/\{\d+\}/.test(template)) return escapeHtml(template);
-        return template.replace(/\{(\d+)\}/g, (match, i) =>
+        const resolved = template.replace(/\{(\d+)\}/g, (match, i) =>
             parts[Number(i)] === undefined ? match : specialEventReference(parts[Number(i)]));
+        return /\{\d+\}/.test(resolved) ? '' : resolved;
     }).filter(Boolean).join(' · ');
 }
 function specialEventStageCard(stage, group, index) {
