@@ -72,7 +72,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestLostAdventurer1Description",
+            "descriptionVariables": "KingdomLandB-11"
+          }
         },
         {
           "id": "39",
@@ -93,7 +98,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "ReturnToAndReportTo",
+            "descriptionVariables": "Castle-10-Mary"
+          }
         }
       ],
       "stages": [
@@ -222,7 +232,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestLostAdventurer1",
+            "objectiveEventKeys": [
+              "LostAdventurer1"
+            ]
           }
         },
         {
@@ -302,7 +316,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "LostAdventurer2"
+            ]
           }
         },
         {
@@ -455,7 +472,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestLostAdventurer1",
+            "objectiveEventKeys": [
+              "LostAdventurer3",
+              "LostAdventurer3"
+            ]
           }
         },
         {
@@ -514,7 +536,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestLostAdventurer2",
+            "objectiveEventKeys": [
+              "LostAdventurer4"
+            ]
           }
         }
       ]
@@ -556,7 +582,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "TheGreatHunt1"
+            ]
           }
         },
         {
@@ -613,7 +642,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "TheGreatHunt2"
+            ]
           }
         },
         {
@@ -647,7 +679,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "TheGreatHunt3"
+            ]
           }
         }
       ]
@@ -676,7 +711,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestLostPet1Description",
+            "descriptionVariables": "49-SlimeLandB"
+          }
         },
         {
           "id": "41",
@@ -697,7 +737,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestLostPet2Description",
+            "descriptionVariables": "BeginnerTownHero-68"
+          }
         }
       ],
       "stages": [
@@ -757,7 +802,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestLostPet1",
+            "objectiveEventKeys": [
+              "LostPet1"
+            ]
           }
         },
         {
@@ -791,7 +840,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "LostPet2"
+            ]
           }
         },
         {
@@ -898,7 +950,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestLostPet1",
+            "objectiveEventKeys": [
+              "LostPet3",
+              "LostPet3"
+            ]
           }
         },
         {
@@ -957,7 +1014,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestLostPet2",
+            "objectiveEventKeys": [
+              "LostPet4"
+            ]
           }
         }
       ]
@@ -986,7 +1047,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "RetriveItemAtIn",
+            "descriptionVariables": "Letter-Castle-34"
+          }
         },
         {
           "id": "43",
@@ -1007,7 +1073,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DeliverSomethingToAtWhere",
+            "descriptionVariables": "Mary Letter-Mary-BeginnerTownHero-8"
+          }
         }
       ],
       "stages": [
@@ -1113,7 +1184,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestLetterErrand1",
+            "objectiveEventKeys": [
+              "LetterErrand1"
+            ]
           }
         },
         {
@@ -1220,7 +1295,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestLetterErrand1",
+            "objectiveEventKeys": [
+              "LetterErrand2",
+              "LetterErrand2"
+            ]
           }
         }
       ]
@@ -1249,7 +1329,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "CollectItemAndGiveTo",
+            "descriptionVariables": "3-Fire Stone-Blacksmith-Castle-34"
+          }
         }
       ],
       "stages": [
@@ -1355,7 +1440,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestEquipmentMaterial1",
+            "objectiveEventKeys": [
+              "EquipmentMaterial1"
+            ]
           }
         },
         {
@@ -1414,7 +1503,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestEquipmentMaterial1",
+            "objectiveEventKeys": [
+              "EquipmentMaterial2"
+            ]
           }
         }
       ]
@@ -1443,7 +1536,13 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "DefeatAreaMonster-15-5"
+            ]
+          }
         }
       ],
       "stages": [
@@ -1549,7 +1648,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestWildMonster1",
+            "objectiveEventKeys": [
+              "WildMonster1"
+            ]
           }
         }
       ]
@@ -1578,7 +1681,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DeliverSomethingTo",
+            "descriptionVariables": "High Nun Necklace-Castle"
+          }
         }
       ],
       "stages": [
@@ -1707,7 +1815,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestHelpingTheNun1",
+            "objectiveEventKeys": [
+              "HelpingTheNun1"
+            ]
           }
         },
         {
@@ -1789,7 +1901,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestHelpingTheNun1",
+            "objectiveEventKeys": [
+              "HelpingTheNun2"
+            ]
           }
         }
       ]
@@ -1818,7 +1934,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DefeatAmountMonsterAndReportToAtArea",
+            "descriptionVariables": "11-KingdomSlimeLand-Slime-OldVillager-5"
+          }
         }
       ],
       "stages": [
@@ -1947,7 +2068,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestSlimeWave1",
+            "objectiveEventKeys": [
+              "SlimeWave1"
+            ]
           }
         },
         {
@@ -2006,7 +2131,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestSlimeWave1",
+            "objectiveEventKeys": [
+              "SlimeWave2"
+            ]
           }
         }
       ]
@@ -2035,7 +2164,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "BringWhoToWhereIn",
+            "descriptionVariables": "Alice-CastleHero-10"
+          }
         }
       ],
       "stages": [
@@ -2141,7 +2275,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestBringAliceToTown1",
+            "objectiveEventKeys": [
+              "BringAliceToTown1"
+            ]
           }
         },
         {
@@ -2223,7 +2361,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestBringAliceToTown1",
+            "objectiveEventKeys": [
+              "BringAliceToTown2"
+            ]
           }
         }
       ]
@@ -2252,7 +2394,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestTheGemstonesQuest1Description",
+            "descriptionVariables": "TheGems-56-WeaponMerchant-Castle-10"
+          }
         }
       ],
       "stages": [
@@ -2381,7 +2528,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestTheGemstonesQuest1",
+            "objectiveEventKeys": [
+              "TheGemstonesQuest1"
+            ]
           }
         },
         {
@@ -2507,7 +2658,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "TheGemstonesQuest2",
+              "TheGemstonesQuest2",
+              "TheGemstonesQuest2"
+            ]
           }
         },
         {
@@ -2566,7 +2722,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestTheGemstonesQuest1",
+            "objectiveEventKeys": [
+              "TheGemstonesQuest3"
+            ]
           }
         }
       ]
@@ -2595,7 +2755,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "InvestigateAndReportAtArea",
+            "descriptionVariables": "KingdomForest-9-Guard-Castle-10"
+          }
         }
       ],
       "stages": [
@@ -2655,7 +2820,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestWhatIs1",
+            "objectiveEventKeys": [
+              "WhatIs1"
+            ]
           }
         },
         {
@@ -2758,7 +2927,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "WhatIs2"
+            ]
           }
         },
         {
@@ -2840,7 +3012,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestWhatIs1",
+            "objectiveEventKeys": [
+              "WhatIs3"
+            ]
           }
         }
       ]
@@ -2869,7 +3045,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "HaveItem",
+            "descriptionVariables": "3-Fire Stone"
+          }
         },
         {
           "id": "51",
@@ -2890,7 +3071,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DefeatTeamAt",
+            "descriptionVariables": "1-Fire Lion-FireBurningLandNormal"
+          }
         }
       ],
       "stages": [
@@ -3091,7 +3277,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestFortuneLuck",
+            "objectiveEventKeys": [
+              "FortuneLuck",
+              "FortuneLuck"
+            ]
           }
         },
         {
@@ -3150,7 +3341,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestFortuneExp",
+            "objectiveEventKeys": [
+              "FortuneExp"
+            ]
           }
         }
       ]
@@ -3179,7 +3374,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DefeatTeamAtArea",
+            "descriptionVariables": "1-Bloodthirsters-42"
+          }
         }
       ],
       "stages": [
@@ -3377,7 +3577,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestVampire1",
+            "objectiveEventKeys": [
+              "Vampire1"
+            ]
           }
         },
         {
@@ -3574,7 +3778,13 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestVampire1",
+            "objectiveEventKeys": [
+              "Vampire2",
+              "Vampire2",
+              "Vampire2"
+            ]
           }
         }
       ]
@@ -3603,7 +3813,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DefeatTeamAndReportToAtArea",
+            "descriptionVariables": "61-DarkMountainDarkNormal-WalkingDead-OldVillager"
+          }
         }
       ],
       "stages": [
@@ -3732,7 +3947,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestUndeadIncidents1",
+            "objectiveEventKeys": [
+              "UndeadIncidents1"
+            ]
           }
         },
         {
@@ -3766,7 +3985,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "UndeadIncidents2"
+            ]
           }
         },
         {
@@ -3848,7 +4070,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestUndeadIncidents1",
+            "objectiveEventKeys": [
+              "UndeadIncidents3"
+            ]
           }
         }
       ]
@@ -3936,7 +4162,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "WhereIsCastle1"
+            ]
           }
         }
       ]
@@ -4116,7 +4345,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "MysteriousOneEye1"
+            ]
           }
         }
       ]
@@ -4227,7 +4459,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "TheVampWarning1"
+            ]
           }
         }
       ]
@@ -4499,7 +4734,13 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "TheThunderForest1",
+              "TheThunderForest1",
+              "TheThunderForest1",
+              "TheThunderForest1"
+            ]
           }
         }
       ]
@@ -4633,7 +4874,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "GetBoat1"
+            ]
           }
         }
       ]
@@ -4662,7 +4906,14 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "HaveItem-Gold Ingot-3",
+              "HaveItem-Boat-1"
+            ]
+          }
         }
       ],
       "stages": [
@@ -4745,7 +4996,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestGetShip1",
+            "objectiveEventKeys": [
+              "GetShip1"
+            ]
           }
         }
       ]
@@ -4774,7 +5029,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": "SalamanderNest",
-          "specialeventRateupTileArea": "19"
+          "specialeventRateupTileArea": "19",
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestSalamanderNest1Description",
+            "descriptionVariables": "Fire Lion-FireBurningLandNormal"
+          }
         }
       ],
       "stages": [
@@ -4903,7 +5163,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestSalamanderNest1",
+            "objectiveEventKeys": [
+              "SalamanderNest1"
+            ]
           }
         },
         {
@@ -4985,7 +5249,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestSalamanderNest1",
+            "objectiveEventKeys": [
+              "SalamanderNest2"
+            ]
           }
         }
       ]
@@ -5014,7 +5282,13 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "DefeatTeam-DeepSeaWardens-1"
+            ]
+          }
         }
       ],
       "stages": [
@@ -5143,7 +5417,13 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestRingOfMermaid1",
+            "objectiveEventKeys": [
+              "RingOfMermaid1",
+              "RingOfMermaid1",
+              "RingOfMermaid1"
+            ]
           }
         }
       ]
@@ -5172,7 +5452,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "DefeatAndRetrieveAtArea",
+            "descriptionVariables": "BanditsGrassLandB-12-Thin Bandit-Vampire Manor Key"
+          }
         }
       ],
       "stages": [
@@ -5232,7 +5517,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestVampireManorKey1",
+            "objectiveEventKeys": [
+              "VampireManorKey1"
+            ]
           }
         },
         {
@@ -5475,7 +5764,13 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestVampireManorKey1",
+            "objectiveEventKeys": [
+              "VampireManorKey2",
+              "VampireManorKey2",
+              "VampireManorKey2"
+            ]
           }
         }
       ]
@@ -5586,7 +5881,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "CapJackDungeonMap1"
+            ]
           }
         }
       ]
@@ -5674,7 +5972,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "CapJackArenaToken1"
+            ]
           }
         },
         {
@@ -5737,7 +6038,13 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "HaveItem-Oyster-3"
+            ]
+          }
         }
       ],
       "stages": [
@@ -5820,7 +6127,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestOrcCaveLeaderGuard1",
+            "objectiveEventKeys": [
+              "OrcsRavagedVillage1"
+            ]
           }
         },
         {
@@ -5879,7 +6190,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestOrcCaveLeaderGuard1",
+            "objectiveEventKeys": [
+              "OrcsRavagedVillage2"
+            ]
           }
         }
       ]
@@ -5908,7 +6223,13 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "HaveEquipment-Silver Dagger-1"
+            ]
+          }
         }
       ],
       "stages": [
@@ -5991,7 +6312,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestOrcsHuntingGroundGuard1",
+            "objectiveEventKeys": [
+              "OrcsHuntingGroundGuard1"
+            ]
           }
         },
         {
@@ -6050,7 +6375,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestOrcsHuntingGroundGuard1",
+            "objectiveEventKeys": [
+              "OrcsHuntingGroundGuard2"
+            ]
           }
         }
       ]
@@ -6079,7 +6408,10 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "event"
+          }
         }
       ],
       "stages": [
@@ -6185,7 +6517,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestLearnHeal1",
+            "objectiveEventKeys": [
+              "LearnHeal1"
+            ]
           }
         }
       ]
@@ -6214,7 +6550,10 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "event"
+          }
         }
       ],
       "stages": [
@@ -6320,7 +6659,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestLearnGuard1",
+            "objectiveEventKeys": [
+              "LearnGuard1"
+            ]
           }
         }
       ]
@@ -6349,7 +6692,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestStrangeFootprintsDescription1",
+            "descriptionVariables": "SlimeSeashore-50"
+          }
         },
         {
           "id": "64",
@@ -6370,7 +6718,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestStrangeFootprintsDescription2",
+            "descriptionVariables": "SlimeSeashore-50"
+          }
         }
       ],
       "stages": [
@@ -6522,7 +6875,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestStrangeFootprints1",
+            "objectiveEventKeys": [
+              "StrangeFootprints1"
+            ]
           }
         },
         {
@@ -6675,7 +7032,13 @@
           ],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestStrangeFootprints1",
+            "objectiveEventKeys": [
+              "StrangeFootprints2",
+              "StrangeFootprints2",
+              "StrangeFootprints2"
+            ]
           }
         },
         {
@@ -6757,7 +7120,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestStrangeFootprints2",
+            "objectiveEventKeys": [
+              "StrangeFootprints3"
+            ]
           }
         }
       ]
@@ -6786,7 +7153,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestEscortMerchantDescription1",
+            "descriptionVariables": "52"
+          }
         },
         {
           "id": "89",
@@ -6807,7 +7179,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestEscortMerchantDescription2",
+            "descriptionVariables": "10"
+          }
         }
       ],
       "stages": [
@@ -6938,7 +7315,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestEscortMerchant1",
+            "objectiveEventKeys": [
+              "EscortMerchant2"
+            ]
           }
         },
         {
@@ -7089,7 +7470,13 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestEscortMerchant2",
+            "objectiveEventKeys": [
+              "EscortMerchant3",
+              "EscortMerchant3",
+              "EscortMerchant3"
+            ]
           }
         },
         {
@@ -7171,7 +7558,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestEscortMerchant1",
+            "objectiveEventKeys": [
+              "EscortMerchant1"
+            ]
           }
         }
       ]
@@ -7200,7 +7591,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestBrokenSignpostDescription1",
+            "descriptionVariables": "67-5-Wood-2-Iron Ingot"
+          }
         }
       ],
       "stages": [
@@ -7375,7 +7771,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestBrokenSignpost1",
+            "objectiveEventKeys": [
+              "BrokenSignpost1"
+            ]
           }
         },
         {
@@ -7503,7 +7903,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestBrokenSignpost1",
+            "objectiveEventKeys": [
+              "BrokenSignpost2"
+            ]
           }
         }
       ]
@@ -7532,7 +7936,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestFindAnOilLampDescription",
+            "descriptionVariables": "Oil Lamp-Herbward Lantern-2 <sprite name=Silver>-BeginnerTownHero"
+          }
         }
       ],
       "stages": [
@@ -7824,7 +8233,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestFindAnOilLamp",
+            "objectiveEventKeys": [
+              "FindAnOilLamp",
+              "FindAnOilLamp"
+            ]
           }
         }
       ]
@@ -8303,7 +8717,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "ChoosePouch"
+            ]
           }
         }
       ]
@@ -8332,7 +8749,15 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "HaveItem-Shell Fragments-2"
+            ],
+            "descriptionKey": "QuestCharmPowderDescription",
+            "descriptionVariables": "Charm Powder"
+          }
         }
       ],
       "stages": [
@@ -8438,7 +8863,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestCharmPowder",
+            "objectiveEventKeys": [
+              "QuestCharmPowder"
+            ]
           }
         }
       ]
@@ -8733,7 +9162,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "AlchemistShopStones"
+            ]
           }
         }
       ]
@@ -8844,7 +9276,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "BlacksmithSilverIngot"
+            ]
           }
         }
       ]
@@ -8873,7 +9308,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestHelpMermaidDescription",
+            "descriptionVariables": "Jellyfish-4"
+          }
         }
       ],
       "stages": [
@@ -9027,7 +9467,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestHelpMermaid",
+            "objectiveEventKeys": [
+              "MermaidPearl",
+              "MermaidPearl"
+            ]
           }
         }
       ]
@@ -9056,7 +9501,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": "SnowCastleHero",
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestSnowCastleRestlessNightDescription",
+            "descriptionVariables": "SnowCastleHero-Ice Lion"
+          }
         }
       ],
       "stages": [
@@ -9162,7 +9612,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestSnowCastleRestlessNight",
+            "objectiveEventKeys": [
+              "SnowCastleRestlessNight1"
+            ]
           }
         },
         {
@@ -9244,7 +9698,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestSnowCastleRestlessNight",
+            "objectiveEventKeys": [
+              "SnowCastleRestlessNight2"
+            ]
           }
         }
       ]
@@ -9273,7 +9731,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestRoadsideCampDelayedDepartureDescription",
+            "descriptionVariables": "RoadsideCamp-Kingdom Lancer"
+          }
         }
       ],
       "stages": [
@@ -9356,7 +9819,11 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "interaction"
+            "kind": "interaction",
+            "objectiveQuestKey": "QuestRoadsideCampDelayedDeparture",
+            "objectiveEventKeys": [
+              "RoadsideCampDelayedDeparture1"
+            ]
           }
         },
         {
@@ -9438,7 +9905,11 @@
           ],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveQuestKey": "QuestRoadsideCampDelayedDeparture",
+            "objectiveEventKeys": [
+              "RoadsideCampDelayedDeparture2"
+            ]
           }
         }
       ]
@@ -9618,7 +10089,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "TheClimbersLostLine1",
+              "TheClimbersLostLine1",
+              "TheClimbersLostLine1"
+            ]
           }
         }
       ]
@@ -9647,7 +10123,12 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "localized-description",
+            "descriptionKey": "QuestDryadPineGroveTheLivingCutDescription",
+            "descriptionVariables": "21"
+          }
         },
         {
           "id": "266",
@@ -9668,7 +10149,15 @@
           "unlockQuestId": null,
           "getFragment": null,
           "specialeventRateupTileData": null,
-          "specialeventRateupTileArea": null
+          "specialeventRateupTileArea": null,
+          "objectiveDisplay": {
+            "source": "quest-condition",
+            "conditionTokens": [
+              "DefeatTeam-Dryad Princess-1"
+            ],
+            "descriptionKey": "QuestDryadPineGroveTheRestlessGroveDescription",
+            "descriptionVariables": "Living Pineheart-DryadPineGroveDungeon-78"
+          }
         }
       ],
       "stages": [
@@ -9937,7 +10426,12 @@
           ],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveQuestKey": "QuestDryadPineGroveTheLivingCut",
+            "objectiveEventKeys": [
+              "QuestDryadPineGroveTheLivingCut",
+              "QuestDryadPineGroveTheLivingCut"
+            ]
           }
         },
         {
@@ -10197,7 +10691,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "CommonHouseSalvagedLeather"
+            ]
           }
         }
       ]
@@ -10676,7 +11173,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "encounter"
+            "kind": "encounter",
+            "objectiveEventKeys": [
+              "LightMountainTooBrightToStudy",
+              "LightMountainTooBrightToStudy",
+              "LightMountainTooBrightToStudy"
+            ]
           }
         }
       ]
@@ -10856,7 +11358,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "EarthSeashorePoisonInThePuddle",
+              "EarthSeashorePoisonInThePuddle",
+              "EarthSeashorePoisonInThePuddle"
+            ]
           }
         }
       ]
@@ -11036,7 +11543,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "ThunderSeashoreWaterproofingFailure"
+            ]
           }
         }
       ]
@@ -11216,7 +11726,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "LightSeashoreTheGlowingWreckage",
+              "LightSeashoreTheGlowingWreckage",
+              "LightSeashoreTheGlowingWreckage"
+            ]
           }
         }
       ]
@@ -11396,7 +11911,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "WaterSnowTracksUnderTheSnow",
+              "WaterSnowTracksUnderTheSnow",
+              "WaterSnowTracksUnderTheSnow"
+            ]
           }
         }
       ]
@@ -11576,7 +12096,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "FireSeashoreTheSmokingCrate",
+              "FireSeashoreTheSmokingCrate",
+              "FireSeashoreTheSmokingCrate"
+            ]
           }
         }
       ]
@@ -11756,7 +12281,10 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "NatureGrassLandTheAbandonedHerbBasket"
+            ]
           }
         }
       ]
@@ -11936,7 +12464,12 @@
           "questKeysCompleted": [],
           "display": {
             "show": true,
-            "kind": "obtain-item"
+            "kind": "obtain-item",
+            "objectiveEventKeys": [
+              "GoblinDarkLandTheEmptyHuntingCamp",
+              "GoblinDarkLandTheEmptyHuntingCamp",
+              "GoblinDarkLandTheEmptyHuntingCamp"
+            ]
           }
         }
       ]
@@ -11944,6 +12477,12 @@
   ],
   "presentation": {
     "mode": "objectives-only",
-    "notes": "Source quest records, stage rows, conditions and dialogue are retained for fidelity. Quest cards and dialogue-only follow-ups are not displayed."
+    "notes": "Source quest records, stage rows, conditions and dialogue are retained for fidelity. Quest cards and dialogue-only follow-ups are not displayed.",
+    "objectivePriority": [
+      "quest-condition",
+      "localized-description",
+      "event"
+    ],
+    "objectiveNotes": "Read quests[].objectiveDisplay for condition tokens or existing localized description keys. Use event steps for NPC/location and fallback. Display renderer must consume this metadata; source rows are unchanged."
   }
 }
