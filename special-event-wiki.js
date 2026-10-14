@@ -67,13 +67,24 @@ function specialEventStageCard(stage, group, index) {
     const location = unique(active.flatMap(row => [row.tileDataPicker, row.tileData, row.tileArea]));
     const npcs = unique(active.filter(row => row.imageType === 'NPC' || (row.type === 'Resolve' && row.eventNpcName && row.eventNpcName !== 'PLAYER'))
         .map(row => row.eventNpcName).filter(name => name && name !== 'PLAYER'));
-    const title = specialEventText(stage.key) || specialEventText(group.key) || stage.key;
+    const title = specialEventText(stage.key) || specialEventText(group.key) || String(group.key).replace(/([a-z])([A-Z])/g, '$1 $2');
     const questKey = stage.display && stage.display.objectiveQuestKey;
     const quest = (group.quests || []).find(q => q.key === questKey);
     // Show each quest objective once, at the stage where it is received.
     const firstQuestStage = quest && group.stages.find(s => (s.questKeysReceived || []).includes(quest.key));
     const showObjective = quest && (!firstQuestStage || firstQuestStage.key === stage.key);
-    const objective = showObjective ? specialEventObjective(quest) : '';
+    let objective = showObjective ? specialEventObjective(quest) : '';
+    // Event-only battles: reuse the already translated DefeatTeam template.
+    if (!objective && !quest) {
+        const battle = rows.flatMap(row => String(row.eventOutcome || '').split('|'))
+            .find(token => token.startsWith('FightTeam-'));
+        const template = specialEventText('DefeatTeam');
+        if (battle && template && /\\{\\d+\\}/.test(template)) {
+            const team = battle.slice('FightTeam-'.length);
+            objective = template.replace(/\\{(\\d+)\\}/g, (match, i) =>
+                Number(i) === 0 ? '1' : Number(i) === 1 ? specialEventReference(team) : match);
+        }
+    }
     const outcomes = rows.flatMap(row => String(row.eventOutcome || '').split('|')).filter(Boolean);
     const rewards = outcomes.filter(token => /^(GainItem|GainEquipment|GainChest|GainCoin|GainEXP|GainJobPoints)-/.test(token));
     const info = [];
