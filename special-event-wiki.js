@@ -45,7 +45,7 @@ function specialEventObjective(quest) {
     const description = key ? specialEventText(key) : '';
     if (description) {
         const values = String(quest.extraDescrVariables || '').split('-');
-        return description.replace(/\\{(\\d+)\\}/g, (match, i) =>
+        return description.replace(/\{(\d+)\}/g, (match, i) =>
             values[Number(i)] === undefined ? match : specialEventReference(values[Number(i)]));
     }
     const conditions = meta.conditionTokens || String(quest.completeCondition || '').split('|').filter(Boolean);
@@ -54,8 +54,8 @@ function specialEventObjective(quest) {
         const key = parts.shift();
         const template = specialEventText(key);
         if (!template) return '';
-        if (!/\\{\\d+\\}/.test(template)) return escapeHtml(template);
-        return template.replace(/\\{(\\d+)\\}/g, (match, i) =>
+        if (!/\{\d+\}/.test(template)) return escapeHtml(template);
+        return template.replace(/\{(\d+)\}/g, (match, i) =>
             parts[Number(i)] === undefined ? match : specialEventReference(parts[Number(i)]));
     }).filter(Boolean).join(' · ');
 }
@@ -72,16 +72,20 @@ function specialEventStageCard(stage, group, index) {
     const quest = (group.quests || []).find(q => q.key === questKey);
     // Show each quest objective once, at the stage where it is received.
     const firstQuestStage = quest && group.stages.find(s => (s.questKeysReceived || []).includes(quest.key));
-    const showObjective = quest && (!firstQuestStage || firstQuestStage.key === stage.key);
+    const showObjective = quest && (
+        (stage.questKeysCompleted || []).includes(quest.key) && !(stage.questKeysReceived || []).includes(quest.key)
+        || (stage.questKeysReceived || []).includes(quest.key)
+        || !firstQuestStage
+    );
     let objective = showObjective ? specialEventObjective(quest) : '';
     // Event-only battles: reuse the already translated DefeatTeam template.
-    if (!objective && !quest) {
+    if (!objective) {
         const battle = rows.flatMap(row => String(row.eventOutcome || '').split('|'))
             .find(token => token.startsWith('FightTeam-'));
         const template = specialEventText('DefeatTeam');
-        if (battle && template && /\\{\\d+\\}/.test(template)) {
+        if (battle && template && /\{\d+\}/.test(template)) {
             const team = battle.slice('FightTeam-'.length);
-            objective = template.replace(/\\{(\\d+)\\}/g, (match, i) =>
+            objective = template.replace(/\{(\d+)\}/g, (match, i) =>
                 Number(i) === 0 ? '1' : Number(i) === 1 ? specialEventReference(team) : match);
         }
     }
