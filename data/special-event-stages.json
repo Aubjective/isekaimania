@@ -1936,9 +1936,7 @@
           "specialeventRateupTileData": null,
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
-            "source": "localized-description",
-            "descriptionKey": "DefeatAmountMonsterAndReportToAtArea",
-            "descriptionVariables": "11-KingdomSlimeLand-Slime-OldVillager-5"
+            "source": "event"
           }
         }
       ],
@@ -3815,9 +3813,7 @@
           "specialeventRateupTileData": null,
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
-            "source": "localized-description",
-            "descriptionKey": "DefeatTeamAndReportToAtArea",
-            "descriptionVariables": "61-DarkMountainDarkNormal-WalkingDead-OldVillager"
+            "source": "event"
           }
         }
       ],
@@ -5454,9 +5450,7 @@
           "specialeventRateupTileData": null,
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
-            "source": "localized-description",
-            "descriptionKey": "DefeatAndRetrieveAtArea",
-            "descriptionVariables": "BanditsGrassLandB-12-Thin Bandit-Vampire Manor Key"
+            "source": "event"
           }
         }
       ],
@@ -8751,10 +8745,7 @@
           "specialeventRateupTileData": null,
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
-            "source": "quest-condition",
-            "conditionTokens": [
-              "HaveItem-Shell Fragments-2"
-            ],
+            "source": "localized-description",
             "descriptionKey": "QuestCharmPowderDescription",
             "descriptionVariables": "Charm Powder"
           }
@@ -10151,10 +10142,7 @@
           "specialeventRateupTileData": null,
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
-            "source": "quest-condition",
-            "conditionTokens": [
-              "DefeatTeam-Dryad Princess-1"
-            ],
+            "source": "localized-description",
             "descriptionKey": "QuestDryadPineGroveTheRestlessGroveDescription",
             "descriptionVariables": "Living Pineheart-DryadPineGroveDungeon-78"
           }
@@ -12479,10 +12467,10 @@
     "mode": "objectives-only",
     "notes": "Source quest records, stage rows, conditions and dialogue are retained for fidelity. Quest cards and dialogue-only follow-ups are not displayed.",
     "objectivePriority": [
-      "quest-condition",
       "localized-description",
+      "quest-condition",
       "event"
     ],
-    "objectiveNotes": "Read quests[].objectiveDisplay for condition tokens or existing localized description keys. Use event steps for NPC/location and fallback. Display renderer must consume this metadata; source rows are unchanged."
+    "objectiveNotes": "Use existing localization for Quest.extraDescr with extraDescrVariables first; otherwise use Quest.completeCondition tokens; otherwise show only existing source event fields. Never invent objective wording. Renderer must consume this metadata."
   }
 }
