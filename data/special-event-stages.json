@@ -77,6 +77,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestLostAdventurer1Description",
             "descriptionVariables": "KingdomLandB-11"
+          },
+          "localization": {
+            "titleKey": "QuestLostAdventurer1",
+            "descriptionKey": "QuestLostAdventurer1Description",
+            "descriptionVariables": "KingdomLandB-11",
+            "condition": null
           }
         },
         {
@@ -103,6 +109,12 @@
             "source": "localized-description",
             "descriptionKey": "ReturnToAndReportTo",
             "descriptionVariables": "Castle-10-Mary"
+          },
+          "localization": {
+            "titleKey": "QuestLostAdventurer2",
+            "descriptionKey": "ReturnToAndReportTo",
+            "descriptionVariables": "Castle-10-Mary",
+            "condition": null
           }
         }
       ],
@@ -237,6 +249,40 @@
             "objectiveEventKeys": [
               "LostAdventurer1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostAdventurer1",
+            "questKeys": [
+              "QuestLostAdventurer1"
+            ],
+            "receivedQuestKeys": [
+              "QuestLostAdventurer1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LostAdventurerDialog1",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog2",
+                "variables": "ForestNormal-11"
+              },
+              {
+                "key": "LostAdventurerDialog3",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog4",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -320,6 +366,28 @@
             "objectiveEventKeys": [
               "LostAdventurer2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostAdventurer2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LostAdventurerDialog5",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog6",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -478,6 +546,51 @@
               "LostAdventurer3",
               "LostAdventurer3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostAdventurer3",
+            "questKeys": [
+              "QuestLostAdventurer2",
+              "QuestLostAdventurer1"
+            ],
+            "receivedQuestKeys": [
+              "QuestLostAdventurer2"
+            ],
+            "completedQuestKeys": [
+              "QuestLostAdventurer1"
+            ],
+            "dialogue": [
+              {
+                "key": "LostAdventurerDialog7",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog8",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog9",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog10",
+                "variables": null
+              },
+              {
+                "key": "LostAdventurerDialog11",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -541,6 +654,32 @@
             "objectiveEventKeys": [
               "LostAdventurer4"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostAdventurer4",
+            "questKeys": [
+              "QuestLostAdventurer2"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestLostAdventurer2"
+            ],
+            "dialogue": [
+              {
+                "key": "LostAdventurerDialog12",
+                "variables": null
+              },
+              {
+                "key": "SpecialEventItemDialog",
+                "variables": "Wood-1"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -586,6 +725,24 @@
             "objectiveEventKeys": [
               "TheGreatHunt1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheGreatHunt1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheGreatHuntDialog1",
+                "variables": "Hunting License-30"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -646,6 +803,28 @@
             "objectiveEventKeys": [
               "TheGreatHunt2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheGreatHunt2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheGreatHuntDialog2",
+                "variables": null
+              },
+              {
+                "key": "TheGreatHuntDialog3",
+                "variables": "Hunting License-OrcsHuntingGround-57"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -683,6 +862,24 @@
             "objectiveEventKeys": [
               "TheGreatHunt3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheGreatHunt3",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheGreatHuntDialog4",
+                "variables": "Hunting License-OrcsHuntingGround-57"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -716,6 +913,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestLostPet1Description",
             "descriptionVariables": "49-SlimeLandB"
+          },
+          "localization": {
+            "titleKey": "QuestLostPet1",
+            "descriptionKey": "QuestLostPet1Description",
+            "descriptionVariables": "49-SlimeLandB",
+            "condition": null
           }
         },
         {
@@ -742,6 +945,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestLostPet2Description",
             "descriptionVariables": "BeginnerTownHero-68"
+          },
+          "localization": {
+            "titleKey": "QuestLostPet2",
+            "descriptionKey": "QuestLostPet2Description",
+            "descriptionVariables": "BeginnerTownHero-68",
+            "condition": null
           }
         }
       ],
@@ -807,6 +1016,28 @@
             "objectiveEventKeys": [
               "LostPet1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostPet1",
+            "questKeys": [
+              "QuestLostPet1"
+            ],
+            "receivedQuestKeys": [
+              "QuestLostPet1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LostPetDialog1",
+                "variables": "49-SlimeLandB-BeginnerTownHero-68"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -844,6 +1075,24 @@
             "objectiveEventKeys": [
               "LostPet2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostPet2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LostPetDialog2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -956,6 +1205,35 @@
               "LostPet3",
               "LostPet3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostPet3",
+            "questKeys": [
+              "QuestLostPet2",
+              "QuestLostPet1"
+            ],
+            "receivedQuestKeys": [
+              "QuestLostPet2"
+            ],
+            "completedQuestKeys": [
+              "QuestLostPet1"
+            ],
+            "dialogue": [
+              {
+                "key": "LostPetDialog3",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -1019,6 +1297,28 @@
             "objectiveEventKeys": [
               "LostPet4"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LostPet4",
+            "questKeys": [
+              "QuestLostPet2"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestLostPet2"
+            ],
+            "dialogue": [
+              {
+                "key": "LostPetDialog5",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -1052,6 +1352,12 @@
             "source": "localized-description",
             "descriptionKey": "RetriveItemAtIn",
             "descriptionVariables": "Letter-Castle-34"
+          },
+          "localization": {
+            "titleKey": "QuestLetterErrand1",
+            "descriptionKey": "RetriveItemAtIn",
+            "descriptionVariables": "Letter-Castle-34",
+            "condition": null
           }
         },
         {
@@ -1078,6 +1384,12 @@
             "source": "localized-description",
             "descriptionKey": "DeliverSomethingToAtWhere",
             "descriptionVariables": "Mary Letter-Mary-BeginnerTownHero-8"
+          },
+          "localization": {
+            "titleKey": "QuestLetterErrand2",
+            "descriptionKey": "DeliverSomethingToAtWhere",
+            "descriptionVariables": "Mary Letter-Mary-BeginnerTownHero-8",
+            "condition": null
           }
         }
       ],
@@ -1189,6 +1501,36 @@
             "objectiveEventKeys": [
               "LetterErrand1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LetterErrand1",
+            "questKeys": [
+              "QuestLetterErrand1"
+            ],
+            "receivedQuestKeys": [
+              "QuestLetterErrand1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LetterErrandDialog1",
+                "variables": null
+              },
+              {
+                "key": "LetterErrandDialog2",
+                "variables": null
+              },
+              {
+                "key": "LetterErrandDialog3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -1301,6 +1643,35 @@
               "LetterErrand2",
               "LetterErrand2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LetterErrand2",
+            "questKeys": [
+              "QuestLetterErrand2",
+              "QuestLetterErrand1"
+            ],
+            "receivedQuestKeys": [
+              "QuestLetterErrand2"
+            ],
+            "completedQuestKeys": [
+              "QuestLetterErrand1"
+            ],
+            "dialogue": [
+              {
+                "key": "LetterErrandDialog4",
+                "variables": null
+              },
+              {
+                "key": "LetterErrandDialog5",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -1334,6 +1705,12 @@
             "source": "localized-description",
             "descriptionKey": "CollectItemAndGiveTo",
             "descriptionVariables": "3-Fire Stone-Blacksmith-Castle-34"
+          },
+          "localization": {
+            "titleKey": "QuestEquipmentMaterial1",
+            "descriptionKey": "CollectItemAndGiveTo",
+            "descriptionVariables": "3-Fire Stone-Blacksmith-Castle-34",
+            "condition": null
           }
         }
       ],
@@ -1445,6 +1822,36 @@
             "objectiveEventKeys": [
               "EquipmentMaterial1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "EquipmentMaterial1",
+            "questKeys": [
+              "QuestEquipmentMaterial1"
+            ],
+            "receivedQuestKeys": [
+              "QuestEquipmentMaterial1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "EquipmentMaterialDialog1",
+                "variables": "Fire Stone-3"
+              },
+              {
+                "key": "EquipmentMaterialDialog2",
+                "variables": null
+              },
+              {
+                "key": "EquipmentMaterialDialog3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -1508,6 +1915,28 @@
             "objectiveEventKeys": [
               "EquipmentMaterial2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "EquipmentMaterial2",
+            "questKeys": [
+              "QuestEquipmentMaterial1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestEquipmentMaterial1"
+            ],
+            "dialogue": [
+              {
+                "key": "EquipmentMaterialDialog4",
+                "variables": "Fire Stone"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -1542,6 +1971,12 @@
             "conditionTokens": [
               "DefeatAreaMonster-15-5"
             ]
+          },
+          "localization": {
+            "titleKey": "QuestWildMonster1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": "DefeatAreaMonster-15-5"
           }
         }
       ],
@@ -1653,6 +2088,36 @@
             "objectiveEventKeys": [
               "WildMonster1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "WildMonster1",
+            "questKeys": [
+              "QuestWildMonster1"
+            ],
+            "receivedQuestKeys": [
+              "QuestWildMonster1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "WildMonsterDialog1",
+                "variables": "Castle-15"
+              },
+              {
+                "key": "WildMonsterDialog2",
+                "variables": null
+              },
+              {
+                "key": "WildMonsterDialog3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -1686,6 +2151,12 @@
             "source": "localized-description",
             "descriptionKey": "DeliverSomethingTo",
             "descriptionVariables": "High Nun Necklace-Castle"
+          },
+          "localization": {
+            "titleKey": "QuestHelpingTheNun1",
+            "descriptionKey": "DeliverSomethingTo",
+            "descriptionVariables": "High Nun Necklace-Castle",
+            "condition": null
           }
         }
       ],
@@ -1820,6 +2291,36 @@
             "objectiveEventKeys": [
               "HelpingTheNun1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "HelpingTheNun1",
+            "questKeys": [
+              "QuestHelpingTheNun1"
+            ],
+            "receivedQuestKeys": [
+              "QuestHelpingTheNun1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "HelpingTheNun1Fiala1",
+                "variables": "Castle-37"
+              },
+              {
+                "key": "HelpingTheNun1Fiala2a",
+                "variables": "Castle-37"
+              },
+              {
+                "key": "HelpingTheNun1Fiala2b",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -1906,6 +2407,32 @@
             "objectiveEventKeys": [
               "HelpingTheNun2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "HelpingTheNun2",
+            "questKeys": [
+              "QuestHelpingTheNun1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestHelpingTheNun1"
+            ],
+            "dialogue": [
+              {
+                "key": "HelpingTheNun2HighNun1",
+                "variables": null
+              },
+              {
+                "key": "HelpingTheNun2HighNun2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -1937,6 +2464,12 @@
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
             "source": "event"
+          },
+          "localization": {
+            "titleKey": "QuestSlimeWave1",
+            "descriptionKey": "DefeatAmountMonsterAndReportToAtArea",
+            "descriptionVariables": "11-KingdomSlimeLand-Slime-OldVillager-5",
+            "condition": null
           }
         }
       ],
@@ -2071,6 +2604,40 @@
             "objectiveEventKeys": [
               "SlimeWave1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "SlimeWave1",
+            "questKeys": [
+              "QuestSlimeWave1"
+            ],
+            "receivedQuestKeys": [
+              "QuestSlimeWave1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "HelpOverHere",
+                "variables": null
+              },
+              {
+                "key": "SlimeWaveDialog1",
+                "variables": null
+              },
+              {
+                "key": "ThankYou",
+                "variables": null
+              },
+              {
+                "key": "Nvm",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -2134,6 +2701,28 @@
             "objectiveEventKeys": [
               "SlimeWave2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "SlimeWave2",
+            "questKeys": [
+              "QuestSlimeWave1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestSlimeWave1"
+            ],
+            "dialogue": [
+              {
+                "key": "SlimeWaveDialog2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -2167,6 +2756,12 @@
             "source": "localized-description",
             "descriptionKey": "BringWhoToWhereIn",
             "descriptionVariables": "Alice-CastleHero-10"
+          },
+          "localization": {
+            "titleKey": "QuestBringAliceToTown1",
+            "descriptionKey": "BringWhoToWhereIn",
+            "descriptionVariables": "Alice-CastleHero-10",
+            "condition": null
           }
         }
       ],
@@ -2278,6 +2873,36 @@
             "objectiveEventKeys": [
               "BringAliceToTown1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "BringAliceToTown1",
+            "questKeys": [
+              "QuestBringAliceToTown1"
+            ],
+            "receivedQuestKeys": [
+              "QuestBringAliceToTown1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "BringAliceToTown1Alice1",
+                "variables": "CastleHero-10"
+              },
+              {
+                "key": "BringAliceToTown1Alice2a",
+                "variables": null
+              },
+              {
+                "key": "BringAliceToTown1Alice2b",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -2364,6 +2989,32 @@
             "objectiveEventKeys": [
               "BringAliceToTown2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "BringAliceToTown2",
+            "questKeys": [
+              "QuestBringAliceToTown1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestBringAliceToTown1"
+            ],
+            "dialogue": [
+              {
+                "key": "BringAliceToTown2Alice1",
+                "variables": null
+              },
+              {
+                "key": "BringAliceToTown2Alice2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -2397,6 +3048,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestTheGemstonesQuest1Description",
             "descriptionVariables": "TheGems-56-WeaponMerchant-Castle-10"
+          },
+          "localization": {
+            "titleKey": "QuestTheGemstonesQuest1",
+            "descriptionKey": "QuestTheGemstonesQuest1Description",
+            "descriptionVariables": "TheGems-56-WeaponMerchant-Castle-10",
+            "condition": null
           }
         }
       ],
@@ -2531,6 +3188,40 @@
             "objectiveEventKeys": [
               "TheGemstonesQuest1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheGemstonesQuest1",
+            "questKeys": [
+              "QuestTheGemstonesQuest1"
+            ],
+            "receivedQuestKeys": [
+              "QuestTheGemstonesQuest1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheGemstonesQuest1Merch1",
+                "variables": null
+              },
+              {
+                "key": "TheGemstonesQuest1Merch2",
+                "variables": "TheGems"
+              },
+              {
+                "key": "TheGemstonesQuest1Merch3a",
+                "variables": null
+              },
+              {
+                "key": "TheGemstonesQuest1Merch3b",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -2662,6 +3353,32 @@
               "TheGemstonesQuest2",
               "TheGemstonesQuest2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheGemstonesQuest2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "AmbushDialog",
+                "variables": null
+              },
+              {
+                "key": "TheGemstonesQuest1Merch4",
+                "variables": "TheGems"
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -2725,6 +3442,28 @@
             "objectiveEventKeys": [
               "TheGemstonesQuest3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheGemstonesQuest3",
+            "questKeys": [
+              "QuestTheGemstonesQuest1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestTheGemstonesQuest1"
+            ],
+            "dialogue": [
+              {
+                "key": "TheGemstonesQuest2Merch1",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -2758,6 +3497,12 @@
             "source": "localized-description",
             "descriptionKey": "InvestigateAndReportAtArea",
             "descriptionVariables": "KingdomForest-9-Guard-Castle-10"
+          },
+          "localization": {
+            "titleKey": "QuestWhatIs1",
+            "descriptionKey": "InvestigateAndReportAtArea",
+            "descriptionVariables": "KingdomForest-9-Guard-Castle-10",
+            "condition": null
           }
         }
       ],
@@ -2823,6 +3568,28 @@
             "objectiveEventKeys": [
               "WhatIs1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "WhatIs1",
+            "questKeys": [
+              "QuestWhatIs1"
+            ],
+            "receivedQuestKeys": [
+              "QuestWhatIs1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "WhatIs1Guard1",
+                "variables": "9"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -2929,6 +3696,32 @@
             "objectiveEventKeys": [
               "WhatIs2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "WhatIs2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "WhatIs2Player1",
+                "variables": null
+              },
+              {
+                "key": "WhatIs2Player3",
+                "variables": null
+              },
+              {
+                "key": "WhatIs2Player4",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -3015,6 +3808,32 @@
             "objectiveEventKeys": [
               "WhatIs3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "WhatIs3",
+            "questKeys": [
+              "QuestWhatIs1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestWhatIs1"
+            ],
+            "dialogue": [
+              {
+                "key": "WhatIs3Guard1",
+                "variables": null
+              },
+              {
+                "key": "WhatIs3Guard2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -3048,6 +3867,12 @@
             "source": "localized-description",
             "descriptionKey": "HaveItem",
             "descriptionVariables": "3-Fire Stone"
+          },
+          "localization": {
+            "titleKey": "QuestFortuneLuck",
+            "descriptionKey": "HaveItem",
+            "descriptionVariables": "3-Fire Stone",
+            "condition": null
           }
         },
         {
@@ -3074,6 +3899,12 @@
             "source": "localized-description",
             "descriptionKey": "DefeatTeamAt",
             "descriptionVariables": "1-Fire Lion-FireBurningLandNormal"
+          },
+          "localization": {
+            "titleKey": "QuestFortuneExp",
+            "descriptionKey": "DefeatTeamAt",
+            "descriptionVariables": "1-Fire Lion-FireBurningLandNormal",
+            "condition": null
           }
         }
       ],
@@ -3281,6 +4112,52 @@
               "FortuneLuck",
               "FortuneLuck"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "FortuneLuck",
+            "questKeys": [
+              "QuestFortuneLuck",
+              "QuestFortuneExp"
+            ],
+            "receivedQuestKeys": [
+              "QuestFortuneLuck",
+              "QuestFortuneExp"
+            ],
+            "completedQuestKeys": [
+              "QuestFortuneLuck"
+            ],
+            "dialogue": [
+              {
+                "key": "Fortune1Wanderer1",
+                "variables": null
+              },
+              {
+                "key": "Fortune1Wanderer2",
+                "variables": "Coin of Luck-Coin of Exp"
+              },
+              {
+                "key": "Fortune1Wanderer3",
+                "variables": "Coin of Luck-Coin of Exp"
+              },
+              {
+                "key": "Fortune1Wanderer4",
+                "variables": "3-Fire Stone"
+              },
+              {
+                "key": "Fortune1Wanderer4IfNo",
+                "variables": null
+              },
+              {
+                "key": "Fortune2Wanderer1",
+                "variables": "Coin of Luck-TheFireGuardian"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -3344,6 +4221,28 @@
             "objectiveEventKeys": [
               "FortuneExp"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "FortuneExp",
+            "questKeys": [
+              "QuestFortuneExp"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestFortuneExp"
+            ],
+            "dialogue": [
+              {
+                "key": "Fortune3Wanderer1",
+                "variables": "Coin of Exp"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -3377,6 +4276,12 @@
             "source": "localized-description",
             "descriptionKey": "DefeatTeamAtArea",
             "descriptionVariables": "1-Bloodthirsters-42"
+          },
+          "localization": {
+            "titleKey": "QuestVampire1",
+            "descriptionKey": "DefeatTeamAtArea",
+            "descriptionVariables": "1-Bloodthirsters-42",
+            "condition": null
           }
         }
       ],
@@ -3580,6 +4485,48 @@
             "objectiveEventKeys": [
               "Vampire1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "Vampire1",
+            "questKeys": [
+              "QuestVampire1"
+            ],
+            "receivedQuestKeys": [
+              "QuestVampire1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "VampireDialog1",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog2",
+                "variables": "Vampire"
+              },
+              {
+                "key": "VampireDialog6",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog3",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog4",
+                "variables": "Bloodthirsters"
+              },
+              {
+                "key": "VampireDialog5",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -3783,6 +4730,48 @@
               "Vampire2",
               "Vampire2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "Vampire2",
+            "questKeys": [
+              "QuestVampire1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestVampire1"
+            ],
+            "dialogue": [
+              {
+                "key": "VampireDialog7",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog8",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog9",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog10",
+                "variables": null
+              },
+              {
+                "key": "VampireDialog11",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -3814,6 +4803,12 @@
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
             "source": "event"
+          },
+          "localization": {
+            "titleKey": "QuestUndeadIncidents1",
+            "descriptionKey": "DefeatTeamAndReportToAtArea",
+            "descriptionVariables": "61-DarkMountainDarkNormal-WalkingDead-OldVillager",
+            "condition": null
           }
         }
       ],
@@ -3948,6 +4943,36 @@
             "objectiveEventKeys": [
               "UndeadIncidents1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "UndeadIncidents1",
+            "questKeys": [
+              "QuestUndeadIncidents1"
+            ],
+            "receivedQuestKeys": [
+              "QuestUndeadIncidents1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "Werewolf1Villager1",
+                "variables": null
+              },
+              {
+                "key": "Werewolf1Villager2",
+                "variables": null
+              },
+              {
+                "key": "Werewolf1Villager4",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -3985,6 +5010,24 @@
             "objectiveEventKeys": [
               "UndeadIncidents2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "UndeadIncidents2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "AmbushDialog",
+                "variables": "WalkingDead"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -4071,6 +5114,28 @@
             "objectiveEventKeys": [
               "UndeadIncidents3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "UndeadIncidents3",
+            "questKeys": [
+              "QuestUndeadIncidents1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestUndeadIncidents1"
+            ],
+            "dialogue": [
+              {
+                "key": "Werewolf3Villager1",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -4162,6 +5227,28 @@
             "objectiveEventKeys": [
               "WhereIsCastle1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "WhereIsCastle1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "WhereIsCastle1",
+                "variables": null
+              },
+              {
+                "key": "WhereIsCastle2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -4345,6 +5432,40 @@
             "objectiveEventKeys": [
               "MysteriousOneEye1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "MysteriousOneEye1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "MysteriousOneEye1",
+                "variables": null
+              },
+              {
+                "key": "MysteriousOneEye2",
+                "variables": null
+              },
+              {
+                "key": "MysteriousOneEye3",
+                "variables": null
+              },
+              {
+                "key": "MysteriousOneEye4",
+                "variables": null
+              },
+              {
+                "key": "MysteriousOneEye5",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -4459,6 +5580,32 @@
             "objectiveEventKeys": [
               "TheVampWarning1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheVampWarning1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheVampWarning1",
+                "variables": null
+              },
+              {
+                "key": "TheVampWarning2",
+                "variables": null
+              },
+              {
+                "key": "TheVampWarning3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -4737,6 +5884,52 @@
               "TheThunderForest1",
               "TheThunderForest1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheThunderForest1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheThunderForest1",
+                "variables": null
+              },
+              {
+                "key": "TheThunderForest2",
+                "variables": null
+              },
+              {
+                "key": "TheThunderForest3",
+                "variables": null
+              },
+              {
+                "key": "TheThunderForest4",
+                "variables": null
+              },
+              {
+                "key": "TheThunderForest5",
+                "variables": null
+              },
+              {
+                "key": "AmbushDialog",
+                "variables": "ThunderCluster"
+              },
+              {
+                "key": "TheThunderForest6",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -4874,6 +6067,32 @@
             "objectiveEventKeys": [
               "GetBoat1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "GetBoat1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "GetBoatFisherman1",
+                "variables": null
+              },
+              {
+                "key": "GetBoatFisherman2",
+                "variables": "5-Worm"
+              },
+              {
+                "key": "GetBoatFishermanAccept",
+                "variables": "Worm"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -4909,6 +6128,12 @@
               "HaveItem-Gold Ingot-3",
               "HaveItem-Boat-1"
             ]
+          },
+          "localization": {
+            "titleKey": "QuestGetShip1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": "HaveItem-Gold Ingot-3|HaveItem-Boat-1"
           }
         }
       ],
@@ -4997,6 +6222,32 @@
             "objectiveEventKeys": [
               "GetShip1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "GetShip1",
+            "questKeys": [
+              "QuestGetShip1"
+            ],
+            "receivedQuestKeys": [
+              "QuestGetShip1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "GetShipFisherman1",
+                "variables": null
+              },
+              {
+                "key": "GetShipFisherman2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -5030,6 +6281,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestSalamanderNest1Description",
             "descriptionVariables": "Fire Lion-FireBurningLandNormal"
+          },
+          "localization": {
+            "titleKey": "QuestSalamanderNest1",
+            "descriptionKey": "QuestSalamanderNest1Description",
+            "descriptionVariables": "Fire Lion-FireBurningLandNormal",
+            "condition": null
           }
         }
       ],
@@ -5164,6 +6421,36 @@
             "objectiveEventKeys": [
               "SalamanderNest1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "SalamanderNest1",
+            "questKeys": [
+              "QuestSalamanderNest1"
+            ],
+            "receivedQuestKeys": [
+              "QuestSalamanderNest1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "SpecialEventSalamanderNestMonologue",
+                "variables": "Young Salamander"
+              },
+              {
+                "key": "SpecialEventSalamanderNestYoungAskHelp",
+                "variables": "Fire Lion"
+              },
+              {
+                "key": "SpecialEventSalamanderNestElderRequest",
+                "variables": "Fire Lion"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -5250,6 +6537,32 @@
             "objectiveEventKeys": [
               "SalamanderNest2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "SalamanderNest2",
+            "questKeys": [
+              "QuestSalamanderNest1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestSalamanderNest1"
+            ],
+            "dialogue": [
+              {
+                "key": "SpecialEventSalamanderNestYoungSaved",
+                "variables": null
+              },
+              {
+                "key": "SpecialEventSalamanderNestElderReward",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -5284,6 +6597,12 @@
             "conditionTokens": [
               "DefeatTeam-DeepSeaWardens-1"
             ]
+          },
+          "localization": {
+            "titleKey": "QuestRingOfMermaid1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": "DefeatTeam-DeepSeaWardens-1"
           }
         }
       ],
@@ -5420,6 +6739,36 @@
               "RingOfMermaid1",
               "RingOfMermaid1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "RingOfMermaid1",
+            "questKeys": [
+              "QuestRingOfMermaid1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestRingOfMermaid1"
+            ],
+            "dialogue": [
+              {
+                "key": "RingOfMermaid1",
+                "variables": null
+              },
+              {
+                "key": "RingOfMermaid2",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -5451,6 +6800,12 @@
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
             "source": "event"
+          },
+          "localization": {
+            "titleKey": "QuestVampireManorKey1",
+            "descriptionKey": "DefeatAndRetrieveAtArea",
+            "descriptionVariables": "BanditsGrassLandB-12-Thin Bandit-Vampire Manor Key",
+            "condition": null
           }
         }
       ],
@@ -5516,6 +6871,28 @@
             "objectiveEventKeys": [
               "VampireManorKey1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "VampireManorKey1",
+            "questKeys": [
+              "QuestVampireManorKey1"
+            ],
+            "receivedQuestKeys": [
+              "QuestVampireManorKey1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "VampireManorKeyBandit1",
+                "variables": "BanditsGrassLandB"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -5765,6 +7142,56 @@
               "VampireManorKey2",
               "VampireManorKey2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "VampireManorKey2",
+            "questKeys": [
+              "QuestVampireManorKey1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestVampireManorKey1"
+            ],
+            "dialogue": [
+              {
+                "key": "VampireManorKeyBandit2",
+                "variables": null
+              },
+              {
+                "key": "VampireManorKeyBandit3",
+                "variables": null
+              },
+              {
+                "key": "VampireManorKeyBandit4",
+                "variables": null
+              },
+              {
+                "key": "VampireManorKeyBandit5",
+                "variables": null
+              },
+              {
+                "key": "VampireManorKeyBandit6",
+                "variables": null
+              },
+              {
+                "key": "VampireManorKeyBandit7",
+                "variables": null
+              },
+              {
+                "key": "VampireManorKeyBandit8",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -5879,6 +7306,28 @@
             "objectiveEventKeys": [
               "CapJackDungeonMap1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "CapJackDungeonMap1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "CapJackDungeonMapTraveller1",
+                "variables": "PiratesHideout-2-Water Stone"
+              },
+              {
+                "key": "CapJackDungeonMapTraveller2",
+                "variables": "PiratesHideout"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -5970,6 +7419,28 @@
             "objectiveEventKeys": [
               "CapJackArenaToken1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "CapJackArenaToken1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "CaptainJackArenaTokenTraveller1",
+                "variables": "5 <sprite name=Silver>-InfamousPirateShip-Ship"
+              },
+              {
+                "key": "CaptainJackArenaTokenTraveller2",
+                "variables": "Ship-InfamousPirateShip"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -6004,6 +7475,19 @@
           "display": {
             "show": false,
             "kind": "progression"
+          },
+          "contentRefs": {
+            "stageKey": "CapJackArenaToken2",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -6038,6 +7522,12 @@
             "conditionTokens": [
               "HaveItem-Oyster-3"
             ]
+          },
+          "localization": {
+            "titleKey": "QuestOrcCaveLeaderGuard1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": "HaveItem-Oyster-3"
           }
         }
       ],
@@ -6126,6 +7616,28 @@
             "objectiveEventKeys": [
               "OrcsRavagedVillage1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "OrcsRavagedVillage1",
+            "questKeys": [
+              "QuestOrcCaveLeaderGuard1"
+            ],
+            "receivedQuestKeys": [
+              "QuestOrcCaveLeaderGuard1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "OrcCaveLeaderGuard1",
+                "variables": "Oysters"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -6189,6 +7701,28 @@
             "objectiveEventKeys": [
               "OrcsRavagedVillage2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "OrcsRavagedVillage2",
+            "questKeys": [
+              "QuestOrcCaveLeaderGuard1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestOrcCaveLeaderGuard1"
+            ],
+            "dialogue": [
+              {
+                "key": "OrcCaveLeaderGuard2",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -6223,6 +7757,12 @@
             "conditionTokens": [
               "HaveEquipment-Silver Dagger-1"
             ]
+          },
+          "localization": {
+            "titleKey": "QuestOrcsHuntingGroundGuard1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": "HaveEquipment-Silver Dagger-1"
           }
         }
       ],
@@ -6311,6 +7851,28 @@
             "objectiveEventKeys": [
               "OrcsHuntingGroundGuard1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "OrcsHuntingGroundGuard1",
+            "questKeys": [
+              "QuestOrcsHuntingGroundGuard1"
+            ],
+            "receivedQuestKeys": [
+              "QuestOrcsHuntingGroundGuard1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "OrcsHuntingGroundGuard1",
+                "variables": "Silver Dagger"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -6374,6 +7936,28 @@
             "objectiveEventKeys": [
               "OrcsHuntingGroundGuard2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "OrcsHuntingGroundGuard2",
+            "questKeys": [
+              "QuestOrcsHuntingGroundGuard1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestOrcsHuntingGroundGuard1"
+            ],
+            "dialogue": [
+              {
+                "key": "OrcsHuntingGroundOpen",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -6405,6 +7989,12 @@
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
             "source": "event"
+          },
+          "localization": {
+            "titleKey": "QuestLearnHeal1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": null
           }
         }
       ],
@@ -6516,6 +8106,36 @@
             "objectiveEventKeys": [
               "LearnHeal1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LearnHeal1",
+            "questKeys": [
+              "QuestLearnHeal1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestLearnHeal1"
+            ],
+            "dialogue": [
+              {
+                "key": "LearnHeal1",
+                "variables": null
+              },
+              {
+                "key": "LearnHeal2",
+                "variables": null
+              },
+              {
+                "key": "LearnHeal3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -6547,6 +8167,12 @@
           "specialeventRateupTileArea": null,
           "objectiveDisplay": {
             "source": "event"
+          },
+          "localization": {
+            "titleKey": "QuestLearnGuard1",
+            "descriptionKey": null,
+            "descriptionVariables": null,
+            "condition": null
           }
         }
       ],
@@ -6658,6 +8284,36 @@
             "objectiveEventKeys": [
               "LearnGuard1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LearnGuard1",
+            "questKeys": [
+              "QuestLearnGuard1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestLearnGuard1"
+            ],
+            "dialogue": [
+              {
+                "key": "LearnGuard1",
+                "variables": null
+              },
+              {
+                "key": "LearnGuard2",
+                "variables": null
+              },
+              {
+                "key": "LearnGuard3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -6691,6 +8347,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestStrangeFootprintsDescription1",
             "descriptionVariables": "SlimeSeashore-50"
+          },
+          "localization": {
+            "titleKey": "QuestStrangeFootprints1",
+            "descriptionKey": "QuestStrangeFootprintsDescription1",
+            "descriptionVariables": "SlimeSeashore-50",
+            "condition": null
           }
         },
         {
@@ -6717,6 +8379,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestStrangeFootprintsDescription2",
             "descriptionVariables": "SlimeSeashore-50"
+          },
+          "localization": {
+            "titleKey": "QuestStrangeFootprints2",
+            "descriptionKey": "QuestStrangeFootprintsDescription2",
+            "descriptionVariables": "SlimeSeashore-50",
+            "condition": null
           }
         }
       ],
@@ -6874,6 +8542,40 @@
             "objectiveEventKeys": [
               "StrangeFootprints1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "StrangeFootprints1",
+            "questKeys": [
+              "QuestStrangeFootprints1"
+            ],
+            "receivedQuestKeys": [
+              "QuestStrangeFootprints1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "StrangeFootprintsDialog1",
+                "variables": null
+              },
+              {
+                "key": "StrangeFootprintsDialog2",
+                "variables": null
+              },
+              {
+                "key": "StrangeFootprintsDialog5",
+                "variables": null
+              },
+              {
+                "key": "StrangeFootprintsDialog6",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -7033,6 +8735,43 @@
               "StrangeFootprints2",
               "StrangeFootprints2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "StrangeFootprints2",
+            "questKeys": [
+              "QuestStrangeFootprints2",
+              "QuestStrangeFootprints1"
+            ],
+            "receivedQuestKeys": [
+              "QuestStrangeFootprints2"
+            ],
+            "completedQuestKeys": [
+              "QuestStrangeFootprints1"
+            ],
+            "dialogue": [
+              {
+                "key": "StrangeFootprintsSystemDialog1",
+                "variables": null
+              },
+              {
+                "key": "StrangeFootprintsSystemDialog2",
+                "variables": "GoblinScouts"
+              },
+              {
+                "key": "StrangeFootprintsSystemDialog3",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -7119,6 +8858,32 @@
             "objectiveEventKeys": [
               "StrangeFootprints3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "StrangeFootprints3",
+            "questKeys": [
+              "QuestStrangeFootprints2"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestStrangeFootprints2"
+            ],
+            "dialogue": [
+              {
+                "key": "StrangeFootprintsDialog3",
+                "variables": null
+              },
+              {
+                "key": "StrangeFootprintsDialog4",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -7152,6 +8917,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestEscortMerchantDescription1",
             "descriptionVariables": "52"
+          },
+          "localization": {
+            "titleKey": "QuestEscortMerchant1",
+            "descriptionKey": "QuestEscortMerchantDescription1",
+            "descriptionVariables": "52",
+            "condition": null
           }
         },
         {
@@ -7178,6 +8949,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestEscortMerchantDescription2",
             "descriptionVariables": "10"
+          },
+          "localization": {
+            "titleKey": "QuestEscortMerchant2",
+            "descriptionKey": "QuestEscortMerchantDescription2",
+            "descriptionVariables": "10",
+            "condition": null
           }
         }
       ],
@@ -7314,6 +9091,43 @@
             "objectiveEventKeys": [
               "EscortMerchant2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "EscortMerchant2",
+            "questKeys": [
+              "QuestEscortMerchant2",
+              "QuestEscortMerchant1"
+            ],
+            "receivedQuestKeys": [
+              "QuestEscortMerchant2"
+            ],
+            "completedQuestKeys": [
+              "QuestEscortMerchant1"
+            ],
+            "dialogue": [
+              {
+                "key": "EscortMerchantDialog1",
+                "variables": null
+              },
+              {
+                "key": "EscortMerchantDialog2",
+                "variables": null
+              },
+              {
+                "key": "EscortMerchantDialog3",
+                "variables": null
+              },
+              {
+                "key": "EscortMerchantDialog4",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -7471,6 +9285,40 @@
               "EscortMerchant3",
               "EscortMerchant3"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "EscortMerchant3",
+            "questKeys": [
+              "QuestEscortMerchant2"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestEscortMerchant2"
+            ],
+            "dialogue": [
+              {
+                "key": "EscortMerchantDialog5",
+                "variables": null
+              },
+              {
+                "key": "EscortMerchantDialog6",
+                "variables": "Spider Slime"
+              },
+              {
+                "key": "EscortMerchantDialog7",
+                "variables": null
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -7557,6 +9405,28 @@
             "objectiveEventKeys": [
               "EscortMerchant1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "EscortMerchant1",
+            "questKeys": [
+              "QuestEscortMerchant1"
+            ],
+            "receivedQuestKeys": [
+              "QuestEscortMerchant1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "QuestEscortMerchantMain",
+                "variables": "52-10"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -7590,6 +9460,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestBrokenSignpostDescription1",
             "descriptionVariables": "67-5-Wood-2-Iron Ingot"
+          },
+          "localization": {
+            "titleKey": "QuestBrokenSignpost1",
+            "descriptionKey": "QuestBrokenSignpostDescription1",
+            "descriptionVariables": "67-5-Wood-2-Iron Ingot",
+            "condition": null
           }
         }
       ],
@@ -7770,6 +9646,44 @@
             "objectiveEventKeys": [
               "BrokenSignpost1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "BrokenSignpost1",
+            "questKeys": [
+              "QuestBrokenSignpost1"
+            ],
+            "receivedQuestKeys": [
+              "QuestBrokenSignpost1"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "BrokenSignpostDialog1",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog2",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog3",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog4",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog5",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -7902,6 +9816,40 @@
             "objectiveEventKeys": [
               "BrokenSignpost2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "BrokenSignpost2",
+            "questKeys": [
+              "QuestBrokenSignpost1"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestBrokenSignpost1"
+            ],
+            "dialogue": [
+              {
+                "key": "BrokenSignpostDialog6",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog7",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog8",
+                "variables": null
+              },
+              {
+                "key": "BrokenSignpostDialog9",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -7935,6 +9883,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestFindAnOilLampDescription",
             "descriptionVariables": "Oil Lamp-Herbward Lantern-2 <sprite name=Silver>-BeginnerTownHero"
+          },
+          "localization": {
+            "titleKey": "QuestFindAnOilLamp",
+            "descriptionKey": "QuestFindAnOilLampDescription",
+            "descriptionVariables": "Oil Lamp-Herbward Lantern-2 <sprite name=Silver>-BeginnerTownHero",
+            "condition": null
           }
         }
       ],
@@ -8233,6 +10187,62 @@
               "FindAnOilLamp",
               "FindAnOilLamp"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "FindAnOilLamp",
+            "questKeys": [
+              "QuestFindAnOilLamp"
+            ],
+            "receivedQuestKeys": [
+              "QuestFindAnOilLamp"
+            ],
+            "completedQuestKeys": [
+              "QuestFindAnOilLamp"
+            ],
+            "dialogue": [
+              {
+                "key": "QuestFindAnOilLampDialog1",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog3",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog2",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog4",
+                "variables": "Oil Lamp-2 <sprite name=Silver>"
+              },
+              {
+                "key": "QuestFindAnOilLampDialog5",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog6",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog7",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog8",
+                "variables": null
+              },
+              {
+                "key": "QuestFindAnOilLampDialog9",
+                "variables": "Herbward Lantern"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -8715,6 +10725,84 @@
             "objectiveEventKeys": [
               "ChoosePouch"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "ChoosePouch",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "QuestChoosePouchDialog1",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialog2",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialog3",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialog4",
+                "variables": "Hot Pouch-Cold Pouch"
+              },
+              {
+                "key": "QuestChoosePouchDialogHotPouch4",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialogColdPouch4",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialog5",
+                "variables": "Hot Pouch"
+              },
+              {
+                "key": "QuestChoosePouchDialog5",
+                "variables": "Cold Pouch"
+              },
+              {
+                "key": "QuestChoosePouchDialogHotPouch6",
+                "variables": "3-Leather"
+              },
+              {
+                "key": "QuestChoosePouchDialogColdPouch6",
+                "variables": "5-Twigs"
+              },
+              {
+                "key": "QuestChoosePouchDialog7",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialog7",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialogHotPouch10",
+                "variables": "Hot Pouch"
+              },
+              {
+                "key": "QuestChoosePouchDialogColdPouch10",
+                "variables": "Cold Pouch"
+              },
+              {
+                "key": "QuestChoosePouchDialog6",
+                "variables": null
+              },
+              {
+                "key": "QuestChoosePouchDialog6",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -8748,6 +10836,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestCharmPowderDescription",
             "descriptionVariables": "Charm Powder"
+          },
+          "localization": {
+            "titleKey": "QuestCharmPowder",
+            "descriptionKey": "QuestCharmPowderDescription",
+            "descriptionVariables": "Charm Powder",
+            "condition": "CoinAbove-1000|HaveItem-Shell Fragments-2"
           }
         }
       ],
@@ -8859,6 +10953,36 @@
             "objectiveEventKeys": [
               "QuestCharmPowder"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "QuestCharmPowder",
+            "questKeys": [
+              "QuestCharmPowder"
+            ],
+            "receivedQuestKeys": [
+              "QuestCharmPowder"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "QuestCharmPowderDialog1",
+                "variables": null
+              },
+              {
+                "key": "QuestCharmPowderDialog2",
+                "variables": null
+              },
+              {
+                "key": "QuestCharmPowderDialog3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -9157,6 +11281,60 @@
             "objectiveEventKeys": [
               "AlchemistShopStones"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "AlchemistShopStones",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "AlchemistShopStonesDialog1",
+                "variables": "Slime Fluid-5"
+              },
+              {
+                "key": "AlchemistShopStonesDialog2",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              },
+              {
+                "key": "AlchemistShopStonesDialog3",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -9271,6 +11449,28 @@
             "objectiveEventKeys": [
               "BlacksmithSilverIngot"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "BlacksmithSilverIngot",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "BlacksmithSilverIngotDialog1",
+                "variables": "4-Wood-4-Leather-3-Silver Ingot"
+              },
+              {
+                "key": "BlacksmithSilverIngotDialog2",
+                "variables": "2-Silver Ingot"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -9304,6 +11504,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestHelpMermaidDescription",
             "descriptionVariables": "Jellyfish-4"
+          },
+          "localization": {
+            "titleKey": "QuestHelpMermaid",
+            "descriptionKey": "QuestHelpMermaidDescription",
+            "descriptionVariables": "Jellyfish-4",
+            "condition": null
           }
         }
       ],
@@ -9464,6 +11670,38 @@
               "MermaidPearl",
               "MermaidPearl"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "MermaidPearl",
+            "questKeys": [
+              "QuestHelpMermaid"
+            ],
+            "receivedQuestKeys": [
+              "QuestHelpMermaid"
+            ],
+            "completedQuestKeys": [
+              "QuestHelpMermaid"
+            ],
+            "dialogue": [
+              {
+                "key": "MermaidPearlDialog1",
+                "variables": null
+              },
+              {
+                "key": "MermaidPearlDialog2",
+                "variables": "Jellyfish-3-Pearl"
+              },
+              {
+                "key": "MermaidPearlDialog3",
+                "variables": "3-Pearl"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -9497,6 +11735,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestSnowCastleRestlessNightDescription",
             "descriptionVariables": "SnowCastleHero-Ice Lion"
+          },
+          "localization": {
+            "titleKey": "QuestSnowCastleRestlessNight",
+            "descriptionKey": "QuestSnowCastleRestlessNightDescription",
+            "descriptionVariables": "SnowCastleHero-Ice Lion",
+            "condition": null
           }
         }
       ],
@@ -9608,6 +11852,36 @@
             "objectiveEventKeys": [
               "SnowCastleRestlessNight1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "SnowCastleRestlessNight1",
+            "questKeys": [
+              "QuestSnowCastleRestlessNight"
+            ],
+            "receivedQuestKeys": [
+              "QuestSnowCastleRestlessNight"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "SnowCastleRestlessNightHandler1",
+                "variables": "Ice Lion"
+              },
+              {
+                "key": "SnowCastleRestlessNightHandler2",
+                "variables": "Ice Lion"
+              },
+              {
+                "key": "SnowCastleRestlessNightHandler3",
+                "variables": "Trained Wolves"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -9694,6 +11968,32 @@
             "objectiveEventKeys": [
               "SnowCastleRestlessNight2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "SnowCastleRestlessNight2",
+            "questKeys": [
+              "QuestSnowCastleRestlessNight"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestSnowCastleRestlessNight"
+            ],
+            "dialogue": [
+              {
+                "key": "SnowCastleRestlessNightReturn1",
+                "variables": "Ice Lion"
+              },
+              {
+                "key": "SnowCastleRestlessNightReturn2",
+                "variables": "Trained Wolves"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -9727,6 +12027,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestRoadsideCampDelayedDepartureDescription",
             "descriptionVariables": "RoadsideCamp-Kingdom Lancer"
+          },
+          "localization": {
+            "titleKey": "QuestRoadsideCampDelayedDeparture",
+            "descriptionKey": "QuestRoadsideCampDelayedDepartureDescription",
+            "descriptionVariables": "RoadsideCamp-Kingdom Lancer",
+            "condition": "HaveMonster-Kingdom Lancer-1|EncounteredBefore-903-1"
           }
         }
       ],
@@ -9815,6 +12121,32 @@
             "objectiveEventKeys": [
               "RoadsideCampDelayedDeparture1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "RoadsideCampDelayedDeparture1",
+            "questKeys": [
+              "QuestRoadsideCampDelayedDeparture"
+            ],
+            "receivedQuestKeys": [
+              "QuestRoadsideCampDelayedDeparture"
+            ],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "RoadsideCampDelayedDepartureIntro1",
+                "variables": null
+              },
+              {
+                "key": "RoadsideCampDelayedDepartureIntro2",
+                "variables": "Kingdom Lancer"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -9901,6 +12233,36 @@
             "objectiveEventKeys": [
               "RoadsideCampDelayedDeparture2"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "RoadsideCampDelayedDeparture2",
+            "questKeys": [
+              "QuestRoadsideCampDelayedDeparture"
+            ],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [
+              "QuestRoadsideCampDelayedDeparture"
+            ],
+            "dialogue": [
+              {
+                "key": "RoadsideCampDelayedDepartureReturn1",
+                "variables": null
+              },
+              {
+                "key": "RoadsideCampDelayedDepartureReturn2",
+                "variables": null
+              },
+              {
+                "key": "RoadsideCampDelayedDepartureReturn3",
+                "variables": "Wagon"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -10086,6 +12448,32 @@
               "TheClimbersLostLine1",
               "TheClimbersLostLine1"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "TheClimbersLostLine1",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "TheClimbersLostLineOffer1",
+                "variables": "Wind Gazer-Grappling Rope"
+              },
+              {
+                "key": "TheClimbersLostLineWin1",
+                "variables": "Wind Gazer"
+              },
+              {
+                "key": "BattleLoseDialog",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -10119,6 +12507,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestDryadPineGroveTheLivingCutDescription",
             "descriptionVariables": "21"
+          },
+          "localization": {
+            "titleKey": "QuestDryadPineGroveTheLivingCut",
+            "descriptionKey": "QuestDryadPineGroveTheLivingCutDescription",
+            "descriptionVariables": "21",
+            "condition": null
           }
         },
         {
@@ -10145,6 +12539,12 @@
             "source": "localized-description",
             "descriptionKey": "QuestDryadPineGroveTheRestlessGroveDescription",
             "descriptionVariables": "Living Pineheart-DryadPineGroveDungeon-78"
+          },
+          "localization": {
+            "titleKey": "QuestDryadPineGroveTheRestlessGrove",
+            "descriptionKey": "QuestDryadPineGroveTheRestlessGroveDescription",
+            "descriptionVariables": "Living Pineheart-DryadPineGroveDungeon-78",
+            "condition": "DefeatTeam-Dryad Princess-1|EncounteredBefore-1152-1"
           }
         }
       ],
@@ -10420,6 +12820,62 @@
               "QuestDryadPineGroveTheLivingCut",
               "QuestDryadPineGroveTheLivingCut"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "QuestDryadPineGroveTheLivingCut",
+            "questKeys": [
+              "QuestDryadPineGroveTheLivingCut"
+            ],
+            "receivedQuestKeys": [
+              "QuestDryadPineGroveTheLivingCut"
+            ],
+            "completedQuestKeys": [
+              "QuestDryadPineGroveTheLivingCut"
+            ],
+            "dialogue": [
+              {
+                "key": "DryadPineGroveRoadside1",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGroveRoadside2",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGroveRoadside3",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGroveMeadow1",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGroveMeadow2",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGroveMeadow3",
+                "variables": "Living Pineheart"
+              },
+              {
+                "key": "DryadPineGroveMeadow4",
+                "variables": "Living Pineheart"
+              },
+              {
+                "key": "DryadPineGroveMeadow5",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGroveMeadow6",
+                "variables": "78-Living Pineheart"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         },
         {
@@ -10569,6 +13025,40 @@
           "display": {
             "show": false,
             "kind": "progression"
+          },
+          "contentRefs": {
+            "stageKey": "QuestDryadPineGroveTheRestlessGrove",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "DryadPineGrovePrincessPost1",
+                "variables": "Living Pineheart"
+              },
+              {
+                "key": "DryadPineGrovePrincessPost2",
+                "variables": "Living Pineheart"
+              },
+              {
+                "key": "DryadPineGrovePrincessPost3",
+                "variables": null
+              },
+              {
+                "key": "DryadPineGrovePrincessPost4",
+                "variables": "Living Pineheart"
+              },
+              {
+                "key": "DryadPineGrovePrincessPost5",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -10683,6 +13173,28 @@
             "objectiveEventKeys": [
               "CommonHouseSalvagedLeather"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "CommonHouseSalvagedLeather",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "CommonHouseSalvagedLeatherDialog1",
+                "variables": "Leather-Flour"
+              },
+              {
+                "key": "CommonHouseSalvagedLeatherDialog2",
+                "variables": "5-Flour-4-Leather"
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -11167,6 +13679,88 @@
               "LightMountainTooBrightToStudy",
               "LightMountainTooBrightToStudy"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LightMountainTooBrightToStudy",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LightMountainTooBrightToStudyDialogIntro",
+                "variables": "Scholar Angel"
+              },
+              {
+                "key": "LightMountainTooBrightToStudyDialog1",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyDialog2",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonWinQuestion",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonThreat",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarIntervene",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonCompromise",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarThanksDragon",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonTsundere",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarNoticeTechnique",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarTeach",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarCongratulations",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonLossQuestion",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonThreat",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarIntervene",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyHaloDragonLossMercy",
+                "variables": null
+              },
+              {
+                "key": "LightMountainTooBrightToStudyScholarLossApology",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -11352,6 +13946,36 @@
               "EarthSeashorePoisonInThePuddle",
               "EarthSeashorePoisonInThePuddle"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "EarthSeashorePoisonInThePuddle",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "EarthSeashorePoisonInThePuddleDialog1",
+                "variables": null
+              },
+              {
+                "key": "EarthSeashorePoisonInThePuddleDialog2",
+                "variables": null
+              },
+              {
+                "key": "EarthSeashorePoisonInThePuddleDialogWin",
+                "variables": null
+              },
+              {
+                "key": "EarthSeashorePoisonInThePuddleDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -11535,6 +14159,40 @@
             "objectiveEventKeys": [
               "ThunderSeashoreWaterproofingFailure"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "ThunderSeashoreWaterproofingFailure",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "ThunderSeashoreWaterproofingFailureDialog1",
+                "variables": null
+              },
+              {
+                "key": "ThunderSeashoreWaterproofingFailureDialog2",
+                "variables": "2-Cloth-2-Energy Cell-2-Magnet"
+              },
+              {
+                "key": "ThunderSeashoreWaterproofingFailureDialog3",
+                "variables": null
+              },
+              {
+                "key": "ThunderSeashoreWaterproofingFailureDialogTradeSuccess",
+                "variables": null
+              },
+              {
+                "key": "ThunderSeashoreWaterproofingFailureDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -11720,6 +14378,36 @@
               "LightSeashoreTheGlowingWreckage",
               "LightSeashoreTheGlowingWreckage"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "LightSeashoreTheGlowingWreckage",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "LightSeashoreTheGlowingWreckageDialog1",
+                "variables": null
+              },
+              {
+                "key": "LightSeashoreTheGlowingWreckageDialog2",
+                "variables": null
+              },
+              {
+                "key": "LightSeashoreTheGlowingWreckageDialogWin",
+                "variables": null
+              },
+              {
+                "key": "LightSeashoreTheGlowingWreckageDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -11905,6 +14593,36 @@
               "WaterSnowTracksUnderTheSnow",
               "WaterSnowTracksUnderTheSnow"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "WaterSnowTracksUnderTheSnow",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "WaterSnowTracksUnderTheSnowDialog1",
+                "variables": null
+              },
+              {
+                "key": "WaterSnowTracksUnderTheSnowDialog2",
+                "variables": null
+              },
+              {
+                "key": "WaterSnowTracksUnderTheSnowDialogWin",
+                "variables": null
+              },
+              {
+                "key": "WaterSnowTracksUnderTheSnowDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -12090,6 +14808,36 @@
               "FireSeashoreTheSmokingCrate",
               "FireSeashoreTheSmokingCrate"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "FireSeashoreTheSmokingCrate",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "FireSeashoreTheSmokingCrateDialog1",
+                "variables": null
+              },
+              {
+                "key": "FireSeashoreTheSmokingCrateDialog2",
+                "variables": null
+              },
+              {
+                "key": "FireSeashoreTheSmokingCrateDialogWin",
+                "variables": null
+              },
+              {
+                "key": "FireSeashoreTheSmokingCrateDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -12273,6 +15021,40 @@
             "objectiveEventKeys": [
               "NatureGrassLandTheAbandonedHerbBasket"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "NatureGrassLandTheAbandonedHerbBasket",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "NatureGrassLandTheAbandonedHerbBasketDialog1",
+                "variables": null
+              },
+              {
+                "key": "NatureGrassLandTheAbandonedHerbBasketDialog2",
+                "variables": "2-Drinking Water-4-Herb-3-Plant Fiber"
+              },
+              {
+                "key": "NatureGrassLandTheAbandonedHerbBasketDialog3",
+                "variables": null
+              },
+              {
+                "key": "NatureGrassLandTheAbandonedHerbBasketDialogTradeSuccess",
+                "variables": null
+              },
+              {
+                "key": "NatureGrassLandTheAbandonedHerbBasketDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -12458,6 +15240,36 @@
               "GoblinDarkLandTheEmptyHuntingCamp",
               "GoblinDarkLandTheEmptyHuntingCamp"
             ]
+          },
+          "contentRefs": {
+            "stageKey": "GoblinDarkLandTheEmptyHuntingCamp",
+            "questKeys": [],
+            "receivedQuestKeys": [],
+            "completedQuestKeys": [],
+            "dialogue": [
+              {
+                "key": "GoblinDarkLandTheEmptyHuntingCampDialog1",
+                "variables": null
+              },
+              {
+                "key": "GoblinDarkLandTheEmptyHuntingCampDialog2",
+                "variables": null
+              },
+              {
+                "key": "GoblinDarkLandTheEmptyHuntingCampDialogWin",
+                "variables": null
+              },
+              {
+                "key": "GoblinDarkLandTheEmptyHuntingCampDialogLoss",
+                "variables": null
+              }
+            ],
+            "objectivePriority": [
+              "quest-description",
+              "quest-condition",
+              "quest-title"
+            ],
+            "source": "SpecialEvents+Quest+Localization"
           }
         }
       ]
@@ -12467,10 +15279,15 @@
     "mode": "objectives-only",
     "notes": "Source quest records, stage rows, conditions and dialogue are retained for fidelity. Quest cards and dialogue-only follow-ups are not displayed.",
     "objectivePriority": [
-      "localized-description",
+      "quest-description",
       "quest-condition",
-      "event"
+      "quest-title"
     ],
-    "objectiveNotes": "Use existing localization for Quest.extraDescr with extraDescrVariables first; otherwise use Quest.completeCondition tokens; otherwise show only existing source event fields. Never invent objective wording. Renderer must consume this metadata."
+    "objectiveNotes": "Use existing localization for Quest.extraDescr with extraDescrVariables first; otherwise use Quest.completeCondition tokens; otherwise show only existing source event fields. Never invent objective wording. Renderer must consume this metadata.",
+    "contentModel": "stage-quest-separate",
+    "stageSource": "SpecialEvents",
+    "questSource": "Quest",
+    "localizationSource": "Quests & Event Groups",
+    "note": "Content references only; renderer resolves selected language. No generated objective sentences."
   }
 }
