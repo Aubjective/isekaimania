@@ -39,8 +39,16 @@ function specialEventReference(key) {
         const row = wiki.monsterLocalisation.get(value);
         return escapeHtml(row[wiki.locale] || row.en || '');
     }
-    if (typeof itemByKey === 'function' && itemByKey(value)) return itemReferenceLink(value);
-    if (typeof equipmentByKey === 'function' && equipmentByKey(value)) return equipmentReferenceLink(value);
+    if (typeof itemByKey === 'function' && itemByKey(value)) {
+        const row = wiki.itemLocalisation && wiki.itemLocalisation.get(value);
+        const name = row && row.Name && (row.Name[wiki.locale] || row.Name.en);
+        return name ? itemReferenceLink(value) : '';
+    }
+    if (typeof equipmentByKey === 'function' && equipmentByKey(value)) {
+        const row = wiki.equipmentLocalisation && wiki.equipmentLocalisation.get(value);
+        const name = row && row.Name && (row.Name[wiki.locale] || row.Name.en);
+        return name ? equipmentReferenceLink(value) : '';
+    }
     if (typeof mainQuestName === 'function' && mainQuestName(value)) return escapeHtml(mainQuestName(value));
     return '';
 }
