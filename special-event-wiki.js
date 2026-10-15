@@ -82,49 +82,64 @@ function specialEventStageQuest(stage, group) {
             (other.contentRefs?.receivedQuestKeys || other.questKeysReceived || []).includes(key))) || '';
     return (group.quests || []).find(q => q.key === chosen);
 }
+function specialEventConditionText(condition) {
+    if (!condition || !condition.localizationKey) return '';
+    const template = specialEventText(condition.localizationKey);
+    if (!template) return '';
+    const variables = condition.variables || [];
+    const text = template.replace(/\{(\d+)\}/g, (match, i) =>
+        variables[Number(i)] === undefined ? match : specialEventReference(variables[Number(i)]));
+    return /\{\d+\}/.test(text) ? '' : text;
+}
 function specialEventStageCard(stage, group, index) {
-    if (stage.display && !stage.display.show) return '';
     const rows = stage.steps || [];
     const active = rows.filter(row => row.type === 'Standard' || row.type === 'Resolve');
     const unique = values => [...new Set(values.filter(Boolean))];
     const location = unique(active.flatMap(row => [row.tileDataPicker, row.tileData, row.tileArea]));
     const npcs = unique(active.filter(row => row.imageType === 'NPC' || (row.type === 'Resolve' && row.eventNpcName && row.eventNpcName !== 'PLAYER'))
         .map(row => row.eventNpcName).filter(name => name && name !== 'PLAYER'));
-    const quest = specialEventStageQuest(stage, group);
-    const questContent = specialEventQuestContent(quest);
-    const title = specialEventText(stage.key) || questContent.title || specialEventText(group.key) || '';
-    let objective = questContent.objective;
-    if (!objective && !quest) {
-        const battle = rows.flatMap(row => String(row.eventOutcome || '').split('|'))
-            .find(token => token.startsWith('FightTeam-'));
-        const template = specialEventText('DefeatTeam');
-        if (battle && template) {
-            const team = battle.slice('FightTeam-'.length);
-            const resolved = template.replace(/\{(\d+)\}/g, (match, i) =>
-                Number(i) === 0 ? '1' : Number(i) === 1 ? specialEventReference(team) : match);
-            if (!/\{\d+\}/.test(resolved)) objective = resolved;
-        }
-    }
+    const refs = stage.contentRefs || {};
+    const received = refs.receivedQuestKeys || stage.questKeysReceived || [];
+    const completed = refs.completedQuestKeys || stage.questKeysCompleted || [];
+    const questKeys = unique([...received, ...completed, ...(refs.questKeys || [])]);
+    const quests = questKeys.map(key => (group.quests || []).find(q => q.key === key)).filter(Boolean);
+    const title = specialEventText(stage.key) || specialEventText(group.key) || '';
+    const conditions = (refs.stageConditions || []).filter(c => c.category !== 'prerequisite');
+    const requirements = unique(conditions.map(specialEventConditionText));
+    const prerequisites = (refs.stageConditions || []).filter(c => c.category === 'prerequisite');
     const outcomes = rows.flatMap(row => String(row.eventOutcome || '').split('|')).filter(Boolean);
     const rewards = outcomes.filter(token => /^(GainItem|GainEquipment|GainChest|GainCoin|GainEXP|GainJobPoints)-/.test(token));
     const info = [];
     if (location.length) info.push('<p><strong>' + escapeHtml(ui('location','Location')) + ':</strong> ' + location.map(specialEventReference).join(' · ') + '</p>');
     if (npcs.length) info.push('<p><strong>' + escapeHtml(ui('npc','NPC')) + ':</strong> ' + npcs.map(specialEventReference).join(' · ') + '</p>');
-    if (questContent.title) info.push('<p><strong>' + escapeHtml(ui('quest','Quest')) + ':</strong> ' + escapeHtml(questContent.title) + '</p>');
-    if (objective) info.push('<p><strong>' + escapeHtml(ui('objective','Objective')) + ':</strong> ' + objective + '</p>');
+    if (questKeys.length) info.push('<p><strong>' + escapeHtml(ui('quest','Quest')) + ':</strong> ' + questKeys.map(specialEventReference).join(' · ') + '</p>');
+    if (requirements.length) info.push('<p><strong>' + escapeHtml(ui('requirements','Requirements')) + ':</strong> ' + requirements.join(' · ') + '</p>');
+    // Internal conditions are source data, not player objectives. Keep their
+    // original tokens visible without fabricating translations.
+    if (prerequisites.length) info.push('<p><strong>' + escapeHtml(ui('prerequisites','Prerequisites')) + ':</strong> ' + unique(prerequisites.map(c => escapeHtml(c.raw))).join(' · ') + '</p>');
     if (rewards.length) info.push('<p><strong>' + escapeHtml(ui('reward','Reward')) + ':</strong> ' + rewards.map(specialEventOutcome).join(' · ') + '</p>');
-    if (!info.length) return '';
-    return '<section class="card detail-section special-event-stage" id="stage-' + encodeURIComponent(stage.key) + '"><h2>' + escapeHtml(ui('stage','Stage')) + ' ' + (index+1) + (title ? ': ' + escapeHtml(title) : '') + '</h2>' + info.join('') + '</section>';
+    const extra = [];
+    for (const quest of quests) {
+        const content = specialEventQuestContent(quest);
+        if (content.objective) extra.push('<p><strong>' + escapeHtml(content.title || quest.key) + ':</strong> ' + content.objective + '</p>');
+    }
+    // Dialogue is additional source-backed information, not an objective.
+    const dialogue = unique((refs.dialogue || []).map(row => specialEventLocalizedTemplate(row.key, row.variables)));
+    if (dialogue.length) extra.push('<p><strong>' + escapeHtml(ui('dialogue','Dialogue')) + ':</strong> ' + dialogue.join(' · ') + '</p>');
+    const heading = '<h2>' + escapeHtml(ui('stage','Stage')) + ' ' + (index + 1) + (title ? ': ' + escapeHtml(title) : '') + '</h2>';
+    return '<section class="card detail-section special-event-stage" id="stage-' + encodeURIComponent(stage.key) + '">' + heading
+        + '<h3>' + escapeHtml(ui('basicInfo','Basic Info')) + '</h3>' + info.join('')
+        + (extra.length ? '<h3>' + escapeHtml(ui('additionalInformation','Additional Information')) + '</h3>' + extra.join('') : '') + '</section>';
 }
 function renderSpecialEventList() {
-    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+specialEventStageOrder(g).filter((stage,i)=>specialEventStageCard(stage,g,i)).length+' Objectives'+'</p></article>').join('');
+    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+specialEventStageOrder(g).filter((stage,i)=>specialEventStageCard(stage,g,i)).length+' '+escapeHtml(ui('stages','Stages'))+'</p></article>').join('');
     return '<div class="header-card"><h1>'+escapeHtml(ui('specialEvents','Special Events'))+'</h1><p>'+wiki.specialEventGroups.length+' '+escapeHtml(ui('entries','entries'))+'</p><input type="text" id="searchInput" class="search-input" placeholder="'+escapeHtml(ui('search','Search...'))+'"></div><div class="grid">'+cards+'</div>';
 }
 function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
     const group=specialEventGroup(key);if(!group)return;
     if(!fromRoute&&navigateHash('specialevents',key))return;
     setActiveView('SpecialEvents');
-    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+specialEventStageOrder(group).filter((stage,i)=>specialEventStageCard(stage,group,i)).length+' Objectives'+'</p></div>'+specialEventStageOrder(group).map((stage,i)=>specialEventStageCard(stage,group,i)).filter(Boolean).map((html,i)=>html.replace(/<h2>Stage \d+:/,'<h2>Stage '+(i+1)+':')).join('')+'</div>';
+    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+specialEventStageOrder(group).filter((stage,i)=>specialEventStageCard(stage,group,i)).length+' '+escapeHtml(ui('stages','Stages'))+'</p></div>'+specialEventStageOrder(group).map((stage,i)=>specialEventStageCard(stage,group,i)).filter(Boolean).map((html,i)=>html.replace(/<h2>Stage \d+:/,'<h2>Stage '+(i+1)+':')).join('')+'</div>';
     window.scrollTo(0,0);
 }
 function specialEventRoute() {
