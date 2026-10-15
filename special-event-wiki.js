@@ -24,11 +24,8 @@ function specialEventReference(key) {
         if ((g.quests || []).some(q => q.key === value) && specialEventText(value))
             return '<a href="' + routeHash('specialevents', g.key) + '/' + encodeURIComponent(value) + '">' + escapeHtml(specialEventText(value)) + '</a>';
     }
-    if (/^\d+$/.test(value)) {
-        const label = escapeHtml(value);
-        return typeof tileAreaById === 'function' && tileAreaById(value)
-            ? '<a href="' + routeHash('tileareas', value) + '">' + label + '</a>' : label;
-    }
+    // A number alone has no entity type: quantities and levels must remain numbers.
+    if (/^\d+$/.test(value)) return escapeHtml(value);
     if (specialEventText(value)) return escapeHtml(specialEventText(value));
     if (typeof tileDataByKey === 'function' && tileDataByKey(value)) {
         const row = wiki.tileDataLocalisation && wiki.tileDataLocalisation.get(value);
@@ -68,13 +65,26 @@ function specialEventOutcome(raw) {
         return mainQuestTokens(token);
     }).filter(Boolean).join(' · ');
 }
+// Link a numeric area only when the source field explicitly identifies it as an area.
+function specialEventAreaReference(value) {
+    const id = String(value).trim();
+    if (!/^\d+$/.test(id)) return specialEventReference(id);
+    return typeof tileAreaById === 'function' && tileAreaById(id)
+        ? '<a href="' + routeHash('tileareas', id) + '">' + escapeHtml(ui('tileArea', 'Tile Area') + ' ' + id) + '</a>'
+        : escapeHtml(id);
+}
 // Quest content is resolved independently of Special Event stage data.
 function specialEventLocalizedTemplate(key, variables) {
     const template = key ? specialEventText(key) : '';
     if (!template) return '';
     const args = String(variables || '').split('-');
-    const resolved = template.replace(/\{(\d+)\}/g, (match, i) =>
-        args[Number(i)] === undefined ? match : (specialEventReference(args[Number(i)]) || match));
+    const englishTemplate = (wiki.specialEventLocalisation[key] || {}).en || '';
+    const areaIndices = new Set([...englishTemplate.matchAll(/\barea\s*\{(\d+)\}/gi)].map(match => Number(match[1])));
+    const resolved = template.replace(/\{(\d+)\}/g, (match, i) => {
+        const index = Number(i);
+        if (args[index] === undefined) return match;
+        return (areaIndices.has(index) ? specialEventAreaReference(args[index]) : specialEventReference(args[index])) || match;
+    });
     return /\{\d+\}/.test(resolved) ? '' : resolved;
 }
 function specialEventQuestContent(quest) {
@@ -156,7 +166,7 @@ function specialEventStageCard(stage, group, index) {
     const localized = key => specialEventReference(key);
     const lines = [];
     const data = unique(tileData.map(localized));
-    const areas = unique(tileArea.map(localized));
+    const areas = unique(tileArea.map(specialEventAreaReference));
     const names = unique(npcs.map(localized));
     if (data.length) lines.push('<p><strong>' + escapeHtml(ui('tileData','Tile Data')) + ':</strong> ' + data.join(' · ') + '</p>');
     if (areas.length) lines.push('<p><strong>' + escapeHtml(ui('tileArea','Tile Area')) + ':</strong> ' + areas.join(' · ') + '</p>');
