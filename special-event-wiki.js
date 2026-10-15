@@ -184,7 +184,11 @@ function specialEventStageCard(stage, group, index) {
     const localized = key => specialEventReference(key);
     const lines = [];
     const data = unique(tileData.map(localized));
-    const areas = unique(tileArea.map(specialEventAreaReference));
+    // Do not repeat a stage Tile Area when the description already links that same area.
+    const descriptionHtml = description.join(' · ');
+    const areas = unique(tileArea.filter(id =>
+        !descriptionHtml.includes('href="' + routeHash('tileareas', String(id)) + '"')
+    ).map(specialEventAreaReference));
     const names = unique(npcs.map(localized));
     if (data.length) lines.push('<p><strong>' + escapeHtml(ui('tileData','Tile Data')) + ':</strong> ' + data.join(' · ') + '</p>');
     if (areas.length) lines.push('<p><strong>' + escapeHtml(ui('tileArea','Tile Area')) + ':</strong> ' + areas.join(' · ') + '</p>');
