@@ -80,7 +80,30 @@ function specialEventLocalizedTemplate(key, variables) {
     const args = String(variables || '').split('-');
     const englishTemplate = (wiki.specialEventLocalisation[key] || {}).en || '';
     const areaIndices = new Set([...englishTemplate.matchAll(/\barea\s*\{(\d+)\}/gi)].map(match => Number(match[1])));
-    const resolved = template.replace(/\{(\d+)\}/g, (match, i) => {
+    // Suppress only explicitly identified quantity variables, never area IDs or levels.
+    const quantityIndexes = {
+        HaveItem: 0, HaveEquipment: 0, DefeatMonster: 0,
+        DefeatTeam: 0, DefeatTeamAt: 0, DefeatTeamAtArea: 0,
+        DefeatDungeonArena: 0, DefeatAreaMonster: 1,
+        DefeatRareEncounterMonster: 1, CollectItemAndGiveTo: 0,
+        QuestSlimeResearchDescription: 1, QuestElementalResearchDescription: 1
+    };
+    const countIndex = quantityIndexes[key];
+    const hideCount = countIndex !== undefined && /^(0|1)$/.test(args[countIndex] || '');
+    let displayTemplate = template;
+    if (hideCount) {
+        const marker = '\\{' + countIndex + '\\}';
+        displayTemplate = displayTemplate
+            .replace(new RegExp('\\s*x' + marker + '\\s*time\\(s\\)', 'gi'), '')
+            .replace(new RegExp(marker + '\\s*(?:个|個|只|隻|次|份|体|回|つ)', 'g'), '')
+            .replace(new RegExp('(?:数量|數量|количество|Число побед)\\s*[:：]\\s*' + marker, 'gi'), '')
+            .replace(new RegExp(marker, 'g'), '')
+            .replace(/ {2,}/g, ' ')
+            .replace(/\s+([.,!?])/g, '$1');
+        if (key === 'CollectItemAndGiveTo' && wiki.locale === 'en')
+            displayTemplate = displayTemplate.replace('deliver them to', 'deliver it to');
+    }
+    const resolved = displayTemplate.replace(/\{(\d+)\}/g, (match, i) => {
         const index = Number(i);
         if (args[index] === undefined) return match;
         return (areaIndices.has(index) ? specialEventAreaReference(args[index]) : specialEventReference(args[index])) || match;
