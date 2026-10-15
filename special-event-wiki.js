@@ -112,7 +112,13 @@ function specialEventLocalizedTemplate(key, variables) {
                 ? '<a href="' + routeHash('tileareas', id) + '">' + escapeHtml(id) + '</a>'
                 : escapeHtml(id);
         }
-        return specialEventReference(args[index]) || match;
+        const localized = specialEventReference(args[index]);
+        if (localized) return localized;
+        // Quest source variables may be plain display words (e.g. Letter, Castle,
+        // Mary) rather than entity keys. Preserve readable source text instead
+        // of dropping the entire localized objective.
+        const source = String(args[index]).trim();
+        return /^[A-Z][a-z]+(?: [A-Z][a-z]+)*$/.test(source) ? escapeHtml(source) : match;
     });
     return /\{\d+\}/.test(resolved) ? '' : resolved;
 }
