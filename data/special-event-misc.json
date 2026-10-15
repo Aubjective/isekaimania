@@ -1,0 +1,240 @@
+{
+  "AccessoryMerchant": {
+    "en": "AccessoryMerchant",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "AdventurersGuild": {
+    "en": "AdventurersGuild",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Alice": {
+    "en": "Alice",
+    "zh": "爱丽丝",
+    "zh-Hant": "愛麗絲",
+    "ja": "アリス",
+    "ru": "Алиса"
+  },
+  "Blacksmith": {
+    "en": "Blacksmith",
+    "zh": "铁匠",
+    "zh-Hant": "鐵匠",
+    "ja": "鍛冶師",
+    "ru": "Кузнец"
+  },
+  "Bloodthirsters": {
+    "en": "Bloodthirsters",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Bridgewright": {
+    "en": "Bridgewright",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Broken Signpost": {
+    "en": "Broken Signpost",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Caretaker": {
+    "en": "Caretaker",
+    "zh": "看护",
+    "zh-Hant": "看護",
+    "ja": "世話係",
+    "ru": "Смотритель"
+  },
+  "Castle": {
+    "en": "Castle",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "DryadPineGroveDungeon": {
+    "en": "DryadPineGroveDungeon",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Engineer": {
+    "en": "Engineer",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Fiala": {
+    "en": "Fiala",
+    "zh": "菲娅拉",
+    "zh-Hant": "菲婭拉",
+    "ja": "フィアラ",
+    "ru": "Фиала"
+  },
+  "Fisherman": {
+    "en": "Fisherman",
+    "zh": "渔夫",
+    "zh-Hant": "漁夫",
+    "ja": "漁師",
+    "ru": "Рыбак"
+  },
+  "Fox": {
+    "en": "Fox",
+    "zh": "狐狸",
+    "zh-Hant": "狐狸",
+    "ja": "キツネ",
+    "ru": "Лиса"
+  },
+  "GeneralMerchant": {
+    "en": "GeneralMerchant",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Guard": {
+    "en": "Guard",
+    "zh": "守卫",
+    "zh-Hant": "守衛",
+    "ja": "衛兵",
+    "ru": "Стражник"
+  },
+  "HighNun": {
+    "en": "High Nun",
+    "zh": "高阶修女",
+    "zh-Hant": "高階修女",
+    "ja": "上級修道女",
+    "ru": "Старшая монахиня"
+  },
+  "James": {
+    "en": "James",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Letter": {
+    "en": "Letter",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Living Pineheart": {
+    "en": "Living Pineheart",
+    "zh": "活松之心",
+    "zh-Hant": "活松之心",
+    "ja": "生きた松の心",
+    "ru": "Живое сердце сосны"
+  },
+  "LostGreyCatPoster": {
+    "en": "Lost Grey Cat Poster",
+    "zh": "灰色猫咪失踪启事",
+    "zh-Hant": "灰色貓咪失蹤啟事",
+    "ja": "灰色の猫の捜索ポスター",
+    "ru": "Объявление о пропавшей серой кошке"
+  },
+  "MaleTraveller": {
+    "en": "Male Traveller",
+    "zh": "旅人",
+    "zh-Hant": "旅人",
+    "ja": "男性の旅人",
+    "ru": "Путник"
+  },
+  "Mary": {
+    "en": "Mary",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Merchant": {
+    "en": "Merchant",
+    "zh": "商人",
+    "zh-Hant": "商人",
+    "ja": "商人",
+    "ru": "Торговец"
+  },
+  "OldVillager": {
+    "en": "Old Villager",
+    "zh": "老村民",
+    "zh-Hant": "老村民",
+    "ja": "老村人",
+    "ru": "Старый житель деревни"
+  },
+  "OldWanderer": {
+    "en": "Old Wanderer",
+    "zh": "流浪老人",
+    "zh-Hant": "流浪老人",
+    "ja": "年老いた放浪者",
+    "ru": "Старый странник"
+  },
+  "OldWoman": {
+    "en": "Old Woman",
+    "zh": "老太太",
+    "zh-Hant": "老太太",
+    "ja": "老婆",
+    "ru": "Старуха"
+  },
+  "Repaired Signpost": {
+    "en": "Repaired Signpost",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Soldier": {
+    "en": "Soldier",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "TheGems": {
+    "en": "TheGems",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "ThunderCluster": {
+    "en": "ThunderCluster",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "Villager": {
+    "en": "Villager",
+    "zh": "村民",
+    "zh-Hant": "村民",
+    "ja": "村人",
+    "ru": "Житель деревни"
+  },
+  "WalkingDead": {
+    "en": "WalkingDead",
+    "zh": "",
+    "zh-Hant": "",
+    "ja": "",
+    "ru": ""
+  },
+  "WeaponMerchant": {
+    "en": "Weapon Merchant",
+    "zh": "武器商人",
+    "zh-Hant": "武器商人",
+    "ja": "武器商人",
+    "ru": "Торговец оружием"
+  }
+}
