@@ -92,13 +92,8 @@ function specialEventStageCard(stage, group, index) {
         .map(row => row.eventNpcName).filter(name => name && name !== 'PLAYER'));
     const quest = specialEventStageQuest(stage, group);
     const questContent = specialEventQuestContent(quest);
-    const refs = stage.contentRefs || {};
-    const dialogue = (refs.dialogue || []).map(row =>
-        specialEventLocalizedTemplate(row.key, row.variables)).filter(Boolean);
     const title = specialEventText(stage.key) || questContent.title || specialEventText(group.key) || '';
     let objective = questContent.objective;
-    // Stage-only events can supply an existing localized dialogue prompt.
-    if (!objective && !quest && dialogue.length) objective = dialogue[0];
     if (!objective && !quest) {
         const battle = rows.flatMap(row => String(row.eventOutcome || '').split('|'))
             .find(token => token.startsWith('FightTeam-'));
