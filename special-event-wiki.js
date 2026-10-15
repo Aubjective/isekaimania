@@ -1,6 +1,7 @@
 // Special Events display localized objectives only; source quest and dialogue records remain in JSON.
 wiki.specialEventGroups = [];
 wiki.specialEventLocalisation = {};
+wiki.specialEventMisc = {};
 wiki.specialEventsReady = false;
 const specialEventPreviousRoute = handleHashRoute;
 const specialEventPreviousView = loadView;
@@ -47,6 +48,8 @@ function specialEventReference(key) {
         return name ? equipmentReferenceLink(value) : '';
     }
     if (typeof mainQuestName === 'function' && mainQuestName(value)) return escapeHtml(mainQuestName(value));
+    const misc = wiki.specialEventMisc[value];
+    if (misc) return escapeHtml(misc[wiki.locale] || misc.en || '');
     return '';
 }
 function specialEventOutcome(raw) {
@@ -240,8 +243,9 @@ loadView=function(view,fromRoute=false){
 };
 window.addEventListener('hashchange',handleHashRoute);
 const specialEventPromise=(async()=>{
-    const [stageData,localisation]=await Promise.all([loadJson('data/special-event-stages.json',{groups:[]}),loadJson('data/special-event-localisation.json',{})]);
+    const [stageData,localisation,misc]=await Promise.all([loadJson('data/special-event-stages.json',{groups:[]}),loadJson('data/special-event-localisation.json',{}),loadJson('data/special-event-misc.json',{})]);
     wiki.specialEventLocalisation=localisation;
+    wiki.specialEventMisc=misc;
     wiki.specialEventGroups=stageData.groups || [];
     await Promise.allSettled([typeof mainQuestPromise!=='undefined'?mainQuestPromise:Promise.resolve(),typeof tileDataPromise!=='undefined'?tileDataPromise:Promise.resolve(),typeof tileAreaDataPromise!=='undefined'?tileAreaDataPromise:Promise.resolve(),typeof monsterDataPromise!=='undefined'?monsterDataPromise:Promise.resolve(),typeof itemDataPromise!=='undefined'?itemDataPromise:Promise.resolve(),typeof equipmentDataPromise!=='undefined'?equipmentDataPromise:Promise.resolve()]);
     wiki.specialEventsReady=true;
