@@ -11,16 +11,38 @@ function specialEventText(key) {
     return row[wiki.locale] || row.en || '';
 }
 function specialEventGroup(key) { return wiki.specialEventGroups.find(group => group.key === key); }
+// Only return references backed by a localized source or a known numeric area.
+// Missing entries are omitted instead of exposing internal identifiers.
 function specialEventReference(key) {
-    if (!key) return '';
+    if (key === null || key === undefined) return '';
     const value = String(key).trim();
+    if (!value) return '';
     const group = specialEventGroup(value);
-    if (group) return '<a href="' + routeHash('specialevents',value) + '">' + escapeHtml(specialEventText(value) || value.replace(/([a-z])([A-Z])/g,'$1 $2')) + '</a>';
+    if (group && specialEventText(value))
+        return '<a href="' + routeHash('specialevents', value) + '">' + escapeHtml(specialEventText(value)) + '</a>';
     for (const g of wiki.specialEventGroups) {
-        if ((g.quests || []).some(q=>q.key===value)) return '<a href="' + routeHash('specialevents',g.key) + '/' + encodeURIComponent(value) + '">' + escapeHtml(specialEventText(value) || value.replace(/([a-z])([A-Z])/g,'$1 $2')) + '</a>';
+        if ((g.quests || []).some(q => q.key === value) && specialEventText(value))
+            return '<a href="' + routeHash('specialevents', g.key) + '/' + encodeURIComponent(value) + '">' + escapeHtml(specialEventText(value)) + '</a>';
     }
-    if (/^\d+$/.test(value)) return '<a href="' + routeHash('tileareas',value) + '">' + escapeHtml(ui('tileArea','Tile Area') + ' ' + value) + '</a>';
-    return mainQuestReference(value);
+    if (/^\d+$/.test(value)) {
+        const label = escapeHtml(value);
+        return typeof tileAreaById === 'function' && tileAreaById(value)
+            ? '<a href="' + routeHash('tileareas', value) + '">' + label + '</a>' : label;
+    }
+    if (specialEventText(value)) return escapeHtml(specialEventText(value));
+    if (typeof tileDataByKey === 'function' && tileDataByKey(value)) {
+        const row = wiki.tileDataLocalisation && wiki.tileDataLocalisation.get(value);
+        const name = row && row.Name && (row.Name[wiki.locale] || row.Name.en);
+        return name ? tileDataReferenceLink(value) : '';
+    }
+    if (typeof monsterText === 'function' && wiki.monsterLocalisation && wiki.monsterLocalisation.has(value)) {
+        const row = wiki.monsterLocalisation.get(value);
+        return escapeHtml(row[wiki.locale] || row.en || '');
+    }
+    if (typeof itemByKey === 'function' && itemByKey(value)) return itemReferenceLink(value);
+    if (typeof equipmentByKey === 'function' && equipmentByKey(value)) return equipmentReferenceLink(value);
+    if (typeof mainQuestName === 'function' && mainQuestName(value)) return escapeHtml(mainQuestName(value));
+    return '';
 }
 function specialEventOutcome(raw) {
     if (!raw) return '';
@@ -44,7 +66,7 @@ function specialEventLocalizedTemplate(key, variables) {
     if (!template) return '';
     const args = String(variables || '').split('-');
     const resolved = template.replace(/\{(\d+)\}/g, (match, i) =>
-        args[Number(i)] === undefined ? match : specialEventReference(args[Number(i)]));
+        args[Number(i)] === undefined ? match : (specialEventReference(args[Number(i)]) || match));
     return /\{\d+\}/.test(resolved) ? '' : resolved;
 }
 function specialEventQuestContent(quest) {
@@ -88,7 +110,7 @@ function specialEventConditionText(condition) {
     if (!template) return '';
     const variables = condition.variables || [];
     const text = template.replace(/\{(\d+)\}/g, (match, i) =>
-        variables[Number(i)] === undefined ? match : specialEventReference(variables[Number(i)]));
+        variables[Number(i)] === undefined ? match : (specialEventReference(variables[Number(i)]) || match));
     return /\{\d+\}/.test(text) ? '' : text;
 }
 function specialEventStageCard(stage, group, index) {
@@ -123,13 +145,7 @@ function specialEventStageCard(stage, group, index) {
         .filter(c => useful.has(c.action)).map(specialEventConditionText));
     const description = descriptions.length ? descriptions : conditions;
     // Only display a source value if a localization resolver can identify it.
-    const localized = key => {
-        if (!key) return '';
-        if (/^\d+$/.test(String(key))) return specialEventReference(key);
-        if (specialEventText(key)) return escapeHtml(specialEventText(key));
-        const resolved = mainQuestReference(key);
-        return resolved && !resolved.includes('>' + escapeHtml(key) + '<') && resolved !== escapeHtml(key) ? resolved : '';
-    };
+    const localized = key => specialEventReference(key);
     const lines = [];
     const data = unique(tileData.map(localized));
     const areas = unique(tileArea.map(localized));
@@ -175,7 +191,7 @@ const specialEventPromise=(async()=>{
     const [stageData,localisation]=await Promise.all([loadJson('data/special-event-stages.json',{groups:[]}),loadJson('data/special-event-localisation.json',{})]);
     wiki.specialEventLocalisation=localisation;
     wiki.specialEventGroups=stageData.groups || [];
-    await Promise.allSettled([typeof mainQuestPromise!=='undefined'?mainQuestPromise:Promise.resolve(),typeof tileDataPromise!=='undefined'?tileDataPromise:Promise.resolve(),typeof itemDataPromise!=='undefined'?itemDataPromise:Promise.resolve(),typeof equipmentDataPromise!=='undefined'?equipmentDataPromise:Promise.resolve()]);
+    await Promise.allSettled([typeof mainQuestPromise!=='undefined'?mainQuestPromise:Promise.resolve(),typeof tileDataPromise!=='undefined'?tileDataPromise:Promise.resolve(),typeof tileAreaDataPromise!=='undefined'?tileAreaDataPromise:Promise.resolve(),typeof monsterDataPromise!=='undefined'?monsterDataPromise:Promise.resolve(),typeof itemDataPromise!=='undefined'?itemDataPromise:Promise.resolve(),typeof equipmentDataPromise!=='undefined'?equipmentDataPromise:Promise.resolve()]);
     wiki.specialEventsReady=true;
     if(wiki.ready&&window.location.hash.toLowerCase().startsWith('#/specialevents'))handleHashRoute();
 })();
