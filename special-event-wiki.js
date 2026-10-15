@@ -106,7 +106,13 @@ function specialEventLocalizedTemplate(key, variables) {
     const resolved = displayTemplate.replace(/\{(\d+)\}/g, (match, i) => {
         const index = Number(i);
         if (args[index] === undefined) return match;
-        return (areaIndices.has(index) ? specialEventAreaReference(args[index]) : specialEventReference(args[index])) || match;
+        if (areaIndices.has(index) && /^\d+$/.test(String(args[index]))) {
+            const id = String(args[index]);
+            return typeof tileAreaById === 'function' && tileAreaById(id)
+                ? '<a href="' + routeHash('tileareas', id) + '">' + escapeHtml(id) + '</a>'
+                : escapeHtml(id);
+        }
+        return specialEventReference(args[index]) || match;
     });
     return /\{\d+\}/.test(resolved) ? '' : resolved;
 }
