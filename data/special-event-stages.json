@@ -9600,7 +9600,8 @@
           "questKeysCompleted": [],
           "display": {
             "show": false,
-            "kind": "progression"
+            "kind": "progression",
+            "reason": "Temporarily hidden: no stage condition or localized description"
           },
           "contentRefs": {
             "stageKey": "CapJackArenaToken2",
@@ -16497,7 +16498,8 @@
           "questKeysCompleted": [],
           "display": {
             "show": false,
-            "kind": "progression"
+            "kind": "progression",
+            "reason": "Temporarily hidden: no stage condition or localized description"
           },
           "contentRefs": {
             "stageKey": "QuestDryadPineGroveTheRestlessGrove",
