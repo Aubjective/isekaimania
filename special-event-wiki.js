@@ -77,7 +77,7 @@ function specialEventAreaReference(value) {
 function specialEventLocalizedTemplate(key, variables) {
     const template = key ? specialEventText(key) : '';
     if (!template) return '';
-    const args = String(variables || '').split('-');
+    const args = Array.isArray(variables) ? variables : String(variables || '').split('-');
     const englishTemplate = (wiki.specialEventLocalisation[key] || {}).en || '';
     const areaIndices = new Set([...englishTemplate.matchAll(/\barea\s*\{(\d+)\}/gi)].map(match => Number(match[1])));
     // Suppress only explicitly identified quantity variables, never area IDs or levels.
@@ -147,12 +147,7 @@ function specialEventStageQuest(stage, group) {
 }
 function specialEventConditionText(condition) {
     if (!condition || !condition.localizationKey) return '';
-    const template = specialEventText(condition.localizationKey);
-    if (!template) return '';
-    const variables = condition.variables || [];
-    const text = template.replace(/\{(\d+)\}/g, (match, i) =>
-        variables[Number(i)] === undefined ? match : (specialEventReference(variables[Number(i)]) || match));
-    return /\{\d+\}/.test(text) ? '' : text;
+    return specialEventLocalizedTemplate(condition.localizationKey, condition.variables || []);
 }
 function specialEventStageCard(stage, group, index) {
     if (stage.display && stage.display.show === false) return '';
