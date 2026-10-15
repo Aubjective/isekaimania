@@ -92,6 +92,7 @@ function specialEventConditionText(condition) {
     return /\{\d+\}/.test(text) ? '' : text;
 }
 function specialEventStageCard(stage, group, index) {
+    if (stage.display && stage.display.show === false) return '';
     const rows = stage.steps || [];
     const active = rows.filter(row => row.type === 'Standard' || row.type === 'Resolve');
     const unique = values => [...new Set(values.filter(Boolean))];
