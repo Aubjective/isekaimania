@@ -82,7 +82,8 @@
             "titleKey": "QuestLostAdventurer1",
             "descriptionKey": "QuestLostAdventurer1Description",
             "descriptionVariables": "KingdomLandB-11",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -114,7 +115,8 @@
             "titleKey": "QuestLostAdventurer2",
             "descriptionKey": "ReturnToAndReportTo",
             "descriptionVariables": "Castle-10-Mary",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -282,7 +284,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLostAdventurer1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLostAdventurer1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-11",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "11"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -387,7 +421,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLostAdventurer1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLostAdventurer1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLostAdventurer1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLostAdventurer1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -590,7 +656,62 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EventBattleOutcome-21-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "21",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLostAdventurer1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLostAdventurer1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-21-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "21",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLostAdventurer1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLostAdventurer1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -679,7 +800,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLostAdventurer2-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLostAdventurer2",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLostAdventurer2-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLostAdventurer2"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -742,7 +895,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "MapHasArea-57",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "57"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "LevelBelow-30",
+                "action": "LevelBelow",
+                "localizationKey": null,
+                "variables": [
+                  "30"
+                ],
+                "category": "unlocalized-requirement",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Hunting License-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Hunting License"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -824,7 +1020,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "MapHasArea-57",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "57"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "LevelAbove-30",
+                "action": "LevelAbove",
+                "localizationKey": "LevelAbove",
+                "variables": [
+                  "30"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Hunting License-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Hunting License"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -879,7 +1118,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "MapHasArea-57",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "57"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "LevelBelow-30",
+                "action": "LevelBelow",
+                "localizationKey": null,
+                "variables": [
+                  "30"
+                ],
+                "category": "unlocalized-requirement",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Hunting License-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Hunting License"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -918,7 +1200,8 @@
             "titleKey": "QuestLostPet1",
             "descriptionKey": "QuestLostPet1Description",
             "descriptionVariables": "49-SlimeLandB",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -950,7 +1233,8 @@
             "titleKey": "QuestLostPet2",
             "descriptionKey": "QuestLostPet2Description",
             "descriptionVariables": "BeginnerTownHero-68",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -1037,7 +1321,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLostPet1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLostPet1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-49",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "49"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -1092,7 +1408,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLostPet1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLostPet1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLostPet1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLostPet1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -1233,7 +1581,40 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EventBattleOutcome-37-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "37",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-37-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "37",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -1318,7 +1699,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLostPet2-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLostPet2",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLostPet2-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLostPet2"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -1357,7 +1770,8 @@
             "titleKey": "QuestLetterErrand1",
             "descriptionKey": "RetriveItemAtIn",
             "descriptionVariables": "Letter-Castle-34",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -1389,7 +1803,8 @@
             "titleKey": "QuestLetterErrand2",
             "descriptionKey": "DeliverSomethingToAtWhere",
             "descriptionVariables": "Mary Letter-Mary-BeginnerTownHero-8",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -1530,7 +1945,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLetterErrand1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLetterErrand1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLetterErrand1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLetterErrand1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-34",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "34"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -1671,7 +2129,74 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestLetterErrand1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLetterErrand1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLetterErrand1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLetterErrand1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestLetterErrand2-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestLetterErrand2",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLetterErrand2-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLetterErrand2"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Mary Letter-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Mary Letter"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -1710,7 +2235,8 @@
             "titleKey": "QuestEquipmentMaterial1",
             "descriptionKey": "CollectItemAndGiveTo",
             "descriptionVariables": "3-Fire Stone-Blacksmith-Castle-34",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -1851,7 +2377,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestEquipmentMaterial1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestEquipmentMaterial1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestEquipmentMaterial1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestEquipmentMaterial1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-34",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "34"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -1936,7 +2505,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestEquipmentMaterial1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestEquipmentMaterial1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Fire Stone-3",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "3",
+                  "Fire Stone"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestEquipmentMaterial1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestEquipmentMaterial1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -1976,7 +2589,21 @@
             "titleKey": "QuestWildMonster1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": "DefeatAreaMonster-15-5"
+            "condition": "DefeatAreaMonster-15-5",
+            "conditionTokens": [
+              {
+                "raw": "DefeatAreaMonster-15-5",
+                "action": "DefeatAreaMonster",
+                "localizationKey": "DefeatAreaMonster",
+                "variables": [
+                  "15",
+                  "5"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -2117,7 +2744,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestWildMonster1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestWildMonster1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestWildMonster1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestWildMonster1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-15",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "15"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -2156,7 +2826,8 @@
             "titleKey": "QuestHelpingTheNun1",
             "descriptionKey": "DeliverSomethingTo",
             "descriptionVariables": "High Nun Necklace-Castle",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -2320,7 +2991,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestHelpingTheNun1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestHelpingTheNun1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestHelpingTheNun1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestHelpingTheNun1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-37",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "37"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -2432,7 +3146,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestHelpingTheNun1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestHelpingTheNun1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestHelpingTheNun1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestHelpingTheNun1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-High Nun Necklace-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "High Nun Necklace"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -2469,7 +3227,8 @@
             "titleKey": "QuestSlimeWave1",
             "descriptionKey": "DefeatAmountMonsterAndReportToAtArea",
             "descriptionVariables": "11-KingdomSlimeLand-Slime-OldVillager-5",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -2637,7 +3396,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestSlimeWave1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestSlimeWave1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestSlimeWave1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestSlimeWave1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -2722,7 +3513,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestSlimeWave1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestSlimeWave1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatMonster-Slime-5",
+                "action": "DefeatMonster",
+                "localizationKey": "DefeatMonster",
+                "variables": [
+                  "5",
+                  "Slime"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestSlimeWave1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestSlimeWave1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -2761,7 +3596,8 @@
             "titleKey": "QuestBringAliceToTown1",
             "descriptionKey": "BringWhoToWhereIn",
             "descriptionVariables": "Alice-CastleHero-10",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -2902,7 +3738,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestBringAliceToTown1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestBringAliceToTown1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestBringAliceToTown1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestBringAliceToTown1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-10",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "10"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -3014,7 +3893,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestBringAliceToTown1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestBringAliceToTown1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestBringAliceToTown1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestBringAliceToTown1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EnteredTileArea-10-1",
+                "action": "EnteredTileArea",
+                "localizationKey": "EnteredTileArea",
+                "variables": [
+                  "10",
+                  "1"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -3053,7 +3976,8 @@
             "titleKey": "QuestTheGemstonesQuest1",
             "descriptionKey": "QuestTheGemstonesQuest1Description",
             "descriptionVariables": "TheGems-56-WeaponMerchant-Castle-10",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -3221,7 +4145,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestTheGemstonesQuest1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestTheGemstonesQuest1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-56",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "56"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -3378,7 +4334,75 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestTheGemstonesQuest1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestTheGemstonesQuest1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestTheGemstonesQuest1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestTheGemstonesQuest1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-92-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "92",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-89-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "89",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-89-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "89",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -3463,7 +4487,87 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestTheGemstonesQuest1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestTheGemstonesQuest1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestTheGemstonesQuest1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestTheGemstonesQuest1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatTeam-TheGems-1",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "1",
+                  "TheGems"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Water Stone-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Water Stone"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Fire Stone-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Fire Stone"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Terra Stone-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Terra Stone"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -3502,7 +4606,8 @@
             "titleKey": "QuestWhatIs1",
             "descriptionKey": "InvestigateAndReportAtArea",
             "descriptionVariables": "KingdomForest-9-Guard-Castle-10",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -3589,7 +4694,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestWhatIs1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestWhatIs1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-9",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "9"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestWhatIs1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestWhatIs1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -3721,7 +4869,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestWhatIs1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestWhatIs1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestWhatIs1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestWhatIs1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EnteredTileArea-9-1",
+                "action": "EnteredTileArea",
+                "localizationKey": "EnteredTileArea",
+                "variables": [
+                  "9",
+                  "1"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -3833,7 +5025,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestWhatIs1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestWhatIs1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestWhatIs1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestWhatIs1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EngagedTileData-KingdomForest-1",
+                "action": "EngagedTileData",
+                "localizationKey": "EngagedTileData",
+                "variables": [
+                  "KingdomForest"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -3872,7 +5107,8 @@
             "titleKey": "QuestFortuneLuck",
             "descriptionKey": "HaveItem",
             "descriptionVariables": "3-Fire Stone",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -3904,7 +5140,8 @@
             "titleKey": "QuestFortuneExp",
             "descriptionKey": "DefeatTeamAt",
             "descriptionVariables": "1-Fire Lion-FireBurningLandNormal",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -4157,7 +5394,85 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "MapHasArea-18",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "18"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestFortuneLuck-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestFortuneLuck",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestFortuneLuck-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestFortuneLuck"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestFortuneLuck-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestFortuneLuck",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestFortuneLuck-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestFortuneLuck"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Fire Stone-3",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "3",
+                  "Fire Stone"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -4242,7 +5557,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestFortuneExp-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestFortuneExp",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestFortuneExp-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestFortuneExp"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatTeam-Fire Lion-1",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "1",
+                  "Fire Lion"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -4281,7 +5640,8 @@
             "titleKey": "QuestVampire1",
             "descriptionKey": "DefeatTeamAtArea",
             "descriptionVariables": "1-Bloodthirsters-42",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -4526,7 +5886,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestVampire1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestVampire1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestVampire1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestVampire1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-42",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "42"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -4771,7 +6174,63 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestVampire1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestVampire1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestVampire1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestVampire1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-126-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "126",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-126-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "126",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -4808,7 +6267,8 @@
             "titleKey": "QuestUndeadIncidents1",
             "descriptionKey": "DefeatTeamAndReportToAtArea",
             "descriptionVariables": "61-DarkMountainDarkNormal-WalkingDead-OldVillager",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -4972,7 +6432,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestUndeadIncidents1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestUndeadIncidents1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestUndeadIncidents1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestUndeadIncidents1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -5027,7 +6519,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestUndeadIncidents1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestUndeadIncidents1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestUndeadIncidents1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestUndeadIncidents1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatTeam-WalkingDead-0",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "0",
+                  "WalkingDead"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -5135,7 +6671,40 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestUndeadIncidents1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestUndeadIncidents1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatTeam-WalkingDead-1",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "1",
+                  "WalkingDead"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -5248,7 +6817,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-139-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "139",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -5465,7 +7055,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-142-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "142",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -5605,7 +7216,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-149-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "149",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -5929,7 +7561,76 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-153-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "153",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-153-1",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "153",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatTeam-ThunderCluster-0",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "0",
+                  "ThunderCluster"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-160-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "160",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-160-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "160",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -6092,7 +7793,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveItem-Boat-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Boat"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -6133,7 +7855,33 @@
             "titleKey": "QuestGetShip1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": "HaveItem-Gold Ingot-3|HaveItem-Boat-1"
+            "condition": "HaveItem-Gold Ingot-3|HaveItem-Boat-1",
+            "conditionTokens": [
+              {
+                "raw": "HaveItem-Gold Ingot-3",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "3",
+                  "Gold Ingot"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Boat-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Boat"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -6247,7 +7995,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestGetShip1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestGetShip1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestGetShip1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestGetShip1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Boat-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Boat"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -6286,7 +8078,8 @@
             "titleKey": "QuestSalamanderNest1",
             "descriptionKey": "QuestSalamanderNest1Description",
             "descriptionVariables": "Fire Lion-FireBurningLandNormal",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -6450,7 +8243,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestSalamanderNest1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestSalamanderNest1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestSalamanderNest1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestSalamanderNest1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -6562,7 +8387,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestSalamanderNest1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestSalamanderNest1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestSalamanderNest1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestSalamanderNest1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatMonster-Fire Lion-1",
+                "action": "DefeatMonster",
+                "localizationKey": "DefeatMonster",
+                "variables": [
+                  "1",
+                  "Fire Lion"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -6602,7 +8471,21 @@
             "titleKey": "QuestRingOfMermaid1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": "DefeatTeam-DeepSeaWardens-1"
+            "condition": "DefeatTeam-DeepSeaWardens-1",
+            "conditionTokens": [
+              {
+                "raw": "DefeatTeam-DeepSeaWardens-1",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "1",
+                  "DeepSeaWardens"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -6768,7 +8651,63 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestRingOfMermaid1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestRingOfMermaid1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestRingOfMermaid1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestRingOfMermaid1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-181-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "181",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-181-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "181",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -6805,7 +8744,8 @@
             "titleKey": "QuestVampireManorKey1",
             "descriptionKey": "DefeatAndRetrieveAtArea",
             "descriptionVariables": "BanditsGrassLandB-12-Thin Bandit-Vampire Manor Key",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -6892,7 +8832,61 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "LevelAbove-15",
+                "action": "LevelAbove",
+                "localizationKey": "LevelAbove",
+                "variables": [
+                  "15"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestVampireManorKey1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestVampireManorKey1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestVampireManorKey1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestVampireManorKey1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-12",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "12"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -7191,7 +9185,75 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestVampireManorKey1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestVampireManorKey1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestVampireManorKey1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestVampireManorKey1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Vampire Manor Key-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Vampire Manor Key"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-193-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "193",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-193-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "193",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -7327,7 +9389,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveItem-Pirates Hideout Map-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Pirates Hideout Map"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-46",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "46"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -7440,7 +9534,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveItem-Pirate Ship Token-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Pirate Ship Token"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-45",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "45"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -7487,7 +9613,15 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -7527,7 +9661,21 @@
             "titleKey": "QuestOrcCaveLeaderGuard1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": "HaveItem-Oyster-3"
+            "condition": "HaveItem-Oyster-3",
+            "conditionTokens": [
+              {
+                "raw": "HaveItem-Oyster-3",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "3",
+                  "Oyster"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -7637,7 +9785,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestOrcCaveLeaderGuard1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestOrcCaveLeaderGuard1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestOrcCaveLeaderGuard1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestOrcCaveLeaderGuard1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -7722,7 +9902,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestOrcCaveLeaderGuard1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestOrcCaveLeaderGuard1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestOrcCaveLeaderGuard1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestOrcCaveLeaderGuard1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Oyster-3",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "3",
+                  "Oyster"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -7762,7 +9986,21 @@
             "titleKey": "QuestOrcsHuntingGroundGuard1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": "HaveEquipment-Silver Dagger-1"
+            "condition": "HaveEquipment-Silver Dagger-1",
+            "conditionTokens": [
+              {
+                "raw": "HaveEquipment-Silver Dagger-1",
+                "action": "HaveEquipment",
+                "localizationKey": "HaveEquipment",
+                "variables": [
+                  "1",
+                  "Silver Dagger"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -7872,7 +10110,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestOrcsHuntingGroundGuard1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestOrcsHuntingGroundGuard1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestOrcsHuntingGroundGuard1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestOrcsHuntingGroundGuard1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-65",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "65"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -7957,7 +10238,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestOrcsHuntingGroundGuard1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestOrcsHuntingGroundGuard1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestOrcsHuntingGroundGuard1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestOrcsHuntingGroundGuard1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveEquipment-Silver Dagger-1",
+                "action": "HaveEquipment",
+                "localizationKey": "HaveEquipment",
+                "variables": [
+                  "1",
+                  "Silver Dagger"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -7994,7 +10319,8 @@
             "titleKey": "QuestLearnHeal1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -8135,7 +10461,49 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "LevelBelow-15",
+                "action": "LevelBelow",
+                "localizationKey": null,
+                "variables": [
+                  "15"
+                ],
+                "category": "unlocalized-requirement",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLearnHeal1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLearnHeal1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveActiveSkill-Bandage-0",
+                "action": "HaveActiveSkill",
+                "localizationKey": "HaveSkill",
+                "variables": [
+                  "Bandage"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -8172,7 +10540,8 @@
             "titleKey": "QuestLearnGuard1",
             "descriptionKey": null,
             "descriptionVariables": null,
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -8313,7 +10682,49 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "LevelBelow-15",
+                "action": "LevelBelow",
+                "localizationKey": null,
+                "variables": [
+                  "15"
+                ],
+                "category": "unlocalized-requirement",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestLearnGuard1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestLearnGuard1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveActiveSkill-Guard-0",
+                "action": "HaveActiveSkill",
+                "localizationKey": "HaveSkill",
+                "variables": [
+                  "Guard"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -8352,7 +10763,8 @@
             "titleKey": "QuestStrangeFootprints1",
             "descriptionKey": "QuestStrangeFootprintsDescription1",
             "descriptionVariables": "SlimeSeashore-50",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -8384,7 +10796,8 @@
             "titleKey": "QuestStrangeFootprints2",
             "descriptionKey": "QuestStrangeFootprintsDescription2",
             "descriptionVariables": "SlimeSeashore-50",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -8575,7 +10988,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestStrangeFootprints1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestStrangeFootprints1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-50",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "50"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -8771,7 +11216,63 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestStrangeFootprints1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestStrangeFootprints1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestStrangeFootprints1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestStrangeFootprints1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-332-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "332",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-332-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "332",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -8883,7 +11384,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestStrangeFootprints2-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestStrangeFootprints2",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestStrangeFootprints2-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestStrangeFootprints2"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -8922,7 +11455,8 @@
             "titleKey": "QuestEscortMerchant1",
             "descriptionKey": "QuestEscortMerchantDescription1",
             "descriptionVariables": "52",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -8954,7 +11488,8 @@
             "titleKey": "QuestEscortMerchant2",
             "descriptionKey": "QuestEscortMerchantDescription2",
             "descriptionVariables": "10",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -9127,7 +11662,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestEscortMerchant1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestEscortMerchant1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestEscortMerchant1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestEscortMerchant1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -9318,7 +11885,75 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestEscortMerchant2-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestEscortMerchant2",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestEscortMerchant2-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestEscortMerchant2"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EnteredTileArea-10-1",
+                "action": "EnteredTileArea",
+                "localizationKey": "EnteredTileArea",
+                "variables": [
+                  "10",
+                  "1"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-346-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "346",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-346-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "346",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -9426,7 +12061,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestEscortMerchant1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestEscortMerchant1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestEscortMerchant1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestEscortMerchant1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -9465,7 +12132,8 @@
             "titleKey": "QuestBrokenSignpost1",
             "descriptionKey": "QuestBrokenSignpostDescription1",
             "descriptionVariables": "67-5-Wood-2-Iron Ingot",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -9683,7 +12351,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestBrokenSignpost1-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestBrokenSignpost1",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -9849,7 +12538,63 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestBrokenSignpost1-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestBrokenSignpost1",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestBrokenSignpost1-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestBrokenSignpost1"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Wood-5",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "5",
+                  "Wood"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Iron Ingot-2",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "2",
+                  "Iron Ingot"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -9888,7 +12633,8 @@
             "titleKey": "QuestFindAnOilLamp",
             "descriptionKey": "QuestFindAnOilLampDescription",
             "descriptionVariables": "Oil Lamp-Herbward Lantern-2 <sprite name=Silver>-BeginnerTownHero",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -10242,7 +12988,63 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestFindAnOilLamp-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestFindAnOilLamp",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestFindAnOilLamp-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestFindAnOilLamp",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Oil Lamp-1",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "1",
+                  "Oil Lamp"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CoinAbove-3000",
+                "action": "CoinAbove",
+                "localizationKey": "CoinAbove",
+                "variables": [
+                  "3000"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -10802,7 +13604,40 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveItem-Cold Pouch-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Cold Pouch"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Hot Pouch-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Hot Pouch"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -10841,7 +13676,32 @@
             "titleKey": "QuestCharmPowder",
             "descriptionKey": "QuestCharmPowderDescription",
             "descriptionVariables": "Charm Powder",
-            "condition": "CoinAbove-1000|HaveItem-Shell Fragments-2"
+            "condition": "CoinAbove-1000|HaveItem-Shell Fragments-2",
+            "conditionTokens": [
+              {
+                "raw": "CoinAbove-1000",
+                "action": "CoinAbove",
+                "localizationKey": "CoinAbove",
+                "variables": [
+                  "1000"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Shell Fragments-2",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "2",
+                  "Shell Fragments"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -10982,7 +13842,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestCharmPowder-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestCharmPowder",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestCharmPowder-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestCharmPowder"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -11334,7 +14226,124 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-817-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "817",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-809-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "809",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-810-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "810",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-811-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "811",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-812-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "812",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-813-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "813",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-814-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "814",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-815-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "815",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-816-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "816",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -11470,7 +14479,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveItem-Silver Ingot-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Silver Ingot"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Grappling Rope-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Grappling Rope"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-821-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "821",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -11509,7 +14563,8 @@
             "titleKey": "QuestHelpMermaid",
             "descriptionKey": "QuestHelpMermaidDescription",
             "descriptionVariables": "Jellyfish-4",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -11701,7 +14756,74 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestHelpMermaid-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestHelpMermaid",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestHelpMermaid-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestHelpMermaid"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestHelpMermaid-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestHelpMermaid",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestHelpMermaid-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestHelpMermaid"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatMonster-Jellyfish-4",
+                "action": "DefeatMonster",
+                "localizationKey": "DefeatMonster",
+                "variables": [
+                  "4",
+                  "Jellyfish"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -11740,7 +14862,8 @@
             "titleKey": "QuestSnowCastleRestlessNight",
             "descriptionKey": "QuestSnowCastleRestlessNightDescription",
             "descriptionVariables": "SnowCastleHero-Ice Lion",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         }
       ],
@@ -11881,7 +15004,39 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestSnowCastleRestlessNight-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestSnowCastleRestlessNight",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestSnowCastleRestlessNight-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestSnowCastleRestlessNight"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -11993,7 +15148,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestSnowCastleRestlessNight-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestSnowCastleRestlessNight",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestSnowCastleRestlessNight-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestSnowCastleRestlessNight"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "DefeatMonster-Ice Lion-1",
+                "action": "DefeatMonster",
+                "localizationKey": "DefeatMonster",
+                "variables": [
+                  "1",
+                  "Ice Lion"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -12032,7 +15231,32 @@
             "titleKey": "QuestRoadsideCampDelayedDeparture",
             "descriptionKey": "QuestRoadsideCampDelayedDepartureDescription",
             "descriptionVariables": "RoadsideCamp-Kingdom Lancer",
-            "condition": "HaveMonster-Kingdom Lancer-1|EncounteredBefore-903-1"
+            "condition": "HaveMonster-Kingdom Lancer-1|EncounteredBefore-903-1",
+            "conditionTokens": [
+              {
+                "raw": "HaveMonster-Kingdom Lancer-1",
+                "action": "HaveMonster",
+                "localizationKey": "HaveMonster",
+                "variables": [
+                  "Kingdom Lancer"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-903-1",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "903",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -12146,7 +15370,51 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestRoadsideCampDelayedDeparture-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestRoadsideCampDelayedDeparture",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestRoadsideCampDelayedDeparture-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestRoadsideCampDelayedDeparture"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveItem-Wagon-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Wagon"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -12262,7 +15530,50 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestRoadsideCampDelayedDeparture-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestRoadsideCampDelayedDeparture",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestRoadsideCampDelayedDeparture-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestRoadsideCampDelayedDeparture"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveMonster-Kingdom Lancer-1",
+                "action": "HaveMonster",
+                "localizationKey": "HaveMonster",
+                "variables": [
+                  "Kingdom Lancer"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -12473,7 +15784,64 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveItem-Grappling Rope-0",
+                "action": "HaveItem",
+                "localizationKey": "HaveItem",
+                "variables": [
+                  "0",
+                  "Grappling Rope"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-991-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "991",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-988-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "988",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-988-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "988",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -12512,7 +15880,8 @@
             "titleKey": "QuestDryadPineGroveTheLivingCut",
             "descriptionKey": "QuestDryadPineGroveTheLivingCutDescription",
             "descriptionVariables": "21",
-            "condition": null
+            "condition": null,
+            "conditionTokens": []
           }
         },
         {
@@ -12544,7 +15913,33 @@
             "titleKey": "QuestDryadPineGroveTheRestlessGrove",
             "descriptionKey": "QuestDryadPineGroveTheRestlessGroveDescription",
             "descriptionVariables": "Living Pineheart-DryadPineGroveDungeon-78",
-            "condition": "DefeatTeam-Dryad Princess-1|EncounteredBefore-1152-1"
+            "condition": "DefeatTeam-Dryad Princess-1|EncounteredBefore-1152-1",
+            "conditionTokens": [
+              {
+                "raw": "DefeatTeam-Dryad Princess-1",
+                "action": "DefeatTeam",
+                "localizationKey": "DefeatTeam",
+                "variables": [
+                  "1",
+                  "Dryad Princess"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-1152-1",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1152",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ]
           }
         }
       ],
@@ -12875,7 +16270,85 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "HaveQuest-QuestDryadPineGroveTheLivingCut-0",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestDryadPineGroveTheLivingCut",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestDryadPineGroveTheLivingCut-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestDryadPineGroveTheLivingCut"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "MapHasArea-78",
+                "action": "MapHasArea",
+                "localizationKey": "MapHasArea",
+                "variables": [
+                  "78"
+                ],
+                "category": "localized-requirement",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "HaveQuest-QuestDryadPineGroveTheLivingCut-1",
+                "action": "HaveQuest",
+                "localizationKey": null,
+                "variables": [
+                  "QuestDryadPineGroveTheLivingCut",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "CompletedQuest-QuestDryadPineGroveTheLivingCut-0",
+                "action": "CompletedQuest",
+                "localizationKey": "CompletedQuest",
+                "variables": [
+                  "QuestDryadPineGroveTheLivingCut"
+                ],
+                "category": "prerequisite",
+                "localized": true,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EncounteredBefore-1146-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1146",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         },
         {
@@ -13058,7 +16531,15 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -13194,7 +16675,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1157-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1157",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -13760,7 +17262,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1233-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1233",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1224-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1224",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1224-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1224",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -13975,7 +17522,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1245-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1245",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1243-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1243",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1243-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1243",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -14192,7 +17784,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1252-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1252",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -14407,7 +18020,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1259-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1259",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1257-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1257",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1257-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1257",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -14622,7 +18280,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1266-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1266",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1264-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1264",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1264-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1264",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -14837,7 +18540,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1273-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1273",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1271-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1271",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1271-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1271",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -15054,7 +18802,28 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1280-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1280",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -15269,7 +19038,52 @@
               "quest-condition",
               "quest-title"
             ],
-            "source": "SpecialEvents+Quest+Localization"
+            "source": "SpecialEvents+Quest+Localization",
+            "stageConditions": [
+              {
+                "raw": "EncounteredBefore-1287-0",
+                "action": "EncounteredBefore",
+                "localizationKey": null,
+                "variables": [
+                  "1287",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1285-1",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1285",
+                  "1"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              },
+              {
+                "raw": "EventBattleOutcome-1285-0",
+                "action": "EventBattleOutcome",
+                "localizationKey": null,
+                "variables": [
+                  "1285",
+                  "0"
+                ],
+                "category": "prerequisite",
+                "localized": false,
+                "source": "eventCondition"
+              }
+            ],
+            "displayPriority": [
+              "quest-description",
+              "quest-complete-condition",
+              "stage-localized-requirement",
+              "quest-title"
+            ],
+            "stageConditionsSource": "Standard and Resolve eventCondition; preserve raw tokens and source row order"
           }
         }
       ]
@@ -15280,7 +19094,8 @@
     "notes": "Source quest records, stage rows, conditions and dialogue are retained for fidelity. Quest cards and dialogue-only follow-ups are not displayed.",
     "objectivePriority": [
       "quest-description",
-      "quest-condition",
+      "quest-complete-condition",
+      "stage-localized-requirement",
       "quest-title"
     ],
     "objectiveNotes": "Use existing localization for Quest.extraDescr with extraDescrVariables first; otherwise use Quest.completeCondition tokens; otherwise show only existing source event fields. Never invent objective wording. Renderer must consume this metadata.",
@@ -15288,6 +19103,8 @@
     "stageSource": "SpecialEvents",
     "questSource": "Quest",
     "localizationSource": "Quests & Event Groups",
-    "note": "Content references only; renderer resolves selected language. No generated objective sentences."
+    "note": "Content references only; renderer resolves selected language. No generated objective sentences.",
+    "conditionModel": "structured-source-tokens",
+    "conditionPolicy": "Keep prerequisites separate from objectives; only render localized condition templates with validated arguments."
   }
 }
