@@ -1,0 +1,3691 @@
+{
+  "InvestigateKingdomSeashore": {
+    "en": "Seashore Check",
+    "zh": "海岸巡查",
+    "zh-Hant": "海岸巡查",
+    "ja": "海岸の確認",
+    "ru": "Проверка побережья"
+  },
+  "QuestInvestigateKingdomSeashore1": {
+    "en": "Investigate Kingdom Seashore",
+    "zh": "调查海岸",
+    "zh-Hant": "調查海岸",
+    "ja": "王国海岸の調査",
+    "ru": "Исследовать королевское побережье"
+  },
+  "EngagedTileData": {
+    "en": "Investigate {0}",
+    "zh": "调查{0}",
+    "zh-Hant": "調查{0}",
+    "ja": "{0}を調べる",
+    "ru": "Исследовать «{0}»"
+  },
+  "CatchCrabs": {
+    "en": "Crab Hunting",
+    "zh": "捕蟹",
+    "zh-Hant": "捕蟹",
+    "ja": "カニ狩り",
+    "ru": "Охота на крабов"
+  },
+  "QuestCatchCrabs": {
+    "en": "Catch Crabs",
+    "zh": "抓螃蟹",
+    "zh-Hant": "抓螃蟹",
+    "ja": "カニを捕まえよう",
+    "ru": "Поймать крабов"
+  },
+  "QuestCatchCrabsDescription": {
+    "en": "Head to the seashore and catch the required number of crabs.",
+    "zh": "前往海岸抓取指定数量的螃蟹。",
+    "zh-Hant": "前往海岸抓取指定數量的螃蟹。",
+    "ja": "海岸へ行き、必要な数のカニを捕まえる。",
+    "ru": "Отправиться на берег и поймать нужное количество крабов."
+  },
+  "HaveItem": {
+    "en": "Collect {0} {1}",
+    "zh": "收集{0}个{1}",
+    "zh-Hant": "收集{0}個{1}",
+    "ja": "{1}を{0}個集める",
+    "ru": "Собрать: {1} (количество: {0})"
+  },
+  "MonsterHunter": {
+    "en": "Monster Hunter",
+    "zh": "怪物猎人",
+    "zh-Hant": "怪物獵人",
+    "ja": "モンスターハンター",
+    "ru": "Охотник на монстров"
+  },
+  "QuestMonsterHunter1": {
+    "en": "Hunt the Monsters",
+    "zh": "猎杀怪物",
+    "zh-Hant": "獵殺怪物",
+    "ja": "モンスターを狩れ",
+    "ru": "Охота на монстров"
+  },
+  "DefeatAreaMonster": {
+    "en": "Defeat {1} monsters in area {0}",
+    "zh": "在 区域 {0} 中击败 {1} 只怪物",
+    "zh-Hant": "在 區域 {0} 中擊敗 {1} 隻怪物",
+    "ja": "エリア{0}でモンスターを{1}体倒す",
+    "ru": "Победить монстров в области {0}: {1}"
+  },
+  "MaterialGatheringWood": {
+    "en": "Material Gathering Wood",
+    "zh": "收集材料：木材",
+    "zh-Hant": "收集材料：木材",
+    "ja": "素材集め：木材",
+    "ru": "Сбор материалов: древесина"
+  },
+  "QuestMaterialGatheringWood": {
+    "en": "Gather Wood Materials",
+    "zh": "收集木材",
+    "zh-Hant": "收集木材",
+    "ja": "木材を集めよう",
+    "ru": "Собрать древесину"
+  },
+  "CourierRun": {
+    "en": "Courier Run",
+    "zh": "信使之路",
+    "zh-Hant": "信差之路",
+    "ja": "配達の道",
+    "ru": "Курьерский рейс"
+  },
+  "QuestCourierRun1": {
+    "en": "Deliver the Package",
+    "zh": "运送包裹",
+    "zh-Hant": "運送包裹",
+    "ja": "荷物を届けよう",
+    "ru": "Доставить посылку"
+  },
+  "PestControl": {
+    "en": "Pest Control",
+    "zh": "害虫清除",
+    "zh-Hant": "害蟲清除",
+    "ja": "害虫駆除",
+    "ru": "Борьба с вредителями"
+  },
+  "QuestPestControl1": {
+    "en": "Eliminate the Pests",
+    "zh": "清除害虫",
+    "zh-Hant": "清除害蟲",
+    "ja": "害虫を退治しよう",
+    "ru": "Истребить вредителей"
+  },
+  "DefeatMonster": {
+    "en": "Defeat {0} {1}",
+    "zh": "击败{0}只{1}",
+    "zh-Hant": "擊敗{0}只{1}",
+    "ja": "{1}を{0}体倒す",
+    "ru": "Победить: {1} (количество: {0})"
+  },
+  "InvestigateTheRuins": {
+    "en": "Investigate The Ruins",
+    "zh": "调查废墟",
+    "zh-Hant": "調查廢墟",
+    "ja": "遺跡の調査",
+    "ru": "Исследование руин"
+  },
+  "QuestInvestigateTheRuins1": {
+    "en": "Explore the Ruins",
+    "zh": "探索遗迹",
+    "zh-Hant": "探索遺跡",
+    "ja": "遺跡を探索しよう",
+    "ru": "Исследовать руины"
+  },
+  "EnteredTileArea": {
+    "en": "Investigate area {0}",
+    "zh": "调查区域{0}",
+    "zh-Hant": "調查區域{0}",
+    "ja": "エリア{0}を調べる",
+    "ru": "Исследовать область {0}"
+  },
+  "CollectBlood": {
+    "en": "Collect Blood",
+    "zh": "采集鲜血",
+    "zh-Hant": "採集鮮血",
+    "ja": "血液の採取",
+    "ru": "Сбор крови"
+  },
+  "QuestINeedBlood1": {
+    "en": "Collect Blood Samples",
+    "zh": "收集鲜血",
+    "zh-Hant": "收集鮮血",
+    "ja": "血液サンプルを集めよう",
+    "ru": "Собрать образцы крови"
+  },
+  "GoldenSkel": {
+    "en": "Golden Skel",
+    "zh": "黄金骷髅",
+    "zh-Hant": "黃金骷髏",
+    "ja": "黄金の骸骨",
+    "ru": "Золотой скелет"
+  },
+  "QuestGoldenSkel1": {
+    "en": "Hunt the Golden Skeleton",
+    "zh": "猎杀黄金骷髅",
+    "zh-Hant": "獵殺黃金骷髏",
+    "ja": "黄金の骸骨を狩れ",
+    "ru": "Охота на золотой скелет"
+  },
+  "FishingRod": {
+    "en": "Fishing Rod",
+    "zh": "钓鱼竿",
+    "zh-Hant": "釣竿",
+    "ja": "釣り竿",
+    "ru": "Удочка"
+  },
+  "QuestFishingrod1": {
+    "en": "Find a Fishing Rod",
+    "zh": "寻找钓鱼竿",
+    "zh-Hant": "尋找釣竿",
+    "ja": "釣り竿を探そう",
+    "ru": "Найти удочку"
+  },
+  "FindFireStone": {
+    "en": "Find Fire Stone",
+    "zh": "寻找火之石",
+    "zh-Hant": "尋找火之石",
+    "ja": "ほのおのいしを探そう",
+    "ru": "Найти огненный камень"
+  },
+  "QuestFindFireStone1": {
+    "en": "Find the Fire Stone",
+    "zh": "寻找火之石",
+    "zh-Hant": "尋找火之石",
+    "ja": "ほのおのいしを探そう",
+    "ru": "Найти огненный камень"
+  },
+  "FindBreezeStone": {
+    "en": "Find Breeze Stone",
+    "zh": "寻找风之石",
+    "zh-Hant": "尋找風之石",
+    "ja": "風の石を探そう",
+    "ru": "Найти камень ветра"
+  },
+  "QuestFindBreezeStone1": {
+    "en": "Find the Breeze Stone",
+    "zh": "寻找风之石",
+    "zh-Hant": "尋找風之石",
+    "ja": "風の石を探そう",
+    "ru": "Найти камень ветра"
+  },
+  "FindLeafStone": {
+    "en": "Find Leaf Stone",
+    "zh": "寻找叶之石",
+    "zh-Hant": "尋找葉之石",
+    "ja": "リーフのいしを探そう",
+    "ru": "Найти лиственный камень"
+  },
+  "QuestFindLeafStone1": {
+    "en": "Find the Leaf Stone",
+    "zh": "寻找叶之石",
+    "zh-Hant": "尋找葉之石",
+    "ja": "リーフのいしを探そう",
+    "ru": "Найти лиственный камень"
+  },
+  "FindThunderStone": {
+    "en": "Find Thunder Stone",
+    "zh": "寻找雷之石",
+    "zh-Hant": "尋找雷之石",
+    "ja": "かみなりのいしを探そう",
+    "ru": "Найти громовой камень"
+  },
+  "QuestFindThunderStone1": {
+    "en": "Find the Thunder Stone",
+    "zh": "寻找雷之石",
+    "zh-Hant": "尋找雷之石",
+    "ja": "かみなりのいしを探そう",
+    "ru": "Найти громовой камень"
+  },
+  "FindWaterStone": {
+    "en": "Find Water Stone",
+    "zh": "寻找水之石",
+    "zh-Hant": "尋找水之石",
+    "ja": "みずのいしを探そう",
+    "ru": "Найти водяной камень"
+  },
+  "QuestFindWaterStone1": {
+    "en": "Find the Water Stone",
+    "zh": "寻找水之石",
+    "zh-Hant": "尋找水之石",
+    "ja": "みずのいしを探そう",
+    "ru": "Найти водяной камень"
+  },
+  "FindTerraStone": {
+    "en": "Find Terra Stone",
+    "zh": "寻找地之石",
+    "zh-Hant": "尋找地之石",
+    "ja": "大地の石を探そう",
+    "ru": "Найти камень земли"
+  },
+  "QuestFindTerraStone1": {
+    "en": "Find the Terra Stone",
+    "zh": "寻找地之石",
+    "zh-Hant": "尋找地之石",
+    "ja": "大地の石を探そう",
+    "ru": "Найти камень земли"
+  },
+  "FindDawnStone": {
+    "en": "Find Dawn Stone",
+    "zh": "寻找黎明石",
+    "zh-Hant": "尋找黎明石",
+    "ja": "めざめいしを探そう",
+    "ru": "Найти рассветный камень"
+  },
+  "QuestFindDawnStone1": {
+    "en": "Find the Dawn Stone",
+    "zh": "寻找黎明石",
+    "zh-Hant": "尋找黎明石",
+    "ja": "めざめいしを探そう",
+    "ru": "Найти рассветный камень"
+  },
+  "FindDuskStone": {
+    "en": "Find Dusk Stone",
+    "zh": "寻找黄昏石",
+    "zh-Hant": "尋找黄昏石",
+    "ja": "やみのいしを探そう",
+    "ru": "Найти сумеречный камень"
+  },
+  "QuestFindDuskStone1": {
+    "en": "Find the Dusk Stone",
+    "zh": "寻找黄昏石",
+    "zh-Hant": "尋找黄昏石",
+    "ja": "やみのいしを探そう",
+    "ru": "Найти сумеречный камень"
+  },
+  "INeedSlimeFluid": {
+    "en": "I Need Slime Fluid",
+    "zh": "我需要史莱姆液",
+    "zh-Hant": "我需要史萊姆液",
+    "ja": "スライム液が欲しい",
+    "ru": "Мне нужна жидкость слайма"
+  },
+  "QuestINeedSlimeFluid1": {
+    "en": "Collect Slime Fluid",
+    "zh": "收集史莱姆液",
+    "zh-Hant": "收集史萊姆液",
+    "ja": "スライム液を集めよう",
+    "ru": "Собрать жидкость слайма"
+  },
+  "MaterialGatheringEgg": {
+    "en": "Material Gathering Egg",
+    "zh": "收集材料：蛋",
+    "zh-Hant": "收集材料：蛋",
+    "ja": "素材集め：卵",
+    "ru": "Сбор материалов: яйца"
+  },
+  "QuestMaterialGatheringEgg": {
+    "en": "Gather Eggs",
+    "zh": "收集蛋",
+    "zh-Hant": "收集蛋",
+    "ja": "卵を集めよう",
+    "ru": "Собрать яйца"
+  },
+  "MaterialGatheringPearl": {
+    "en": "Material Gathering Pearl",
+    "zh": "收集材料：珍珠",
+    "zh-Hant": "收集材料：珍珠",
+    "ja": "素材集め：真珠",
+    "ru": "Сбор материалов: жемчуг"
+  },
+  "QuestMaterialGatheringPearl": {
+    "en": "Gather Pearls",
+    "zh": "收集珍珠",
+    "zh-Hant": "收集珍珠",
+    "ja": "真珠を集めよう",
+    "ru": "Собрать жемчуг"
+  },
+  "GuildPatrolArea1": {
+    "en": "Guild Patrol",
+    "zh": "公会巡逻",
+    "zh-Hant": "公會巡邏",
+    "ja": "ギルド巡回",
+    "ru": "Патруль гильдии"
+  },
+  "QuestPatrolDutyArea1": {
+    "en": "Patrol Duty",
+    "zh": "巡逻任务",
+    "zh-Hant": "巡邏任務",
+    "ja": "巡回任務",
+    "ru": "Патрульная служба"
+  },
+  "QuestPatrolDutyDescription": {
+    "en": "Patrol the surroundings of area {0} and eliminate the monsters threatening local travelers.",
+    "zh": "巡逻区域 {0} 周边，消灭威胁旅人的怪物。",
+    "zh-Hant": "巡邏區域 {0} 周邊，消滅威脅旅人的怪物。",
+    "ja": "エリア{0}の周辺を巡回し、旅人を脅かすモンスターを倒す。",
+    "ru": "Патрулировать окрестности области {0} и уничтожить монстров, угрожающих местным путникам."
+  },
+  "MonsterSuppressionArea1": {
+    "en": "Monster Suppression",
+    "zh": "怪物镇压",
+    "zh-Hant": "怪物鎮壓",
+    "ja": "モンスター制圧",
+    "ru": "Подавление монстров"
+  },
+  "QuestMonsterSuppressionArea1": {
+    "en": "Monster Suppression Duty",
+    "zh": "怪物镇压任务",
+    "zh-Hant": "怪物鎮壓任務",
+    "ja": "モンスター制圧任務",
+    "ru": "Задача по подавлению монстров"
+  },
+  "QuestMonsterSuppressionDescription": {
+    "en": "Monsters have become unusually active around area {0}. Defeat them.",
+    "zh": "区域{0}附近的怪物异常活跃。击败它们。",
+    "zh-Hant": "區域{0}附近的怪物異常活躍。擊敗牠們。",
+    "ja": "エリア{0}の周辺で、モンスターが異様に活発になっている。倒そう。",
+    "ru": "Монстры вокруг области {0} стали необычно активны. Победите их."
+  },
+  "RoadClearanceArea1": {
+    "en": "Road Clearance",
+    "zh": "道路清理",
+    "zh-Hant": "道路清理",
+    "ja": "道路の確保",
+    "ru": "Расчистка дороги"
+  },
+  "QuestRoadClearanceArea1": {
+    "en": "Recover Stolen Supplies",
+    "zh": "夺回被盗物资",
+    "zh-Hant": "奪回被盜物資",
+    "ja": "盗まれた物資を取り戻せ",
+    "ru": "Вернуть украденные припасы"
+  },
+  "QuestRoadClearanceDescription": {
+    "en": "Rebel soldiers have been stealing supplies from travelers near area {0}. Defeat them and recover their stolen supplies.",
+    "zh": "叛军士兵在区域{0}附近抢夺了旅人的补给。击败他们，夺回被抢走的物资。",
+    "zh-Hant": "叛軍士兵在區域{0}附近搶奪了旅人的補給。擊敗他們，奪回被搶走的物資。",
+    "ja": "エリア{0}の近くで、反乱兵が旅人の補給を奪っている。兵を倒し、盗まれた物資を取り戻す。",
+    "ru": "Мятежные солдаты крадут припасы у путников возле области {0}. Победите их и верните украденное."
+  },
+  "ConstructionMaterialsArea1": {
+    "en": "Construction Materials",
+    "zh": "建筑材料",
+    "zh-Hant": "建築材料",
+    "ja": "建築資材",
+    "ru": "Строительные материалы"
+  },
+  "QuestConstructionMaterialsArea1": {
+    "en": "Construction Material Collection",
+    "zh": "建筑材料收集",
+    "zh-Hant": "建築材料收集",
+    "ja": "建築資材集め",
+    "ru": "Сбор строительных материалов"
+  },
+  "QuestConstructionMaterialsDescription": {
+    "en": "The Adventurers' Guild is in need of construction materials. Gather them from area {0}.",
+    "zh": "冒险者公会急需建筑材料。前往区域{0}收集所需的材料。",
+    "zh-Hant": "冒險者公會急需建築材料。前往區域{0}收集所需的材料。",
+    "ja": "冒険者ギルドが建築資材を必要としている。エリア{0}で集めよう。",
+    "ru": "Гильдии искателей приключений нужны строительные материалы. Соберите их в области {0}."
+  },
+  "SeaMonsterExterminationArea1": {
+    "en": "Sea Monster Extermination",
+    "zh": "讨伐海怪",
+    "zh-Hant": "討伐海怪",
+    "ja": "海のモンスター討伐",
+    "ru": "Истребление морских монстров"
+  },
+  "QuestSeaMonsterExterminationArea1": {
+    "en": "Sea Monster Control",
+    "zh": "海怪治理",
+    "zh-Hant": "海怪治理",
+    "ja": "海のモンスター対策",
+    "ru": "Борьба с морскими монстрами"
+  },
+  "QuestMonsterExterminationDescription": {
+    "en": "{2} have been increasing in number near {1} in area {0}. Defeat them to help keep the area safe.",
+    "zh": "区域{0}的{1}附近{2}数量不断增加。击败它们，帮助维持当地安全。",
+    "zh-Hant": "區域{0}的{1}附近{2}數量不斷增加。擊敗牠們，幫助維持當地安全。",
+    "ja": "エリア{0}の{1}付近で{2}が増えている。倒して、この場所の安全を守ろう。",
+    "ru": "Возле «{1}» в области {0} растёт численность: {2}. Победите их, чтобы сохранить безопасность."
+  },
+  "EmergencySupplies": {
+    "en": "Emergency Supplies",
+    "zh": "紧急补给",
+    "zh-Hant": "緊急補給",
+    "ja": "緊急物資",
+    "ru": "Экстренные припасы"
+  },
+  "QuestGuildSupplies": {
+    "en": "Supply Collection",
+    "zh": "收集补给",
+    "zh-Hant": "收集補給",
+    "ja": "物資集め",
+    "ru": "Сбор припасов"
+  },
+  "QuestGuildSuppliesDescription": {
+    "en": "Gather emergency supplies from area {0} to replenish the Guild's provisions.",
+    "zh": "前往区域{0}收集紧急补给，补充公会储备。",
+    "zh-Hant": "前往區域{0}收集緊急補給，補充公會儲備。",
+    "ja": "エリア{0}で緊急物資を集め、ギルドの備蓄を補充する。",
+    "ru": "Собрать экстренные припасы в области {0}, чтобы пополнить запасы гильдии."
+  },
+  "ClearTheRoad": {
+    "en": "Trade Route Trouble",
+    "zh": "商道危机",
+    "zh-Hant": "商道危機",
+    "ja": "商道の危機",
+    "ru": "Беда на торговом пути"
+  },
+  "QuestClearTheRoad1": {
+    "en": "Clear the Monsters",
+    "zh": "清理怪物",
+    "zh-Hant": "清理怪物",
+    "ja": "モンスターを一掃せよ",
+    "ru": "Зачистить монстров"
+  },
+  "QuestClearTheRoadDescription1": {
+    "en": "Clear the monsters along the way to ensure safe passage for merchants.",
+    "zh": "清理沿途出没的怪物，确保商人来往安全。",
+    "zh-Hant": "清理沿途出沒的怪物，確保商人來往安全。",
+    "ja": "道中のモンスターを倒し、商人が安全に通れるようにする。",
+    "ru": "Уничтожить монстров по пути, чтобы обеспечить торговцам безопасный проход."
+  },
+  "HoneyCollectionArea8": {
+    "en": "Honey Collection",
+    "zh": "收集蜂蜜",
+    "zh-Hant": "收集蜂蜜",
+    "ja": "ハチミツ集め",
+    "ru": "Сбор мёда"
+  },
+  "QuestHoneyCollectionArea8": {
+    "en": "Sweet Harvest",
+    "zh": "甜蜜采集",
+    "zh-Hant": "甜蜜採集",
+    "ja": "甘い収穫",
+    "ru": "Сладкий урожай"
+  },
+  "QuestHoneyCollectionDescription": {
+    "en": "Fresh honey is in short supply at the Adventurers' Guild. Gather {1} Fresh Honey from area {0}.",
+    "zh": "冒险者公会的新鲜蜂蜜库存不足。前往区域{0}收集 {1} 个新鲜蜂蜜。",
+    "zh-Hant": "冒險者公會的新鮮蜂蜜庫存不足。前往區域{0}收集 {1} 個新鮮蜂蜜。",
+    "ja": "冒険者ギルドで新鮮なハチミツが不足している。エリア{0}で新鮮なハチミツを{1}個集める。",
+    "ru": "Гильдии искателей приключений не хватает свежего мёда. Соберите его в области {0}. Количество: {1}."
+  },
+  "MonsterSuppressionArea8": {
+    "en": "Monster Suppression",
+    "zh": "怪物镇压",
+    "zh-Hant": "怪物鎮壓",
+    "ja": "モンスター制圧",
+    "ru": "Подавление монстров"
+  },
+  "QuestMonsterSuppressionArea8": {
+    "en": "Monster Suppression Duty",
+    "zh": "怪物镇压任务",
+    "zh-Hant": "怪物鎮壓任務",
+    "ja": "モンスター制圧任務",
+    "ru": "Задача по подавлению монстров"
+  },
+  "SlimeInfestation": {
+    "en": "Slime Infestation",
+    "zh": "史莱姆泛滥",
+    "zh-Hant": "史萊姆氾濫",
+    "ja": "スライムの大発生",
+    "ru": "Нашествие слаймов"
+  },
+  "QuestStopTheSlimes": {
+    "en": "Stop the Slimes",
+    "zh": "阻止史莱姆",
+    "zh-Hant": "阻止史萊姆",
+    "ja": "スライムを止めろ",
+    "ru": "Остановить слаймов"
+  },
+  "QuestStopTheSlimesDescription": {
+    "en": "{0} around area {1} have been devouring the villagers' skirts! Defeat them before the situation gets even more embarrassing.",
+    "zh": "区域{1}附近的{0}一直在吞噬村民的裙子！快去击败它们，别让场面变得更加尴尬！",
+    "zh-Hant": "區域{1}附近的{0}一直在吞噬村民的裙子！快去擊敗牠們，別讓場面變得更加尷尬！",
+    "ja": "エリア{1}の周辺で、{0}が村人のスカートを食べている！もっと気まずいことになる前に倒そう。",
+    "ru": "В окрестностях области {1} «{0}» пожирают юбки жителей! Победите их, пока не стало ещё неловче."
+  },
+  "MerchantTroubleArea68": {
+    "en": "Restore Trade",
+    "zh": "恢复贸易",
+    "zh-Hant": "恢復貿易",
+    "ja": "交易の復興",
+    "ru": "Восстановить торговлю"
+  },
+  "QuestMerchantTroubleArea68": {
+    "en": "Merchant Trouble",
+    "zh": "商人困境",
+    "zh-Hant": "商人困境",
+    "ja": "商人の困り事",
+    "ru": "Беда торговца"
+  },
+  "QuestMerchantTroubleDescription": {
+    "en": "Monsters have been preventing merchants from doing business in area {0}. Defeat them and help restore trade.",
+    "zh": "怪物阻碍了区域{0}商人的生意。击败它们，帮助恢复当地贸易。",
+    "zh-Hant": "怪物阻礙了區域{0}商人的生意。擊敗牠們，幫助恢復當地貿易。",
+    "ja": "エリア{0}でモンスターが商人の商売を邪魔している。倒して、交易の再開を助けよう。",
+    "ru": "Монстры мешают торговцам вести дела в области {0}. Победите их и помогите восстановить торговлю."
+  },
+  "SlimeResearchArea68EGrade": {
+    "en": "Slime Research",
+    "zh": "史莱姆研究",
+    "zh-Hant": "史萊姆研究",
+    "ja": "スライム研究",
+    "ru": "Исследование слаймов"
+  },
+  "QuestSlimeResearchArea68EGrade": {
+    "en": "Collect Slime Samples",
+    "zh": "收集史莱姆样本",
+    "zh-Hant": "收集史萊姆樣本",
+    "ja": "スライムサンプル集め",
+    "ru": "Собрать образцы слаймов"
+  },
+  "QuestSlimeResearchDescription": {
+    "en": "The Adventurers' Guild is researching Slimes. Collect {1} Slime Fluid from area {0} for analysis.",
+    "zh": "冒险者公会正在研究史莱姆。前往区域{0}收集 {1} 份史莱姆黏液供研究使用。",
+    "zh-Hant": "冒險者公會正在研究史萊姆。前往區域{0}收集 {1} 份史萊姆黏液供研究使用。",
+    "ja": "冒険者ギルドがスライムを研究している。分析のため、エリア{0}でスライム液を{1}個集める。",
+    "ru": "Гильдия искателей приключений изучает слаймов. Соберите жидкость слаймов в области {0} для анализа. Количество: {1}."
+  },
+  "ArrowMaterials": {
+    "en": "Arrow Materials",
+    "zh": "箭矢材料",
+    "zh-Hant": "箭矢材料",
+    "ja": "矢の素材",
+    "ru": "Материалы для стрел"
+  },
+  "QuestArrowMaterials": {
+    "en": "Gather Arrow Materials",
+    "zh": "收集箭矢材料",
+    "zh-Hant": "收集箭矢材料",
+    "ja": "矢の素材を集めよう",
+    "ru": "Собрать материалы для стрел"
+  },
+  "QuestArrowMaterialsDescription": {
+    "en": "Feathers are needed to craft arrows. Gather {1} Feathers from area {0}.",
+    "zh": "制作箭矢需要羽毛。前往区域{0}收集 {1} 根羽毛。",
+    "zh-Hant": "製作箭矢需要羽毛。前往區域{0}收集 {1} 根羽毛。",
+    "ja": "矢の製作に羽毛が必要だ。エリア{0}で羽毛を{1}枚集める。",
+    "ru": "Для изготовления стрел нужны перья. Соберите их в области {0}. Количество: {1}."
+  },
+  "ElementalDisturbance": {
+    "en": "Elemental Disturbance",
+    "zh": "元素异动",
+    "zh-Hant": "元素異動",
+    "ja": "元素の異変",
+    "ru": "Стихийное возмущение"
+  },
+  "QuestElementalDisturbance": {
+    "en": "Calm the Elements",
+    "zh": "平息元素异动",
+    "zh-Hant": "平息元素異動",
+    "ja": "元素を鎮めよ",
+    "ru": "Успокоить стихии"
+  },
+  "QuestElementalDisturbanceDescription": {
+    "en": "The elemental energy around area {0} has become unstable. Defeat the elemental creatures.",
+    "zh": "区域{0}的元素能量变得异常紊乱。击败元素生物，恢复平衡。",
+    "zh-Hant": "區域{0}的元素能量變得異常紊亂。擊敗元素生物，恢復平衡。",
+    "ja": "エリア{0}の周辺で元素エネルギーが不安定になっている。元素の生物を倒そう。",
+    "ru": "Стихийная энергия вокруг области {0} стала нестабильной. Победите стихийных существ."
+  },
+  "ElementalBalance": {
+    "en": "Elemental Balance",
+    "zh": "元素平衡",
+    "zh-Hant": "元素平衡",
+    "ja": "元素の調和",
+    "ru": "Равновесие стихий"
+  },
+  "QuestElementalBalance": {
+    "en": "Restore Balance",
+    "zh": "恢复平衡",
+    "zh-Hant": "恢復平衡",
+    "ja": "調和を取り戻せ",
+    "ru": "Восстановить равновесие"
+  },
+  "QuestElementalBalanceDescription": {
+    "en": "The balance of the elements has been disrupted in area {0}. Help restore it.",
+    "zh": "区域{0}的元素平衡遭到破坏。帮助恢复这里的平衡。",
+    "zh-Hant": "區域{0}的元素平衡遭到破壞。幫助恢復這裡的平衡。",
+    "ja": "エリア{0}で元素の調和が乱れている。元に戻すのを手伝おう。",
+    "ru": "В области {0} нарушено равновесие стихий. Помогите его восстановить."
+  },
+  "ConstructionMaterialsArea69": {
+    "en": "Construction Materials",
+    "zh": "建筑材料",
+    "zh-Hant": "建築材料",
+    "ja": "建築資材",
+    "ru": "Строительные материалы"
+  },
+  "QuestConstructionMaterialsArea69": {
+    "en": "Construction Material Collection",
+    "zh": "建筑材料收集",
+    "zh-Hant": "建築材料收集",
+    "ja": "建築資材集め",
+    "ru": "Сбор строительных материалов"
+  },
+  "ElementalResearch": {
+    "en": "Elemental Research",
+    "zh": "元素研究",
+    "zh-Hant": "元素研究",
+    "ja": "元素研究",
+    "ru": "Исследование стихий"
+  },
+  "QuestElementalResearch": {
+    "en": "Collect Elemental Samples",
+    "zh": "收集元素样本",
+    "zh-Hant": "收集元素樣本",
+    "ja": "元素サンプル集め",
+    "ru": "Собрать стихийные образцы"
+  },
+  "QuestElementalResearchDescription": {
+    "en": "The Adventurers' Guild is researching elemental creatures. Collect {1} Slime Fluid from area {0}.",
+    "zh": "冒险者公会正在研究元素生物。前往区域{0}收集 {1} 份史莱姆黏液。",
+    "zh-Hant": "冒險者公會正在研究元素生物。前往區域{0}收集 {1} 份史萊姆黏液。",
+    "ja": "冒険者ギルドが元素の生物を研究している。エリア{0}でスライム液を{1}個集める。",
+    "ru": "Гильдия искателей приключений изучает стихийных существ. Соберите жидкость слаймов в области {0}. Количество: {1}."
+  },
+  "HoneyCollectionArea69": {
+    "en": "Honey Collection",
+    "zh": "收集蜂蜜",
+    "zh-Hant": "收集蜂蜜",
+    "ja": "ハチミツ集め",
+    "ru": "Сбор мёда"
+  },
+  "QuestHoneyCollectionArea69": {
+    "en": "Sweet Harvest",
+    "zh": "甜蜜采集",
+    "zh-Hant": "甜蜜採集",
+    "ja": "甘い収穫",
+    "ru": "Сладкий урожай"
+  },
+  "GuildPatrolArea11": {
+    "en": "Guild Patrol",
+    "zh": "公会巡逻",
+    "zh-Hant": "公會巡邏",
+    "ja": "ギルド巡回",
+    "ru": "Патруль гильдии"
+  },
+  "QuestPatrolDutyArea11": {
+    "en": "Patrol Duty",
+    "zh": "巡逻任务",
+    "zh-Hant": "巡邏任務",
+    "ja": "巡回任務",
+    "ru": "Патрульная служба"
+  },
+  "MonsterSuppressionArea11": {
+    "en": "Monster Suppression",
+    "zh": "怪物镇压",
+    "zh-Hant": "怪物鎮壓",
+    "ja": "モンスター制圧",
+    "ru": "Подавление монстров"
+  },
+  "QuestMonsterSuppressionArea11": {
+    "en": "Monster Suppression Duty",
+    "zh": "怪物镇压任务",
+    "zh-Hant": "怪物鎮壓任務",
+    "ja": "モンスター制圧任務",
+    "ru": "Задача по подавлению монстров"
+  },
+  "ConstructionMaterialsArea11": {
+    "en": "Construction Materials",
+    "zh": "建筑材料",
+    "zh-Hant": "建築材料",
+    "ja": "建築資材",
+    "ru": "Строительные материалы"
+  },
+  "QuestConstructionMaterialsArea11": {
+    "en": "Construction Material Collection",
+    "zh": "建筑材料收集",
+    "zh-Hant": "建築材料收集",
+    "ja": "建築資材集め",
+    "ru": "Сбор строительных материалов"
+  },
+  "RoadClearanceArea11": {
+    "en": "Road Clearance",
+    "zh": "道路清理",
+    "zh-Hant": "道路清理",
+    "ja": "道路の確保",
+    "ru": "Расчистка дороги"
+  },
+  "QuestRoadClearanceArea11": {
+    "en": "Recover Stolen Supplies",
+    "zh": "夺回被盗物资",
+    "zh-Hant": "奪回被盜物資",
+    "ja": "盗まれた物資を取り戻せ",
+    "ru": "Вернуть украденные припасы"
+  },
+  "SeaMonsterExterminationArea11": {
+    "en": "Sea Monster Extermination",
+    "zh": "讨伐海怪",
+    "zh-Hant": "討伐海怪",
+    "ja": "海のモンスター討伐",
+    "ru": "Истребление морских монстров"
+  },
+  "QuestSeaMonsterExterminationArea11": {
+    "en": "Sea Monster Control",
+    "zh": "海怪治理",
+    "zh-Hant": "海怪治理",
+    "ja": "海のモンスター対策",
+    "ru": "Борьба с морскими монстрами"
+  },
+  "GuildPatrolArea13": {
+    "en": "Guild Patrol",
+    "zh": "公会巡逻",
+    "zh-Hant": "公會巡邏",
+    "ja": "ギルド巡回",
+    "ru": "Патруль гильдии"
+  },
+  "QuestPatrolDutyArea13": {
+    "en": "Patrol Duty",
+    "zh": "巡逻任务",
+    "zh-Hant": "巡邏任務",
+    "ja": "巡回任務",
+    "ru": "Патрульная служба"
+  },
+  "MonsterSuppressionArea13": {
+    "en": "Monster Suppression",
+    "zh": "怪物镇压",
+    "zh-Hant": "怪物鎮壓",
+    "ja": "モンスター制圧",
+    "ru": "Подавление монстров"
+  },
+  "QuestMonsterSuppressionArea13": {
+    "en": "Monster Suppression Duty",
+    "zh": "怪物镇压任务",
+    "zh-Hant": "怪物鎮壓任務",
+    "ja": "モンスター制圧任務",
+    "ru": "Задача по подавлению монстров"
+  },
+  "RoadClearanceArea13": {
+    "en": "Road Clearance",
+    "zh": "道路清理",
+    "zh-Hant": "道路清理",
+    "ja": "道路の確保",
+    "ru": "Расчистка дороги"
+  },
+  "QuestRoadClearanceArea13": {
+    "en": "Recover Stolen Supplies",
+    "zh": "夺回被盗物资",
+    "zh-Hant": "奪回被盜物資",
+    "ja": "盗まれた物資を取り戻せ",
+    "ru": "Вернуть украденные припасы"
+  },
+  "ConstructionMaterialsArea13": {
+    "en": "Construction Materials",
+    "zh": "建筑材料",
+    "zh-Hant": "建築材料",
+    "ja": "建築資材",
+    "ru": "Строительные материалы"
+  },
+  "QuestConstructionMaterialsArea13": {
+    "en": "Construction Material Collection",
+    "zh": "建筑材料收集",
+    "zh-Hant": "建築材料收集",
+    "ja": "建築資材集め",
+    "ru": "Сбор строительных материалов"
+  },
+  "SeaMonsterExterminationArea13": {
+    "en": "Sea Monster Extermination",
+    "zh": "讨伐海怪",
+    "zh-Hant": "討伐海怪",
+    "ja": "海のモンスター討伐",
+    "ru": "Истребление морских монстров"
+  },
+  "QuestSeaMonsterExterminationArea13": {
+    "en": "Sea Monster Control",
+    "zh": "海怪治理",
+    "zh-Hant": "海怪治理",
+    "ja": "海のモンスター対策",
+    "ru": "Борьба с морскими монстрами"
+  },
+  "SupplyLineArea1": {
+    "en": "Supply Line",
+    "zh": "补给线",
+    "zh-Hant": "補給線",
+    "ja": "補給線",
+    "ru": "Линия снабжения"
+  },
+  "QuestSupplyLineArea1": {
+    "en": "Disrupt the Supply Line",
+    "zh": "破坏补给线",
+    "zh-Hant": "破壞補給線",
+    "ja": "補給線を断て",
+    "ru": "Нарушить линию снабжения"
+  },
+  "QuestSupplyLineDescription": {
+    "en": "Enemy soldiers are transporting supplies through area {0}. Defeat them and disrupt their supply line.",
+    "zh": "敌军正在区域{0}运输补给。击败他们，破坏敌军补给线。",
+    "zh-Hant": "敵軍正在區域{0}運輸補給。擊敗他們，破壞敵軍補給線。",
+    "ja": "敵兵がエリア{0}を通って物資を運んでいる。倒して、補給線を断とう。",
+    "ru": "Вражеские солдаты перевозят припасы через область {0}. Победите их и нарушьте линию снабжения."
+  },
+  "RescueMissionArea1": {
+    "en": "Rescue Mission",
+    "zh": "营救行动",
+    "zh-Hant": "營救行動",
+    "ja": "救出作戦",
+    "ru": "Спасательная миссия"
+  },
+  "QuestRescueMissionArea1": {
+    "en": "Rescue the Captives",
+    "zh": "营救俘虏",
+    "zh-Hant": "營救俘虜",
+    "ja": "捕虜を救出せよ",
+    "ru": "Спасти пленников"
+  },
+  "QuestRescueMissionDescription": {
+    "en": "Several travelers have been captured near area {0}. Defeat the enemy soldiers guarding them.",
+    "zh": "有旅人在区域{0}附近被敌军俘虏。击败看守他们的敌军士兵。",
+    "zh-Hant": "有旅人在區域{0}附近被敵軍俘虜。擊敗看守他們的敵軍士兵。",
+    "ja": "エリア{0}の近くで、数人の旅人が捕らえられた。見張りの敵兵を倒そう。",
+    "ru": "Возле области {0} захватили нескольких путников. Победите вражеских солдат, охраняющих их."
+  },
+  "BreadSuppliesArea1": {
+    "en": "Food Supplies",
+    "zh": "粮食补给",
+    "zh-Hant": "糧食補給",
+    "ja": "食料物資",
+    "ru": "Продовольствие"
+  },
+  "QuestBreadSuppliesArea1": {
+    "en": "Gather Food Supplies",
+    "zh": "收集粮食补给",
+    "zh-Hant": "收集糧食補給",
+    "ja": "食料を集めよう",
+    "ru": "Собрать продовольствие"
+  },
+  "QuestFoodSuppliesDescription": {
+    "en": "Gather food supplies from area {0}.",
+    "zh": "前往区域{0}收集粮食补给。",
+    "zh-Hant": "前往區域{0}收集糧食補給。",
+    "ja": "エリア{0}で食料を集める。",
+    "ru": "Собрать продовольствие в области {0}."
+  },
+  "CleanWaterArea1": {
+    "en": "Clean Water",
+    "zh": "洁净水",
+    "zh-Hant": "潔淨水",
+    "ja": "きれいな水",
+    "ru": "Чистая вода"
+  },
+  "QuestCleanWaterArea1": {
+    "en": "Gather Clean Water",
+    "zh": "收集洁净水",
+    "zh-Hant": "收集潔淨水",
+    "ja": "きれいな水を集めよう",
+    "ru": "Собрать чистую воду"
+  },
+  "QuestCleanWaterDescription": {
+    "en": "The local water source has been contaminated. Gather {1} from area {0}.",
+    "zh": "当地水源受到污染。前往区域 {0} 收集 {1}。",
+    "zh-Hant": "當地水源受到污染。前往區域 {0} 收集 {1}。",
+    "ja": "地元の水源が汚染されている。エリア{0}で{1}を集める。",
+    "ru": "Местный источник воды загрязнён. Соберите «{1}» в области {0}."
+  },
+  "AdvancedSlimeResearchArea8": {
+    "en": "Advanced Slime Research",
+    "zh": "深入史莱姆研究",
+    "zh-Hant": "深入史萊姆研究",
+    "ja": "スライムの高度な研究",
+    "ru": "Углублённое исследование слаймов"
+  },
+  "QuestSlimeResearchArea8DGrade": {
+    "en": "Collect Additional Samples",
+    "zh": "收集更多样本",
+    "zh-Hant": "收集更多樣本",
+    "ja": "追加サンプル集め",
+    "ru": "Собрать дополнительные образцы"
+  },
+  "QuestAdvancedSlimeResearchDescription": {
+    "en": "The Adventurers' Guild requires more Slime Fluid for advanced research. Gather {1} from area {0}.",
+    "zh": "冒险者公会需要更多史莱姆黏液进行深入研究。前往区域{0}收集 {1}。",
+    "zh-Hant": "冒險者公會需要更多史萊姆黏液進行深入研究。前往區域{0}收集 {1}。",
+    "ja": "冒険者ギルドが高度な研究のため、さらにスライム液を必要としている。エリア{0}で{1}を集める。",
+    "ru": "Гильдии искателей приключений нужно больше жидкости слаймов для углублённого исследования. Соберите «{1}» в области {0}."
+  },
+  "SlimeOutbreakArea8": {
+    "en": "Slime Outbreak",
+    "zh": "史莱姆泛滥",
+    "zh-Hant": "史萊姆氾濫",
+    "ja": "スライムの異常増殖",
+    "ru": "Вспышка размножения слаймов"
+  },
+  "QuestSlimeOutbreakArea8": {
+    "en": "Contain the Slime Outbreak",
+    "zh": "控制史莱姆泛滥",
+    "zh-Hant": "控制史萊姆氾濫",
+    "ja": "スライムの異常増殖を抑えよ",
+    "ru": "Сдержать размножение слаймов"
+  },
+  "QuestSlimeOutbreakDescription": {
+    "en": "Slimes are multiplying rapidly in area {0}. Defeat them before the outbreak spreads further.",
+    "zh": "区域{0}的史莱姆数量迅速增加。击败它们，阻止泛滥继续扩大。",
+    "zh-Hant": "區域{0}的史萊姆數量迅速增加。擊敗牠們，阻止氾濫繼續擴大。",
+    "ja": "エリア{0}でスライムが急増している。さらに広がる前に倒そう。",
+    "ru": "Слаймы быстро размножаются в области {0}. Победите их, пока нашествие не распространилось."
+  },
+  "AlchemySuppliesArea8DGrade": {
+    "en": "Alchemy Supplies",
+    "zh": "炼金材料",
+    "zh-Hant": "煉金材料",
+    "ja": "錬金術の素材",
+    "ru": "Алхимические припасы"
+  },
+  "QuestAlchemySuppliesArea8DGrade": {
+    "en": "Gather Alchemy Supplies",
+    "zh": "收集炼金材料",
+    "zh-Hant": "收集煉金材料",
+    "ja": "錬金術の素材を集めよう",
+    "ru": "Собрать алхимические припасы"
+  },
+  "QuestAlchemySuppliesDescription": {
+    "en": "Gather {1} from area {0} for the Guild's alchemists.",
+    "zh": "前往区域 {0} 收集 {1}，供公会炼金师使用。",
+    "zh-Hant": "前往區域 {0} 收集 {1} ，供公會鍊金師使用。",
+    "ja": "ギルドの錬金術師のために、エリア{0}で{1}を集める。",
+    "ru": "Собрать «{1}» в области {0} для алхимиков гильдии."
+  },
+  "MimicSlimeControl": {
+    "en": "Mimic Slime Control",
+    "zh": "伪史莱姆治理",
+    "zh-Hant": "偽史萊姆治理",
+    "ja": "スライムミミック対策",
+    "ru": "Борьба с мимиками-слаймами"
+  },
+  "QuestMimicSlimeControl": {
+    "en": "Control the Mimic Slimes",
+    "zh": "控制伪史莱姆",
+    "zh-Hant": "控制偽史萊姆",
+    "ja": "スライムミミックを抑えよ",
+    "ru": "Усмирить мимиков-слаймов"
+  },
+  "QuestSlimeControlDescription": {
+    "en": "{1} have been gathering around {2} in area {0}. Defeat them before they spread further.",
+    "zh": "区域{0}的{2}附近聚集了大量{1}。击败它们，防止它们继续扩散。",
+    "zh-Hant": "區域{0}的{2}附近聚集了大量{1}。擊敗牠們，防止牠們繼續擴散。",
+    "ja": "エリア{0}の{2}周辺に、{1}が集まっている。さらに広がる前に倒そう。",
+    "ru": "В области {0} возле «{2}» собираются «{1}». Победите их, пока они не распространились."
+  },
+  "SupplyLineArea11": {
+    "en": "Supply Line",
+    "zh": "补给线",
+    "zh-Hant": "補給線",
+    "ja": "補給線",
+    "ru": "Линия снабжения"
+  },
+  "QuestSupplyLineArea11": {
+    "en": "Disrupt the Supply Line",
+    "zh": "破坏补给线",
+    "zh-Hant": "破壞補給線",
+    "ja": "補給線を断て",
+    "ru": "Нарушить линию снабжения"
+  },
+  "RescueMissionArea11": {
+    "en": "Rescue Mission",
+    "zh": "营救行动",
+    "zh-Hant": "營救行動",
+    "ja": "救出作戦",
+    "ru": "Спасательная миссия"
+  },
+  "QuestRescueMissionArea11": {
+    "en": "Rescue the Captives",
+    "zh": "营救俘虏",
+    "zh-Hant": "營救俘虜",
+    "ja": "捕虜を救出せよ",
+    "ru": "Спасти пленников"
+  },
+  "AppleSuppliesArea11": {
+    "en": "Food Supplies",
+    "zh": "粮食补给",
+    "zh-Hant": "糧食補給",
+    "ja": "食料物資",
+    "ru": "Продовольствие"
+  },
+  "QuestAppleSuppliesArea11": {
+    "en": "Gather Food Supplies",
+    "zh": "收集粮食补给",
+    "zh-Hant": "收集糧食補給",
+    "ja": "食料を集めよう",
+    "ru": "Собрать продовольствие"
+  },
+  "CleanWaterArea11": {
+    "en": "Clean Water",
+    "zh": "洁净水",
+    "zh-Hant": "潔淨水",
+    "ja": "きれいな水",
+    "ru": "Чистая вода"
+  },
+  "QuestCleanWaterArea11": {
+    "en": "Gather Clean Water",
+    "zh": "收集洁净水",
+    "zh-Hant": "收集潔淨水",
+    "ja": "きれいな水を集めよう",
+    "ru": "Собрать чистую воду"
+  },
+  "SupplyLineArea13": {
+    "en": "Supply Line",
+    "zh": "补给线",
+    "zh-Hant": "補給線",
+    "ja": "補給線",
+    "ru": "Линия снабжения"
+  },
+  "QuestSupplyLineArea13": {
+    "en": "Disrupt the Supply Line",
+    "zh": "破坏补给线",
+    "zh-Hant": "破壞補給線",
+    "ja": "補給線を断て",
+    "ru": "Нарушить линию снабжения"
+  },
+  "RescueMissionArea13": {
+    "en": "Rescue Mission",
+    "zh": "营救行动",
+    "zh-Hant": "營救行動",
+    "ja": "救出作戦",
+    "ru": "Спасательная миссия"
+  },
+  "QuestRescueMissionArea13": {
+    "en": "Rescue the Captives",
+    "zh": "营救俘虏",
+    "zh-Hant": "營救俘虜",
+    "ja": "捕虜を救出せよ",
+    "ru": "Спасти пленников"
+  },
+  "FishSuppliesArea13": {
+    "en": "Food Supplies",
+    "zh": "粮食补给",
+    "zh-Hant": "糧食補給",
+    "ja": "食料物資",
+    "ru": "Продовольствие"
+  },
+  "QuestFishSuppliesArea13": {
+    "en": "Gather Food Supplies",
+    "zh": "收集粮食补给",
+    "zh-Hant": "收集糧食補給",
+    "ja": "食料を集めよう",
+    "ru": "Собрать продовольствие"
+  },
+  "CleanWaterArea13": {
+    "en": "Clean Water",
+    "zh": "洁净水",
+    "zh-Hant": "潔淨水",
+    "ja": "きれいな水",
+    "ru": "Чистая вода"
+  },
+  "QuestCleanWaterArea13": {
+    "en": "Gather Clean Water",
+    "zh": "收集洁净水",
+    "zh-Hant": "收集潔淨水",
+    "ja": "きれいな水を集めよう",
+    "ru": "Собрать чистую воду"
+  },
+  "AdvancedSlimeResearchArea68": {
+    "en": "Advanced Slime Research",
+    "zh": "深入史莱姆研究",
+    "zh-Hant": "深入史萊姆研究",
+    "ja": "スライムの高度な研究",
+    "ru": "Углублённое исследование слаймов"
+  },
+  "QuestSlimeResearchArea68DGrade": {
+    "en": "Collect Additional Samples",
+    "zh": "收集更多样本",
+    "zh-Hant": "收集更多樣本",
+    "ja": "追加サンプル集め",
+    "ru": "Собрать дополнительные образцы"
+  },
+  "SlimeOutbreakArea68": {
+    "en": "Slime Outbreak",
+    "zh": "史莱姆泛滥",
+    "zh-Hant": "史萊姆氾濫",
+    "ja": "スライムの異常増殖",
+    "ru": "Вспышка размножения слаймов"
+  },
+  "QuestSlimeOutbreakArea68": {
+    "en": "Contain the Slime Outbreak",
+    "zh": "控制史莱姆泛滥",
+    "zh-Hant": "控制史萊姆氾濫",
+    "ja": "スライムの異常増殖を抑えよ",
+    "ru": "Сдержать размножение слаймов"
+  },
+  "WaterSlimeControl": {
+    "en": "Water Slime Control",
+    "zh": "水史莱姆治理",
+    "zh-Hant": "水史萊姆治理",
+    "ja": "水のスライム対策",
+    "ru": "Борьба с водяными слаймами"
+  },
+  "QuestWaterSlimeControl": {
+    "en": "Control the Water Slimes",
+    "zh": "控制水史莱姆",
+    "zh-Hant": "控制水史萊姆",
+    "ja": "水のスライムを抑えよ",
+    "ru": "Усмирить водяных слаймов"
+  },
+  "AlchemySuppliesArea68DGrade": {
+    "en": "Alchemy Supplies",
+    "zh": "炼金材料",
+    "zh-Hant": "煉金材料",
+    "ja": "錬金術の素材",
+    "ru": "Алхимические припасы"
+  },
+  "QuestAlchemySuppliesArea68DGrade": {
+    "en": "Gather Alchemy Supplies",
+    "zh": "收集炼金材料",
+    "zh-Hant": "收集煉金材料",
+    "ja": "錬金術の素材を集めよう",
+    "ru": "Собрать алхимические припасы"
+  },
+  "ElementalOutbreakArea69DGrade": {
+    "en": "Elemental Outbreak",
+    "zh": "元素暴动",
+    "zh-Hant": "元素暴動",
+    "ja": "元素の暴走",
+    "ru": "Стихийное буйство"
+  },
+  "QuestElementalOutbreakArea69DGrade": {
+    "en": "Contain the Elemental Outbreak",
+    "zh": "控制元素暴动",
+    "zh-Hant": "控制元素暴動",
+    "ja": "元素の暴走を抑えよ",
+    "ru": "Сдержать стихийное буйство"
+  },
+  "QuestElementalOutbreakDescription": {
+    "en": "Elemental creatures have become increasingly aggressive around area {0}. Defeat them before the disturbance spreads.",
+    "zh": "区域{0}的元素生物变得越来越狂暴。击败它们，防止异动继续扩大。",
+    "zh-Hant": "區域{0}的元素生物變得越來越狂暴。擊敗牠們，防止異動繼續擴大。",
+    "ja": "エリア{0}の周辺で、元素の生物が凶暴になっている。異変が広がる前に倒そう。",
+    "ru": "Стихийные существа вокруг области {0} становятся всё агрессивнее. Победите их до распространения возмущения."
+  },
+  "FireSlimeControl": {
+    "en": "Fire Slime Control",
+    "zh": "火史莱姆治理",
+    "zh-Hant": "火史萊姆治理",
+    "ja": "火のスライム対策",
+    "ru": "Борьба с огненными слаймами"
+  },
+  "QuestFireSlimeControl": {
+    "en": "Control the Fire Slimes",
+    "zh": "控制火史莱姆",
+    "zh-Hant": "控制火史萊姆",
+    "ja": "火のスライムを抑えよ",
+    "ru": "Усмирить огненных слаймов"
+  },
+  "HerbalCollectionArea69": {
+    "en": "Healing Herbs",
+    "zh": "疗愈草药",
+    "zh-Hant": "療癒草藥",
+    "ja": "治療の薬草",
+    "ru": "Лечебные травы"
+  },
+  "QuestHerbalCollectionArea69": {
+    "en": "Gather Healing Herbs",
+    "zh": "收集疗愈草药",
+    "zh-Hant": "收集療癒草藥",
+    "ja": "治療の薬草を集めよう",
+    "ru": "Собрать лечебные травы"
+  },
+  "QuestHerbalCollectionDescription": {
+    "en": "Gather {1} from area {0}. They are needed to prepare medicinal remedies.",
+    "zh": "前往区域{0}收集 {1}，用于制作治疗药剂。",
+    "zh-Hant": "前往區域{0}收集 {1}，用於製作治療藥劑。",
+    "ja": "エリア{0}で{1}を集める。薬の調合に必要だ。",
+    "ru": "Собрать «{1}» в области {0} для приготовления лечебных снадобий."
+  },
+  "ForestResourcesArea69": {
+    "en": "Forest Resources",
+    "zh": "森林资源",
+    "zh-Hant": "森林資源",
+    "ja": "森の資源",
+    "ru": "Лесные ресурсы"
+  },
+  "QuestForestResourcesArea69": {
+    "en": "Gather Forest Resources",
+    "zh": "收集森林资源",
+    "zh-Hant": "收集森林資源",
+    "ja": "森の資源を集めよう",
+    "ru": "Собрать лесные ресурсы"
+  },
+  "QuestForestResourcesDescription": {
+    "en": "Gather {1} from area {0}.",
+    "zh": "前往区域{0}收集 {1} 。",
+    "zh-Hant": "前往區域{0}收集 {1}。",
+    "ja": "エリア{0}で{1}を集める。",
+    "ru": "Собрать «{1}» в области {0}."
+  },
+  "DefeatTheMantisSyndicate": {
+    "en": "Defeat The Mantis Syndicate",
+    "zh": "击败螳螂帮",
+    "zh-Hant": "擊敗螳螂幫",
+    "ja": "カマキリ同盟を倒せ",
+    "ru": "Победить синдикат богомолов"
+  },
+  "QuestDefeatTheMantisSyndicate": {
+    "en": "Defeat the Mantis Leader",
+    "zh": "击败螳螂帮首领",
+    "zh-Hant": "擊敗螳螂幫首領",
+    "ja": "カマキリの首領を倒せ",
+    "ru": "Победить вожака богомолов"
+  },
+  "DefeatTeam": {
+    "en": "Defeat monster group {1} x{0} time(s)",
+    "zh": "击败{0}次{1}怪物团",
+    "zh-Hant": "擊敗{0}次{1}怪物團",
+    "ja": "モンスター集団「{1}」を{0}回倒す",
+    "ru": "Победить группу монстров «{1}». Число побед: {0}"
+  },
+  "ElementalFightFire": {
+    "en": "Elemental Fight Fire",
+    "zh": "元素之战·火",
+    "zh-Hant": "元素之戰·火",
+    "ja": "元素の戦い：火",
+    "ru": "Стихийная битва: огонь"
+  },
+  "QuestElementalFightFire1": {
+    "en": "Defeat the Fire Elemental",
+    "zh": "击败火元素",
+    "zh-Hant": "擊敗火元素",
+    "ja": "火の精霊を倒せ",
+    "ru": "Победить элементаля огня"
+  },
+  "ElementalFightWind": {
+    "en": "Elemental Fight Wind",
+    "zh": "元素之战·风",
+    "zh-Hant": "元素之戰·風",
+    "ja": "元素の戦い：風",
+    "ru": "Стихийная битва: ветер"
+  },
+  "QuestElementalFightWind1": {
+    "en": "Defeat the Wind Elemental",
+    "zh": "击败风元素",
+    "zh-Hant": "擊敗風元素",
+    "ja": "風の精霊を倒せ",
+    "ru": "Победить элементаля ветра"
+  },
+  "ElementalFightNature": {
+    "en": "Elemental Fight Nature",
+    "zh": "元素之战·木",
+    "zh-Hant": "元素之戰·木",
+    "ja": "元素の戦い：自然",
+    "ru": "Стихийная битва: природа"
+  },
+  "QuestElementalFightNature1": {
+    "en": "Defeat the Nature Elemental",
+    "zh": "击败木元素",
+    "zh-Hant": "擊敗木元素",
+    "ja": "自然の精霊を倒せ",
+    "ru": "Победить элементаля природы"
+  },
+  "ElementalFightThunder": {
+    "en": "Elemental Fight Thunder",
+    "zh": "元素之战·雷",
+    "zh-Hant": "元素之戰·雷",
+    "ja": "元素の戦い：雷",
+    "ru": "Стихийная битва: молния"
+  },
+  "QuestElementalFightThunder1": {
+    "en": "Defeat the Thunder Elemental",
+    "zh": "击败雷元素",
+    "zh-Hant": "擊敗雷元素",
+    "ja": "雷の精霊を倒せ",
+    "ru": "Победить элементаля молнии"
+  },
+  "ElementalFightWater": {
+    "en": "Elemental Fight Water",
+    "zh": "元素之战·水",
+    "zh-Hant": "元素之戰·水",
+    "ja": "元素の戦い：水",
+    "ru": "Стихийная битва: вода"
+  },
+  "QuestElementalFightWater1": {
+    "en": "Defeat the Water Elemental",
+    "zh": "击败水元素",
+    "zh-Hant": "擊敗水元素",
+    "ja": "水の精霊を倒せ",
+    "ru": "Победить элементаля воды"
+  },
+  "ElementalFightEarth": {
+    "en": "Elemental Fight Earth",
+    "zh": "元素之战·土",
+    "zh-Hant": "元素之戰·土",
+    "ja": "元素の戦い：土",
+    "ru": "Стихийная битва: земля"
+  },
+  "QuestElementalFightEarth1": {
+    "en": "Defeat the Earth Elemental",
+    "zh": "击败土元素",
+    "zh-Hant": "擊敗土元素",
+    "ja": "土の精霊を倒せ",
+    "ru": "Победить элементаля земли"
+  },
+  "ElementalFightLight": {
+    "en": "Elemental Fight Light",
+    "zh": "元素之战·光",
+    "zh-Hant": "元素之戰·光",
+    "ja": "元素の戦い：光",
+    "ru": "Стихийная битва: свет"
+  },
+  "QuestElementalFightLight1": {
+    "en": "Defeat the Light Elemental",
+    "zh": "击败光元素",
+    "zh-Hant": "擊敗光元素",
+    "ja": "光の精霊を倒せ",
+    "ru": "Победить элементаля света"
+  },
+  "ElementalFightDark": {
+    "en": "Elemental Fight Dark",
+    "zh": "元素之战·暗",
+    "zh-Hant": "元素之戰·暗",
+    "ja": "元素の戦い：闇",
+    "ru": "Стихийная битва: тьма"
+  },
+  "QuestElementalFightDark1": {
+    "en": "Defeat the Dark Elemental",
+    "zh": "击败暗元素",
+    "zh-Hant": "擊敗暗元素",
+    "ja": "闇の精霊を倒せ",
+    "ru": "Победить элементаля тьмы"
+  },
+  "TheCursedForest": {
+    "en": "The Cursed Forest",
+    "zh": "被诅咒的森林",
+    "zh-Hant": "被詛咒的森林",
+    "ja": "呪われた森",
+    "ru": "Проклятый лес"
+  },
+  "QuestTheCursedForest1": {
+    "en": "Explore the Cursed Forest",
+    "zh": "探索被诅咒的森林",
+    "zh-Hant": "探索被詛咒的森林",
+    "ja": "呪われた森を探索せよ",
+    "ru": "Исследовать проклятый лес"
+  },
+  "SuspiciousShadow": {
+    "en": "Suspicious Shadow",
+    "zh": "可疑的影子",
+    "zh-Hant": "可疑的影子",
+    "ja": "怪しい影",
+    "ru": "Подозрительная тень"
+  },
+  "QuestSuspiciousShadow1": {
+    "en": "Investigate the Suspicious Shadow",
+    "zh": "调查可疑的影子",
+    "zh-Hant": "調查可疑的影子",
+    "ja": "怪しい影を調べよう",
+    "ru": "Исследовать подозрительную тень"
+  },
+  "DestroyTheTribe": {
+    "en": "Destroy The Tribe",
+    "zh": "消灭部族",
+    "zh-Hant": "消滅部落",
+    "ja": "部族を倒せ",
+    "ru": "Уничтожить племя"
+  },
+  "QuestDestroyTheTribe1": {
+    "en": "Assault the Tribe",
+    "zh": "进攻部族",
+    "zh-Hant": "進攻部族",
+    "ja": "部族への襲撃",
+    "ru": "Атаковать племя"
+  },
+  "DefeatDungeonArena": {
+    "en": "Defeat {1} x{0} time(s)",
+    "zh": "攻陷{0}次{1}",
+    "zh-Hant": "攻陷{0}次{1}",
+    "ja": "{1}を{0}回倒す",
+    "ru": "Победить «{1}». Число побед: {0}"
+  },
+  "UrgentNeedForIronIngot": {
+    "en": "Urgent Need for Iron Ingots",
+    "zh": "紧急需求铁锭",
+    "zh-Hant": "緊急需求鐵錠",
+    "ja": "鉄インゴット急募",
+    "ru": "Срочно нужны железные слитки"
+  },
+  "QuestUrgentNeedForIronIngot1": {
+    "en": "Gather Iron Ingots",
+    "zh": "收集铁锭",
+    "zh-Hant": "收集鐵錠",
+    "ja": "鉄インゴットを集めよう",
+    "ru": "Собрать железные слитки"
+  },
+  "UrgentNeedForCopperIngot": {
+    "en": "Urgent Need for Copper Ingots",
+    "zh": "紧急需求铜锭",
+    "zh-Hant": "緊急需求銅錠",
+    "ja": "銅インゴット急募",
+    "ru": "Срочно нужны медные слитки"
+  },
+  "QuestUrgentNeedForCopperIngot1": {
+    "en": "Gather Copper Ingots",
+    "zh": "收集铜锭",
+    "zh-Hant": "收集銅錠",
+    "ja": "銅インゴットを集めよう",
+    "ru": "Собрать медные слитки"
+  },
+  "KingdomThreatArea1": {
+    "en": "Kingdom Threat",
+    "zh": "王国威胁",
+    "zh-Hant": "王國威脅",
+    "ja": "王国への脅威",
+    "ru": "Угроза королевству"
+  },
+  "QuestKingdomThreatArea1": {
+    "en": "Eliminate the Kingdom Threat",
+    "zh": "肃清王国威胁",
+    "zh-Hant": "肅清王國威脅",
+    "ja": "王国への脅威を排除する",
+    "ru": "Устранить угрозу королевству"
+  },
+  "QuestKingdomThreatAreaDescription": {
+    "en": "Monsters around area {0} have grown far more dangerous. Defeat {1} of them to secure the region.",
+    "zh": "区域{0}附近的怪物变得更加危险。击败 {1} 只怪物，确保当地安全。",
+    "zh-Hant": "區域{0}附近的怪物變得更加危險。擊敗 {1} 隻怪物，確保當地安全。",
+    "ja": "エリア{0}周辺のモンスターが以前より危険になっています。{1}体倒して地域の安全を確保してください。",
+    "ru": "Монстры в окрестностях области {0} стали гораздо опаснее. Победите их, чтобы обезопасить регион. Требуемое количество: {1}."
+  },
+  "ForestSecurityArea1": {
+    "en": "Forest Security",
+    "zh": "森林治安",
+    "zh-Hant": "森林治安",
+    "ja": "森の安全",
+    "ru": "Безопасность леса"
+  },
+  "QuestForestSecurityArea1": {
+    "en": "Secure the Forest",
+    "zh": "确保森林安全",
+    "zh-Hant": "確保森林安全",
+    "ja": "森の安全を確保する",
+    "ru": "Обезопасить лес"
+  },
+  "QuestForestSecurityDescription": {
+    "en": "{3} have been sighted near {2} in area {0}. Defeat {1} of them to make the forest safe again.",
+    "zh": "区域{0}的{2}附近发现了{3}。击败 {1} 只，让森林恢复安全。",
+    "zh-Hant": "區域{0}的{2}附近發現了{3}。擊敗 {1} 隻，讓森林恢復安全。",
+    "ja": "エリア{0}の{2}付近で{3}が目撃されています。{1}体倒して森の安全を取り戻してください。",
+    "ru": "В области {0}, возле {2}, замечены монстры «{3}». Победите их, чтобы вернуть лесу безопасность. Требуемое количество: {1}."
+  },
+  "SilkCollectionArea1": {
+    "en": "Silk Collection",
+    "zh": "丝绸收集",
+    "zh-Hant": "絲綢收集",
+    "ja": "絹の収集",
+    "ru": "Сбор шёлка"
+  },
+  "QuestSilkCollectionArea1": {
+    "en": "Gather Silk",
+    "zh": "收集丝绸",
+    "zh-Hant": "收集絲綢",
+    "ja": "絹を集める",
+    "ru": "Собрать шёлк"
+  },
+  "QuestSilkCollectionDescription": {
+    "en": "Fine {1} is needed for crafting and tailoring. Gather {1} from area {0}.",
+    "zh": "制作装备和裁缝工艺需要优质{1}。前往区域{0}收集 {1} 。",
+    "zh-Hant": "製作裝備和裁縫工藝需要優質{1}。前往區域{0}收集 {1} 。",
+    "ja": "製作や裁縫に上質な{1}が必要です。エリア{0}で{1}を集めてください。",
+    "ru": "Для ремесла и шитья нужен качественный материал «{1}». Соберите {1} в области {0}."
+  },
+  "ForestSecurityArea8": {
+    "en": "Forest Security",
+    "zh": "森林治安",
+    "zh-Hant": "森林治安",
+    "ja": "森の安全",
+    "ru": "Безопасность леса"
+  },
+  "QuestForestSecurityArea8": {
+    "en": "Secure the Forest",
+    "zh": "确保森林安全",
+    "zh-Hant": "確保森林安全",
+    "ja": "森の安全を確保する",
+    "ru": "Обезопасить лес"
+  },
+  "FarmSuppliesArea8": {
+    "en": "Farm Supplies",
+    "zh": "农场补给",
+    "zh-Hant": "農場補給",
+    "ja": "農場の物資",
+    "ru": "Припасы для фермы"
+  },
+  "QuestFarmSuppliesArea8": {
+    "en": "Gather Farm Supplies",
+    "zh": "收集农场补给",
+    "zh-Hant": "收集農場補給",
+    "ja": "農場の物資を集める",
+    "ru": "Собрать припасы для фермы"
+  },
+  "QuestFarmSuppliesDescription": {
+    "en": "The Adventurers' Guild needs fresh ingredients. Gather {1} from area {0}.",
+    "zh": "冒险者公会需要新鲜食材。前往区域{0}收集 {1}。",
+    "zh-Hant": "冒險者公會需要新鮮食材。前往區域{0}收集 {1}。",
+    "ja": "冒険者ギルドが新鮮な食材を必要としています。エリア{0}で{1}を集めてください。",
+    "ru": "Гильдии искателей приключений нужны свежие ингредиенты. Соберите {1} в области {0}."
+  },
+  "SlimeNestArea8": {
+    "en": "Slime Nest",
+    "zh": "史莱姆巢穴",
+    "zh-Hant": "史萊姆巢穴",
+    "ja": "スライムの巣",
+    "ru": "Гнездо слаймов"
+  },
+  "QuestSlimeNestArea8": {
+    "en": "Destroy the Slime Nest",
+    "zh": "摧毁史莱姆巢穴",
+    "zh-Hant": "摧毀史萊姆巢穴",
+    "ja": "スライムの巣を壊す",
+    "ru": "Уничтожить гнездо слаймов"
+  },
+  "QuestSlimeRareEncounterDescription": {
+    "en": "Unusually powerful Slimes are appearing throughout area {0}. Defeat {1} Rare Encounter monsters to suppress the outbreak.",
+    "zh": "区域 {0} 出现了异常强大的史莱姆。击败 {1} 只稀有遭遇怪物，遏制这次爆发。",
+    "zh-Hant": "區域 {0} 出現了異常強大的史萊姆。擊敗 {1} 隻稀有遭遇怪物，遏制這次爆發。",
+    "ja": "エリア{0}の各地に異常に強いスライムが現れています。レア遭遇のモンスターを{1}体倒して発生を抑えてください。",
+    "ru": "По всей области {0} появляются необычайно сильные слаймы. Победите монстров из редких встреч, чтобы сдержать их нашествие. Требуемое количество: {1}."
+  },
+  "DefeatRareEncounterMonster": {
+    "en": "Defeat {1} Rare Encounters in area {0}",
+    "zh": "在区域 {0} 击败 {1} 个稀有遭遇",
+    "zh-Hant": "在區域 {0} 擊敗 {1} 個稀有遭遇",
+    "ja": "エリア{0}のレアな遭遇で{1}回勝利する",
+    "ru": "Победить в редких встречах области {0}: {1}"
+  },
+  "KingdomThreatArea11": {
+    "en": "Kingdom Threat",
+    "zh": "王国威胁",
+    "zh-Hant": "王國威脅",
+    "ja": "王国への脅威",
+    "ru": "Угроза королевству"
+  },
+  "QuestKingdomThreatArea11": {
+    "en": "Eliminate the Kingdom Threat",
+    "zh": "肃清王国威胁",
+    "zh-Hant": "肅清王國威脅",
+    "ja": "王国への脅威を排除する",
+    "ru": "Устранить угрозу королевству"
+  },
+  "ForestSecurityArea11": {
+    "en": "Forest Security",
+    "zh": "森林治安",
+    "zh-Hant": "森林治安",
+    "ja": "森の安全",
+    "ru": "Безопасность леса"
+  },
+  "QuestForestSecurityArea11": {
+    "en": "Secure the Forest",
+    "zh": "确保森林安全",
+    "zh-Hant": "確保森林安全",
+    "ja": "森の安全を確保する",
+    "ru": "Обезопасить лес"
+  },
+  "FarmSuppliesArea11": {
+    "en": "Farm Supplies",
+    "zh": "农场补给",
+    "zh-Hant": "農場補給",
+    "ja": "農場の物資",
+    "ru": "Припасы для фермы"
+  },
+  "QuestFarmSuppliesArea11": {
+    "en": "Gather Farm Supplies",
+    "zh": "收集农场补给",
+    "zh-Hant": "收集農場補給",
+    "ja": "農場の物資を集める",
+    "ru": "Собрать припасы для фермы"
+  },
+  "KingdomThreatArea13": {
+    "en": "Kingdom Threat",
+    "zh": "王国威胁",
+    "zh-Hant": "王國威脅",
+    "ja": "王国への脅威",
+    "ru": "Угроза королевству"
+  },
+  "QuestKingdomThreatArea13": {
+    "en": "Eliminate the Kingdom Threat",
+    "zh": "肃清王国威胁",
+    "zh-Hant": "肅清王國威脅",
+    "ja": "王国への脅威を排除する",
+    "ru": "Устранить угрозу королевству"
+  },
+  "ForestSecurityArea13": {
+    "en": "Forest Security",
+    "zh": "森林治安",
+    "zh-Hant": "森林治安",
+    "ja": "森の安全",
+    "ru": "Безопасность леса"
+  },
+  "QuestForestSecurityArea13": {
+    "en": "Secure the Forest",
+    "zh": "确保森林安全",
+    "zh-Hant": "確保森林安全",
+    "ja": "森の安全を確保する",
+    "ru": "Обезопасить лес"
+  },
+  "FarmSuppliesArea13": {
+    "en": "Farm Supplies",
+    "zh": "农场补给",
+    "zh-Hant": "農場補給",
+    "ja": "農場の物資",
+    "ru": "Припасы для фермы"
+  },
+  "QuestFarmSuppliesArea13": {
+    "en": "Gather Farm Supplies",
+    "zh": "收集农场补给",
+    "zh-Hant": "收集農場補給",
+    "ja": "農場の物資を集める",
+    "ru": "Собрать припасы для фермы"
+  },
+  "ForestSecurityArea68": {
+    "en": "Forest Security",
+    "zh": "森林治安",
+    "zh-Hant": "森林治安",
+    "ja": "森の安全",
+    "ru": "Безопасность леса"
+  },
+  "QuestForestSecurityArea68": {
+    "en": "Secure the Forest",
+    "zh": "确保森林安全",
+    "zh-Hant": "確保森林安全",
+    "ja": "森の安全を確保する",
+    "ru": "Обезопасить лес"
+  },
+  "SilkCollectionArea68": {
+    "en": "Silk Collection",
+    "zh": "丝绸收集",
+    "zh-Hant": "絲綢收集",
+    "ja": "絹の収集",
+    "ru": "Сбор шёлка"
+  },
+  "QuestSilkCollectionArea68": {
+    "en": "Gather Silk",
+    "zh": "收集丝绸",
+    "zh-Hant": "收集絲綢",
+    "ja": "絹を集める",
+    "ru": "Собрать шёлк"
+  },
+  "SlimeNestArea68": {
+    "en": "Slime Nest",
+    "zh": "史莱姆巢穴",
+    "zh-Hant": "史萊姆巢穴",
+    "ja": "スライムの巣",
+    "ru": "Гнездо слаймов"
+  },
+  "QuestSlimeNestArea68": {
+    "en": "Destroy the Slime Nest",
+    "zh": "摧毁史莱姆巢穴",
+    "zh-Hant": "摧毀史萊姆巢穴",
+    "ja": "スライムの巣を壊す",
+    "ru": "Уничтожить гнездо слаймов"
+  },
+  "ForestSecurityArea69": {
+    "en": "Forest Security",
+    "zh": "森林治安",
+    "zh-Hant": "森林治安",
+    "ja": "森の安全",
+    "ru": "Безопасность леса"
+  },
+  "QuestForestSecurityArea69": {
+    "en": "Secure the Forest",
+    "zh": "确保森林安全",
+    "zh-Hant": "確保森林安全",
+    "ja": "森の安全を確保する",
+    "ru": "Обезопасить лес"
+  },
+  "FarmSuppliesArea69": {
+    "en": "Farm Supplies",
+    "zh": "农场补给",
+    "zh-Hant": "農場補給",
+    "ja": "農場の物資",
+    "ru": "Припасы для фермы"
+  },
+  "QuestFarmSuppliesArea69": {
+    "en": "Gather Farm Supplies",
+    "zh": "收集农场补给",
+    "zh-Hant": "收集農場補給",
+    "ja": "農場の物資を集める",
+    "ru": "Собрать припасы для фермы"
+  },
+  "ElementalSurgeArea69": {
+    "en": "Elemental Surge",
+    "zh": "元素暴走",
+    "zh-Hant": "元素暴走",
+    "ja": "元素の急増",
+    "ru": "Всплеск стихий"
+  },
+  "QuestElementalSurgeArea69": {
+    "en": "Suppress the Elemental Surge",
+    "zh": "平息元素暴走",
+    "zh-Hant": "平息元素暴走",
+    "ja": "元素の急増を抑える",
+    "ru": "Подавить всплеск стихий"
+  },
+  "QuestElementalSurgeDescription": {
+    "en": "Rare elemental monsters are surging across area {0}. Defeat {1} Rare Encounter monsters to restore balance.",
+    "zh": "区域 {0} 出现了大量稀有元素怪物。击败 {1} 只稀有遭遇怪物，恢复元素平衡。",
+    "zh-Hant": "區域 {0} 出現了大量稀有元素怪物。擊敗 {1} 隻稀有遭遇怪物，恢復元素平衡。",
+    "ja": "エリア{0}全域で希少な元素モンスターが急増しています。レア遭遇のモンスターを{1}体倒して均衡を取り戻してください。",
+    "ru": "Редкие стихийные монстры заполонили область {0}. Победите монстров из редких встреч, чтобы восстановить равновесие. Требуемое количество: {1}."
+  },
+  "CastleThreatArea10CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea10CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "QuestCastleThreatAreaDescription": {
+    "en": "Monsters around area {0} have become increasingly dangerous. Defeat {1} of them to secure the region.",
+    "zh": "区域{0}附近的怪物变得更加危险。击败 {1} 只怪物，确保当地安全。",
+    "zh-Hant": "區域{0}附近的怪物變得更加危險。擊敗 {1} 隻怪物，確保當地安全。",
+    "ja": "エリア{0}周辺のモンスターがますます危険になっています。{1}体倒して地域の安全を確保してください。",
+    "ru": "Монстры в окрестностях области {0} становятся всё опаснее. Победите их, чтобы обезопасить регион. Требуемое количество: {1}."
+  },
+  "CastleGuardArea10CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea10CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "QuestCastleGuardDescription": {
+    "en": "{1} have been spotted near the castle in area {0}. Defeat them to protect the castle.",
+    "zh": "区域{0}的城堡附近发现了{1}。击败他们，保护城堡安全。",
+    "zh-Hant": "區域{0}的城堡附近發現了{1}。擊敗他們，保護城堡安全。",
+    "ja": "エリア{0}の城付近で{1}が目撃されています。倒して城を守ってください。",
+    "ru": "В области {0}, возле замка, замечены монстры «{1}». Победите их, чтобы защитить замок."
+  },
+  "CastleProvisionsArea10CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea10CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "QuestCastleProvisionsDescription": {
+    "en": "The Castle Adventurers' Guild requires {1}. Gather them from area {0}.",
+    "zh": "城堡冒险者公会需要{1}。前往区域{0}收集。",
+    "zh-Hant": "城堡冒險者公會需要{1}。前往區域{0}收集。",
+    "ja": "城の冒険者ギルドが{1}を必要としています。エリア{0}で集めてください。",
+    "ru": "Гильдии искателей приключений при замке нужны припасы «{1}». Соберите их в области {0}."
+  },
+  "CastleThreatArea15CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea15CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "CastleGuardArea15CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea15CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "CastleProvisionsArea15CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea15CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "CastleThreatArea18CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea18CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "CastleGuardArea18CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea18CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "CastleProvisionsArea18CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea18CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "CastleThreatArea29CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea29CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "CastleGuardArea29CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea29CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "CastleProvisionsArea29CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea29CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "CastleThreatArea34CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea34CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "CastleGuardArea34CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea34CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "CastleProvisionsArea34CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea34CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "CastleThreatArea37CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea37CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "CastleGuardArea37CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea37CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "CastleProvisionsArea37CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea37CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "CastleThreatArea59CGrade": {
+    "en": "Castle Threat",
+    "zh": "城堡威胁",
+    "zh-Hant": "城堡威脅",
+    "ja": "城への脅威",
+    "ru": "Угроза замку"
+  },
+  "QuestCastleThreatArea59CGrade": {
+    "en": "Eliminate the Castle Threat",
+    "zh": "肃清城堡威胁",
+    "zh-Hant": "肅清城堡威脅",
+    "ja": "城への脅威を排除する",
+    "ru": "Устранить угрозу замку"
+  },
+  "CastleGuardArea59CGrade": {
+    "en": "Castle Guard",
+    "zh": "城堡守卫",
+    "zh-Hant": "城堡守衛",
+    "ja": "城の防衛",
+    "ru": "Оборона замка"
+  },
+  "QuestCastleGuardArea59CGrade": {
+    "en": "Guard the Castle",
+    "zh": "保卫城堡",
+    "zh-Hant": "保衛城堡",
+    "ja": "城を守る",
+    "ru": "Защитить замок"
+  },
+  "CastleProvisionsArea59CGrade": {
+    "en": "Castle Provisions",
+    "zh": "城堡补给",
+    "zh-Hant": "城堡補給",
+    "ja": "城の食料",
+    "ru": "Провиант для замка"
+  },
+  "QuestCastleProvisionsArea59CGrade": {
+    "en": "Gather Castle Provisions",
+    "zh": "收集城堡补给",
+    "zh-Hant": "收集城堡補給",
+    "ja": "城の食料を集める",
+    "ru": "Собрать провиант для замка"
+  },
+  "GemwatchLeylinePatrol": {
+    "en": "Leyline Patrol",
+    "zh": "地脉巡查",
+    "zh-Hant": "地脈巡查",
+    "ja": "地脈巡回",
+    "ru": "Патруль силовых линий"
+  },
+  "QuestGemwatchLeylinePatrol": {
+    "en": "Gemwatch Leyline Patrol",
+    "zh": "宝石瞭望镇地脉巡查",
+    "zh-Hant": "寶石瞭望鎮地脈巡查",
+    "ja": "宝石見の町の地脈巡回",
+    "ru": "Патруль силовых линий Города Самоцветного дозора"
+  },
+  "QuestGemwatchLeylinePatrolDescription": {
+    "en": "Elemental activity around area {0} is becoming unstable. Patrol the surrounding region and clear out nearby monsters.",
+    "zh": "区域 {0} 周围的元素活动变得不稳定。巡查附近地区并清除出没的怪物。",
+    "zh-Hant": "區域 {0} 周圍的元素活動變得不穩定。巡查附近地區並清除出沒的怪物。",
+    "ja": "エリア{0}周辺の元素活動が不安定になっています。周辺を巡回して、近くのモンスターを排除してください。",
+    "ru": "Стихийная активность вокруг области {0} становится нестабильной. Обойдите окрестности и уничтожьте ближайших монстров."
+  },
+  "GemwatchStoneSamples": {
+    "en": "Stone Sample Survey",
+    "zh": "石样调查",
+    "zh-Hant": "石樣調查",
+    "ja": "石の標本調査",
+    "ru": "Исследование образцов камня"
+  },
+  "QuestGemwatchStoneSamples": {
+    "en": "Survey Stone Samples",
+    "zh": "调查石样",
+    "zh-Hant": "調查石樣",
+    "ja": "石の標本を調べる",
+    "ru": "Исследовать образцы камня"
+  },
+  "QuestGemwatchStoneSamplesDescription": {
+    "en": "Researchers at {0} need ordinary stone samples to compare with the local elemental minerals. Gather the samples during your exploration.",
+    "zh": "{0} 的研究人员需要普通石样，用来与当地的元素矿物进行比较。请在探索途中收集所需样本。",
+    "zh-Hant": "{0} 的研究人員需要普通石樣，用來與當地的元素礦物進行比較。請在探索途中收集所需樣本。",
+    "ja": "{0}の研究者たちが、地元の元素鉱物との比較に使う普通の石の標本を必要としています。探索中に集めてください。",
+    "ru": "Исследователям в месте «{0}» нужны образцы обычного камня для сравнения с местными стихийными минералами. Соберите их во время исследования."
+  },
+  "GemwatchSilverVeinSurvey": {
+    "en": "Gemwatch Mining Survey",
+    "zh": "宝石瞭望镇矿业调查",
+    "zh-Hant": "寶石瞭望鎮礦業調查",
+    "ja": "宝石見の町の採鉱調査",
+    "ru": "Горное исследование Города Самоцветного дозора"
+  },
+  "QuestGemwatchSilverVeinSurvey": {
+    "en": "Silver Vein Survey",
+    "zh": "银矿脉调查",
+    "zh-Hant": "銀礦脈調查",
+    "ja": "銀鉱脈の調査",
+    "ru": "Исследование серебряной жилы"
+  },
+  "QuestGemwatchSilverVeinSurveyDescription": {
+    "en": "Survey the silver deposits at {0} in area {1}. Reaching the mining site requires at least Mountain Level 1.",
+    "zh": "调查区域 {1} 的 {0} 银矿资源。前往采矿地点需要山地等级至少达到 1。",
+    "zh-Hant": "調查區域 {1} 的 {0} 銀礦資源。前往採礦地點需要山地等級至少達到 1。",
+    "ja": "エリア{1}の{0}で銀鉱床を調べてください。採掘場に行くには山岳レベル1以上が必要です。",
+    "ru": "Исследуйте залежи серебра в месте «{0}» в области {1}. Для доступа к месту добычи нужен уровень перемещения по горам не ниже 1."
+  },
+  "WinterRefugeTrailCheck": {
+    "en": "Snowfield Trail Check",
+    "zh": "雪地路线检查",
+    "zh-Hant": "雪地路線檢查",
+    "ja": "雪原の道の確認",
+    "ru": "Проверка снежных троп"
+  },
+  "QuestWinterRefugeFreshTracks": {
+    "en": "Fresh Tracks Near the Refuge",
+    "zh": "庇护所附近的新足迹",
+    "zh-Hant": "庇護所附近的新足跡",
+    "ja": "避難所付近の新しい足跡",
+    "ru": "Свежие следы возле убежища"
+  },
+  "QuestWinterRefugeFreshTracksDescription": {
+    "en": "Fresh tracks are appearing around area {0}. Defeat {1} monsters while learning the routes near WinterRefuge.",
+    "zh": "区域 {0} 周围出现了新的足迹。击败 {1} 只怪物，同时熟悉冬日庇护所附近的路线。",
+    "zh-Hant": "區域 {0} 周圍出現了新的足跡。擊敗 {1} 隻怪物，同時熟悉冬日庇護所附近的路線。",
+    "ja": "エリア{0}周辺に新しい足跡が現れています。冬の避難所付近の道を覚えながら、モンスターを{1}体倒してください。",
+    "ru": "Вокруг области {0} появляются свежие следы. Победите монстров, знакомясь с путями возле Зимнего убежища. Требуемое количество: {1}."
+  },
+  "CinderTowerLowerPathCheck": {
+    "en": "Lower Path Check",
+    "zh": "下层小径检查",
+    "zh-Hant": "下層小徑檢查",
+    "ja": "下の道の確認",
+    "ru": "Проверка нижней тропы"
+  },
+  "QuestCinderTowerLowerPathEmbers": {
+    "en": "Small Flames on the Lower Path",
+    "zh": "下层小径上的火苗",
+    "zh-Hant": "下層小徑上的火苗",
+    "ja": "下の道の小さな炎",
+    "ru": "Огоньки на нижней тропе"
+  },
+  "QuestCinderTowerLowerPathEmbersDescription": {
+    "en": "{1} are drifting onto the lower paths in area {0}. Defeat {2} before they gather near CinderTower.",
+    "zh": "{1}正在飘向区域 {0} 的下层小径。击败 {2} 只，避免它们在灰烬塔附近聚集。",
+    "zh-Hant": "{1}正在飄向區域 {0} 的下層小徑。擊敗 {2} 隻，避免牠們在灰燼塔附近聚集。",
+    "ja": "エリア{0}の下の道に{1}が漂ってきています。残り火の塔付近に集まる前に{2}体倒してください。",
+    "ru": "Существа «{1}» дрейфуют на нижние тропы в области {0}. Победите их, пока они не собрались возле Башни углей. Требуемое количество: {2}."
+  },
+  "RootHavenWeavingRequest": {
+    "en": "Haven Weaving Request",
+    "zh": "庇护所编织委托",
+    "zh-Hant": "庇護所編織委託",
+    "ja": "隠れ里の織物依頼",
+    "ru": "Заказ на плетение для приюта"
+  },
+  "QuestRootHavenWeavingFibers": {
+    "en": "Soft Fibers for RootHaven",
+    "zh": "林根庇护所需要的柔软纤维",
+    "zh-Hant": "林根庇護所需要的柔軟纖維",
+    "ja": "根の隠れ里のための柔らかな繊維",
+    "ru": "Мягкие волокна для Приюта корней"
+  },
+  "QuestRootHavenWeavingFibersDescription": {
+    "en": "RootHaven needs {2} {1} from area {0} for everyday weaving. Gather them during your exploration.",
+    "zh": "林根庇护所需要区域 {0} 的 {2} 个{1}制作日常编织品。请在探索途中收集。",
+    "zh-Hant": "林根庇護所需要區域 {0} 的 {2} 個{1}製作日常編織品。請在探索途中收集。",
+    "ja": "根の隠れ里が日用品を織るために、エリア{0}の{1}を{2}個必要としています。探索中に集めてください。",
+    "ru": "Приюту корней нужен материал «{1}» из области {0} для повседневного плетения. Требуемое количество: {2}. Соберите его во время исследования."
+  },
+  "SandholdSmallRepairRequest": {
+    "en": "Small Repair Request",
+    "zh": "小型维修委托",
+    "zh-Hant": "小型維修委託",
+    "ja": "小さな修繕依頼",
+    "ru": "Заказ на мелкий ремонт"
+  },
+  "QuestSandholdLooseShells": {
+    "en": "Shells Left by the Wind",
+    "zh": "风吹留下的贝壳碎片",
+    "zh-Hant": "風吹留下的貝殼碎片",
+    "ja": "風が残した貝殻",
+    "ru": "Раковины, оставленные ветром"
+  },
+  "QuestSandholdLooseShellsDescription": {
+    "en": "Collect {2} {1} from area {0} for small repairs around Sandhold.",
+    "zh": "从区域 {0} 收集 {2} 个{1}，用于沙堡镇的简单维修。",
+    "zh-Hant": "從區域 {0} 收集 {2} 個{1}，用於沙堡鎮的簡單維修。",
+    "ja": "砂砦の小さな修繕のために、エリア{0}で{1}を{2}個集めてください。",
+    "ru": "Соберите материал «{1}» в области {0} для мелкого ремонта в Песчаной твердыне. Требуемое количество: {2}."
+  },
+  "StormwatchPylonSafetyCheck": {
+    "en": "Pylon Safety Check",
+    "zh": "塔柱安全检查",
+    "zh-Hant": "塔柱安全檢查",
+    "ja": "塔柱の安全確認",
+    "ru": "Проверка безопасности пилона"
+  },
+  "QuestStormwatchFirstPylonBees": {
+    "en": "Bees Near the First Pylon",
+    "zh": "第一座塔柱附近的雷蜂",
+    "zh-Hant": "第一座塔柱附近的雷蜂",
+    "ja": "最初の塔柱付近のハチたち",
+    "ru": "Пчёлы возле первого пилона"
+  },
+  "QuestStormwatchFirstPylonBeesDescription": {
+    "en": "{1} are gathering near the first pylons in area {0}. Defeat {2} before they interrupt the relay.",
+    "zh": "{1}正在区域 {0} 的初段塔柱附近聚集。击败 {2} 只，避免它们干扰中继线路。",
+    "zh-Hant": "{1}正在區域 {0} 的初段塔柱附近聚集。擊敗 {2} 隻，避免牠們干擾中繼線路。",
+    "ja": "エリア{0}の最初の塔柱付近に{1}が集まっています。中継を妨げる前に{2}体倒してください。",
+    "ru": "Существа «{1}» собираются возле первых пилонов в области {0}. Победите их, пока они не нарушили ретрансляцию. Требуемое количество: {2}."
+  },
+  "BreezewatchSignpostSafetyCheck": {
+    "en": "Signpost Safety Check",
+    "zh": "路标安全检查",
+    "zh-Hant": "路標安全檢查",
+    "ja": "道標の安全確認",
+    "ru": "Проверка безопасности указателей"
+  },
+  "QuestBreezewatchSignpostBunnies": {
+    "en": "Bunnies by the Signposts",
+    "zh": "路标旁的风兔",
+    "zh-Hant": "路標旁的風兔",
+    "ja": "道標のそばのウサギたち",
+    "ru": "Кролики у указателей"
+  },
+  "QuestBreezewatchSignpostBunniesDescription": {
+    "en": "{1} are blocking the signposts in area {0}. Defeat {2} to keep Breezewatch's paths clear.",
+    "zh": "{1}正在挡住区域 {0} 的路标。击败 {2} 只，确保观风哨站附近的路线畅通。",
+    "zh-Hant": "{1}正在擋住區域 {0} 的路標。擊敗 {2} 隻，確保觀風哨站附近的路線暢通。",
+    "ja": "エリア{0}の道標を{1}が塞いでいます。{2}体倒して風見哨所への道を確保してください。",
+    "ru": "Существа «{1}» перекрывают указатели в области {0}. Победите их, чтобы расчистить пути Ветрового дозора. Требуемое количество: {2}."
+  },
+  "WinterRefugeSupplyRouteSweep": {
+    "en": "Refuge Supply Route Sweep",
+    "zh": "庇护所补给路线清理",
+    "zh-Hant": "庇護所補給路線清理",
+    "ja": "避難所の補給路の掃討",
+    "ru": "Зачистка пути снабжения убежища"
+  },
+  "QuestWinterRefugeSnowfieldPatrol": {
+    "en": "Tracks Along the Supply Route",
+    "zh": "补给路线上的足迹",
+    "zh-Hant": "補給路線上的足跡",
+    "ja": "補給路の足跡",
+    "ru": "Следы на пути снабжения"
+  },
+  "QuestWinterRefugeSnowfieldPatrolDescription": {
+    "en": "Monsters around WinterRefuge in area {0} are pressing toward the roads. Defeat {1} monsters during your patrol.",
+    "zh": "区域 {0} 的冬日庇护所周围有越来越多怪物逼近道路。巡逻期间击败 {1} 只怪物。",
+    "zh-Hant": "區域 {0} 的冬日庇護所周圍有越來越多怪物逼近道路。巡邏期間擊敗 {1} 隻怪物。",
+    "ja": "エリア{0}の冬の避難所周辺で、モンスターが道に迫っています。巡回中に{1}体倒してください。",
+    "ru": "Монстры вокруг Зимнего убежища в области {0} приближаются к дорогам. Победите их во время патруля. Требуемое количество: {1}."
+  },
+  "CinderTowerEmberlineWatch": {
+    "en": "Emberline Watch",
+    "zh": "余烬路线警戒",
+    "zh-Hant": "餘燼路線警戒",
+    "ja": "残り火の道の警戒",
+    "ru": "Дозор угольной тропы"
+  },
+  "QuestCinderTowerFireElementalControl": {
+    "en": "Embers Along the Tower Path",
+    "zh": "塔楼小径上的余烬",
+    "zh-Hant": "塔樓小徑上的餘燼",
+    "ja": "塔への道の残り火",
+    "ru": "Угли на тропе к башне"
+  },
+  "QuestCinderTowerFireElementalControlDescription": {
+    "en": "{1} are gathering near CinderTower in area {0}. Defeat {2} before the tower roads become unsafe.",
+    "zh": "{1}正在区域 {0} 的灰烬塔附近聚集。击败 {2} 只，避免塔楼道路陷入危险。",
+    "zh-Hant": "{1}正在區域 {0} 的灰燼塔附近聚集。擊敗 {2} 隻，避免塔樓道路陷入危險。",
+    "ja": "エリア{0}の残り火の塔付近に{1}が集まっています。塔への道が危険になる前に{2}体倒してください。",
+    "ru": "Существа «{1}» собираются возле Башни углей в области {0}. Победите их, пока дороги к башне не стали опасными. Требуемое количество: {2}."
+  },
+  "RootHavenShelterReinforcement": {
+    "en": "Shelter Reinforcement",
+    "zh": "住所加固委托",
+    "zh-Hant": "住所加固委託",
+    "ja": "避難所の補強",
+    "ru": "Укрепление укрытий"
+  },
+  "QuestRootHavenForestFiber": {
+    "en": "Fibers for Stronger Shelters",
+    "zh": "加固住所所需的纤维",
+    "zh-Hant": "加固住所所需的纖維",
+    "ja": "避難所を強くする繊維",
+    "ru": "Волокна для прочных укрытий"
+  },
+  "QuestRootHavenForestFiberDescription": {
+    "en": "RootHaven needs {2} {1} from area {0} to reinforce its shelters. Gather the materials during your exploration.",
+    "zh": "林根庇护所需要区域 {0} 的 {2} 个{1}来加固住所。请在探索途中收集这些材料。",
+    "zh-Hant": "林根庇護所需要區域 {0} 的 {2} 個{1}來加固住所。請在探索途中收集這些材料。",
+    "ja": "根の隠れ里が避難所の補強に、エリア{0}の{1}を{2}個必要としています。探索中に材料を集めてください。",
+    "ru": "Приюту корней нужен материал «{1}» из области {0} для укрепления укрытий. Требуемое количество: {2}. Соберите материалы во время исследования."
+  },
+  "SandholdWallRepairOrder": {
+    "en": "Sandhold Repair Order",
+    "zh": "沙堡维修委托",
+    "zh-Hant": "沙堡維修委託",
+    "ja": "砂砦の修繕依頼",
+    "ru": "Заказ на ремонт Песчаной твердыни"
+  },
+  "QuestSandholdDesertFragments": {
+    "en": "Fragments for Sandhold's Walls",
+    "zh": "修补沙堡城墙的碎片",
+    "zh-Hant": "修補沙堡城牆的碎片",
+    "ja": "砂砦の壁のための欠片",
+    "ru": "Осколки для стен Песчаной твердыни"
+  },
+  "QuestSandholdDesertFragmentsDescription": {
+    "en": "Sandhold needs {2} {1} from area {0} for repairs. Gather them while crossing the desert.",
+    "zh": "沙堡镇需要区域 {0} 的 {2} 个{1}进行维修。请在穿越沙漠时收集。",
+    "zh-Hant": "沙堡鎮需要區域 {0} 的 {2} 個{1}進行維修。請在穿越沙漠時收集。",
+    "ja": "砂砦が修繕に、エリア{0}の{1}を{2}個必要としています。砂漠を渡る間に集めてください。",
+    "ru": "Песчаной твердыне нужен материал «{1}» из области {0} для ремонта. Требуемое количество: {2}. Соберите его, пересекая пустыню."
+  },
+  "StormwatchRelayPestOrder": {
+    "en": "Relay Pest Order",
+    "zh": "中继线害兽处理令",
+    "zh-Hant": "中繼線害獸處理令",
+    "ja": "中継線の害獣駆除命令",
+    "ru": "Приказ об истреблении вредителей на линиях ретрансляции"
+  },
+  "QuestStormwatchLightningBeeControl": {
+    "en": "Buzzing Along the Relay Lines",
+    "zh": "中继线路旁的嗡鸣",
+    "zh-Hant": "中繼線路旁的嗡鳴",
+    "ja": "中継線の羽音",
+    "ru": "Жужжание вдоль линий ретрансляции"
+  },
+  "QuestStormwatchLightningBeeControlDescription": {
+    "en": "{1} are gathering around the relay paths in area {0}. Defeat {2} before they disrupt travel near StormwatchPost.",
+    "zh": "{1}正在区域 {0} 的中继线路周围聚集。击败 {2} 只，避免它们干扰雷暴哨站附近的通行。",
+    "zh-Hant": "{1}正在區域 {0} 的中繼線路周圍聚集。擊敗 {2} 隻，避免牠們干擾雷暴哨站附近的通行。",
+    "ja": "エリア{0}の中継路周辺に{1}が集まっています。嵐見哨所付近の通行を妨げる前に{2}体倒してください。",
+    "ru": "Существа «{1}» собираются вокруг путей ретрансляции в области {0}. Победите их, пока они не нарушили движение возле Грозового дозора. Требуемое количество: {2}."
+  },
+  "BreezewatchHighroadClearing": {
+    "en": "Highroad Clearing",
+    "zh": "高地道路清理委托",
+    "zh-Hant": "高地道路清理委託",
+    "ja": "高地の道の掃討",
+    "ru": "Зачистка высокой дороги"
+  },
+  "QuestBreezewatchWindBunnyControl": {
+    "en": "Bunnies on the High Road",
+    "zh": "高地道路上的风兔",
+    "zh-Hant": "高地道路上的風兔",
+    "ja": "高地の道のウサギたち",
+    "ru": "Кролики на высокой дороге"
+  },
+  "QuestBreezewatchWindBunnyControlDescription": {
+    "en": "{1} are crowding the high roads in area {0}. Defeat {2} to keep the routes around Breezewatch clear.",
+    "zh": "{1}正在区域 {0} 的高地道路上聚集。击败 {2} 只，确保观风哨站周围的路线畅通。",
+    "zh-Hant": "{1}正在區域 {0} 的高地道路上聚集。擊敗 {2} 隻，確保觀風哨站周圍的路線暢通。",
+    "ja": "エリア{0}の高地の道に{1}が集まっています。{2}体倒して風見哨所周辺の道を確保してください。",
+    "ru": "Существа «{1}» заполонили высокие дороги в области {0}. Победите их, чтобы расчистить пути вокруг Ветрового дозора. Требуемое количество: {2}."
+  },
+  "WinterRefugeWhiteoutThreat": {
+    "en": "Whiteout Threat Notice",
+    "zh": "暴风雪威胁通告",
+    "zh-Hant": "暴風雪威脅通告",
+    "ja": "吹雪の脅威通告",
+    "ru": "Извещение об угрозе в снежной мгле"
+  },
+  "QuestWinterRefugeFrozenPredators": {
+    "en": "Tracks Beneath the Whiteout",
+    "zh": "暴风雪下的足迹",
+    "zh-Hant": "暴風雪下的足跡",
+    "ja": "吹雪の下の足跡",
+    "ru": "Следы под снежной мглой"
+  },
+  "QuestWinterRefugeFrozenPredatorsDescription": {
+    "en": "Powerful predators are emerging across area {0}. Defeat {1} Rare Encounter monsters before they reach WinterRefuge.",
+    "zh": "强大的掠食者正在区域 {0} 出没。击败 {1} 只稀有遭遇怪物，阻止它们靠近冬日庇护所。",
+    "zh-Hant": "強大的掠食者正在區域 {0} 出沒。擊敗 {1} 隻稀有遭遇怪物，阻止牠們靠近冬日庇護所。",
+    "ja": "エリア{0}の各地に強力な捕食者が現れています。冬の避難所に到達する前に、レア遭遇のモンスターを{1}体倒してください。",
+    "ru": "По всей области {0} появляются могучие хищники. Победите монстров из редких встреч, пока они не добрались до Зимнего убежища. Требуемое количество: {1}."
+  },
+  "CinderTowerAshfangAlert": {
+    "en": "Ashfang Alert",
+    "zh": "烬牙警报",
+    "zh-Hant": "燼牙警報",
+    "ja": "灰牙の警報",
+    "ru": "Тревога Пепельного клыка"
+  },
+  "QuestCinderTowerHellhoundHunt": {
+    "en": "Howls Beyond the Cinders",
+    "zh": "灰烬之外的嚎叫",
+    "zh-Hant": "灰燼之外的嚎叫",
+    "ja": "残り火の向こうの遠吠え",
+    "ru": "Вой за углями"
+  },
+  "QuestCinderTowerHellhoundHuntDescription": {
+    "en": "Unusually dangerous beasts are roaming area {0}. Defeat {1} Rare Encounter monsters to keep CinderTower's routes open.",
+    "zh": "异常危险的野兽正在区域 {0} 游荡。击败 {1} 只稀有遭遇怪物，确保灰烬塔的路线畅通。",
+    "zh-Hant": "異常危險的野獸正在區域 {0} 遊蕩。擊敗 {1} 隻稀有遭遇怪物，確保灰燼塔的路線暢通。",
+    "ja": "異常に危険な獣がエリア{0}をうろついています。レア遭遇のモンスターを{1}体倒し、残り火の塔への道を確保してください。",
+    "ru": "Необычайно опасные звери бродят по области {0}. Победите монстров из редких встреч, чтобы сохранить доступ к Башне углей. Требуемое количество: {1}."
+  },
+  "RootHavenOldwoodAwakening": {
+    "en": "Oldwood Awakening",
+    "zh": "古林苏醒通告",
+    "zh-Hant": "古林甦醒通告",
+    "ja": "古い森の目覚め",
+    "ru": "Пробуждение старого леса"
+  },
+  "QuestRootHavenAncientGuardians": {
+    "en": "The Old Pines Are Stirring",
+    "zh": "古松林正在苏醒",
+    "zh-Hant": "古松林正在甦醒",
+    "ja": "古い松林が動き始める",
+    "ru": "Старые сосны пробуждаются"
+  },
+  "QuestRootHavenAncientGuardiansDescription": {
+    "en": "Ancient creatures have awakened throughout area {0}. Defeat {1} Rare Encounter monsters before they threaten RootHaven.",
+    "zh": "古老生物正在区域 {0} 各处苏醒。击败 {1} 只稀有遭遇怪物，避免它们威胁林根庇护所。",
+    "zh-Hant": "古老生物正在區域 {0} 各處甦醒。擊敗 {1} 隻稀有遭遇怪物，避免牠們威脅林根庇護所。",
+    "ja": "エリア{0}の各地で古代の生き物が目覚めています。根の隠れ里を脅かす前に、レア遭遇のモンスターを{1}体倒してください。",
+    "ru": "По всей области {0} пробудились древние существа. Победите монстров из редких встреч, пока они не стали угрозой Приюту корней. Требуемое количество: {1}."
+  },
+  "SandholdDuneStalkerAlert": {
+    "en": "Dune Stalker Alert",
+    "zh": "沙丘潜伏者警报",
+    "zh-Hant": "沙丘潛伏者警報",
+    "ja": "砂丘の潜伏者の警報",
+    "ru": "Тревога дюнного охотника"
+  },
+  "QuestSandholdBuriedPredators": {
+    "en": "Something Beneath the Dunes",
+    "zh": "沙丘之下的异动",
+    "zh-Hant": "沙丘之下的異動",
+    "ja": "砂丘の下の何か",
+    "ru": "Нечто под дюнами"
+  },
+  "QuestSandholdBuriedPredatorsDescription": {
+    "en": "Large predators are moving beneath area {0}. Defeat {1} Rare Encounter monsters before they reach Sandhold.",
+    "zh": "大型掠食者正在区域 {0} 的沙地下移动。击败 {1} 只稀有遭遇怪物，阻止它们靠近沙堡镇。",
+    "zh-Hant": "大型掠食者正在區域 {0} 的沙地下移動。擊敗 {1} 隻稀有遭遇怪物，阻止牠們靠近沙堡鎮。",
+    "ja": "エリア{0}の地中を大型の捕食者が移動しています。砂砦に到達する前に、レア遭遇のモンスターを{1}体倒してください。",
+    "ru": "Под областью {0} передвигаются крупные хищники. Победите монстров из редких встреч, пока они не добрались до Песчаной твердыни. Требуемое количество: {1}."
+  },
+  "StormwatchChargedBeastAlert": {
+    "en": "Charged Beast Alert",
+    "zh": "雷能兽警报",
+    "zh-Hant": "雷能獸警報",
+    "ja": "帯電した獣の警報",
+    "ru": "Тревога заряженных зверей"
+  },
+  "QuestStormwatchChargedPredators": {
+    "en": "Shapes Inside the Thunder",
+    "zh": "雷鸣中的身影",
+    "zh-Hant": "雷鳴中的身影",
+    "ja": "雷鳴の中の影",
+    "ru": "Силуэты среди грома"
+  },
+  "QuestStormwatchChargedPredatorsDescription": {
+    "en": "Charged creatures are appearing throughout area {0}. Defeat {1} Rare Encounter monsters to protect StormwatchPost's relay routes.",
+    "zh": "带电生物正在区域 {0} 各处出现。击败 {1} 只稀有遭遇怪物，保护雷暴哨站的中继路线。",
+    "zh-Hant": "帶電生物正在區域 {0} 各處出現。擊敗 {1} 隻稀有遭遇怪物，保護雷暴哨站的中繼路線。",
+    "ja": "エリア{0}の各地に帯電した生き物が現れています。レア遭遇のモンスターを{1}体倒し、嵐見哨所の中継路を守ってください。",
+    "ru": "По всей области {0} появляются заряженные существа. Победите монстров из редких встреч, чтобы защитить пути ретрансляции Грозового дозора. Требуемое количество: {1}."
+  },
+  "BreezewatchHighwindThreat": {
+    "en": "Highwind Threat Notice",
+    "zh": "高空强风威胁通告",
+    "zh-Hant": "高空強風威脅通告",
+    "ja": "高空の強風の脅威通告",
+    "ru": "Извещение об угрозе в высотном ветре"
+  },
+  "QuestBreezewatchSkyPredators": {
+    "en": "Wings Across the High Wind",
+    "zh": "高空疾风中的羽翼",
+    "zh-Hant": "高空疾風中的羽翼",
+    "ja": "高空の風を渡る翼",
+    "ru": "Крылья в высотном ветре"
+  },
+  "QuestBreezewatchSkyPredatorsDescription": {
+    "en": "Powerful flying creatures are roaming area {0}. Defeat {1} Rare Encounter monsters before they endanger Breezewatch's routes.",
+    "zh": "强大的飞行生物正在区域 {0} 游荡。击败 {1} 只稀有遭遇怪物，避免它们威胁观风哨站的路线。",
+    "zh-Hant": "強大的飛行生物正在區域 {0} 遊蕩。擊敗 {1} 隻稀有遭遇怪物，避免牠們威脅觀風哨站的路線。",
+    "ja": "強力な飛行生物がエリア{0}をうろついています。風見哨所への道を脅かす前に、レア遭遇のモンスターを{1}体倒してください。",
+    "ru": "Могучие летающие существа бродят по области {0}. Победите монстров из редких встреч, пока они не стали угрозой путям Ветрового дозора. Требуемое количество: {1}."
+  },
+  "GelgroveCampCoastalWatch": {
+    "en": "Coastal Watch Duty",
+    "zh": "海岸巡查任务",
+    "zh-Hant": "海岸巡查任務",
+    "ja": "海岸の巡回任務",
+    "ru": "Дежурство берегового дозора"
+  },
+  "QuestGelgroveCampShorelinePatrol": {
+    "en": "Slimes Along the Shore",
+    "zh": "海岸沿线的史莱姆",
+    "zh-Hant": "海岸沿線的史萊姆",
+    "ja": "海岸沿いのスライム",
+    "ru": "Слаймы вдоль берега"
+  },
+  "QuestGelgroveCampShorelinePatrolDescription": {
+    "en": "Slimes are gathering along the shore near GelgroveCamp. Defeat {1} {0} to keep the camp's routes clear.",
+    "zh": "史莱姆正在凝胶林营地附近的海岸聚集。击败 {1} 只{0}，确保营地路线畅通。",
+    "zh-Hant": "史萊姆正在凝膠林營地附近的海岸聚集。擊敗 {1} 隻{0}，確保營地路線暢通。",
+    "ja": "ゲルの森の野営地付近の海岸にスライムが集まっています。{0}を{1}体倒して野営地への道を確保してください。",
+    "ru": "Слаймы собираются на берегу возле Лагеря Гелевой рощи. Победите монстров «{0}», чтобы расчистить пути к лагерю. Требуемое количество: {1}."
+  },
+  "GelgroveCampSupplyStock": {
+    "en": "Camp Supply Stock",
+    "zh": "营地补给储备",
+    "zh-Hant": "營地補給儲備",
+    "ja": "野営地の物資備蓄",
+    "ru": "Запас лагерных припасов"
+  },
+  "QuestGelgroveCampFluidReserve": {
+    "en": "Fluid for the Camp Stores",
+    "zh": "营地仓库需要的黏液",
+    "zh-Hant": "營地倉庫需要的黏液",
+    "ja": "野営地の備蓄用の粘液",
+    "ru": "Жидкость для лагерных запасов"
+  },
+  "QuestGelgroveCampFluidReserveDescription": {
+    "en": "GelgroveCamp needs {1} {0} to replenish its field supplies. Gather them during your adventure.",
+    "zh": "凝胶林营地需要 {1} 个{0}补充野外物资。请在冒险途中收集。",
+    "zh-Hant": "凝膠林營地需要 {1} 個{0}補充野外物資。請在冒險途中收集。",
+    "ja": "ゲルの森の野営地が野外物資の補充に{0}を{1}個必要としています。冒険中に集めてください。",
+    "ru": "Лагерю Гелевой рощи нужен материал «{0}» для пополнения походных запасов. Требуемое количество: {1}. Соберите его во время приключения."
+  },
+  "GelgroveCampOuterSeaWarning": {
+    "en": "Outer Sea Warning",
+    "zh": "外海威胁警报",
+    "zh-Hant": "外海威脅警報",
+    "ja": "外海の警告",
+    "ru": "Предупреждение об открытом море"
+  },
+  "QuestGelgroveCampDeepwaterSharks": {
+    "en": "Sharks Beyond the Safe Waters",
+    "zh": "安全海域外的鲨鱼",
+    "zh-Hant": "安全海域外的鯊魚",
+    "ja": "安全な海域の先のサメ",
+    "ru": "Акулы за безопасными водами"
+  },
+  "QuestGelgroveCampDeepwaterSharksDescription": {
+    "en": "Sharks are threatening the outer waters of area {0}. Defeat {2} {1}. Sea Level {3} is required to enter the deep-water route.",
+    "zh": "鲨鱼正在威胁区域 {0} 的外海。击败 {2} 只{1}。进入深海路线至少需要 {3} 级海洋通行能力。",
+    "zh-Hant": "鯊魚正在威脅區域 {0} 的外海。擊敗 {2} 隻{1}。進入深海路線至少需要 {3} 級海洋通行能力。",
+    "ja": "エリア{0}の外海をサメが脅かしています。{1}を{2}体倒してください。深海の道に入るには海レベル{3}が必要です。",
+    "ru": "Акулы угрожают внешним водам области {0}. Победите монстров «{1}». Требуемое количество: {2}. Для входа на глубоководный маршрут нужен уровень перемещения по морю {3}."
+  },
+  "RaidersRestShoreWatch": {
+    "en": "Shore Watch Assignment",
+    "zh": "海岸巡防委托",
+    "zh-Hant": "海岸巡防委託",
+    "ja": "海岸の見張り依頼",
+    "ru": "Задание берегового дозора"
+  },
+  "QuestRaidersRestGoblinLookouts": {
+    "en": "Goblin Lookouts on the Shore",
+    "zh": "海岸上的哥布林哨兵",
+    "zh-Hant": "海岸上的哥布林哨兵",
+    "ja": "海岸のゴブリン見張り",
+    "ru": "Гоблинские дозорные на берегу"
+  },
+  "QuestRaidersRestGoblinLookoutsDescription": {
+    "en": "{0} scouts are watching the routes near RaidersRest. Defeat {1} before they can guide a larger raid toward the camp.",
+    "zh": "{0}哨兵正在监视掠夺者歇脚处附近的路线。击败 {1} 只，避免它们引导更大的袭击队伍前来。",
+    "zh-Hant": "{0}哨兵正在監視掠奪者歇腳處附近的路線。擊敗 {1} 隻，避免牠們引導更大的襲擊隊伍前來。",
+    "ja": "{0}の偵察兵が略奪者の休息地付近の道を監視しています。大規模な襲撃隊を野営地へ導く前に{1}体倒してください。",
+    "ru": "Разведчики «{0}» наблюдают за путями возле Привала налётчиков. Победите их, пока они не навели на лагерь крупный отряд. Требуемое количество: {1}."
+  },
+  "TwilightRestDawnsideWatch": {
+    "en": "Dawnside Watch",
+    "zh": "晨光侧巡防",
+    "zh-Hant": "晨光側巡防",
+    "ja": "暁側の見張り",
+    "ru": "Дозор рассветной стороны"
+  },
+  "QuestTwilightRestLightPatrol": {
+    "en": "Patrol the Lightward Paths",
+    "zh": "巡查光明侧道路",
+    "zh-Hant": "巡查光明側道路",
+    "ja": "光側の道を巡回する",
+    "ru": "Патрулировать пути со стороны света"
+  },
+  "QuestTwilightRestLightPatrolDescription": {
+    "en": "Clear {1} monsters from the lightward paths in area {0} to keep the routes near TwilightRest safe.",
+    "zh": "清除区域 {0} 光明侧道路上的 {1} 只怪物，确保暮光歇脚处附近的路线安全。",
+    "zh-Hant": "清除區域 {0} 光明側道路上的 {1} 隻怪物，確保暮光歇腳處附近的路線安全。",
+    "ja": "エリア{0}の光側の道でモンスターを{1}体排除し、黄昏の休息地付近の安全を確保してください。",
+    "ru": "Уничтожьте монстров на путях со стороны света в области {0}, чтобы обезопасить окрестности Сумеречного приюта. Требуемое количество: {1}."
+  },
+  "RaidersRestCoastalDefense": {
+    "en": "Coastal Defense Request",
+    "zh": "海岸防卫委托",
+    "zh-Hant": "海岸防衛委託",
+    "ja": "海岸防衛の依頼",
+    "ru": "Задание по обороне побережья"
+  },
+  "QuestRaidersRestOrcBeachRaid": {
+    "en": "Orc Raid on the Beach",
+    "zh": "兽人突袭海滩",
+    "zh-Hant": "獸人突襲海灘",
+    "ja": "海辺のオーク襲撃",
+    "ru": "Налёт орков на пляж"
+  },
+  "QuestRaidersRestOrcBeachRaidDescription": {
+    "en": "{1} are raiding the beaches of area {0}. Defeat {2} before they reach RaidersRest's supply routes.",
+    "zh": "{1}正在袭击区域 {0} 的海滩。击败 {2} 只，避免它们闯入掠夺者歇脚处的补给路线。",
+    "zh-Hant": "{1}正在襲擊區域 {0} 的海灘。擊敗 {2} 隻，避免牠們闖入掠奪者歇腳處的補給路線。",
+    "ja": "エリア{0}の海辺を{1}が襲っています。略奪者の休息地の補給路に到達する前に{2}体倒してください。",
+    "ru": "Существа «{1}» нападают на пляжи области {0}. Победите их, пока они не добрались до путей снабжения Привала налётчиков. Требуемое количество: {2}."
+  },
+  "TwilightRestNightRouteWatch": {
+    "en": "Night Route Watch",
+    "zh": "夜路巡防",
+    "zh-Hant": "夜路巡防",
+    "ja": "夜道の見張り",
+    "ru": "Дозор ночных путей"
+  },
+  "QuestTwilightRestDarkenedRoads": {
+    "en": "Darkened Roads",
+    "zh": "黑暗笼罩的道路",
+    "zh-Hant": "黑暗籠罩的道路",
+    "ja": "闇に包まれた道",
+    "ru": "Потемневшие дороги"
+  },
+  "QuestTwilightRestDarkenedRoadsDescription": {
+    "en": "Monsters are gathering along the dark routes in area {0}. Defeat {1} to keep the road to TwilightRest open.",
+    "zh": "怪物正在区域 {0} 的黑暗路线聚集。击败 {1} 只，保持通往暮光歇脚处的道路畅通。",
+    "zh-Hant": "怪物正在區域 {0} 的黑暗路線聚集。擊敗 {1} 隻，保持通往暮光歇腳處的道路暢通。",
+    "ja": "エリア{0}の暗い道にモンスターが集まっています。{1}体倒し、黄昏の休息地への道を確保してください。",
+    "ru": "Монстры собираются вдоль тёмных путей области {0}. Победите их, чтобы сохранить доступ к Сумеречному приюту. Требуемое количество: {1}."
+  },
+  "AventoraFreeportDockSecurity": {
+    "en": "Freeport Dock Security",
+    "zh": "自由港码头警备",
+    "zh-Hant": "自由港碼頭警備",
+    "ja": "自由港の埠頭警備",
+    "ru": "Охрана причалов Вольного порта"
+  },
+  "QuestAventoraFreeportDocksideBandits": {
+    "en": "Bandits Along the Docks",
+    "zh": "码头沿线的强盗",
+    "zh-Hant": "碼頭沿線的強盜",
+    "ja": "埠頭の盗賊",
+    "ru": "Бандиты вдоль причалов"
+  },
+  "QuestAventoraFreeportDocksideBanditsDescription": {
+    "en": "{1} are threatening the dock routes in area {0}. Defeat {2} before trade around AventoraFreeport is disrupted.",
+    "zh": "{1}正在威胁区域 {0} 的码头路线。击败 {2} 名，避免阿文托拉自由港的贸易受到影响。",
+    "zh-Hant": "{1}正在威脅區域 {0} 的碼頭路線。擊敗 {2} 名，避免阿文托拉自由港的貿易受到影響。",
+    "ja": "エリア{0}の埠頭への道を{1}が脅かしています。アヴェントラ自由港の交易が妨げられる前に{2}体倒してください。",
+    "ru": "Противники «{1}» угрожают путям к причалам в области {0}. Победите их, пока торговля в Вольном порту Авентора не нарушена. Требуемое количество: {2}."
+  },
+  "RaidersRestGoblinWarbandAlert": {
+    "en": "Goblin Warband Alert",
+    "zh": "哥布林战团警报",
+    "zh-Hant": "哥布林戰團警報",
+    "ja": "ゴブリン戦団の警報",
+    "ru": "Тревога гоблинского боевого отряда"
+  },
+  "QuestRaidersRestNightRaiders": {
+    "en": "Raiders After Nightfall",
+    "zh": "入夜后的掠夺者",
+    "zh-Hant": "入夜後的掠奪者",
+    "ja": "日暮れ後の略奪者",
+    "ru": "Налётчики после заката"
+  },
+  "QuestRaidersRestNightRaidersDescription": {
+    "en": "Rare threats are gathering in area {0} after nightfall. Defeat {1} rare encounter monsters before they can form another warband.",
+    "zh": "入夜后，区域 {0} 正有罕见威胁聚集。击败 {1} 只稀有遭遇怪物，阻止它们组成新的战团。",
+    "zh-Hant": "入夜後，區域 {0} 正有罕見威脅聚集。擊敗 {1} 隻稀有遭遇怪物，阻止牠們組成新的戰團。",
+    "ja": "日暮れ後、エリア{0}に希少な脅威が集まっています。新たな戦団を結成する前に、レア遭遇のモンスターを{1}体倒してください。",
+    "ru": "После заката в области {0} собираются редкие враги. Победите монстров из редких встреч, пока они не сформировали новый боевой отряд. Требуемое количество: {1}."
+  },
+  "TwilightRestDeepShadowAlert": {
+    "en": "Deep Shadow Alert",
+    "zh": "深影警报",
+    "zh-Hant": "深影警報",
+    "ja": "深い影の警報",
+    "ru": "Тревога глубокой тени"
+  },
+  "QuestTwilightRestMidnightThreats": {
+    "en": "Threats at Midnight",
+    "zh": "午夜时分的威胁",
+    "zh-Hant": "午夜時分的威脅",
+    "ja": "真夜中の脅威",
+    "ru": "Угрозы в полночь"
+  },
+  "QuestTwilightRestMidnightThreatsDescription": {
+    "en": "Defeat {1} rare encounter monsters in area {0}. Some routes in this area require travel capability Level {2}.",
+    "zh": "击败区域 {0} 的 {1} 只稀有遭遇怪物。该区域的部分路线需要至少 {2} 级通行能力。",
+    "zh-Hant": "擊敗區域 {0} 的 {1} 隻稀有遭遇怪物。該區域的部分路線需要至少 {2} 級通行能力。",
+    "ja": "エリア{0}でレア遭遇のモンスターを{1}体倒してください。このエリアの一部の道には移動能力レベル{2}が必要です。",
+    "ru": "Победите монстров из редких встреч в области {0}. Требуемое количество: {1}. Для некоторых путей в этой области нужен уровень перемещения {2}."
+  },
+  "AventoraFreeportHighridgeWarning": {
+    "en": "Highridge Threat Warning",
+    "zh": "高岭威胁警报",
+    "zh-Hant": "高嶺威脅警報",
+    "ja": "高い尾根の脅威警告",
+    "ru": "Предупреждение об угрозе на высоких хребтах"
+  },
+  "QuestAventoraFreeportMountainBlades": {
+    "en": "Blades in the High Ridges",
+    "zh": "高岭上的魔刃",
+    "zh-Hant": "高嶺上的魔刃",
+    "ja": "高い尾根の刃",
+    "ru": "Клинки на высоких хребтах"
+  },
+  "QuestAventoraFreeportMountainBladesDescription": {
+    "en": "{1} are roaming the mountain routes in area {0}. Defeat {2}. Mountain Level {3} is required to reach them.",
+    "zh": "{1}正在区域 {0} 的山地路线游荡。击败 {2} 只。抵达目标地点需要至少 {3} 级山地通行能力。",
+    "zh-Hant": "{1}正在區域 {0} 的山地路線遊蕩。擊敗 {2} 隻。抵達目標地點需要至少 {3} 級山地通行能力。",
+    "ja": "エリア{0}の山道を{1}がうろついています。{2}体倒してください。到達するには山岳レベル{3}が必要です。",
+    "ru": "Существа «{1}» бродят по горным путям области {0}. Победите их. Требуемое количество: {2}. Чтобы добраться до них, нужен уровень перемещения по горам {3}."
+  },
+  "AventoraFreeportRouteSafety": {
+    "en": "Freeport Route Patrol",
+    "zh": "自由港路线巡逻",
+    "zh-Hant": "自由港路線巡邏",
+    "ja": "自由港への道の巡回",
+    "ru": "Патруль путей Вольного порта"
+  },
+  "QuestAventoraFreeportApproachPatrol": {
+    "en": "Trouble on the Freeport Roads",
+    "zh": "自由港道路上的麻烦",
+    "zh-Hant": "自由港道路上的麻煩",
+    "ja": "自由港への道の問題",
+    "ru": "Беды на дорогах Вольного порта"
+  },
+  "QuestAventoraFreeportApproachPatrolDescription": {
+    "en": "Defeat {1} monsters along the routes in area {0} to keep the approaches to AventoraFreeport safe.",
+    "zh": "击败区域 {0} 路线上的 {1} 只怪物，确保通往阿文托拉自由港的道路安全。",
+    "zh-Hant": "擊敗區域 {0} 路線上的 {1} 隻怪物，確保通往阿文托拉自由港的道路安全。",
+    "ja": "エリア{0}の道でモンスターを{1}体倒し、アヴェントラ自由港への道の安全を確保してください。",
+    "ru": "Победите монстров вдоль путей области {0}, чтобы обезопасить подступы к Вольному порту Авентора. Требуемое количество: {1}."
+  },
+  "GemwatchArcaneCavernClearance": {
+    "en": "Gemwatch Cavern Operations",
+    "zh": "宝石瞭望镇洞窟行动",
+    "zh-Hant": "寶石瞭望鎮洞窟行動",
+    "ja": "宝石見の町の洞窟作戦",
+    "ru": "Пещерная операция Города Самоцветного дозора"
+  },
+  "QuestGemwatchArcaneCavernClearance": {
+    "en": "Arcane Cavern Clearance",
+    "zh": "奥术洞窟清剿",
+    "zh-Hant": "奧術洞窟清剿",
+    "ja": "秘術の洞窟の掃討",
+    "ru": "Зачистка тайной пещеры"
+  },
+  "QuestGemwatchArcaneCavernClearanceDescription": {
+    "en": "Enter {0} in area {1} and clear the dungeon threatening GemwatchTown's supply routes.",
+    "zh": "进入区域 {1} 的 {0}，清除威胁宝石瞭望镇补给路线的地下城。",
+    "zh-Hant": "進入區域 {1} 的 {0}，清除威脅寶石瞭望鎮補給路線的地下城。",
+    "ja": "エリア{1}の{0}に入り、宝石見の町の補給路を脅かすダンジョンを攻略してください。",
+    "ru": "Войдите в место «{0}» в области {1} и зачистите подземелье, угрожающее путям снабжения Города Самоцветного дозора."
+  },
+  "RootHavenSurveyEquipmentRecovery": {
+    "en": "Survey Equipment Recovery",
+    "zh": "调查仪器回收委托",
+    "zh-Hant": "調查儀器回收委託",
+    "ja": "調査器具の回収",
+    "ru": "Возвращение исследовательского снаряжения"
+  },
+  "QuestRootHavenSurveyRouteRecovery": {
+    "en": "Lost Instruments in the Green",
+    "zh": "绿林中遗失的仪器",
+    "zh-Hant": "綠林中遺失的儀器",
+    "ja": "緑の中に失くした器具",
+    "ru": "Инструменты, потерянные среди зелени"
+  },
+  "QuestRootHavenSurveyRouteRecoveryDescription": {
+    "en": "Nature Lions have driven RootHaven's surveyors from area {0}. Defeat {2} {1} so the team can recover its abandoned instruments.",
+    "zh": "自然狮将林根庇护所的调查员赶出了区域 {0}。击败 {2} 只{1}，让调查队能够取回遗失的仪器。",
+    "zh-Hant": "自然獅將林根庇護所的調查員趕出了區域 {0}。擊敗 {2} 隻{1}，讓調查隊能夠取回遺失的儀器。",
+    "ja": "自然の獅子が根の隠れ里の調査員をエリア{0}から追い払いました。{1}を{2}体倒し、調査隊が置き去りにした器具を回収できるようにしてください。",
+    "ru": "Львы природы выгнали геодезистов Приюта корней из области {0}. Победите монстров «{1}», чтобы отряд смог вернуть брошенные инструменты. Требуемое количество: {2}."
+  },
+  "GeneralDriftingSeaHorseWatch": {
+    "en": "Supply Route Herd",
+    "zh": "补给航线兽群",
+    "zh-Hant": "補給航線獸群",
+    "ja": "補給航路の群れ",
+    "ru": "Стадо на пути снабжения"
+  },
+  "QuestGeneralDriftingSeaHorses": {
+    "en": "Drifting Sea Horses",
+    "zh": "漂流的海马群",
+    "zh-Hant": "漂流的海馬群",
+    "ja": "漂うシーホースの群れ",
+    "ru": "Дрейфующие морские коньки"
+  },
+  "QuestGeneralDriftingSeaHorsesDescription": {
+    "en": "A herd of {0} has drifted into the supply route and is forcing smaller boats off course. Defeat {1} of them before another shipment is delayed.",
+    "zh": "一群{0}漂进了补给航线，迫使小型船只偏离航向。请击败其中{1}只，避免下一批货物延误。",
+    "zh-Hant": "一群{0}漂進了補給航線，迫使小型船隻偏離航向。請擊敗其中{1}隻，避免下一批貨物延誤。",
+    "ja": "{0}の群れが補給航路に流れ込み、小さな船を航路から押し出しています。次の貨物が遅れる前に{1}体倒してください。",
+    "ru": "Стадо существ «{0}» дрейфует на пути снабжения и вынуждает малые суда сбиваться с курса. Победите их, пока очередной груз не задержан. Требуемое количество: {1}."
+  },
+  "GeneralTangledRigging": {
+    "en": "Tangled Rigging",
+    "zh": "缠结的船索",
+    "zh-Hant": "纏結的船索",
+    "ja": "絡まった船索",
+    "ru": "Спутанные снасти"
+  },
+  "QuestGeneralPelicansCaughtInRigging": {
+    "en": "Pelicans Caught in the Rigging",
+    "zh": "受困船索的海鹈鹕",
+    "zh-Hant": "受困船索的海鵜鶘",
+    "ja": "船索に絡まったペリカン",
+    "ru": "Пеликаны, запутавшиеся в снастях"
+  },
+  "QuestGeneralPelicansCaughtInRiggingDescription": {
+    "en": "Several {0} became tangled in discarded rigging near the supply route. Frightened and unable to break free, they are attacking anyone who approaches. Subdue {1} of them so the damaged ropes can be removed safely.",
+    "zh": "数只{0}被补给航线附近废弃的船索缠住，受惊后不断攻击靠近的人。请制服其中{1}只，让工作人员能够安全拆除损坏的绳索。",
+    "zh-Hant": "數隻{0}被補給航線附近廢棄的船索纏住，受驚後不斷攻擊靠近的人。請制服其中{1}隻，讓工作人員能夠安全拆除損壞的繩索。",
+    "ja": "補給航路付近の捨てられた船索に、数体の{0}が絡まっています。怯え、逃げられず、近づく者を襲っています。{1}体を制圧して、傷んだロープを安全に取り除けるようにしてください。",
+    "ru": "Несколько существ «{0}» запутались в брошенных снастях возле пути снабжения. Испуганные и не способные освободиться, они нападают на всех, кто приближается. Усмирите их, чтобы повреждённые верёвки можно было безопасно убрать. Требуемое количество: {1}."
+  },
+  "GeneralParalyzedFishingNets": {
+    "en": "Paralyzed Nets",
+    "zh": "麻痹的渔网",
+    "zh-Hant": "麻痺的漁網",
+    "ja": "麻痺した漁網",
+    "ru": "Парализованные сети"
+  },
+  "QuestGeneralJellyfishInTheNets": {
+    "en": "Jellyfish in the Fishing Nets",
+    "zh": "渔网中的水母",
+    "zh-Hant": "漁網中的水母",
+    "ja": "漁網のクラゲ",
+    "ru": "Медузы в рыболовных сетях"
+  },
+  "QuestGeneralJellyfishInTheNetsDescription": {
+    "en": "A group of {0} has become trapped in the fishing nets. Their venom and paralysis are preventing the crews from retrieving their equipment. Defeat {1} of them and reopen the fishing route.",
+    "zh": "一群{0}被困在渔网中。它们的毒素和麻痹能力令船员无法回收设备。请击败其中{1}只，重新打通捕鱼航线。",
+    "zh-Hant": "一群{0}被困在漁網中。牠們的毒素和麻痺能力令船員無法回收設備。請擊敗其中{1}隻，重新打通捕魚航線。",
+    "ja": "{0}の群れが漁網に絡まりました。その毒と麻痺能力のせいで、船員たちは道具を回収できません。{1}体倒し、漁業航路を再び開いてください。",
+    "ru": "Группа существ «{0}» застряла в рыболовных сетях. Их яд и парализующие способности мешают командам вернуть снаряжение. Победите их и откройте рыболовный маршрут. Требуемое количество: {1}."
+  },
+  "GeneralNightFishingEmergency": {
+    "en": "Night Fishing Emergency",
+    "zh": "夜间捕鱼紧急委托",
+    "zh-Hant": "夜間捕魚緊急委託",
+    "ja": "夜釣りの緊急事態",
+    "ru": "Чрезвычайная ситуация на ночной рыбалке"
+  },
+  "QuestGeneralNightNetEmergency": {
+    "en": "Night Net Emergency",
+    "zh": "夜间渔网危机",
+    "zh-Hant": "夜間漁網危機",
+    "ja": "夜の漁網の危機",
+    "ru": "Ночная беда с сетями"
+  },
+  "QuestGeneralNightNetEmergencyDescription": {
+    "en": "A group of {0} is dragging weighted fishing nets beneath the water after dark. Defeat {1} of them so the crews can recover the nets and repair their boats.",
+    "zh": "一群{0}在入夜后将沉重的渔网拖入水下。请击败其中{1}只，让船员能够回收渔网并修理船只。",
+    "zh-Hant": "一群{0}在入夜後將沉重的漁網拖入水下。請擊敗其中{1}隻，讓船員能夠回收漁網並修理船隻。",
+    "ja": "日暮れ後、{0}の群れが重り付きの漁網を水中へ引きずり込んでいます。{1}体倒し、船員たちが網を回収して船を修理できるようにしてください。",
+    "ru": "После наступления темноты группа существ «{0}» утаскивает под воду рыболовные сети с грузилами. Победите их, чтобы команды смогли вернуть сети и починить лодки. Требуемое количество: {1}."
+  },
+  "GeneralToxicShippingLane": {
+    "en": "Toxic Shipping Lane",
+    "zh": "剧毒航线",
+    "zh-Hant": "劇毒航線",
+    "ja": "猛毒の航路",
+    "ru": "Ядовитый судоходный путь"
+  },
+  "QuestGeneralPoisonedShippingLane": {
+    "en": "Poisoned Shipping Lane",
+    "zh": "受毒素威胁的航线",
+    "zh-Hant": "受毒素威脅的航線",
+    "ja": "毒に脅かされた航路",
+    "ru": "Отравленный судоходный путь"
+  },
+  "QuestGeneralPoisonedShippingLaneDescription": {
+    "en": "Groups of {0} and {2} have gathered along the night shipping lane. Defeat {1} {0} and {3} {2} before another boat is forced to turn back.",
+    "zh": "成群的{0}和{2}聚集在夜间航线上。请击败{1}只{0}和{3}只{2}，避免更多船只被迫返航。",
+    "zh-Hant": "成群的{0}和{2}聚集在夜間航線上。請擊敗{1}隻{0}和{3}隻{2}，避免更多船隻被迫返航。",
+    "ja": "夜の航路に{0}と{2}の群れが集まっています。次の船が引き返すことになる前に、{0}を{1}体、{2}を{3}体倒してください。",
+    "ru": "Группы существ «{0}» и «{2}» собрались вдоль ночного судоходного пути. Победите их, пока очередное судно не вынуждено повернуть назад. Требуемое количество: {0} ({1}), {2} ({3})."
+  },
+  "GeneralEmergencyProvisionOrder": {
+    "en": "Emergency Provision Order",
+    "zh": "紧急补给订单",
+    "zh-Hant": "緊急補給訂單",
+    "ja": "緊急食料の注文",
+    "ru": "Срочный заказ провианта"
+  },
+  "QuestGeneralEmergencyCoastalProvisions": {
+    "en": "Emergency Coastal Provisions",
+    "zh": "紧急海岸补给",
+    "zh-Hant": "緊急海岸補給",
+    "ja": "海岸への緊急食料",
+    "ru": "Экстренный провиант для побережья"
+  },
+  "QuestGeneralEmergencyCoastalProvisionsDescription": {
+    "en": "Several coastal settlements are running short of food. Deliver {1} {0}, {3} {2}, and {5} {4} to complete the emergency shipment.",
+    "zh": "数个海岸聚落的食物即将耗尽。请交付{1}份{0}、{3}份{2}和{5}份{4}，完成这批紧急补给。",
+    "zh-Hant": "數個海岸聚落的食物即將耗盡。請交付{1}份{0}、{3}份{2}和{5}份{4}，完成這批緊急補給。",
+    "ja": "海岸のいくつかの集落で食料が不足しています。{0}を{1}個、{2}を{3}個、{4}を{5}個届け、緊急輸送を完了してください。",
+    "ru": "В нескольких прибрежных поселениях заканчивается еда. Доставьте припасы, чтобы завершить срочную поставку. Требуемое количество: {0} ({1}), {2} ({3}), {4} ({5})."
+  },
+  "GeneralBlockedDockingRoute": {
+    "en": "Blocked Docking Route",
+    "zh": "受阻的靠岸航线",
+    "zh-Hant": "受阻的靠岸航線",
+    "ja": "塞がれた接岸航路",
+    "ru": "Заблокированный подход к причалу"
+  },
+  "QuestGeneralFishBlockingTheDocks": {
+    "en": "Fish Blocking the Docks",
+    "zh": "鱼群堵塞码头",
+    "zh-Hant": "魚群堵塞碼頭",
+    "ja": "埠頭を塞ぐ魚",
+    "ru": "Рыбы, блокирующие причалы"
+  },
+  "QuestGeneralFishBlockingTheDocksDescription": {
+    "en": "A large group of {0} is gathering at the dock entrance and striking approaching boats. Defeat {1} of them so supply vessels can dock safely.",
+    "zh": "一大群{0}聚集在码头入口并不断撞击靠近的船只。请击败其中{1}只，让补给船能够安全靠岸。",
+    "zh-Hant": "一大群{0}聚集在碼頭入口並不斷撞擊靠近的船隻。請擊敗其中{1}隻，讓補給船能夠安全靠岸。",
+    "ja": "{0}の大群が埠頭の入口に集まり、近づく船に体当たりしています。{1}体倒し、補給船が安全に接岸できるようにしてください。",
+    "ru": "Большая группа существ «{0}» собирается у входа к причалам и бьёт приближающиеся суда. Победите их, чтобы суда снабжения могли безопасно причалить. Требуемое количество: {1}."
+  },
+  "GeneralCrabSupplyOrder": {
+    "en": "Crab Supply Order",
+    "zh": "螃蟹补给订单",
+    "zh-Hant": "螃蟹補給訂單",
+    "ja": "カニの補給注文",
+    "ru": "Заказ на поставку крабов"
+  },
+  "QuestGeneralCrabDelivery": {
+    "en": "Crab Delivery",
+    "zh": "螃蟹补给配送",
+    "zh-Hant": "螃蟹補給配送",
+    "ja": "カニの配達",
+    "ru": "Доставка крабов"
+  },
+  "QuestGeneralCrabDeliveryDescription": {
+    "en": "The guild kitchens need fresh {0} for the patrol crews. Deliver {1} of them before the next meal is prepared.",
+    "zh": "公会厨房需要新鲜的{0}为巡逻队准备餐食。请在下一餐开始制作前交付{1}只。",
+    "zh-Hant": "公會廚房需要新鮮的{0}為巡邏隊準備餐食。請在下一餐開始製作前交付{1}隻。",
+    "ja": "ギルドの厨房が巡回隊の食事に新鮮な{0}を必要としています。次の食事を作り始める前に{1}体届けてください。",
+    "ru": "Кухням гильдии нужны свежие продукты «{0}» для патрульных команд. Доставьте их до приготовления следующей трапезы. Требуемое количество: {1}."
+  },
+  "GeneralOysterBedRecovery": {
+    "en": "Oyster Bed Recovery",
+    "zh": "牡蛎养殖区修复",
+    "zh-Hant": "牡蠣養殖區修復",
+    "ja": "カキの養殖場の復旧",
+    "ru": "Восстановление устричных отмелей"
+  },
+  "QuestGeneralDisturbedOysterBeds": {
+    "en": "Disturbed Oyster Beds",
+    "zh": "受扰乱的牡蛎养殖区",
+    "zh-Hant": "受擾亂的牡蠣養殖區",
+    "ja": "荒らされたカキの養殖場",
+    "ru": "Потревоженные устричные отмели"
+  },
+  "QuestGeneralDisturbedOysterBedsDescription": {
+    "en": "Groups of {0} are disturbing the shallow oyster beds. Defeat {1} {0} and deliver {3} {2} that remain undamaged.",
+    "zh": "成群的{0}正在扰乱浅水区的牡蛎养殖场。请击败{1}只{0}并交付{3}份未受损的{2}。",
+    "zh-Hant": "成群的{0}正在擾亂淺水區的牡蠣養殖場。請擊敗{1}隻{0}並交付{3}份未受損的{2}。",
+    "ja": "{0}の群れが浅瀬のカキの養殖場を荒らしています。{0}を{1}体倒し、無傷の{2}を{3}個届けてください。",
+    "ru": "Группы существ «{0}» тревожат мелководные устричные отмели. Победите монстров «{0}» и доставьте неповреждённые продукты «{2}». Требуемое количество: противники ({1}), продукты ({3})."
+  },
+  "GeneralRaidedFishingGrounds": {
+    "en": "Raided Fishing Grounds",
+    "zh": "遭袭的捕鱼区",
+    "zh-Hant": "遭襲的捕魚區",
+    "ja": "襲われた漁場",
+    "ru": "Разорённые рыбные угодья"
+  },
+  "QuestGeneralPelicanFishingRaid": {
+    "en": "Pelican Fishing Raid",
+    "zh": "鹈鹕袭击渔船",
+    "zh-Hant": "鵜鶘襲擊漁船",
+    "ja": "ペリカンの漁船襲撃",
+    "ru": "Налёт пеликанов на рыбаков"
+  },
+  "QuestGeneralPelicanFishingRaidDescription": {
+    "en": "A flock of {0} is raiding fishing boats and scattering their catch. Defeat {1} {0} and recover {3} {2} for the delayed shipment.",
+    "zh": "一群{0}正在袭击渔船并抢走捕获物。请击败{1}只{0}并为延误的补给取回{3}份{2}。",
+    "zh-Hant": "一群{0}正在襲擊漁船並搶走捕獲物。請擊敗{1}隻{0}並為延誤的補給取回{3}份{2}。",
+    "ja": "{0}の群れが漁船を襲い、獲物を散らしています。{0}を{1}体倒し、遅れた貨物のために{2}を{3}個回収してください。",
+    "ru": "Стая существ «{0}» нападает на рыболовные суда и разбрасывает улов. Победите монстров «{0}» и верните продукты «{2}» для задержанного груза. Требуемое количество: противники ({1}), продукты ({3})."
+  },
+  "GeneralVenomousCrabTraps": {
+    "en": "Venomous Crab Traps",
+    "zh": "带毒的捕蟹区",
+    "zh-Hant": "帶毒的捕蟹區",
+    "ja": "毒のカニ籠",
+    "ru": "Ядовитые крабовые ловушки"
+  },
+  "QuestGeneralContaminatedCrabTraps": {
+    "en": "Contaminated Crab Traps",
+    "zh": "受污染的捕蟹笼",
+    "zh-Hant": "受污染的捕蟹籠",
+    "ja": "汚染されたカニ籠",
+    "ru": "Загрязнённые крабовые ловушки"
+  },
+  "QuestGeneralContaminatedCrabTrapsDescription": {
+    "en": "Several {0} have contaminated the crab traps with venom. Defeat {1} {0} and deliver {3} safe {2} from the unaffected traps.",
+    "zh": "数只{0}的毒液污染了捕蟹笼。请击败{1}只{0}并从未受影响的捕蟹笼中交付{3}只安全的{2}。",
+    "zh-Hant": "數隻{0}的毒液污染了捕蟹籠。請擊敗{1}隻{0}並從未受影響的捕蟹籠中交付{3}隻安全的{2}。",
+    "ja": "数体の{0}が毒でカニ籠を汚染しました。{0}を{1}体倒し、汚染されていない籠から安全な{2}を{3}体届けてください。",
+    "ru": "Несколько существ «{0}» отравили крабовые ловушки. Победите монстров «{0}» и доставьте безопасные продукты «{2}» из незатронутых ловушек. Требуемое количество: противники ({1}), продукты ({3})."
+  },
+  "GeneralNightOysterRecovery": {
+    "en": "Night Oyster Recovery",
+    "zh": "夜间牡蛎回收",
+    "zh-Hant": "夜間牡蠣回收",
+    "ja": "夜のカキ回収",
+    "ru": "Ночное возвращение устриц"
+  },
+  "QuestGeneralOctopusOysterRaid": {
+    "en": "Octopus Oyster Raid",
+    "zh": "章鱼夜袭牡蛎场",
+    "zh-Hant": "章魚夜襲牡蠣場",
+    "ja": "タコのカキ養殖場襲撃",
+    "ru": "Налёт осьминогов на устриц"
+  },
+  "QuestGeneralOctopusOysterRaidDescription": {
+    "en": "Several {0} are dragging oyster baskets underwater after dark. Defeat {1} {0} and recover {3} {2} before the remaining baskets are lost.",
+    "zh": "数只{0}在入夜后将牡蛎篮拖入水下。请击败{1}只{0}并取回{3}份{2}，避免剩余的篮子也被拖走。",
+    "zh-Hant": "數隻{0}在入夜後將牡蠣籃拖入水下。請擊敗{1}隻{0}並取回{3}份{2}，避免剩餘的籃子也被拖走。",
+    "ja": "日暮れ後、数体の{0}がカキの籠を水中へ引きずり込んでいます。残りの籠が失われる前に、{0}を{1}体倒し、{2}を{3}個回収してください。",
+    "ru": "После наступления темноты несколько существ «{0}» утаскивают под воду корзины с устрицами. Победите монстров «{0}» и верните продукты «{2}», пока не пропали остальные корзины. Требуемое количество: противники ({1}), продукты ({3})."
+  },
+  "TwilightRestArea40UnstableRoadlights": {
+    "en": "Unstable Roadlights",
+    "zh": "不稳定的路灯",
+    "zh-Hant": "不穩定的路燈",
+    "ja": "不安定な道の灯り",
+    "ru": "Нестабильные дорожные огни"
+  },
+  "QuestTwilightRestArea40LightElementals": {
+    "en": "Light Elemental Interference",
+    "zh": "光元素干扰",
+    "zh-Hant": "光元素干擾",
+    "ja": "光の元素の妨害",
+    "ru": "Помехи световых элементалей"
+  },
+  "QuestTwilightRestArea40LightElementalsDescription": {
+    "en": "Groups of {0} are overloading the road markers with light. Defeat {1} of them before travelers lose sight of the route.",
+    "zh": "成群的{0}让道路标记承受过强的光芒。请击败其中{1}只，避免旅人看不清路线。",
+    "zh-Hant": "成群的{0}讓道路標記承受過強的光芒。請擊敗其中{1}隻，避免旅人看不清路線。",
+    "ja": "{0}の群れが道標を光で過負荷にしています。旅人が道を見失う前に{1}体倒してください。",
+    "ru": "Группы существ «{0}» перегружают путевые знаки светом. Победите их, пока путники не потеряли дорогу из виду. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40RadiantInterference": {
+    "en": "Radiant Interference",
+    "zh": "辉光干扰",
+    "zh-Hant": "輝光干擾",
+    "ja": "輝きの妨害",
+    "ru": "Сияющие помехи"
+  },
+  "QuestTwilightRestArea40OrbAngelInterference": {
+    "en": "Orb Angel Interference",
+    "zh": "光球天使干扰",
+    "zh-Hant": "光球天使干擾",
+    "ja": "オーブの天使の妨害",
+    "ru": "Помехи ангелов сферы"
+  },
+  "QuestTwilightRestArea40OrbAngelInterferenceDescription": {
+    "en": "Several {0} are disrupting the route markers with concentrated light. Defeat {1} of them and stabilize the road.",
+    "zh": "数只{0}用集中的光芒干扰路线标记。请击败其中{1}只并稳定道路。",
+    "zh-Hant": "數隻{0}用集中的光芒干擾路線標記。請擊敗其中{1}隻並穩定道路。",
+    "ja": "数体の{0}が集中した光で道標を乱しています。{1}体倒して道を安定させてください。",
+    "ru": "Несколько существ «{0}» мешают работе путевых знаков сосредоточенным светом. Победите их и стабилизируйте дорогу. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40GuardianAlert": {
+    "en": "Radiant Guardian Alert",
+    "zh": "辉光守卫警报",
+    "zh-Hant": "輝光守衛警報",
+    "ja": "輝きの守護者の警報",
+    "ru": "Тревога сияющих стражей"
+  },
+  "QuestTwilightRestArea40RareGuardians": {
+    "en": "Rare Guardians of the Light",
+    "zh": "稀有光之守卫",
+    "zh-Hant": "稀有光之守衛",
+    "ja": "希少な光の守護者",
+    "ru": "Редкие стражи света"
+  },
+  "QuestTwilightRestArea40RareGuardiansDescription": {
+    "en": "Powerful guardians are controlling the routes in area {0}. Defeat {1} rare encounters before travel becomes impossible.",
+    "zh": "强大的守卫正在控制{0}区的路线。请击败{1}队稀有遭遇敌人，避免道路彻底无法通行。",
+    "zh-Hant": "強大的守衛正在控制{0}區的路線。請擊敗{1}隊稀有遭遇敵人，避免道路徹底無法通行。",
+    "ja": "強力な守護者がエリア{0}の道を支配しています。通行不能になる前に、レア遭遇を{1}回制してください。",
+    "ru": "Могучие стражи контролируют пути в области {0}. Победите в редких встречах, пока перемещение не стало невозможным. Требуемое количество встреч: {1}."
+  },
+  "TwilightRestArea41FadingLanterns": {
+    "en": "Fading Lanterns",
+    "zh": "逐渐熄灭的灯火",
+    "zh-Hant": "逐漸熄滅的燈火",
+    "ja": "消えゆく灯り",
+    "ru": "Угасающие фонари"
+  },
+  "QuestTwilightRestArea41DarkElementals": {
+    "en": "Dark Elemental Interference",
+    "zh": "暗元素干扰",
+    "zh-Hant": "暗元素干擾",
+    "ja": "闇の元素の妨害",
+    "ru": "Помехи тёмных элементалей"
+  },
+  "QuestTwilightRestArea41DarkElementalsDescription": {
+    "en": "Groups of {0} are draining the light from the road lanterns. Defeat {1} before the route is left in darkness.",
+    "zh": "成群的{0}正在吸走道路灯火的光芒。请击败其中{1}只，避免路线陷入黑暗。",
+    "zh-Hant": "成群的{0}正在吸走道路燈火的光芒。請擊敗其中{1}隻，避免路線陷入黑暗。",
+    "ja": "{0}の群れが道の灯りから光を吸い取っています。道が闇に包まれる前に{1}体倒してください。",
+    "ru": "Группы существ «{0}» вытягивают свет из дорожных фонарей. Победите их, пока путь не погрузился во тьму. Требуемое количество: {1}."
+  },
+  "TwilightRestArea41CorruptedRoads": {
+    "en": "Corrupted Roads",
+    "zh": "受侵蚀的道路",
+    "zh-Hant": "受侵蝕的道路",
+    "ja": "侵食された道",
+    "ru": "Осквернённые дороги"
+  },
+  "QuestTwilightRestArea41DarkSlimeraControl": {
+    "en": "Dark Slimera Control",
+    "zh": "黑暗史莱姆控制",
+    "zh-Hant": "黑暗史萊姆控制",
+    "ja": "闇のスライムラの駆除",
+    "ru": "Сдерживание тёмных слаймер"
+  },
+  "QuestTwilightRestArea41DarkSlimeraControlDescription": {
+    "en": "Several {0} are spreading dark fluid across the road. Defeat {1} before more equipment is damaged.",
+    "zh": "数只{0}正在道路上散布黑暗液体。请击败其中{1}只，避免更多装备受损。",
+    "zh-Hant": "數隻{0}正在道路上散布黑暗液體。請擊敗其中{1}隻，避免更多裝備受損。",
+    "ja": "数体の{0}が道に闇の液体を広げています。さらに装備が傷む前に{1}体倒してください。",
+    "ru": "Несколько существ «{0}» разливают тёмную жидкость по дороге. Победите их, пока не повреждено ещё больше снаряжения. Требуемое количество: {1}."
+  },
+  "TwilightRestArea41TwilightGuardianAlert": {
+    "en": "Twilight Guardian Alert",
+    "zh": "暮光守卫警报",
+    "zh-Hant": "暮光守衛警報",
+    "ja": "黄昏の守護者の警報",
+    "ru": "Тревога сумеречных стражей"
+  },
+  "QuestTwilightRestArea41RareGuardians": {
+    "en": "Rare Guardians of Twilight",
+    "zh": "稀有暮光守卫",
+    "zh-Hant": "稀有暮光守衛",
+    "ja": "希少な黄昏の守護者",
+    "ru": "Редкие стражи сумерек"
+  },
+  "QuestTwilightRestArea41RareGuardiansDescription": {
+    "en": "Powerful creatures are appearing across area {0}. Defeat {1} rare encounters before they control both mountain routes.",
+    "zh": "强大的生物正在{0}区各处出现。请击败{1}队稀有遭遇敌人，避免它们控制两条山路。",
+    "zh-Hant": "強大的生物正在{0}區各處出現。請擊敗{1}隊稀有遭遇敵人，避免牠們控制兩條山路。",
+    "ja": "エリア{0}の各地に強力な生き物が現れています。二つの山道を支配する前に、レア遭遇を{1}回制してください。",
+    "ru": "По всей области {0} появляются могучие существа. Победите в редких встречах, пока они не захватили оба горных маршрута. Требуемое количество встреч: {1}."
+  },
+  "GelgroveCampArea49RareThreatAlert": {
+    "en": "Rare Threat Alert",
+    "zh": "稀有威胁警报",
+    "zh-Hant": "稀有威脅警報",
+    "ja": "希少な脅威の警報",
+    "ru": "Тревога редких угроз"
+  },
+  "QuestGelgroveCampArea49RareThreats": {
+    "en": "Rare Threats near Gelgrove",
+    "zh": "Gelgrove附近的稀有威胁",
+    "zh-Hant": "Gelgrove附近的稀有威脅",
+    "ja": "ゲルの森付近の希少な脅威",
+    "ru": "Редкие угрозы возле Гелевой рощи"
+  },
+  "QuestGelgroveCampArea49RareThreatsDescription": {
+    "en": "Powerful creatures are threatening the routes in area {0}. Defeat {1} rare encounters before the camp is cut off.",
+    "zh": "强大的生物正在威胁{0}区的路线。请击败{1}队稀有遭遇敌人，避免营地与外界失去联系。",
+    "zh-Hant": "強大的生物正在威脅{0}區的路線。請擊敗{1}隊稀有遭遇敵人，避免營地與外界失去聯繫。",
+    "ja": "強力な生き物がエリア{0}の道を脅かしています。野営地が孤立する前に、レア遭遇を{1}回制してください。",
+    "ru": "Могучие существа угрожают путям в области {0}. Победите в редких встречах, пока лагерь не отрезан от мира. Требуемое количество встреч: {1}."
+  },
+  "TwilightRestArea40CoastalSupplyCatch": {
+    "en": "Coastal Supply Catch",
+    "zh": "海岸补给渔获",
+    "zh-Hant": "海岸補給漁獲",
+    "ja": "海岸の補給用の獲物",
+    "ru": "Прибрежный улов для снабжения"
+  },
+  "QuestTwilightRestArea40CoastalCatch": {
+    "en": "Coastal Catch",
+    "zh": "海岸渔获",
+    "zh-Hant": "海岸漁獲",
+    "ja": "海岸の獲物",
+    "ru": "Прибрежный улов"
+  },
+  "QuestTwilightRestArea40CoastalCatchDescription": {
+    "en": "The rest station needs fresh {0} for the next supply convoy. Deliver {1} before the convoy departs.",
+    "zh": "休息站需要新鲜的{0}供应下一支补给队。请在补给队出发前交付{1}份。",
+    "zh-Hant": "休息站需要新鮮的{0}供應下一支補給隊。請在補給隊出發前交付{1}份。",
+    "ja": "休息所が次の補給隊のために新鮮な{0}を必要としています。出発前に{1}個届けてください。",
+    "ru": "Станции отдыха нужны свежие продукты «{0}» для следующего конвоя снабжения. Доставьте их до его отправления. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40DawnStoneSurvey": {
+    "en": "Dawn Stone Survey",
+    "zh": "晨曦石调查",
+    "zh-Hant": "晨曦石調查",
+    "ja": "めざめいしの調査",
+    "ru": "Исследование Рассветного камня"
+  },
+  "QuestTwilightRestArea40DawnSamples": {
+    "en": "Dawn Stone Samples",
+    "zh": "晨曦石样本",
+    "zh-Hant": "晨曦石樣本",
+    "ja": "めざめいしの標本",
+    "ru": "Образцы Рассветного камня"
+  },
+  "QuestTwilightRestArea40DawnSamplesDescription": {
+    "en": "The guild is measuring the unusual light around the grasslands. Deliver {1} {0} for the survey.",
+    "zh": "公会正在测量草原附近的异常光芒。请为调查交付{1}颗{0}。",
+    "zh-Hant": "公會正在測量草原附近的異常光芒。請為調查交付{1}顆{0}。",
+    "ja": "ギルドが草原周辺の異常な光を測定しています。調査用に{0}を{1}個届けてください。",
+    "ru": "Гильдия измеряет необычный свет вокруг лугов. Доставьте предмет «{0}» для исследования. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40RestlessLights": {
+    "en": "Restless Lights",
+    "zh": "躁动的光芒",
+    "zh-Hant": "躁動的光芒",
+    "ja": "落ち着かない光",
+    "ru": "Беспокойные огни"
+  },
+  "QuestTwilightRestArea40LightSpiritPatrol": {
+    "en": "Light Spirit Patrol",
+    "zh": "光之精灵巡逻",
+    "zh-Hant": "光之精靈巡邏",
+    "ja": "光の精霊の巡回",
+    "ru": "Патруль световых духов"
+  },
+  "QuestTwilightRestArea40LightSpiritPatrolDescription": {
+    "en": "Groups of {0} are gathering around the highland route and startling travelers. Defeat {1} of them.",
+    "zh": "成群的{0}聚集在高地路线附近并惊扰旅人。请击败其中{1}只。",
+    "zh-Hant": "成群的{0}聚集在高地路線附近並驚擾旅人。請擊敗其中{1}隻。",
+    "ja": "{0}の群れが高地の道に集まり、旅人を怯えさせています。{1}体倒してください。",
+    "ru": "Группы существ «{0}» собираются возле высокогорного пути и пугают путников. Победите их. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40HighlandFiberReserve": {
+    "en": "Highland Repair Materials",
+    "zh": "高地修理材料",
+    "zh-Hant": "高地修理材料",
+    "ja": "高地の修理材料",
+    "ru": "Высокогорные ремонтные материалы"
+  },
+  "QuestTwilightRestArea40FiberReserve": {
+    "en": "Highland Fiber Reserve",
+    "zh": "高地纤维储备",
+    "zh-Hant": "高地纖維儲備",
+    "ja": "高地の繊維備蓄",
+    "ru": "Высокогорный запас волокон"
+  },
+  "QuestTwilightRestArea40FiberReserveDescription": {
+    "en": "Strong winds have damaged the rest station shelters. Deliver {1} {0} so the guild can reinforce them.",
+    "zh": "强风损坏了休息站的遮蔽物。请交付{1}份{0}供公会加固设施。",
+    "zh-Hant": "強風損壞了休息站的遮蔽物。請交付{1}份{0}供公會加固設施。",
+    "ja": "強風で休息所の避難設備が壊れました。ギルドが補強できるよう、{0}を{1}個届けてください。",
+    "ru": "Сильные ветры повредили укрытия станции отдыха. Доставьте материал «{0}», чтобы гильдия могла их укрепить. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40RadiantPredators": {
+    "en": "Radiant Predators",
+    "zh": "辉光掠食者",
+    "zh-Hant": "輝光掠食者",
+    "ja": "輝きの捕食者",
+    "ru": "Сияющие хищники"
+  },
+  "QuestTwilightRestArea40HaloWolfHunt": {
+    "en": "Halo Wolf Hunt",
+    "zh": "光环狼狩猎",
+    "zh-Hant": "光環狼狩獵",
+    "ja": "光輪の狼の狩猟",
+    "ru": "Охота на волков ореола"
+  },
+  "QuestTwilightRestArea40HaloWolfHuntDescription": {
+    "en": "A pack of {0} is hunting along the highland road. Defeat {1} before another caravan is surrounded.",
+    "zh": "一群{0}正在高地道路附近狩猎。请击败其中{1}只，避免另一支商队被包围。",
+    "zh-Hant": "一群{0}正在高地道路附近狩獵。請擊敗其中{1}隻，避免另一支商隊被包圍。",
+    "ja": "{0}の群れが高地の道沿いで狩りをしています。次の隊商が囲まれる前に{1}体倒してください。",
+    "ru": "Стая существ «{0}» охотится вдоль высокогорной дороги. Победите их, пока ещё один караван не окружён. Требуемое количество: {1}."
+  },
+  "TwilightRestArea40RadiantReserve": {
+    "en": "Radiant Reserve",
+    "zh": "辉光储备",
+    "zh-Hant": "輝光儲備",
+    "ja": "輝きの備蓄",
+    "ru": "Сияющий резерв"
+  },
+  "QuestTwilightRestArea40RadiantEssence": {
+    "en": "Radiant Essence Collection",
+    "zh": "辉光精华收集",
+    "zh-Hant": "輝光精華收集",
+    "ja": "輝きの精髄の収集",
+    "ru": "Сбор сияющей эссенции"
+  },
+  "QuestTwilightRestArea40RadiantEssenceDescription": {
+    "en": "The guild needs concentrated light for its protective equipment. Deliver {1} {0} from the highlands.",
+    "zh": "公会需要浓缩的光能维护防护装备。请从高地交付{1}份{0}。",
+    "zh-Hant": "公會需要濃縮的光能維護防護裝備。請從高地交付{1}份{0}。",
+    "ja": "ギルドが防護装備のために凝縮された光を必要としています。高地から{0}を{1}個届けてください。",
+    "ru": "Гильдии нужен концентрированный свет для защитного снаряжения. Доставьте материал «{0}» с высокогорья. Требуемое количество: {1}."
+  },
+  "TwilightRestArea41BlindingCrossroads": {
+    "en": "Blinding Crossroads",
+    "zh": "刺眼的十字路口",
+    "zh-Hant": "刺眼的十字路口",
+    "ja": "まばゆい交差点",
+    "ru": "Ослепляющий перекрёсток"
+  },
+  "QuestTwilightRestArea41LightElementals": {
+    "en": "Blinding Light Elementals",
+    "zh": "刺眼的光元素",
+    "zh-Hant": "刺眼的光元素",
+    "ja": "まばゆい光の元素",
+    "ru": "Ослепляющие световые элементали"
+  },
+  "QuestTwilightRestArea41LightElementalsDescription": {
+    "en": "Several {0} are flooding the crossroads with blinding light. Defeat {1} so travelers can see the road again.",
+    "zh": "数只{0}让十字路口充满刺眼的强光。请击败其中{1}只，让旅人重新看清道路。",
+    "zh-Hant": "數隻{0}讓十字路口充滿刺眼的強光。請擊敗其中{1}隻，讓旅人重新看清道路。",
+    "ja": "数体の{0}が交差点をまばゆい光で満たしています。旅人が再び道を見られるよう、{1}体倒してください。",
+    "ru": "Несколько существ «{0}» заливают перекрёсток ослепительным светом. Победите их, чтобы путники снова могли видеть дорогу. Требуемое количество: {1}."
+  },
+  "TwilightRestArea41CoastalProvisions": {
+    "en": "Coastal Provisions",
+    "zh": "海岸补给",
+    "zh-Hant": "海岸補給",
+    "ja": "海岸の食料",
+    "ru": "Прибрежный провиант"
+  },
+  "QuestTwilightRestArea41SeaProvisions": {
+    "en": "Twilight Sea Provisions",
+    "zh": "暮光海域补给",
+    "zh-Hant": "暮光海域補給",
+    "ja": "黄昏の海の食料",
+    "ru": "Провиант Сумеречного моря"
+  },
+  "QuestTwilightRestArea41SeaProvisionsDescription": {
+    "en": "The rest station is preparing food for travelers crossing both mountain routes. Deliver {1} fresh {0}.",
+    "zh": "休息站正在为穿越两条山路的旅人准备食物。请交付{1}份新鲜的{0}。",
+    "zh-Hant": "休息站正在為穿越兩條山路的旅人準備食物。請交付{1}份新鮮的{0}。",
+    "ja": "休息所が二つの山道を渡る旅人のために食事を準備しています。新鮮な{0}を{1}個届けてください。",
+    "ru": "Станция отдыха готовит еду для путников, пересекающих оба горных маршрута. Доставьте свежие продукты «{0}». Требуемое количество: {1}."
+  },
+  "TwilightRestArea41MountainBatWatch": {
+    "en": "Mountain Bat Watch",
+    "zh": "山地蝙蝠监视",
+    "zh-Hant": "山地蝙蝠監視",
+    "ja": "山のコウモリの監視",
+    "ru": "Дозор горных летучих мышей"
+  },
+  "QuestTwilightRestArea41DevilBatWatch": {
+    "en": "Devil Bat Watch",
+    "zh": "恶魔蝙蝠监视",
+    "zh-Hant": "惡魔蝙蝠監視",
+    "ja": "悪魔コウモリの監視",
+    "ru": "Дозор дьявольских летучих мышей"
+  },
+  "QuestTwilightRestArea41DevilBatWatchDescription": {
+    "en": "A colony of {0} is attacking travelers on the dark mountain route. Defeat {1} and reopen the path.",
+    "zh": "一群{0}正在黑暗山路上袭击旅人。请击败其中{1}只并重新开放道路。",
+    "zh-Hant": "一群{0}正在黑暗山路上襲擊旅人。請擊敗其中{1}隻並重新開放道路。",
+    "ja": "{0}の群れが暗い山道で旅人を襲っています。{1}体倒し、道を再び開いてください。",
+    "ru": "Колония существ «{0}» нападает на путников на тёмном горном маршруте. Победите их и откройте путь. Требуемое количество: {1}."
+  },
+  "TwilightRestArea41BalancedStoneSurvey": {
+    "en": "Balanced Stone Survey",
+    "zh": "明暗石平衡调查",
+    "zh-Hant": "明暗石平衡調查",
+    "ja": "石の均衡の調査",
+    "ru": "Исследование равновесия камней"
+  },
+  "QuestTwilightRestArea41TwilightStoneSurvey": {
+    "en": "Twilight Stone Survey",
+    "zh": "暮光石调查",
+    "zh-Hant": "暮光石調查",
+    "ja": "黄昏の石の調査",
+    "ru": "Исследование сумеречных камней"
+  },
+  "QuestTwilightRestArea41TwilightStoneSurveyDescription": {
+    "en": "The guild is comparing the light and darkness around the mountain routes. Deliver {1} {0} and {3} {2} for the survey.",
+    "zh": "公会正在比较两条山路附近的光明与黑暗。请为调查交付{1}颗{0}和{3}颗{2}。",
+    "zh-Hant": "公會正在比較兩條山路附近的光明與黑暗。請為調查交付{1}顆{0}和{3}顆{2}。",
+    "ja": "ギルドが山道周辺の光と闇を比較しています。調査用に{0}を{1}個、{2}を{3}個届けてください。",
+    "ru": "Гильдия сравнивает свет и тьму вокруг горных путей. Доставьте предметы для исследования. Требуемое количество: {0} ({1}), {2} ({3})."
+  },
+  "TwilightRestArea41MountainScholars": {
+    "en": "Mountain Scholars",
+    "zh": "山中的学者",
+    "zh-Hant": "山中的學者",
+    "ja": "山の学者たち",
+    "ru": "Горные учёные"
+  },
+  "QuestTwilightRestArea41ScholarAngelBlockade": {
+    "en": "Scholar Angel Blockade",
+    "zh": "学者天使封路",
+    "zh-Hant": "學者天使封路",
+    "ja": "学者の天使の封鎖",
+    "ru": "Блокада ангелов-учёных"
+  },
+  "QuestTwilightRestArea41ScholarAngelBlockadeDescription": {
+    "en": "Several {0} have sealed off the mountain path during a dangerous experiment. Defeat {1} and clear the route.",
+    "zh": "数名{0}在进行危险实验时封锁了山路。请击败其中{1}名并清理路线。",
+    "zh-Hant": "數名{0}在進行危險實驗時封鎖了山路。請擊敗其中{1}名並清理路線。",
+    "ja": "数体の{0}が危険な実験のために山道を封鎖しました。{1}体倒して道を空けてください。",
+    "ru": "Несколько существ «{0}» перекрыли горную тропу во время опасного эксперимента. Победите их и расчистите путь. Требуемое количество: {1}."
+  },
+  "TwilightRestArea41HeavyWings": {
+    "en": "Heavy Wings",
+    "zh": "沉重的羽翼",
+    "zh-Hant": "沉重的羽翼",
+    "ja": "重い翼",
+    "ru": "Тяжёлые крылья"
+  },
+  "QuestTwilightRestArea41AvianElephants": {
+    "en": "Avian Elephants on the Pass",
+    "zh": "山口上的飞翼象",
+    "zh-Hant": "山口上的飛翼象",
+    "ja": "峠の鳥の象",
+    "ru": "Птицеслоны на перевале"
+  },
+  "QuestTwilightRestArea41AvianElephantsDescription": {
+    "en": "Several {0} are landing on the mountain pass and blocking caravans. Defeat {1} before the route collapses under their weight.",
+    "zh": "数只{0}降落在山口并阻挡商队。请击败其中{1}只，避免道路承受不住它们的重量。",
+    "zh-Hant": "數隻{0}降落在山口並阻擋商隊。請擊敗其中{1}隻，避免道路承受不住牠們的重量。",
+    "ja": "数体の{0}が峠に降り立ち、隊商を妨げています。その重みで道が崩れる前に{1}体倒してください。",
+    "ru": "Несколько существ «{0}» приземлились на перевале и преградили путь караванам. Победите их, пока дорога не обрушилась под их весом. Требуемое количество: {1}."
+  },
+  "GelgroveCampArea49TidepoolClearance": {
+    "en": "Tidepool Clearance",
+    "zh": "潮池清理",
+    "zh-Hant": "潮池清理",
+    "ja": "潮だまりの掃討",
+    "ru": "Зачистка приливных луж"
+  },
+  "QuestGelgroveCampArea49StarfishClearance": {
+    "en": "Starfish Clearance",
+    "zh": "海星清理",
+    "zh-Hant": "海星清理",
+    "ja": "ヒトデの駆除",
+    "ru": "Зачистка морских звёзд"
+  },
+  "QuestGelgroveCampArea49StarfishClearanceDescription": {
+    "en": "Groups of {0} are blocking the camp shoreline and damaging fishing gear. Defeat {1} of them.",
+    "zh": "成群的{0}堵住营地海岸并破坏捕鱼工具。请击败其中{1}只。",
+    "zh-Hant": "成群的{0}堵住營地海岸並破壞捕魚工具。請擊敗其中{1}隻。",
+    "ja": "{0}の群れが野営地の海岸を塞ぎ、漁具を壊しています。{1}体倒してください。",
+    "ru": "Группы существ «{0}» блокируют берег лагеря и повреждают рыболовное снаряжение. Победите их. Требуемое количество: {1}."
+  },
+  "GelgroveCampArea49CampCrabOrder": {
+    "en": "Camp Crab Order",
+    "zh": "营地螃蟹订单",
+    "zh-Hant": "營地螃蟹訂單",
+    "ja": "野営地のカニ注文",
+    "ru": "Лагерный заказ крабов"
+  },
+  "QuestGelgroveCampArea49CrabDelivery": {
+    "en": "Camp Crab Delivery",
+    "zh": "营地螃蟹配送",
+    "zh-Hant": "營地螃蟹配送",
+    "ja": "野営地へのカニ配達",
+    "ru": "Доставка крабов в лагерь"
+  },
+  "QuestGelgroveCampArea49CrabDeliveryDescription": {
+    "en": "Gelgrove Camp needs fresh {0} for its food stores. Deliver {1} before the next supply boat leaves.",
+    "zh": "Gelgrove营地需要新鲜的{0}补充食物储备。请在下一艘补给船离开前交付{1}只。",
+    "zh-Hant": "Gelgrove營地需要新鮮的{0}補充食物儲備。請在下一艘補給船離開前交付{1}隻。",
+    "ja": "ゲルの森の野営地が食料備蓄に新鮮な{0}を必要としています。次の補給船が出る前に{1}体届けてください。",
+    "ru": "Лагерю Гелевой рощи нужны свежие продукты «{0}» для продовольственных запасов. Доставьте их до отправления следующего судна снабжения. Требуемое количество: {1}."
+  },
+  "GelgroveCampArea49FloodedPath": {
+    "en": "Flooded Camp Path",
+    "zh": "积水的营地道路",
+    "zh-Hant": "積水的營地道路",
+    "ja": "水浸しの野営地の道",
+    "ru": "Затопленная лагерная тропа"
+  },
+  "QuestGelgroveCampArea49WaterSlimera": {
+    "en": "Water Slimera on the Path",
+    "zh": "道路上的水史莱姆",
+    "zh-Hant": "道路上的水史萊姆",
+    "ja": "道の水のスライムラ",
+    "ru": "Водяные слаймеры на пути"
+  },
+  "QuestGelgroveCampArea49WaterSlimeraDescription": {
+    "en": "Several {0} are flooding the route between the camp and the shore. Defeat {1} and reopen the path.",
+    "zh": "数只{0}让营地与海岸之间的道路积满了水。请击败其中{1}只并重新开放路线。",
+    "zh-Hant": "數隻{0}讓營地與海岸之間的道路積滿了水。請擊敗其中{1}隻並重新開放路線。",
+    "ja": "数体の{0}が野営地と海岸の間の道を水浸しにしています。{1}体倒し、道を再び開いてください。",
+    "ru": "Несколько существ «{0}» затапливают путь между лагерем и берегом. Победите их и откройте тропу. Требуемое количество: {1}."
+  },
+  "GelgroveCampArea49RaidedFishingGround": {
+    "en": "Raided Fishing Ground",
+    "zh": "遭袭的捕鱼区",
+    "zh-Hant": "遭襲的捕魚區",
+    "ja": "襲われた漁場",
+    "ru": "Разорённые рыбные угодья"
+  },
+  "QuestGelgroveCampArea49PelicanRaid": {
+    "en": "Pelican Fishing Raid",
+    "zh": "鹈鹕袭击渔获",
+    "zh-Hant": "鵜鶘襲擊漁獲",
+    "ja": "ペリカンの漁船襲撃",
+    "ru": "Налёт пеликанов на рыбаков"
+  },
+  "QuestGelgroveCampArea49PelicanRaidDescription": {
+    "en": "A flock of {0} is raiding the camp fishing boats. Defeat {1} {0} and recover {3} {2} for the delayed shipment.",
+    "zh": "一群{0}正在袭击营地的渔船。请击败{1}只{0}并为延误的补给取回{3}份{2}。",
+    "zh-Hant": "一群{0}正在襲擊營地的漁船。請擊敗{1}隻{0}並為延誤的補給取回{3}份{2}。",
+    "ja": "{0}の群れが野営地の漁船を襲っています。{0}を{1}体倒し、遅れた貨物のために{2}を{3}個回収してください。",
+    "ru": "Стая существ «{0}» нападает на лагерные рыболовные суда. Победите монстров «{0}» и верните продукты «{2}» для задержанного груза. Требуемое количество: противники ({1}), продукты ({3})."
+  },
+  "GelgroveCampArea49ForestProvisionRaid": {
+    "en": "Forest Provision Raid",
+    "zh": "森林补给遭袭",
+    "zh-Hant": "森林補給遭襲",
+    "ja": "森の物資襲撃",
+    "ru": "Налёт на лесные припасы"
+  },
+  "QuestGelgroveCampArea49MonkeyRaiders": {
+    "en": "Monkey Provision Raiders",
+    "zh": "猴群抢夺补给",
+    "zh-Hant": "猴群搶奪補給",
+    "ja": "物資を奪うサルたち",
+    "ru": "Обезьяны, расхищающие припасы"
+  },
+  "QuestGelgroveCampArea49MonkeyRaidersDescription": {
+    "en": "A group of {0} is stealing supplies from workers near the tropical forest. Defeat {1} before the camp stores are emptied.",
+    "zh": "一群{0}正在热带森林附近抢夺工作人员的补给。请击败其中{1}只，避免营地储备被搬空。",
+    "zh-Hant": "一群{0}正在熱帶森林附近搶奪工作人員的補給。請擊敗其中{1}隻，避免營地儲備被搬空。",
+    "ja": "{0}の群れが熱帯林付近で作業員の物資を盗んでいます。野営地の備蓄がなくなる前に{1}体倒してください。",
+    "ru": "Группа существ «{0}» крадёт припасы у рабочих возле тропического леса. Победите их, пока лагерные запасы не опустели. Требуемое количество: {1}."
+  },
+  "GelgroveCampArea49UnstableSlimes": {
+    "en": "Arcane Mimic Outbreak",
+    "zh": "奥术拟态爆发",
+    "zh-Hant": "奧術擬態爆發",
+    "ja": "秘術のミミックの大量発生",
+    "ru": "Нашествие тайных мимиков"
+  },
+  "QuestGelgroveCampArea49ArcaneMimics": {
+    "en": "Unstable Slime Pack",
+    "zh": "不稳定的史莱姆群",
+    "zh-Hant": "不穩定的史萊姆群",
+    "ja": "不安定なスライムの群れ",
+    "ru": "Нестабильная стая слаймов"
+  },
+  "QuestGelgroveCampArea49ArcaneMimicsDescription": {
+    "en": "Groups of {0} and {2} are attacking workers across the slime fields. Defeat {1} {0} and {3} {2}.",
+    "zh": "成群的{0}和{2}正在史莱姆原野袭击工作人员。请击败{1}只{0}和{3}只{2}。",
+    "zh-Hant": "成群的{0}和{2}正在史萊姆原野襲擊工作人員。請擊敗{1}隻{0}和{3}隻{2}。",
+    "ja": "{0}と{2}の群れがスライムの野原で作業員を襲っています。{0}を{1}体、{2}を{3}体倒してください。",
+    "ru": "Группы существ «{0}» и «{2}» нападают на рабочих по всем слаймовым полям. Победите их. Требуемое количество: {0} ({1}), {2} ({3})."
+  },
+  "TwilightRestArea38RadiantInterference": {
+    "en": "Radiant Interference",
+    "zh": "辉光干扰",
+    "zh-Hant": "輝光干擾",
+    "ja": "輝きの妨害",
+    "ru": "Сияющие помехи"
+  },
+  "QuestTwilightRestArea38OrbAngelInterference": {
+    "en": "Orb Angel Interference",
+    "zh": "光球天使干扰",
+    "zh-Hant": "光球天使干擾",
+    "ja": "オーブの天使の妨害",
+    "ru": "Помехи ангелов сферы"
+  },
+  "QuestTwilightRestArea38OrbAngelInterferenceDescription": {
+    "en": "Several {0} are disrupting the route markers with concentrated light. Defeat {1} of them and stabilize the road.",
+    "zh": "数只{0}用集中的光芒干扰路线标记。请击败其中{1}只并稳定道路。",
+    "zh-Hant": "數隻{0}用集中的光芒干擾路線標記。請擊敗其中{1}隻並穩定道路。",
+    "ja": "数体の{0}が集中した光で道標を乱しています。{1}体倒して道を安定させてください。",
+    "ru": "Несколько существ «{0}» мешают работе путевых знаков сосредоточенным светом. Победите их и стабилизируйте дорогу. Требуемое количество: {1}."
+  },
+  "TwilightRestArea38GuardianAlert": {
+    "en": "Radiant Guardian Alert",
+    "zh": "辉光守卫警报",
+    "zh-Hant": "輝光守衛警報",
+    "ja": "輝きの守護者の警報",
+    "ru": "Тревога сияющих стражей"
+  },
+  "QuestTwilightRestArea38RareGuardians": {
+    "en": "Rare Guardians of the Light",
+    "zh": "稀有光之守卫",
+    "zh-Hant": "稀有光之守衛",
+    "ja": "希少な光の守護者",
+    "ru": "Редкие стражи света"
+  },
+  "QuestTwilightRestArea38RareGuardiansDescription": {
+    "en": "Powerful guardians are controlling the routes in area {0}. Defeat {1} rare encounters before travel becomes impossible.",
+    "zh": "强大的守卫正在控制{0}区的路线。请击败{1}队稀有遭遇敌人，避免道路彻底无法通行。",
+    "zh-Hant": "強大的守衛正在控制{0}區的路線。請擊敗{1}隊稀有遭遇敵人，避免道路徹底無法通行。",
+    "ja": "強力な守護者がエリア{0}の道を支配しています。通行不能になる前に、レア遭遇を{1}回制してください。",
+    "ru": "Могучие стражи контролируют пути в области {0}. Победите в редких встречах, пока перемещение не стало невозможным. Требуемое количество встреч: {1}."
+  },
+  "TwilightRestArea44FadingLanterns": {
+    "en": "Fading Lanterns",
+    "zh": "逐渐熄灭的灯火",
+    "zh-Hant": "逐漸熄滅的燈火",
+    "ja": "消えゆく灯り",
+    "ru": "Угасающие фонари"
+  },
+  "QuestTwilightRestArea44DarkElementals": {
+    "en": "Dark Elemental Interference",
+    "zh": "暗元素干扰",
+    "zh-Hant": "暗元素干擾",
+    "ja": "闇の元素の妨害",
+    "ru": "Помехи тёмных элементалей"
+  },
+  "QuestTwilightRestArea44DarkElementalsDescription": {
+    "en": "Groups of {0} are draining the light from the road lanterns. Defeat {1} before the route is left in darkness.",
+    "zh": "成群的{0}正在吸走道路灯火的光芒。请击败其中{1}只，避免路线陷入黑暗。",
+    "zh-Hant": "成群的{0}正在吸走道路燈火的光芒。請擊敗其中{1}隻，避免路線陷入黑暗。",
+    "ja": "{0}の群れが道の灯りから光を吸い取っています。道が闇に包まれる前に{1}体倒してください。",
+    "ru": "Группы существ «{0}» вытягивают свет из дорожных фонарей. Победите их, пока путь не погрузился во тьму. Требуемое количество: {1}."
+  },
+  "RaidersRestArea53RoadsideRaiderAlert": {
+    "en": "Roadside Raider Alert",
+    "zh": "路边袭击警报",
+    "zh-Hant": "路邊襲擊警報",
+    "ja": "道端の略奪者の警報",
+    "ru": "Тревога придорожных налётчиков"
+  },
+  "QuestRaidersRestArea53GoblinRaiders": {
+    "en": "Goblin Raiders on the Road",
+    "zh": "道路上的哥布林袭击者",
+    "zh-Hant": "道路上的哥布林襲擊者",
+    "ja": "道のゴブリン略奪者",
+    "ru": "Гоблинские налётчики на дороге"
+  },
+  "QuestRaidersRestArea53GoblinRaidersDescription": {
+    "en": "Groups of {0} are ambushing supply wagons near RaidersRest. Defeat {1} before another shipment is stolen.",
+    "zh": "成群的{0}正在RaidersRest附近伏击补给车。请击败其中{1}只，避免下一批货物被抢走。",
+    "zh-Hant": "成群的{0}正在RaidersRest附近伏擊補給車。請擊敗其中{1}隻，避免下一批貨物被搶走。",
+    "ja": "{0}の群れが略奪者の休息地付近で補給荷車を待ち伏せしています。次の貨物が盗まれる前に{1}体倒してください。",
+    "ru": "Группы существ «{0}» устраивают засады на повозки снабжения возле Привала налётчиков. Победите их, пока очередной груз не украден. Требуемое количество: {1}."
+  },
+  "RaidersRestArea64TurtleGolemWarning": {
+    "en": "Turtle Golem Warning",
+    "zh": "海龟魔像警报",
+    "zh-Hant": "海龜魔像警報",
+    "ja": "亀のゴーレムの警告",
+    "ru": "Предупреждение о черепашьем големе"
+  },
+  "QuestRaidersRestArea64CoastalTremors": {
+    "en": "Tremors Beneath the Shore",
+    "zh": "海岸下的震动",
+    "zh-Hant": "海岸下的震動",
+    "ja": "海岸の下の地響き",
+    "ru": "Толчки под берегом"
+  },
+  "QuestRaidersRestArea64CoastalTremorsDescription": {
+    "en": "Powerful creatures are causing tremors across area {0}. Defeat {1} rare encounter before the coastal road is destroyed.",
+    "zh": "强大的生物正在{0}区引发震动。请击败{1}队稀有遭遇敌人，避免海岸道路被摧毁。",
+    "zh-Hant": "強大的生物正在{0}區引發震動。請擊敗{1}隊稀有遭遇敵人，避免海岸道路被摧毀。",
+    "ja": "強力な生き物がエリア{0}全域に地響きを起こしています。海岸の道が壊れる前に、レア遭遇を{1}回制してください。",
+    "ru": "Могучие существа вызывают толчки по всей области {0}. Победите в редких встречах, пока прибрежная дорога не разрушена. Требуемое количество встреч: {1}."
+  }
+}
