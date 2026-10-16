@@ -164,62 +164,41 @@ function specialEventConditionText(condition) {
     if (!condition || !condition.localizationKey) return '';
     return specialEventLocalizedTemplate(condition.localizationKey, condition.variables || []);
 }
-function specialEventStageCard(stage, group, index) {
-    if (stage.display && stage.display.show === false) return '';
-    const active = (stage.steps || []).filter(row => row.type === 'Standard' || row.type === 'Resolve');
-    const unique = values => [...new Set(values.filter(Boolean))];
-    const tileData = unique(active.flatMap(row => [row.tileDataPicker, row.tileData]));
-    const tileArea = unique(active.map(row => row.tileArea));
-    const npcs = unique(active.filter(row => row.imageType === 'NPC' || row.eventNpcName && row.eventNpcName !== 'PLAYER')
-        .map(row => row.eventNpcName).filter(name => name && name !== 'PLAYER'));
-    // An active quest applies to intervening stages, not just its receive/complete stage.
-    const ordered = specialEventStageOrder(group);
-    const received = new Map();
-    let questKeys = [];
-    for (const current of ordered) {
-        const refs = current.contentRefs || {};
-        const completed = refs.completedQuestKeys || current.questKeysCompleted || [];
-        const incoming = refs.receivedQuestKeys || current.questKeysReceived || [];
-        if (current === stage) {
-            questKeys = unique([...received.keys(), ...completed, ...incoming]);
-            break;
+function specialEventSummary(group) {
+    const ordered = specialEventStageOrder(group).filter(stage => !stage.display || stage.display.show !== false);
+    const locations = [], targets = [], objectives = [];
+    const unique = (arr, v) => { if (v && !arr.includes(v)) arr.push(v); };
+    for (const quest of (group.quests || []).slice().sort((a,b) => Number(a.questorder || 0) - Number(b.questorder || 0)))
+        unique(objectives, specialEventQuestContent(quest).objective);
+    for (const stage of ordered) {
+        for (const step of stage.steps || []) {
+            if (step.tileData || step.tileDataPicker || step.tileArea) {
+                const tiles = String(step.tileDataPicker || step.tileData || '').split('|').filter(Boolean);
+                for (const tile of (tiles.length ? tiles : [''])) {
+                    const location = [tile ? specialEventReference(tile) : '', step.tileArea ? specialEventAreaReference(step.tileArea) : ''].filter(Boolean).join(' ');
+                    if (location && locations[locations.length - 1] !== location) locations.push(location);
+                }
+            }
+            if (step.eventNpcName && step.eventNpcName !== 'PLAYER') unique(targets, specialEventReference(step.eventNpcName));
         }
-        for (const key of completed) received.delete(key);
-        for (const key of incoming) received.set(key, true);
+        if (!(group.quests || []).length) for (const condition of (stage.contentRefs?.stageConditions || []))
+            if (condition.category === 'localized-requirement') unique(objectives, specialEventConditionText(condition));
     }
-    const descriptions = unique(questKeys.map(key => {
-        const quest = (group.quests || []).find(q => q.key === key);
-        return quest ? specialEventQuestContent(quest).objective : '';
-    }));
-    const useful = new Set(['LevelAbove','CoinAbove','GradeAbove','HaveItem','HaveEquipment','HaveSkill','HaveActiveSkill','HaveJob','HaveMonster','EngagedTileData','EnteredTileArea','DefeatMonster','DefeatTeam','DefeatDungeonArena','DefeatAreaMonster']);
-    const conditions = unique(((stage.contentRefs || {}).stageConditions || [])
-        .filter(c => useful.has(c.action)).map(specialEventConditionText));
-    const description = descriptions.length ? descriptions : conditions;
-    // Only display a source value if a localization resolver can identify it.
-    const localized = key => specialEventReference(key);
     const lines = [];
-    const data = unique(tileData.map(localized));
-    // Do not repeat a stage Tile Area when the description already links that same area.
-    const descriptionHtml = description.join(' · ');
-    const areas = unique(tileArea.filter(id =>
-        !descriptionHtml.includes('href="' + routeHash('tileareas', String(id)) + '"')
-    ).map(specialEventAreaReference));
-    const names = unique(npcs.map(localized));
-    if (data.length) lines.push('<p><strong>' + escapeHtml(ui('tileData','Tile Data')) + ':</strong> ' + data.join(' · ') + '</p>');
-    if (areas.length) lines.push('<p><strong>' + escapeHtml(ui('tileArea','Tile Area')) + ':</strong> ' + areas.join(' · ') + '</p>');
-    if (names.length) lines.push('<p><strong>' + escapeHtml(ui('npc','NPC')) + ':</strong> ' + names.join(' · ') + '</p>');
-    if (description.length) lines.push('<p><strong>' + escapeHtml(ui('description','Description')) + ':</strong> ' + description.join(' · ') + '</p>');
-    return '<section class="card detail-section special-event-stage" id="stage-' + encodeURIComponent(stage.key) + '"><h2>' + escapeHtml(ui('stage','Stage')) + ' ' + (index + 1) + '</h2>' + lines.join('') + '</section>';
+    if (locations.length) lines.push('<p><strong>' + escapeHtml(ui('locations','Locations')) + ':</strong> ' + locations.join(' → ') + '</p>');
+    if (targets.length) lines.push('<p><strong>' + escapeHtml(ui('npc','NPC') + ' / ' + ui('target','Target')) + ':</strong> ' + targets.join(' · ') + '</p>');
+    if (objectives.length) lines.push('<p><strong>' + escapeHtml(ui('objective','Objective')) + ':</strong> ' + objectives.join(' · ') + '</p>');
+    return '<section class="card detail-section special-event-summary">' + lines.join('') + '</section>';
 }
 function renderSpecialEventList() {
-    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+specialEventStageOrder(g).filter((stage,i)=>specialEventStageCard(stage,g,i)).length+' '+escapeHtml(ui('stages','Stages'))+'</p></article>').join('');
+    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+specialEventStageOrder(g).filter(stage=>!stage.display||stage.display.show!==false).length+' '+escapeHtml(ui('stages','Stages'))+'</p></article>').join('');
     return '<div class="header-card"><h1>'+escapeHtml(ui('specialEvents','Special Events'))+'</h1><p>'+wiki.specialEventGroups.length+' '+escapeHtml(ui('entries','entries'))+'</p><input type="text" id="searchInput" class="search-input" placeholder="'+escapeHtml(ui('search','Search...'))+'"></div><div class="grid">'+cards+'</div>';
 }
 function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
     const group=specialEventGroup(key);if(!group)return;
     if(!fromRoute&&navigateHash('specialevents',key))return;
     setActiveView('SpecialEvents');
-    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+specialEventStageOrder(group).filter((stage,i)=>specialEventStageCard(stage,group,i)).length+' '+escapeHtml(ui('stages','Stages'))+'</p></div>'+specialEventStageOrder(group).map((stage,i)=>specialEventStageCard(stage,group,i)).filter(Boolean).map((html,i)=>html.replace(/<h2>Stage \d+:/,'<h2>Stage '+(i+1)+':')).join('')+'</div>';
+    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+specialEventStageOrder(group).filter(stage=>!stage.display||stage.display.show!==false).length+' '+escapeHtml(ui('stages','Stages'))+'</p></div>'+specialEventSummary(group)+'</div>';
     window.scrollTo(0,0);
 }
 function specialEventRoute() {
