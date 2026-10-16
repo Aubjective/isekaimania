@@ -63,7 +63,7 @@ function missionDetail(group) {
     }
     const objective = missionObjective(group);
     const grade = String(group.grade || '').replace(/Grade$/, '');
-    const rows = [infoRow(ui('grade','Grade'), escapeHtml(grade))];
+    const rows = [infoRow(ui('grade','Grade'), escapeHtml(grade + ' Grade'))];
     if (locations.length) rows.push(infoRow(ui('locations','Locations'),locations.join(' · ')));
     if (targets.length) rows.push(infoRow(ui('npc','NPC') + ' / ' + ui('target','Target'),targets.join(' · ')));
     if (objective) rows.push(infoRow(ui('objective','Objective'),objective));
@@ -79,7 +79,7 @@ function renderMissionList() {
 }
 function missionFilter() {
     const grade = document.getElementById('missionGradeFilter')?.value || '';
-    document.querySelectorAll('#missionGrid [data-grade]').forEach(card => { card.hidden = Boolean(grade && card.dataset.grade !== grade); });
+    document.querySelectorAll('#missionGrid [data-grade]').forEach(card => { card.style.display = grade && card.dataset.grade !== grade ? 'none' : ''; });
 }
 function loadMissionDetail(key,fromRoute=false) {
     const group = wiki.missionGroups.find(g => g.key === key);
