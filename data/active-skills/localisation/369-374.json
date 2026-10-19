@@ -1,0 +1,44 @@
+{
+  "Grave Spark": {
+    "Name": {
+      "en": "Grave Spark",
+      "zh-CN": "墓火",
+      "zh-TW": "墓火"
+    }
+  },
+  "Binding Field": {
+    "Name": {
+      "en": "Binding Field",
+      "zh-CN": "缚魂领域",
+      "zh-TW": "縛魂領域"
+    }
+  },
+  "Borrowed Breath": {
+    "Name": {
+      "en": "Borrowed Breath",
+      "zh-CN": "借来的气息",
+      "zh-TW": "借來的氣息"
+    }
+  },
+  "Veteran's Cut": {
+    "Name": {
+      "en": "Veteran's Cut",
+      "zh-CN": "老兵斩",
+      "zh-TW": "老兵斬"
+    }
+  },
+  "Hold the Line": {
+    "Name": {
+      "en": "Hold the Line",
+      "zh-CN": "守住阵线",
+      "zh-TW": "守住陣線"
+    }
+  },
+  "Shoulder the Wound": {
+    "Name": {
+      "en": "Shoulder the Wound",
+      "zh-CN": "替同伴扛伤",
+      "zh-TW": "替同伴扛傷"
+    }
+  }
+}
