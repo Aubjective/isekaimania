@@ -1,0 +1,37 @@
+{
+  "DryadPineGroveDungeon": {
+    "Name": {
+      "en": "Dryad Pine Grove",
+      "zh-CN": "树精松林",
+      "zh-TW": "樹精松林"
+    }
+  },
+  "EnragedCockatriceHighGround": {
+    "Name": {
+      "en": "Enraged Cockatrice High Ground",
+      "zh-CN": "暴怒巨型蛇鸡兽高地",
+      "zh-TW": "暴怒巨型蛇雞獸高地"
+    }
+  },
+  "OldGarrisonRoad": {
+    "Name": {
+      "en": "Old Garrison Road",
+      "zh-CN": "旧要塞路",
+      "zh-TW": "舊要塞路"
+    }
+  },
+  "OldGarrisonDungeon": {
+    "Name": {
+      "en": "Old Garrison Vault",
+      "zh-CN": "旧要塞库房",
+      "zh-TW": "舊要塞庫房"
+    }
+  },
+  "Alarm Tower": {
+    "Name": {
+      "en": "Alarm Tower",
+      "zh-CN": "警报塔",
+      "zh-TW": "警報塔"
+    }
+  }
+}
