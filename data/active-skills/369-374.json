@@ -1,0 +1,132 @@
+[
+  {
+    "ID": 369,
+    "ActiveSkillKey": "Grave Spark",
+    "Tier": "Low",
+    "Element": "None",
+    "Cooldown": 4,
+    "Units": [
+      {
+        "Action": "Damage",
+        "Value": "MagicalIntelligence",
+        "Multiplier": 75,
+        "Duration": null,
+        "Target": "Enemy",
+        "AreaOfEffect": "O"
+      }
+    ],
+    "Sprite": "GraveSpark",
+    "NegativeSkill": false
+  },
+  {
+    "ID": 370,
+    "ActiveSkillKey": "Binding Field",
+    "Tier": "Medium",
+    "Element": "None",
+    "Cooldown": 5,
+    "Units": [
+      {
+        "Action": "StatusDebuff",
+        "Value": "Root",
+        "Multiplier": 1,
+        "Duration": 2,
+        "Target": "Enemy",
+        "AreaOfEffect": "All"
+      }
+    ],
+    "Sprite": "BindingField",
+    "NegativeSkill": false
+  },
+  {
+    "ID": 371,
+    "ActiveSkillKey": "Borrowed Breath",
+    "Tier": "Medium",
+    "Element": "None",
+    "Cooldown": 6,
+    "Units": [
+      {
+        "Action": "Heal",
+        "Value": "Intelligence",
+        "Multiplier": 35,
+        "Duration": null,
+        "Target": "Ally",
+        "AreaOfEffect": "LHP"
+      },
+      {
+        "Action": "Buff",
+        "Value": "MagicalAttack",
+        "Multiplier": 10,
+        "Duration": 2,
+        "Target": "Ally",
+        "AreaOfEffect": "LHP"
+      }
+    ],
+    "Sprite": "BorrowedBreath",
+    "NegativeSkill": false
+  },
+  {
+    "ID": 372,
+    "ActiveSkillKey": "Veteran's Cut",
+    "Tier": "Low",
+    "Element": "None",
+    "Cooldown": 4,
+    "Units": [
+      {
+        "Action": "Damage",
+        "Value": "PhysicalStrength",
+        "Multiplier": 90,
+        "Duration": null,
+        "Target": "Enemy",
+        "AreaOfEffect": "O"
+      }
+    ],
+    "Sprite": "Veteran'sCut",
+    "NegativeSkill": false
+  },
+  {
+    "ID": 373,
+    "ActiveSkillKey": "Hold the Line",
+    "Tier": "Medium",
+    "Element": "None",
+    "Cooldown": 5,
+    "Units": [
+      {
+        "Action": "StatusBuff",
+        "Value": "Guard",
+        "Multiplier": 2,
+        "Duration": 3,
+        "Target": "Ally",
+        "AreaOfEffect": "All"
+      }
+    ],
+    "Sprite": "HoldTheLine",
+    "NegativeSkill": false
+  },
+  {
+    "ID": 374,
+    "ActiveSkillKey": "Shoulder the Wound",
+    "Tier": "Medium",
+    "Element": "None",
+    "Cooldown": 6,
+    "Units": [
+      {
+        "Action": "Buff",
+        "Value": "DamageMitigation",
+        "Multiplier": 10,
+        "Duration": 2,
+        "Target": "Ally",
+        "AreaOfEffect": "All"
+      },
+      {
+        "Action": "Heal",
+        "Value": "Constitution",
+        "Multiplier": 30,
+        "Duration": null,
+        "Target": "Ally",
+        "AreaOfEffect": "LHP"
+      }
+    ],
+    "Sprite": "ShoulderTheWound",
+    "NegativeSkill": false
+  }
+]
