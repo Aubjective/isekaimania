@@ -129,17 +129,25 @@
       "status": "verified",
       "summary": "Formalized content inclusion/exclusion policy in WIKI_CONTENT_SCOPE.md. Exclude dialogue and universal/system Special Events from presentation, audit counts and localization requirements; preserve named gameplay events and quest objectives.",
       "notes": "All current 51 Special Events wiki groups are named events; generic source-sheet handlers are not included as standalone wiki groups."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "in_scope_objective_localization",
+      "status": "partial",
+      "summary": "Resolved 3 gameplay objective template localization keys from live SpecialEvents source; localized Special Events objective dictionary now contains 844 keys.",
+      "notes": "12 named zero-quest event groups lack exact localization entries in SpecialEvents and Quests & Event Groups tabs. They remain pending classification; not automatically universal. Dialogues remain excluded."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Wiki scope formally documented: gameplay-focused; exclude dialogue and universal/system Special Events. Continue checking only in-scope objectives and references.",
+    "summary": "Three event objective templates restored using source translations. Twelve named event groups remain pending exact source localization and relevance review; universal events and dialogues excluded.",
     "ongoing": [
-      "Check missing localization only for included named gameplay event objectives; universal event handlers and dialogues are excluded",
-      "Complete cross-category gameplay reference checks",
-      "Review unrepresented system-event and GoddessQuest scope",
-      "Verify deployed wiki in a browser",
-      "Preserve approved Chest ID 77 HeartwoodCache exception"
+      "Review localization and relevance of 12 named zero-quest Special Events without source-backed title keys",
+      "Complete broader gameplay references and data validation",
+      "Review GoddessQuest scope separately",
+      "Verify published wiki in a browser",
+      "Preserve Chest ID 77 HeartwoodCache and dialogue/universal-event exclusions"
     ]
   }
 }
