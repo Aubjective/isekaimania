@@ -1,0 +1,245 @@
+[
+  {
+    "ID": 141,
+    "TileDataKey": "DryadPineGroveDungeon",
+    "SpriteKey": "BigTree",
+    "SubLayer": "None",
+    "TravelLevel": [
+      {
+        "Type": "Structure",
+        "Level": 2
+      }
+    ],
+    "ExtraTravelTime": 60,
+    "MinimumLevel": 20,
+    "MaximumLevel": 30,
+    "EnemyTeamsDay": [
+      "Dryad Archer",
+      "2 Dryad Archer",
+      "2 Dryad Warrior",
+      "2 Dryad Mage"
+    ],
+    "EnemyTeamsNight": [],
+    "SpecialTeamsDay": [
+      "DryadTrio",
+      "Dryad Princess"
+    ],
+    "SpecialTeamsNight": [],
+    "ItemLootKeys": [
+      "Herb",
+      "Plant Fiber",
+      "Wood",
+      "Twigs",
+      "Leaf Stone",
+      "Nature Substance"
+    ],
+    "EquipmentLootKeys": [
+      "Verdara Helmet"
+    ],
+    "ChestKeys": [
+      "DryadPineGroveCache"
+    ],
+    "ItemMerchantKeys": [],
+    "EquipmentMerchantKeys": [],
+    "SkillMerchantKeys": [],
+    "TileType": "Dungeon",
+    "OneTimeRewards": true,
+    "StandardEvents": [
+      "Battle",
+      "Trap",
+      "Loots",
+      "Chest"
+    ],
+    "Locked": true,
+    "LockHintDescr": "HaveItem",
+    "LockHintVariable": "1-Living Pineheart"
+  },
+  {
+    "ID": 142,
+    "TileDataKey": "EnragedCockatriceHighGround",
+    "SpriteKey": "Crater",
+    "SubLayer": "None",
+    "TravelLevel": [
+      {
+        "Type": "Structure",
+        "Level": 1
+      }
+    ],
+    "ExtraTravelTime": 0,
+    "MinimumLevel": 25,
+    "MaximumLevel": 30,
+    "EnemyTeamsDay": [
+      "2 Wind Slimera",
+      "WindCluster",
+      "Gale Spirit",
+      "Wind Avian"
+    ],
+    "EnemyTeamsNight": [
+      "3 Wind Slimera",
+      "WindCluster",
+      "3 Wind Bunny",
+      "3 Gale Spirit"
+    ],
+    "SpecialTeamsDay": [
+      "MadGiantCockatrice"
+    ],
+    "SpecialTeamsNight": [],
+    "ItemLootKeys": [
+      "Breeze Stone",
+      "Twigs",
+      "Plant Fiber",
+      "Medium Glass Flask"
+    ],
+    "EquipmentLootKeys": [],
+    "ChestKeys": [],
+    "ItemMerchantKeys": [],
+    "EquipmentMerchantKeys": [],
+    "SkillMerchantKeys": [],
+    "TileType": "Dungeon",
+    "OneTimeRewards": false,
+    "StandardEvents": [
+      "None",
+      "Battle",
+      "Trap",
+      "Loots"
+    ],
+    "Locked": false,
+    "LockHintDescr": "",
+    "LockHintVariable": ""
+  },
+  {
+    "ID": 143,
+    "TileDataKey": "OldGarrisonRoad",
+    "SpriteKey": "BurningLand",
+    "SubLayer": "OnTop",
+    "TravelLevel": [
+      {
+        "Type": "Forest",
+        "Level": 2
+      }
+    ],
+    "ExtraTravelTime": 40,
+    "MinimumLevel": 20,
+    "MaximumLevel": 25,
+    "EnemyTeamsDay": [
+      "2 Skeleton Hare",
+      "2 Skeleton Archer",
+      "2 Skeleton Warrior"
+    ],
+    "EnemyTeamsNight": [
+      "2 Skeleton Hare",
+      "2 Skeleton Archer",
+      "2 Skeleton Warrior"
+    ],
+    "SpecialTeamsDay": [],
+    "SpecialTeamsNight": [],
+    "ItemLootKeys": [
+      "Bone",
+      "Soul Ash",
+      "Dusk Stone"
+    ],
+    "EquipmentLootKeys": [],
+    "ChestKeys": [],
+    "ItemMerchantKeys": [],
+    "EquipmentMerchantKeys": [],
+    "SkillMerchantKeys": [],
+    "TileType": "Terrain",
+    "OneTimeRewards": false,
+    "StandardEvents": [
+      "Battle",
+      "RareEncounter",
+      "Loots",
+      "SpecialEvent"
+    ],
+    "Locked": false,
+    "LockHintDescr": "",
+    "LockHintVariable": ""
+  },
+  {
+    "ID": 144,
+    "TileDataKey": "OldGarrisonDungeon",
+    "SpriteKey": "CastleHaunted",
+    "SubLayer": "None",
+    "TravelLevel": [
+      {
+        "Type": "Structure",
+        "Level": 2
+      }
+    ],
+    "ExtraTravelTime": 60,
+    "MinimumLevel": 25,
+    "MaximumLevel": 30,
+    "EnemyTeamsDay": [
+      "OldGarrisonPatrol",
+      "WalkingDead"
+    ],
+    "EnemyTeamsNight": [
+      "OldGarrisonPatrol",
+      "WalkingDead"
+    ],
+    "SpecialTeamsDay": [
+      "OldGarrisonMabonBoss"
+    ],
+    "SpecialTeamsNight": [],
+    "ItemLootKeys": [
+      "Bone",
+      "Soul Ash",
+      "Dusk Stone"
+    ],
+    "EquipmentLootKeys": [],
+    "ChestKeys": [],
+    "ItemMerchantKeys": [],
+    "EquipmentMerchantKeys": [],
+    "SkillMerchantKeys": [],
+    "TileType": "Dungeon",
+    "OneTimeRewards": false,
+    "StandardEvents": [
+      "Battle",
+      "Trap",
+      "Loots",
+      "Chest",
+      "SpecialEvent"
+    ],
+    "Locked": true,
+    "LockHintDescr": "HaveItem",
+    "LockHintVariable": "1-Military Access Seal"
+  },
+  {
+    "ID": 145,
+    "TileDataKey": "Alarm Tower",
+    "SpriteKey": "TowerWatch",
+    "SubLayer": "None",
+    "TravelLevel": [
+      {
+        "Type": "Structure",
+        "Level": 1
+      }
+    ],
+    "ExtraTravelTime": 0,
+    "MinimumLevel": 5,
+    "MaximumLevel": 15,
+    "EnemyTeamsDay": [],
+    "EnemyTeamsNight": [],
+    "SpecialTeamsDay": [],
+    "SpecialTeamsNight": [],
+    "ItemLootKeys": [],
+    "EquipmentLootKeys": [],
+    "ChestKeys": [],
+    "ItemMerchantKeys": [],
+    "EquipmentMerchantKeys": [],
+    "SkillMerchantKeys": [],
+    "TileType": "Residential",
+    "OneTimeRewards": false,
+    "StandardEvents": [
+      "AdventurersGuild",
+      "ItemMerchant",
+      "MaterialMerchant",
+      "EquipmentMerchant",
+      "Portal",
+      "SpecialEvent"
+    ],
+    "Locked": false,
+    "LockHintDescr": "",
+    "LockHintVariable": ""
+  }
+]
