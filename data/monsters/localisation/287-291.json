@@ -1,0 +1,37 @@
+{
+  "Skeleton Hare": {
+    "Name": {
+      "en": "Skeleton Hare",
+      "zh-CN": "骷髅野兔",
+      "zh-TW": "骷髏野兔"
+    }
+  },
+  "Skeleton Archer": {
+    "Name": {
+      "en": "Skeleton Archer",
+      "zh-CN": "骷髅弓手",
+      "zh-TW": "骷髏弓手"
+    }
+  },
+  "Skeleton Warrior": {
+    "Name": {
+      "en": "Skeleton Warrior",
+      "zh-CN": "骷髅战士",
+      "zh-TW": "骷髏戰士"
+    }
+  },
+  "Skeleton Mage Mabon": {
+    "Name": {
+      "en": "Skeleton Mage Mabon",
+      "zh-CN": "骷髅法师·梅本",
+      "zh-TW": "骷髏法師·梅本"
+    }
+  },
+  "Skeleton Knight Baron": {
+    "Name": {
+      "en": "Skeleton Knight Baron",
+      "zh-CN": "骷髅骑士·巴伦",
+      "zh-TW": "骷髏騎士·巴倫"
+    }
+  }
+}
