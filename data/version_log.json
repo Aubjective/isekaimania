@@ -144,6 +144,14 @@
       "type": "scope_decision",
       "status": "verified",
       "summary": "Retain all 12 named single-stage Special Events despite missing exact group-title localization and zero associated quests. No fabricated translations; exclude universal/system events and dialogues."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "gameplay_reference_review",
+      "status": "partial",
+      "summary": "Reviewed quest condition/reward strings for 254 named Special Event and Mission groups (240 quest records). Confirmed DryadPineGroveIncident quest ID 266 explicitly references newly added Living Pineheart and retains its source reward data.",
+      "notes": "This is a targeted reference review, not exhaustive validation of all linked keys. Twelve user-approved named event groups remain included; universal events and dialogues remain excluded."
     }
   ],
   "publicStatus": {
