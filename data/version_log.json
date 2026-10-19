@@ -152,17 +152,25 @@
       "status": "partial",
       "summary": "Reviewed quest condition/reward strings for 254 named Special Event and Mission groups (240 quest records). Confirmed DryadPineGroveIncident quest ID 266 explicitly references newly added Living Pineheart and retains its source reward data.",
       "notes": "This is a targeted reference review, not exhaustive validation of all linked keys. Twelve user-approved named event groups remain included; universal events and dialogues remain excluded."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "cross_reference_audit",
+      "status": "partial",
+      "summary": "Validated ten explicit new-content gameplay links: 8 Skeleton boss skill/passive references, Verdara Helmet in Dryad Pine Grove equipment loot, and HeartwoodCache in its chest list. Checked new tile lock requirements for Living Pineheart (ID 141) and Military Access Seal (ID 144), whose item unlock targets were verified previously.",
+      "notes": "Full legacy-partition cross-reference scan not completed due to connector request limits; it must not be represented as fully verified."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Three event objective templates restored using source translations. Twelve named event groups remain pending exact source localization and relevance review; universal events and dialogues excluded.",
+    "summary": "Confirmed selected new-content cross-references. Full legacy cross-category links and browser verification are still pending; wiki excludes dialogue and universal events.",
     "ongoing": [
-      "Preserve 12 approved named Special Events and verify gameplay references, without inventing their titles",
-      "Complete broader gameplay references and data validation",
-      "Review GoddessQuest scope separately",
+      "Complete partitioned cross-reference audit of older Monster, Tile, Skill, Item, Equipment and Chest keys",
+      "Verify remaining gameplay localization and source links",
       "Verify published wiki in a browser",
-      "Preserve Chest ID 77 HeartwoodCache and dialogue/universal-event exclusions"
+      "Preserve 12 approved named events and Chest ID 77 HeartwoodCache",
+      "Exclude dialogues and universal Special Events"
     ]
   }
 }
