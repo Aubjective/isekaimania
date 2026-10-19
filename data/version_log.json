@@ -74,11 +74,19 @@
       "summary": "Checked IDs and partitions for 291 monsters, 374 active skills, 134 passive skills, and 194 items; validated all six newly added TileArea grids as 12×12 and checked 824 represented event steps against live source fields.",
       "status": "partial",
       "notes": "Full cross-reference, all-localization, runtime/browser verification remain outstanding. Chest ID 77 HeartwoodCache is an explicit exception to the current live Chest Sheet."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "verification",
+      "status": "partial",
+      "summary": "Corrected the five new Monster localizations to existing flat-language schema and verified complete en/zh-CN/zh-TW name coverage for Monsters (291), Active Skills (374), Passive Skills (134), Items (194), and Tile Data (145). Confirmed linked new Monster skills and two item tile-unlock IDs, and HeartwoodCache chest references.",
+      "notes": "Complete descriptions, references outside new record families, and deployed browser smoke test still pending."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Source-backed JSON sync applied. ID/partition integrity and represented event fields checked; final runtime, complete localization, and cross-reference checks remain ongoing.",
+    "summary": "Confirmed game-data sync applied; core name localization coverage and newly added content dependencies checked. Broader cross-references and browser verification remain ongoing.",
     "ongoing": [
       "Cross-reference and localization validation",
       "SpecialEvent and GoddessQuest scope review",
