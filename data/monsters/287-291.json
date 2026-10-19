@@ -1,0 +1,144 @@
+[
+  {
+    "ID": 287,
+    "MonsterKey": "Skeleton Hare",
+    "Rarity": 2,
+    "Race": "Spiritkin",
+    "Element": "Dark",
+    "Growth": "Dual",
+    "Stats": {
+      "Constitution": 32,
+      "Strength": 25,
+      "Agility": 48,
+      "Intelligence": 20
+    },
+    "PassiveSkillKeys": [
+      "Undead",
+      "Finesse Gift"
+    ],
+    "ActiveSkillKeys": [
+      "Bite",
+      "Stealth"
+    ],
+    "ItemLootKeys": [
+      "Bone",
+      "Soul Ash"
+    ],
+    "EquipmentLootKeys": []
+  },
+  {
+    "ID": 288,
+    "MonsterKey": "Skeleton Archer",
+    "Rarity": 3,
+    "Race": "Spiritkin",
+    "Element": "Dark",
+    "Growth": "Focus",
+    "Stats": {
+      "Constitution": 45,
+      "Strength": 50,
+      "Agility": 78,
+      "Intelligence": 27
+    },
+    "PassiveSkillKeys": [
+      "Undead",
+      "Sharpshooter Instinct"
+    ],
+    "ActiveSkillKeys": [
+      "Shoot",
+      "Piercing Strike"
+    ],
+    "ItemLootKeys": [
+      "Bone-2",
+      "Dusk Stone",
+      "Soul Ash"
+    ],
+    "EquipmentLootKeys": []
+  },
+  {
+    "ID": 289,
+    "MonsterKey": "Skeleton Warrior",
+    "Rarity": 3,
+    "Race": "Spiritkin",
+    "Element": "Dark",
+    "Growth": "Dual",
+    "Stats": {
+      "Constitution": 82,
+      "Strength": 60,
+      "Agility": 48,
+      "Intelligence": 30
+    },
+    "PassiveSkillKeys": [
+      "Undead",
+      "Vanguard Gift"
+    ],
+    "ActiveSkillKeys": [
+      "Guard",
+      "Shield Break",
+      "Cover Guard"
+    ],
+    "ItemLootKeys": [
+      "Bone-2",
+      "Dusk Stone",
+      "Soul Ash"
+    ],
+    "EquipmentLootKeys": []
+  },
+  {
+    "ID": 290,
+    "MonsterKey": "Skeleton Mage Mabon",
+    "Rarity": 4,
+    "Race": "Spiritkin",
+    "Element": "Dark",
+    "Growth": "Focus",
+    "Stats": {
+      "Constitution": 75,
+      "Strength": 55,
+      "Agility": 62,
+      "Intelligence": 115
+    },
+    "PassiveSkillKeys": [
+      "Undead",
+      "Life-Bound Mind"
+    ],
+    "ActiveSkillKeys": [
+      "Grave Spark",
+      "Binding Field",
+      "Borrowed Breath"
+    ],
+    "ItemLootKeys": [
+      "Bone-3",
+      "Soul Ash-2",
+      "Dusk Stone"
+    ],
+    "EquipmentLootKeys": []
+  },
+  {
+    "ID": 291,
+    "MonsterKey": "Skeleton Knight Baron",
+    "Rarity": 4,
+    "Race": "Spiritkin",
+    "Element": "Dark",
+    "Growth": "Dual",
+    "Stats": {
+      "Constitution": 90,
+      "Strength": 105,
+      "Agility": 60,
+      "Intelligence": 40
+    },
+    "PassiveSkillKeys": [
+      "Undead",
+      "Unbroken Watch"
+    ],
+    "ActiveSkillKeys": [
+      "Veteran's Cut",
+      "Hold the Line",
+      "Shoulder the Wound"
+    ],
+    "ItemLootKeys": [
+      "Bone-3",
+      "Soul Ash-2",
+      "Dusk Stone"
+    ],
+    "EquipmentLootKeys": []
+  }
+]
