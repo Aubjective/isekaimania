@@ -35,3 +35,6 @@ The wiki documents player-useful, confirmed **gameplay data** from the live Isek
 
 ## VERSION-LOG AUDIT RULE
 Excluded dialogue and universal event rows are **out of scope**, not missing or pending localization work. Only report gaps in included gameplay content and its displayed localization.
+
+## APPROVED NAMED EVENT EXCEPTIONS (2026-10-20)
+Keep all twelve named single-stage events even when they have zero attached quests or no exact source title translation: `WhereIsCastle`, `MysteriousOneEye`, `TheVampWarning`, `TheThunderForest`, `TooBrightToStudy`, `PoisonInThePuddle`, `WaterproofingFailure`, `TheGlowingWreckage`, `TracksUnderTheSnow`, `TheSmokingCrate`, `TheAbandonedHerbBasket`, `TheEmptyHuntingCamp`. They are **included**; missing localization is not a reason to hide or delete them. Never invent translated titles. Universal/system events and all dialogues remain excluded.
