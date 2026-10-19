@@ -5857,9 +5857,24 @@
     "ja": "旧守備隊地下施設"
   },
   "MainQuestBaronMabonRecoverTheMilitaryHornDescription": {
-    "en": "At {0} (Area {1}), inspect the old quartermaster record with {2} and obtain {3}. Enter {4} (Area {5}), defeat {6}, then return to {0}.",
-    "zh": "在区域{1}的{0}与{2}检查旧军需记录并取得{3}。随后进入区域{5}的{4}，击败{6}，再返回{0}。",
-    "zh-Hant": "在區域{1}的{0}與{2}檢查舊軍需記錄並取得{3}。隨後進入區域{5}的{4}，擊敗{6}，再返回{0}。",
-    "ja": "エリア{1}の{0}で{2}と共に旧兵站記録を調べ、{3}を手に入れる。エリア{5}の{4}に入り、{6}を倒してから{0}へ戻る。"
+    "en": "At {0} (Area {1}), inspect the old quartermaster record with {2} and obtain {3}. Enter {4} (Area {5}) and defeat {6}.",
+    "zh": "在区域{1}的{0}与{2}检查旧军需记录并取得{3}。随后进入区域{5}的{4}，击败{6}。",
+    "zh-Hant": "在區域{1}的{0}與{2}檢查舊軍需記錄並取得{3}。隨後進入區域{5}的{4}，擊敗{6}。",
+    "ja": "エリア{1}の{0}で{2}と共に旧兵站記録を調べ、{3}を手に入れる。その後、エリア{5}の{4}に入り、{6}を倒す。",
+    "ru": "В {0} (область {1}) изучите старые записи интенданта вместе с {2} и получите {3}. {3}атем войдите в {4} (область {5}) и победите {6}."
+  },
+  "MainQuestBaronMabonReportToVillageMessenger": {
+    "en": "Report to the Village Messenger",
+    "zh": "向村庄信使汇报",
+    "zh-Hant": "向村莊信使匯報",
+    "ja": "村の伝令に報告する",
+    "ru": "Доложить деревенскому гонцу"
+  },
+  "MainQuestBaronMabonReportToVillageMessengerDescription": {
+    "en": "Return to {0} in area {1} and speak with {2}.",
+    "zh": "返回区域{1}的{0}，与{2}对话。",
+    "zh-Hant": "返回區域{1}的{0}，與{2}對話。",
+    "ja": "エリア{1}の{0}に戻り、{2}と話す。",
+    "ru": "Вернитесь в {0} (область {1}) и поговорите с {2}."
   }
 }
