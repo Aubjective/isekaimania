@@ -27,7 +27,22 @@
       "Chest ID 77 uses HeartwoodCache by explicit project decision; live Chest Sheet still says DryadPineGroveCache."
     ],
     "scope": "Wiki covers gameplay data, quest objectives, requirements, stages, rewards, and mechanics; dialogue transcripts are excluded. Source event dialogue fields may remain in underlying stage JSON but are not displayed or localized as a wiki feature.",
-    "versioning": "Wiki version is independent of game's Ver Log; never claim full game-version parity without completed audit."
+    "versioning": "Wiki version is independent of game's Ver Log; never claim full game-version parity without completed audit.",
+    "contentScopeDocument": "WIKI_CONTENT_SCOPE.md",
+    "include": [
+      "Confirmed gameplay records",
+      "Main Quest objectives, requirements and rewards",
+      "Named, gameplay-relevant Special Events and Missions",
+      "Gameplay mechanics, stages, locations and references",
+      "Displayed text localization"
+    ],
+    "exclude": [
+      "NPC and player dialogue transcripts and option scripts",
+      "Universal/generic/system Special Event handlers",
+      "Raw internal event rows with no standalone gameplay purpose",
+      "Blank-ID drafts and unconfirmed content"
+    ],
+    "specialEventClassification": "Zero associated quests does not mean universal; keep relevant named encounters. Universal event source rows are intentionally excluded and must not be counted as missing."
   },
   "checkpoints": {
     "latestSourceGameVersionObserved": "1.2.0",
@@ -106,13 +121,21 @@
       "status": "partial",
       "summary": "Restored 841 non-dialogue localized Quest/Event Group objective and title keys to special-event-localisation.json from the live Quests & Event Groups localization tab. Added two missing Baron Mabon quest title/description keys and updated a changed description.",
       "notes": "15 Special Events group/title/description references lack a matching key in this source and need classification. Dialogue transcripts remain excluded."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "scope_policy",
+      "status": "verified",
+      "summary": "Formalized content inclusion/exclusion policy in WIKI_CONTENT_SCOPE.md. Exclude dialogue and universal/system Special Events from presentation, audit counts and localization requirements; preserve named gameplay events and quest objectives.",
+      "notes": "All current 51 Special Events wiki groups are named events; generic source-sheet handlers are not included as standalone wiki groups."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Restored 841 gameplay-oriented objective/title translations for Special Events, without dialogue. Source-backed quest localization differences synced; 15 unresolved Special Events localization references require review.",
+    "summary": "Wiki scope formally documented: gameplay-focused; exclude dialogue and universal/system Special Events. Continue checking only in-scope objectives and references.",
     "ongoing": [
-      "Classify 15 Special Events objective/title keys lacking Quests & Event Groups localization entries",
+      "Check missing localization only for included named gameplay event objectives; universal event handlers and dialogues are excluded",
       "Complete cross-category gameplay reference checks",
       "Review unrepresented system-event and GoddessQuest scope",
       "Verify deployed wiki in a browser",
