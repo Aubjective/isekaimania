@@ -98,14 +98,22 @@
       "status": "verified",
       "summary": "Confirmed dialog transcripts are out of scope for Isekaimania Wiki. Special Events should show objectives, conditions, stages and rewards, not conversations.",
       "notes": "Empty special-event-localisation.json remains a potential objective-text localization gap rather than a dialogue-translation obligation."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "objective_localization_sync",
+      "status": "partial",
+      "summary": "Restored 841 non-dialogue localized Quest/Event Group objective and title keys to special-event-localisation.json from the live Quests & Event Groups localization tab. Added two missing Baron Mabon quest title/description keys and updated a changed description.",
+      "notes": "15 Special Events group/title/description references lack a matching key in this source and need classification. Dialogue transcripts remain excluded."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Wiki data sync and core localization checked. Dialogue transcripts are out of scope. Verify Special Events objective text, cross-references and deployed site before final sign-off.",
+    "summary": "Restored 841 gameplay-oriented objective/title translations for Special Events, without dialogue. Source-backed quest localization differences synced; 15 unresolved Special Events localization references require review.",
     "ongoing": [
-      "Check Special Events objective/condition text localization using live Localization Sheet; no dialogues",
-      "Complete cross-category references for gameplay data",
+      "Classify 15 Special Events objective/title keys lacking Quests & Event Groups localization entries",
+      "Complete cross-category gameplay reference checks",
       "Review unrepresented system-event and GoddessQuest scope",
       "Verify deployed wiki in a browser",
       "Preserve approved Chest ID 77 HeartwoodCache exception"
