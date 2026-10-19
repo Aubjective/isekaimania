@@ -82,16 +82,25 @@
       "status": "partial",
       "summary": "Corrected the five new Monster localizations to existing flat-language schema and verified complete en/zh-CN/zh-TW name coverage for Monsters (291), Active Skills (374), Passive Skills (134), Items (194), and Tile Data (145). Confirmed linked new Monster skills and two item tile-unlock IDs, and HeartwoodCache chest references.",
       "notes": "Complete descriptions, references outside new record families, and deployed browser smoke test still pending."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "content_integrity",
+      "status": "partial",
+      "summary": "Verified complete EN, Simplified Chinese, and Traditional Chinese descriptions for all 194 Item and 125 Equipment localization records. Identified empty special-event-localisation.json in repository; special-event UI requests this file, so localized special-event text remains unverified and requires regeneration from the Localization Sheet.",
+      "notes": "GitHub Pages URLs could not be opened by the verification service. No synthesized translations or unsupported runtime claims."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Confirmed game-data sync applied; core name localization coverage and newly added content dependencies checked. Broader cross-references and browser verification remain ongoing.",
+    "summary": "Data synchronization and core localization checks completed; special-event localization file is empty and must be reconciled with the source Localization Sheet. Browser verification remains pending.",
     "ongoing": [
-      "Cross-reference and localization validation",
-      "SpecialEvent and GoddessQuest scope review",
-      "Chest ID 77 Sheet-name exception reconciliation",
-      "Browser and GitHub Pages smoke testing"
+      "Reconcile empty special-event-localisation.json with the live Localization Sheet",
+      "Finish full cross-category references and dialogue localization coverage",
+      "Review unrepresented system-event and GoddessQuest scope",
+      "Verify deployed site in a browser",
+      "Preserve the approved Chest ID 77 HeartwoodCache naming exception"
     ]
   }
 }
