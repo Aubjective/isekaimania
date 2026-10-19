@@ -1,0 +1,86 @@
+{
+  "Living Pineheart": {
+    "Name": {
+      "en": "Living Pineheart",
+      "zh-CN": "活松之心",
+      "zh-TW": "活松之心"
+    },
+    "Description": {
+      "en": "A knot of living wood that continues to grow after being cut. Its gentle Nature energy increases the bearer's Nature Resistance.",
+      "zh-CN": "取自古老松树的稀有活性核心。即使被切下，它依然温暖，并持续涌动着自然能量。其恢复之力极为珍贵，而散发的能量也能为持有者提供少量自然抗性。",
+      "zh-TW": "取自古老松樹的稀有活性核心。即使被切下，它依然溫暖，並持續湧動著自然能量。其恢復之力極為珍貴，而散發的能量也能為持有者提供少量自然抗性。"
+    }
+  },
+  "Minor EXP Potion": {
+    "Name": {
+      "en": "Minor EXP Potion",
+      "zh-CN": "初级经验药水",
+      "zh-TW": "初級經驗藥水"
+    },
+    "Description": {
+      "en": "Grants a small amount of EXP.",
+      "zh-CN": "获得少量经验值。",
+      "zh-TW": "獲得少量經驗值。"
+    }
+  },
+  "Standard EXP Potion": {
+    "Name": {
+      "en": "Standard EXP Potion",
+      "zh-CN": "标准经验药水",
+      "zh-TW": "標準經驗藥水"
+    },
+    "Description": {
+      "en": "Grants a moderate amount of EXP.",
+      "zh-CN": "获得适量经验值。",
+      "zh-TW": "獲得適量經驗值。"
+    }
+  },
+  "Greater EXP Potion": {
+    "Name": {
+      "en": "Greater EXP Potion",
+      "zh-CN": "高级经验药水",
+      "zh-TW": "高級經驗藥水"
+    },
+    "Description": {
+      "en": "Grants a large amount of EXP.",
+      "zh-CN": "获得大量经验值。",
+      "zh-TW": "獲得大量經驗值。"
+    }
+  },
+  "Echo Essence": {
+    "Name": {
+      "en": "Echo Essence",
+      "zh-CN": "回响精华",
+      "zh-TW": "回響精華"
+    },
+    "Description": {
+      "en": "A magical material that carries sound. Used in crafting.",
+      "zh-CN": "能传递声音的魔法材料，可用于制作物品。",
+      "zh-TW": "能傳遞聲音的魔法材料，可用於製作物品。"
+    }
+  },
+  "Merchant Whistle": {
+    "Name": {
+      "en": "Merchant Whistle",
+      "zh-CN": "商人哨",
+      "zh-TW": "商人哨"
+    },
+    "Description": {
+      "en": "An enchanted whistle whose two short notes and one long note are a trade call merchants recognize. Summons one nearby merchant to your location in any terrain. Consumed on successful use.",
+      "zh-CN": "魔法哨子。两短一长的哨声，是商人熟悉的交易信号。可在任何地形召来附近的一位商人，召唤成功后消耗。",
+      "zh-TW": "魔法哨子。兩短一長的哨聲，是商人熟悉的交易訊號。可在任何地形召來附近的一位商人，召喚成功後消耗。"
+    }
+  },
+  "Military Access Seal": {
+    "Name": {
+      "en": "Military Access Seal",
+      "zh-CN": "要塞通行封印",
+      "zh-TW": "要塞通行封印"
+    },
+    "Description": {
+      "en": "A seal Vey issues to open the old garrison vault.",
+      "zh-CN": "由Vey签发、用于开启旧要塞库房的封印。",
+      "zh-TW": "由Vey簽發、用於開啟舊要塞庫房的封印。"
+    }
+  }
+}
