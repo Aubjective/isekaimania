@@ -139,11 +139,11 @@
       "zh-TW": "雷網核心秘藏"
     }
   },
-  "DryadPineGroveCache": {
+  "HeartwoodCache": {
     "Name": {
-      "en": "Dryad Pine Grove Cache",
-      "zh-CN": "树精松林储藏箱",
-      "zh-TW": "樹精松林儲藏箱"
+      "en": "Heartwood Cache",
+      "zh-CN": "心木储藏箱",
+      "zh-TW": "心木儲藏箱"
     }
   }
 }
