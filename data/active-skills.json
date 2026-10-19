@@ -8,13 +8,15 @@
     "data/active-skills/201-250.json",
     "data/active-skills/251-300.json",
     "data/active-skills/301-350.json",
-    "data/active-skills/351-368.json"
+    "data/active-skills/351-368.json",
+    "data/active-skills/369-374.json"
   ],
   "localisationParts": [
     "data/active-skills/localisation/001-100.json",
     "data/active-skills/localisation/101-200.json",
     "data/active-skills/localisation/201-300.json",
-    "data/active-skills/localisation/301-368.json"
+    "data/active-skills/localisation/301-368.json",
+    "data/active-skills/localisation/369-374.json"
   ],
   "descriptionLocalisation": "data/active-skills/description-localisation.json"
 }
