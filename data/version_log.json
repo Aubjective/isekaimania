@@ -137,13 +137,20 @@
       "status": "partial",
       "summary": "Resolved 3 gameplay objective template localization keys from live SpecialEvents source; localized Special Events objective dictionary now contains 844 keys.",
       "notes": "12 named zero-quest event groups lack exact localization entries in SpecialEvents and Quests & Event Groups tabs. They remain pending classification; not automatically universal. Dialogues remain excluded."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "scope_decision",
+      "status": "verified",
+      "summary": "Retain all 12 named single-stage Special Events despite missing exact group-title localization and zero associated quests. No fabricated translations; exclude universal/system events and dialogues."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
     "summary": "Three event objective templates restored using source translations. Twelve named event groups remain pending exact source localization and relevance review; universal events and dialogues excluded.",
     "ongoing": [
-      "Review localization and relevance of 12 named zero-quest Special Events without source-backed title keys",
+      "Preserve 12 approved named Special Events and verify gameplay references, without inventing their titles",
       "Complete broader gameplay references and data validation",
       "Review GoddessQuest scope separately",
       "Verify published wiki in a browser",
