@@ -26,7 +26,7 @@
     "exceptions": [
       "Chest ID 77 uses HeartwoodCache by explicit project decision; live Chest Sheet still says DryadPineGroveCache."
     ],
-    "scope": "SpecialEvents and mission group pages show a scoped subset of runtime event rows; do not equate unrepresented system events with missing content.",
+    "scope": "Wiki covers gameplay data, quest objectives, requirements, stages, rewards, and mechanics; dialogue transcripts are excluded. Source event dialogue fields may remain in underlying stage JSON but are not displayed or localized as a wiki feature.",
     "versioning": "Wiki version is independent of game's Ver Log; never claim full game-version parity without completed audit."
   },
   "checkpoints": {
@@ -90,17 +90,25 @@
       "status": "partial",
       "summary": "Verified complete EN, Simplified Chinese, and Traditional Chinese descriptions for all 194 Item and 125 Equipment localization records. Identified empty special-event-localisation.json in repository; special-event UI requests this file, so localized special-event text remains unverified and requires regeneration from the Localization Sheet.",
       "notes": "GitHub Pages URLs could not be opened by the verification service. No synthesized translations or unsupported runtime claims."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "scope_clarification",
+      "status": "verified",
+      "summary": "Confirmed dialog transcripts are out of scope for Isekaimania Wiki. Special Events should show objectives, conditions, stages and rewards, not conversations.",
+      "notes": "Empty special-event-localisation.json remains a potential objective-text localization gap rather than a dialogue-translation obligation."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Data synchronization and core localization checks completed; special-event localization file is empty and must be reconciled with the source Localization Sheet. Browser verification remains pending.",
+    "summary": "Wiki data sync and core localization checked. Dialogue transcripts are out of scope. Verify Special Events objective text, cross-references and deployed site before final sign-off.",
     "ongoing": [
-      "Reconcile empty special-event-localisation.json with the live Localization Sheet",
-      "Finish full cross-category references and dialogue localization coverage",
+      "Check Special Events objective/condition text localization using live Localization Sheet; no dialogues",
+      "Complete cross-category references for gameplay data",
       "Review unrepresented system-event and GoddessQuest scope",
-      "Verify deployed site in a browser",
-      "Preserve the approved Chest ID 77 HeartwoodCache naming exception"
+      "Verify deployed wiki in a browser",
+      "Preserve approved Chest ID 77 HeartwoodCache exception"
     ]
   }
 }
