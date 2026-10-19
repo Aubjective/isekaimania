@@ -1,0 +1,46 @@
+[
+  {
+    "ID": 133,
+    "PassiveSkillKey": "Life-Bound Mind",
+    "Type": "Passive",
+    "Element": "None",
+    "Units": [
+      {
+        "Action": "Increase",
+        "Value": "MagicalPenetration",
+        "Multiplier": 5,
+        "Target": "Ally",
+        "AreaOfEffect": "O"
+      },
+      {
+        "Action": "Increase",
+        "Value": "StatusResist",
+        "Multiplier": 10,
+        "Target": "Ally",
+        "AreaOfEffect": "O"
+      }
+    ]
+  },
+  {
+    "ID": 134,
+    "PassiveSkillKey": "Unbroken Watch",
+    "Type": "Passive",
+    "Element": "None",
+    "Units": [
+      {
+        "Action": "Increase",
+        "Value": "Constitution",
+        "Multiplier": 10,
+        "Target": "Ally",
+        "AreaOfEffect": "O"
+      },
+      {
+        "Action": "Increase",
+        "Value": "StatusResist",
+        "Multiplier": 5,
+        "Target": "Ally",
+        "AreaOfEffect": "O"
+      }
+    ]
+  }
+]
