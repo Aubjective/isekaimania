@@ -96,7 +96,7 @@
       "extraDescrVariables": "BeginnerTownHero-80-Village Messenger-Camouflage Cloak",
       "completeCondition": "HaveItem-Camouflage Cloak-1",
       "completeOutcome": "GainEXP-300|ReceiveQuest-MainQuestBaronMabonStopTheScout-GainItem-Trained Horse-1|GainItem-Fire Substance-2",
-      "mapGradeLimitation": "C",
+      "mapGradeLimitation": "C-B",
       "mainQuestRequireMapArea": "80-81-82-83",
       "mapSizeAvailable": 2,
       "mainQuestImage": "Skeleton Mage Mabon",
