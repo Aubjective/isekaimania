@@ -1,0 +1,205 @@
+[
+  {
+    "ID": 188,
+    "ItemKey": "Living Pineheart",
+    "Rarity": "Rare",
+    "Type": "KeyItem",
+    "Price": 8000,
+    "UseAt": "All",
+    "CraftType": "None",
+    "Units": [
+      {
+        "Action": "Unlock",
+        "Value": "TileData",
+        "Multiplier": 141,
+        "Duration": null,
+        "Target": null,
+        "AreaOfEffect": null
+      },
+      {
+        "Action": "Increase",
+        "Value": "NatureResistance",
+        "Multiplier": 10,
+        "Duration": null,
+        "Target": "Ally",
+        "AreaOfEffect": "All"
+      }
+    ],
+    "CraftMaterials": []
+  },
+  {
+    "ID": 189,
+    "ItemKey": "Minor EXP Potion",
+    "Rarity": "Common",
+    "Type": "Consumable",
+    "Price": 750,
+    "UseAt": "All",
+    "CraftType": "Craft",
+    "Units": [
+      {
+        "Action": "Increase",
+        "Value": "Experience",
+        "Multiplier": 100,
+        "Duration": null,
+        "Target": null,
+        "AreaOfEffect": null
+      }
+    ],
+    "CraftMaterials": [
+      {
+        "ItemKey": "Small Glass Vial",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Herb",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Blood",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Drinking Water",
+        "Quantity": 1
+      }
+    ]
+  },
+  {
+    "ID": 190,
+    "ItemKey": "Standard EXP Potion",
+    "Rarity": "Uncommon",
+    "Type": "Consumable",
+    "Price": 1250,
+    "UseAt": "All",
+    "CraftType": "Craft",
+    "Units": [
+      {
+        "Action": "Increase",
+        "Value": "Experience",
+        "Multiplier": 250,
+        "Duration": null,
+        "Target": null,
+        "AreaOfEffect": null
+      }
+    ],
+    "CraftMaterials": [
+      {
+        "ItemKey": "Medium Glass Flask",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Herb",
+        "Quantity": 2
+      },
+      {
+        "ItemKey": "Blood",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Drinking Water",
+        "Quantity": 1
+      }
+    ]
+  },
+  {
+    "ID": 191,
+    "ItemKey": "Greater EXP Potion",
+    "Rarity": "Rare",
+    "Type": "Consumable",
+    "Price": 2500,
+    "UseAt": "All",
+    "CraftType": "Craft",
+    "Units": [
+      {
+        "Action": "Increase",
+        "Value": "Experience",
+        "Multiplier": 500,
+        "Duration": null,
+        "Target": null,
+        "AreaOfEffect": null
+      }
+    ],
+    "CraftMaterials": [
+      {
+        "ItemKey": "Large Glass Bottle",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Herb",
+        "Quantity": 3
+      },
+      {
+        "ItemKey": "Blood",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Drinking Water",
+        "Quantity": 1
+      }
+    ]
+  },
+  {
+    "ID": 192,
+    "ItemKey": "Echo Essence",
+    "Rarity": "Rare",
+    "Type": "Material",
+    "Price": 750,
+    "UseAt": "All",
+    "CraftType": "None",
+    "Units": [],
+    "CraftMaterials": []
+  },
+  {
+    "ID": 193,
+    "ItemKey": "Merchant Whistle",
+    "Rarity": "Rare",
+    "Type": "Consumable",
+    "Price": 5000,
+    "UseAt": "Day",
+    "CraftType": "Craft",
+    "Units": [
+      {
+        "Action": "Set",
+        "Value": "Merchant",
+        "Multiplier": null,
+        "Duration": null,
+        "Target": null,
+        "AreaOfEffect": null
+      }
+    ],
+    "CraftMaterials": [
+      {
+        "ItemKey": "Beast Horn",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Echo Essence",
+        "Quantity": 1
+      },
+      {
+        "ItemKey": "Leather",
+        "Quantity": 1
+      }
+    ]
+  },
+  {
+    "ID": 194,
+    "ItemKey": "Military Access Seal",
+    "Rarity": "Rare",
+    "Type": "KeyItem",
+    "Price": 0,
+    "UseAt": "All",
+    "CraftType": "None",
+    "Units": [
+      {
+        "Action": "Unlock",
+        "Value": "TileData",
+        "Multiplier": 144,
+        "Duration": null,
+        "Target": null,
+        "AreaOfEffect": null
+      }
+    ],
+    "CraftMaterials": []
+  }
+]
