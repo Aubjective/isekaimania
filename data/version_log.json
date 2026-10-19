@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "wikiVersion": "1.0",
+  "baseline": {
+    "label": "Wiki baseline 0.0 — pre-Sheets synchronization",
+    "capturedDate": "2026-10-20",
+    "repository": "Aubjective/isekaimania",
+    "branch": "wiki-baseline-0.0",
+    "commit": "ede83aaaca62dc8e4a06ef8805e3a3a3ea9c43e0",
+    "url": "https://github.com/Aubjective/isekaimania/tree/wiki-baseline-0.0"
+  },
+  "sources": {
+    "database": {
+      "name": "Isekaimania Sheets",
+      "url": "https://docs.google.com/spreadsheets/d/1ZbQ6oPdS_x3lrI9RcIQ-Wf3Mm8KulFDtMqCAI01D4uI",
+      "versionSheet": "Ver Log"
+    },
+    "localization": {
+      "name": "Isekaimania Localization",
+      "url": "https://docs.google.com/spreadsheets/d/1en85nN7NUlleTyOzHP11YC6TEj9GMm4urSUfq7gcbpQ"
+    }
+  },
+  "policy": {
+    "ids": "Include valid positive numeric IDs only. Blank-ID draft rows remain pending.",
+    "source": "Use live Sheets for confirmed gameplay fields. Preserve stable IDs and wiki schema.",
+    "exceptions": [
+      "Chest ID 77 uses HeartwoodCache by explicit project decision; live Chest Sheet still says DryadPineGroveCache."
+    ],
+    "scope": "SpecialEvents and mission group pages show a scoped subset of runtime event rows; do not equate unrepresented system events with missing content.",
+    "versioning": "Wiki version is independent of game's Ver Log; never claim full game-version parity without completed audit."
+  },
+  "checkpoints": {
+    "latestSourceGameVersionObserved": "1.2.0",
+    "lastAuditedGameVersion": null,
+    "lastSyncedGameVersion": null,
+    "lastAuditDate": "2026-10-20",
+    "lastSyncDate": "2026-10-20"
+  },
+  "trackedCategories": [
+    "Characters",
+    "Jobs",
+    "Monsters",
+    "ActiveSkills",
+    "PassiveSkills",
+    "Items",
+    "Equipments",
+    "Chests",
+    "TileData",
+    "TileAreas",
+    "MainQuests",
+    "SpecialEvents",
+    "Missions"
+  ],
+  "entries": [
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "0.0",
+      "type": "baseline",
+      "summary": "Created immutable pre-sync reference branch at commit ede83aa.",
+      "status": "verified"
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "source_sync",
+      "summary": "Synchronized confirmed item prices, skill effects/cooldown, tile fields and one quest grade; added 31 ID-backed source records with related localization and manifests; preserved Chest ID 77 as HeartwoodCache.",
+      "status": "partial",
+      "notes": "Complete cross-reference, localization, event coverage and site verification remain outstanding."
+    }
+  ],
+  "publicStatus": {
+    "asOf": "2026-10-20",
+    "summary": "Source-backed JSON update applied; detailed verification still ongoing.",
+    "ongoing": [
+      "Cross-reference and localization validation",
+      "SpecialEvent and GoddessQuest scope review",
+      "Chest ID 77 Sheet-name exception reconciliation",
+      "Browser and GitHub Pages smoke testing"
+    ]
+  }
+}
