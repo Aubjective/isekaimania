@@ -13,11 +13,13 @@
     "data/tile-data/101-110.json",
     "data/tile-data/111-120.json",
     "data/tile-data/121-130.json",
-    "data/tile-data/131-140.json"
+    "data/tile-data/131-140.json",
+    "data/tile-data/141-145.json"
   ],
   "localisationParts": [
     "data/tile-data/localisation/001-050.json",
     "data/tile-data/localisation/051-100.json",
-    "data/tile-data/localisation/101-140.json"
+    "data/tile-data/localisation/101-140.json",
+    "data/tile-data/localisation/141-145.json"
   ]
 }
