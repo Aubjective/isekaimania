@@ -188,16 +188,24 @@
       "status": "partial",
       "summary": "Compared all 145 Tile Data enemy/special team and item/equipment loot lists against live TileData rows. Corrected lists on Tile IDs 15, 21, 28, 58, 59, 71; fixed Tile ID 12 team name typo to match canonical EnemyTeams ID 141.",
       "notes": "Tile ID 12 key differs from the current TileData Sheet ('2 SquirrelDefender'), so the canonical EnemyTeams reference is a documented source exception. Mechanics and delivery remain ongoing workstreams, not permanent blockers."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "quest_source_parity",
+      "status": "partial",
+      "summary": "Compared 240 quest records referenced by the named Special Events and Missions against the live Quest Sheet (324 numeric-ID source records). All 240 IDs were found and all 16 compared gameplay fields matched, including completion conditions/outcomes, map restrictions and unlock requirements.",
+      "notes": "This verifies the 240 included Special Event and Mission quest records, not every Quest source row; excluded universal event handlers and dialogue remain out of scope. Main Quest and complete source parity still need sign-off."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Tile encounter and loot lists checked against live Sheets; seven Tile Data records corrected. Mechanics documentation and delivery/UI improvements are ongoing. Remaining source/category and published-site checks are separately tracked.",
+    "summary": "All 240 in-scope Special Event and Mission quest records match the live Quest Sheet across 16 gameplay fields. Final full-scope source parity and published-site verification remain.",
     "ongoing": [
-      "Complete remaining quest outcomes and other gameplay cross-references",
-      "Perform final source-data/category parity audit before declaring fully synced",
-      "Validate published website data loading and navigation",
-      "Maintain mechanics documentation and delivery improvements as ongoing workstreams"
+      "Check Main Quest records against live Quest Sheet and any remaining in-scope Quest data",
+      "Validate published site navigation/data loading",
+      "Finalize version-log sync status without blocking ongoing mechanics or delivery improvements",
+      "Preserve approved Chest ID 77 and 12 named events; exclude dialogue and universal Special Events"
     ]
   }
 }
