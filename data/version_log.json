@@ -42,7 +42,11 @@
       "Raw internal event rows with no standalone gameplay purpose",
       "Blank-ID drafts and unconfirmed content"
     ],
-    "specialEventClassification": "Zero associated quests does not mean universal; keep relevant named encounters. Universal event source rows are intentionally excluded and must not be counted as missing."
+    "specialEventClassification": "Zero associated quests does not mean universal; keep relevant named encounters. Universal event source rows are intentionally excluded and must not be counted as missing.",
+    "ongoingWorkstreams": {
+      "mechanics": "Ongoing documentation and changes; not necessarily a blocker for a verified data snapshot.",
+      "delivery": "Ongoing navigation, UI and publishing improvements; actual broken display remains an issue."
+    }
   },
   "checkpoints": {
     "latestSourceGameVersionObserved": "1.2.0",
@@ -176,17 +180,24 @@
       "status": "partial",
       "summary": "Verified all 514 Monster passive and 702 active skill references across 291 Monsters: no missing skills. Checked all 145 Tile Data chest references against all 81 Chests; normalized two malformed chest lists on Tile IDs 59 and 139 directly from the live TileData source Sheet.",
       "notes": "Tile 59 chest list now GemCache and PrismaticGemHoard. Tile 139 chest list now ThunderUtilityCrate2 and StormgridCoreCache. All chest keys in both corrected records resolve. Other Tile Data encounter/team/loot references and browser verification still pending."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "tile_team_loot_audit",
+      "status": "partial",
+      "summary": "Compared all 145 Tile Data enemy/special team and item/equipment loot lists against live TileData rows. Corrected lists on Tile IDs 15, 21, 28, 58, 59, 71; fixed Tile ID 12 team name typo to match canonical EnemyTeams ID 141.",
+      "notes": "Tile ID 12 key differs from the current TileData Sheet ('2 SquirrelDefender'), so the canonical EnemyTeams reference is a documented source exception. Mechanics and delivery remain ongoing workstreams, not permanent blockers."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Complete Monster skill references verified, and Tile Data chest-reference errors corrected from live Sheets. Gameplay teams/loot and deployed browser verification remain ongoing.",
+    "summary": "Tile encounter and loot lists checked against live Sheets; seven Tile Data records corrected. Mechanics documentation and delivery/UI improvements are ongoing. Remaining source/category and published-site checks are separately tracked.",
     "ongoing": [
-      "Audit Tile Data enemy/special team and item/equipment loot references",
-      "Complete broader quest/outcome reference checks",
-      "Verify published wiki in a browser",
-      "Preserve 12 named events and Chest ID 77 HeartwoodCache",
-      "Exclude dialogues and universal Special Events"
+      "Complete remaining quest outcomes and other gameplay cross-references",
+      "Perform final source-data/category parity audit before declaring fully synced",
+      "Validate published website data loading and navigation",
+      "Maintain mechanics documentation and delivery improvements as ongoing workstreams"
     ]
   }
 }
