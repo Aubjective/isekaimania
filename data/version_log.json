@@ -168,16 +168,24 @@
       "status": "partial",
       "summary": "Validated Monster IDs 1–100 loot entries against all 194 Items and 125 Equipment, correctly parsing numeric loot quantity suffixes. All references resolved. Checked all 125 Equipment crafting recipes: 259 references, including 227 Item and 32 Equipment materials; no unresolved recipe materials.",
       "notes": "Broader Monster skill and Tile Data references, quests and deployed browser tests remain to be checked. No gameplay data changed."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "cross_reference_correction",
+      "status": "partial",
+      "summary": "Verified all 514 Monster passive and 702 active skill references across 291 Monsters: no missing skills. Checked all 145 Tile Data chest references against all 81 Chests; normalized two malformed chest lists on Tile IDs 59 and 139 directly from the live TileData source Sheet.",
+      "notes": "Tile 59 chest list now GemCache and PrismaticGemHoard. Tile 139 chest list now ThunderUtilityCrate2 and StormgridCoreCache. All chest keys in both corrected records resolve. Other Tile Data encounter/team/loot references and browser verification still pending."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Verified historical Monster 1–100 loot references and all Equipment crafting-material references. Further cross-category audit and deployed browser verification remain outstanding.",
+    "summary": "Complete Monster skill references verified, and Tile Data chest-reference errors corrected from live Sheets. Gameplay teams/loot and deployed browser verification remain ongoing.",
     "ongoing": [
-      "Complete Monster skill/passive and remaining Monster loot reference checks",
-      "Validate Tile Data loot/chest/team references and remaining quest links",
+      "Audit Tile Data enemy/special team and item/equipment loot references",
+      "Complete broader quest/outcome reference checks",
       "Verify published wiki in a browser",
-      "Preserve the 12 included named events and approved HeartwoodCache exception",
+      "Preserve 12 named events and Chest ID 77 HeartwoodCache",
       "Exclude dialogues and universal Special Events"
     ]
   }
