@@ -46,7 +46,9 @@
     "ongoingWorkstreams": {
       "mechanics": "Ongoing documentation and changes; not necessarily a blocker for a verified data snapshot.",
       "delivery": "Ongoing navigation, UI and publishing improvements; actual broken display remains an issue."
-    }
+    },
+    "publicDisplay": "Present Wiki Version, Sheets Version and human-readable Updated / Ongoing / Excluded sections; no technical identifiers.",
+    "incrementalSync": "Wiki and Sheets versions are tracked independently."
   },
   "checkpoints": {
     "latestSourceGameVersionObserved": "1.2.0",
@@ -216,12 +218,65 @@
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "All ten core category counts match live numeric-ID Sheet totals; six category exact ID sets checked, with only the approved Chest 77 naming exception. Full field-level parity and published-site verification remain pending.",
+    "summary": "Core gameplay synchronization substantially completed; final detailed verification remains.",
     "ongoing": [
-      "Complete source field parity beyond ID/name/category counts, including Monsters, Skills, Items and other mechanics fields",
-      "Verify published website navigation and data loading",
-      "Define a precise as-of snapshot status without conflating mechanics and delivery work",
-      "Keep named Special Events, exclude dialogues and universal events, preserve HeartwoodCache"
+      "Final detailed source-field comparisons",
+      "Published wiki navigation and data-loading verification",
+      "Mechanics explanations and delivery/presentation refinements"
+    ],
+    "sheetsVersion": "1.2.0",
+    "updated": [
+      "Current core gameplay record coverage checked against live Sheets",
+      "Main Quests, named Special Events and Missions synchronized",
+      "Monster skills, equipment crafting and selected tile encounters, loot and chests validated",
+      "Gameplay-facing translations updated"
+    ],
+    "excluded": [
+      "NPC and player dialogues and dialogue options",
+      "Universal and generic system Special Events",
+      "Unconfirmed drafts and unsupported additions"
+    ],
+    "editorialNote": "Twelve approved named events remain included; approved chest naming retained."
+  },
+  "publicSections": {
+    "updated": [
+      "Current core gameplay record coverage checked against live Sheets",
+      "Main Quests, named Special Events and Missions synchronized",
+      "Monster skills, equipment crafting and selected tile encounters, loot and chests validated",
+      "Gameplay-facing translations updated"
+    ],
+    "ongoing": [
+      "Final detailed source-field comparisons",
+      "Published wiki navigation and data-loading verification",
+      "Mechanics explanations and delivery/presentation refinements"
+    ],
+    "excluded": [
+      "NPC and player dialogues and dialogue options",
+      "Universal and generic system Special Events",
+      "Unconfirmed drafts and unsupported additions"
     ]
+  },
+  "maintenance": {
+    "purpose": "Incremental future wiki updates without unnecessary full database re-audits",
+    "updateProcedure": [
+      "Read confirmed new game release and changed source records",
+      "Apply only documented in-scope additions and field changes by exact source identifiers",
+      "Check dependent references, relevant localized display text and publication",
+      "Add structured entry for each meaningful source change; preserve original audit history",
+      "Update public Updated/Ongoing/Excluded sections, observed Sheets version and only verified checkpoints"
+    ],
+    "changeRecordFields": [
+      "version",
+      "category",
+      "changeType",
+      "sourceSheet",
+      "sourceId",
+      "changedFields",
+      "syncStatus",
+      "localizationRequired",
+      "notes"
+    ],
+    "displayPolicy": "Internal source IDs, canonical keys, diff payloads and technical filenames remain in machine-readable records, not on public Version Log page.",
+    "lastScopeReview": "2026-10-20"
   }
 }
