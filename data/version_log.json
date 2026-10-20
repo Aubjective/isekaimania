@@ -160,16 +160,24 @@
       "status": "partial",
       "summary": "Validated ten explicit new-content gameplay links: 8 Skeleton boss skill/passive references, Verdara Helmet in Dryad Pine Grove equipment loot, and HeartwoodCache in its chest list. Checked new tile lock requirements for Living Pineheart (ID 141) and Military Access Seal (ID 144), whose item unlock targets were verified previously.",
       "notes": "Full legacy-partition cross-reference scan not completed due to connector request limits; it must not be represented as fully verified."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "legacy_reference_audit",
+      "status": "partial",
+      "summary": "Validated Monster IDs 1–100 loot entries against all 194 Items and 125 Equipment, correctly parsing numeric loot quantity suffixes. All references resolved. Checked all 125 Equipment crafting recipes: 259 references, including 227 Item and 32 Equipment materials; no unresolved recipe materials.",
+      "notes": "Broader Monster skill and Tile Data references, quests and deployed browser tests remain to be checked. No gameplay data changed."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "Confirmed selected new-content cross-references. Full legacy cross-category links and browser verification are still pending; wiki excludes dialogue and universal events.",
+    "summary": "Verified historical Monster 1–100 loot references and all Equipment crafting-material references. Further cross-category audit and deployed browser verification remain outstanding.",
     "ongoing": [
-      "Complete partitioned cross-reference audit of older Monster, Tile, Skill, Item, Equipment and Chest keys",
-      "Verify remaining gameplay localization and source links",
+      "Complete Monster skill/passive and remaining Monster loot reference checks",
+      "Validate Tile Data loot/chest/team references and remaining quest links",
       "Verify published wiki in a browser",
-      "Preserve 12 approved named events and Chest ID 77 HeartwoodCache",
+      "Preserve the 12 included named events and approved HeartwoodCache exception",
       "Exclude dialogues and universal Special Events"
     ]
   }
