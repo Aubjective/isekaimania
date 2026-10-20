@@ -15,7 +15,7 @@
     "MaximumLevel": 15,
     "EnemyTeamsDay": [
       "3 Nature Slime",
-      "2 Honey Slime",
+      "3 Honey Slime",
       "2 Nature Slimera",
       "Spider Slime",
       "2 Spider Slime"
@@ -375,7 +375,6 @@
     "EnemyTeamsDay": [
       "2 Goblin Grunt",
       "3 Goblin Grunt",
-      "",
       "3 Goblin Archer",
       "GoblinPack"
     ],
