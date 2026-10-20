@@ -196,16 +196,24 @@
       "status": "partial",
       "summary": "Compared 240 quest records referenced by the named Special Events and Missions against the live Quest Sheet (324 numeric-ID source records). All 240 IDs were found and all 16 compared gameplay fields matched, including completion conditions/outcomes, map restrictions and unlock requirements.",
       "notes": "This verifies the 240 included Special Event and Mission quest records, not every Quest source row; excluded universal event handlers and dialogue remain out of scope. Main Quest and complete source parity still need sign-off."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "main_quest_source_parity",
+      "status": "verified",
+      "summary": "Compared all 15 Main Quest groups and 83 quests against the live Quest Sheet. Corrected Baron Mabon group from five to six source quests with IDs 319–324, current quest order, conditions, rewards and requirements; updated its manifest count. All 83 quests now match the source across compared gameplay fields.",
+      "notes": "Mechanics documentation and delivery improvements remain ongoing; this audit establishes Main Quest data parity only, not full-site game-version parity. Dialogue and universal Special Events remain excluded."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "All 240 in-scope Special Event and Mission quest records match the live Quest Sheet across 16 gameplay fields. Final full-scope source parity and published-site verification remain.",
+    "summary": "All 83 Main Quest records and 240 included Special Event/Mission quests match the live Quest Sheet. Other category-wide source parity and deployed-site checks remain pending; mechanics and delivery stay ongoing.",
     "ongoing": [
-      "Check Main Quest records against live Quest Sheet and any remaining in-scope Quest data",
-      "Validate published site navigation/data loading",
-      "Finalize version-log sync status without blocking ongoing mechanics or delivery improvements",
-      "Preserve approved Chest ID 77 and 12 named events; exclude dialogue and universal Special Events"
+      "Complete final source-data parity assessment across included categories",
+      "Validate deployed wiki loading/navigation and version log",
+      "Document precise data synchronization checkpoint separately from ongoing mechanics and delivery",
+      "Keep twelve approved named events and HeartwoodCache; exclude dialogue and universal Special Events"
     ]
   }
 }
