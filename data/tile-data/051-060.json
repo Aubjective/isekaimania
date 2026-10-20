@@ -437,7 +437,7 @@
     ],
     "EnemyTeamsNight": [],
     "SpecialTeamsDay": [
-      "ArcaneTeamElite"
+      "ArcaneCrystalsAmbush"
     ],
     "SpecialTeamsNight": [],
     "ItemLootKeys": [
@@ -500,7 +500,7 @@
     ],
     "EnemyTeamsNight": [],
     "SpecialTeamsDay": [
-      "ArcaneTeamElite",
+      "ArcaneCrystalsAmbush",
       "Elemental Gemstone Golem"
     ],
     "SpecialTeamsNight": [],
