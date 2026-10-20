@@ -1,35 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Isekaimania Wiki version and content update status">
 <title>Isekaimania Wiki — Version Log</title>
 <link rel="stylesheet" href="style.css">
 <style>
-body{margin:0;padding:24px;background:#0f131b;color:#e8edf5;font:16px/1.6 system-ui,sans-serif}
-main{max-width:850px;margin:auto}
-a{color:#9fceff}h1{line-height:1.2}
-.panel{border:1px solid #344054;border-radius:12px;padding:20px;margin:20px 0;background:#182130}
-small,.muted{color:#afbbca}.entry{border-top:1px solid #39445a;padding:16px 0}
-.pill{display:inline-block;border:1px solid #71819e;border-radius:24px;padding:2px 10px;font-size:13px}
-</style></head><body><main>
-<p><a href="index.html">← Back to Isekaimania Wiki</a></p>
-<h1>Isekaimania Wiki — Version Log</h1>
-<div class="panel" id="version-status"><p>Loading version history…</p></div>
-<section class="panel"><h2>History</h2><div id="history"></div></section>
-<p class="muted">The wiki's version is separate from the game's release version. Only verified Sheet synchronization is recorded as complete.</p>
+:root{color-scheme:dark}body{margin:0;background:#101622;color:#edf3ff;font:16px/1.6 system-ui,-apple-system,sans-serif}
+.version-page{max-width:880px;margin:0 auto;padding:30px 20px 70px}
+a{color:#8cd9ff}.back{display:inline-block;margin-bottom:20px}
+h1{font-size:clamp(1.65rem,4vw,2.25rem);margin:0 0 4px;color:#fff}h2{font-size:1.12rem;margin:0 0 12px;color:#f3f7ff}
+.muted{color:#aebed7}.lead{margin:0 0 22px}
+.version-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:18px 0 22px}
+.panel{background:#1a263a;border:1px solid #334764;border-radius:14px;padding:20px;margin:16px 0}
+.version-grid .panel{margin:0}.value{font-size:clamp(1.8rem,5vw,2.55rem);font-weight:750;line-height:1.3;color:#fff}.eyebrow{font-size:.85rem;color:#b6c8df}
+ul{margin:7px 0 0;padding-left:22px}li{margin:8px 0}
+.summary{margin:0;color:#d8e5f6}.foot{font-size:.85rem;margin-top:24px}
+@media(max-width:480px){.version-grid{gap:10px}.panel{padding:15px}}
+</style></head><body><main class="version-page">
+<a class="back" href="index.html">← Back to Wiki</a>
+<h1>Wiki Version Log</h1>
+<p class="muted lead">Content updates and ongoing work for Isekaimania.</p>
+<div class="version-grid">
+ <section class="panel"><div class="eyebrow">Wiki Version</div><div class="value" id="wiki-version">—</div></section>
+ <section class="panel"><div class="eyebrow">Sheets Version</div><div class="value" id="sheets-version">—</div></section>
+</div>
+<section class="panel"><h2>Current status</h2><p class="summary" id="summary">Loading update status…</p><p class="muted" id="reviewed"></p></section>
+<section class="panel"><h2>Updated</h2><ul id="updated"></ul></section>
+<section class="panel"><h2>Ongoing</h2><ul id="ongoing"></ul></section>
+<section class="panel"><h2>Excluded</h2><ul id="excluded"></ul></section>
+<p class="foot muted">Updates are tracked against the source Sheets. Ongoing documentation and presentation improvements are tracked separately from verified gameplay data.</p>
+</main>
 <script>
 (async()=>{
- const el=document.querySelector('#version-status'),history=document.querySelector('#history');
  try{
- const r=await fetch('data/version_log.json',{cache:'no-store'});if(!r.ok)throw new Error('Version history unavailable');
- const d=await r.json(), p=d.publicStatus||{}, check=d.checkpoints||{};
- el.replaceChildren();
- const h=document.createElement('h2');h.textContent='Wiki '+(d.wikiVersion||'—');el.append(h);
- const t=document.createElement('p');t.textContent=p.summary||'Wiki synchronization status unavailable';el.append(t);
- const c=document.createElement('p');c.className='muted';c.textContent='Updated: '+(p.asOf||'—')+' · Latest game version observed: '+(check.latestSourceGameVersionObserved||'—')+' · Last fully audited game version: '+(check.lastAuditedGameVersion||'Not yet verified');el.append(c);
- if(Array.isArray(p.ongoing)&&p.ongoing.length){let sub=document.createElement('h3');sub.textContent='Ongoing';el.append(sub);let ul=document.createElement('ul');for(const x of p.ongoing){let li=document.createElement('li');li.textContent=x;ul.append(li)}el.append(ul)}
- const entries=[...(d.entries||[])].reverse();if(!entries.length)history.textContent='No entries yet.';
- for(const x of entries){let div=document.createElement('div');div.className='entry';let strong=document.createElement('strong');strong.textContent='Wiki '+x.wikiVersion+' · '+x.date;div.append(strong);let status=document.createElement('span');status.className='pill';status.style.marginLeft='10px';status.textContent=x.status||'—';div.append(status);let p=document.createElement('p');p.textContent=x.summary||'';div.append(p);if(x.notes){let note=document.createElement('small');note.textContent=x.notes;div.append(note)}history.append(div)}
- }catch(e){el.textContent='Version log could not be loaded. Please try again later.';history.textContent='No history available.'}
+  const response=await fetch('data/version_log.json',{cache:'no-store'});if(!response.ok)throw Error('load failed');
+  const data=await response.json(),pub=data.publicStatus||{},sections=data.publicSections||{};
+  document.getElementById('wiki-version').textContent=data.wikiVersion||'—';
+  document.getElementById('sheets-version').textContent=pub.sheetsVersion||data.checkpoints?.latestSourceGameVersionObserved||'—';
+  document.getElementById('summary').textContent=pub.summary||'Current verification status not available.';
+  document.getElementById('reviewed').textContent='Last reviewed: '+(pub.lastReviewed||pub.asOf||'—');
+  for(const key of ['updated','ongoing','excluded']){
+   const parent=document.getElementById(key);
+   const values=Array.isArray(sections[key])?sections[key]:Array.isArray(pub[key])?pub[key]:[];
+   if(!values.length){const li=document.createElement('li');li.textContent='No items reported.';parent.append(li);continue;}
+   for(const value of values){const li=document.createElement('li');li.textContent=String(value);parent.append(li);}
+  }
+ }catch(e){document.getElementById('summary').textContent='Version information is temporarily unavailable.';}
 })();
-</script></main></body></html>
+</script></body></html>
