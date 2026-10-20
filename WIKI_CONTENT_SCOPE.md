@@ -38,3 +38,9 @@ Excluded dialogue and universal event rows are **out of scope**, not missing or 
 
 ## APPROVED NAMED EVENT EXCEPTIONS (2026-10-20)
 Keep all twelve named single-stage events even when they have zero attached quests or no exact source title translation: `WhereIsCastle`, `MysteriousOneEye`, `TheVampWarning`, `TheThunderForest`, `TooBrightToStudy`, `PoisonInThePuddle`, `WaterproofingFailure`, `TheGlowingWreckage`, `TracksUnderTheSnow`, `TheSmokingCrate`, `TheAbandonedHerbBasket`, `TheEmptyHuntingCamp`. They are **included**; missing localization is not a reason to hide or delete them. Never invent translated titles. Universal/system events and all dialogues remain excluded.
+
+## ONGOING WORK VS RELEASE READINESS
+- **Mechanics documentation** is an ongoing, evolving wiki workstream as gameplay systems change or are confirmed. Do not treat unfinished optional mechanics explanations as a blocker to calling the currently scoped, verified data snapshot up to date.
+- **Delivery/presentation work** (layout, navigation, usability, refinements and publishing improvements) is ongoing, separately tracked. It is not a blanket blocker to a verified data-synchronization checkpoint. Actual broken published links or data display are defects and must still be reported.
+- For any version claim, distinguish **source data synchronization**, **verified gameplay scope**, **website availability**, and **ongoing documentation/delivery improvements**. Never imply these four are identical.
+- Scope remains: dialogues and universal/system Special Events excluded, twelve approved named events kept, Chest ID 77 fixed as `HeartwoodCache`.
