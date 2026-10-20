@@ -204,16 +204,24 @@
       "status": "verified",
       "summary": "Compared all 15 Main Quest groups and 83 quests against the live Quest Sheet. Corrected Baron Mabon group from five to six source quests with IDs 319–324, current quest order, conditions, rewards and requirements; updated its manifest count. All 83 quests now match the source across compared gameplay fields.",
       "notes": "Mechanics documentation and delivery improvements remain ongoing; this audit establishes Main Quest data parity only, not full-site game-version parity. Dialogue and universal Special Events remain excluded."
+    },
+    {
+      "date": "2026-10-20",
+      "wikiVersion": "1.0",
+      "type": "source_id_parity",
+      "status": "partial",
+      "summary": "Compared the live gameplay Sheets' numeric ID sets against wiki records for Monsters (291), Active Skills (374), Passive Skills (134), Items (194), Equipment (125), Chests (81), Tile Data (145), Tile Areas (83 unique IDs), Characters (10), and Jobs (51). Category counts match. Exact ID-set comparison confirms Equipment, Chests, Tile Data, Tile Areas, Characters and Jobs; these key/name fields also match except the explicitly approved Chest 77 HeartwoodCache exception.",
+      "notes": "This is not a full field-by-field audit of every gameplay record. Some categories' ID sets were only count-checked here. Mechanics documentation and delivery remain ongoing, separately from source-data checkpoints."
     }
   ],
   "publicStatus": {
     "asOf": "2026-10-20",
-    "summary": "All 83 Main Quest records and 240 included Special Event/Mission quests match the live Quest Sheet. Other category-wide source parity and deployed-site checks remain pending; mechanics and delivery stay ongoing.",
+    "summary": "All ten core category counts match live numeric-ID Sheet totals; six category exact ID sets checked, with only the approved Chest 77 naming exception. Full field-level parity and published-site verification remain pending.",
     "ongoing": [
-      "Complete final source-data parity assessment across included categories",
-      "Validate deployed wiki loading/navigation and version log",
-      "Document precise data synchronization checkpoint separately from ongoing mechanics and delivery",
-      "Keep twelve approved named events and HeartwoodCache; exclude dialogue and universal Special Events"
+      "Complete source field parity beyond ID/name/category counts, including Monsters, Skills, Items and other mechanics fields",
+      "Verify published website navigation and data loading",
+      "Define a precise as-of snapshot status without conflating mechanics and delivery work",
+      "Keep named Special Events, exclude dialogues and universal events, preserve HeartwoodCache"
     ]
   }
 }
