@@ -1,0 +1,130 @@
+{
+  "source": "Isekaimania SpecialEvents and Quest sheets; preliminary Other Events classification",
+  "localization": "data/special-event-localisation.json",
+  "groups": [
+    {
+      "key": "GetBoat",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "itemExchange"
+    },
+    {
+      "key": "CapJackDungeonMap",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "itemExchange"
+    },
+    {
+      "key": "CapJackArenaToken",
+      "locations": [
+        {
+          "tileData": "AventoraFreeport",
+          "tileArea": "46"
+        }
+      ],
+      "quests": [],
+      "interactionType": "purchase"
+    },
+    {
+      "key": "LearnHeal",
+      "locations": [
+        {
+          "tileData": "SlimeLandB",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLearnHeal1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": null
+        }
+      ],
+      "interactionType": "skillTraining"
+    },
+    {
+      "key": "LearnGuard",
+      "locations": [
+        {
+          "tileData": "KingdomLandB",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLearnGuard1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": null
+        }
+      ],
+      "interactionType": "skillTraining"
+    },
+    {
+      "key": "ChoiceOfSurvival",
+      "locations": [
+        {
+          "tileData": "CommonHouse",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "itemExchange"
+    },
+    {
+      "key": "ElementSubstances",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "itemExchange"
+    },
+    {
+      "key": "GetSilverIngot",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "itemExchange"
+    },
+    {
+      "key": "TheClimbersLostLine",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "battle"
+    },
+    {
+      "key": "CommonHouseSalvagedTravelGear",
+      "locations": [
+        {
+          "tileData": "CommonHouse",
+          "tileArea": null
+        }
+      ],
+      "quests": [],
+      "interactionType": "itemExchange"
+    }
+  ]
+}
