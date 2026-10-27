@@ -11,7 +11,14 @@
         }
       ],
       "quests": [],
-      "interactionType": "itemExchange"
+      "interactionType": "itemExchange",
+      "requirements": [
+        "HaveItem-Worm-5"
+      ],
+      "outcomes": [
+        "GainItem-Boat-1",
+        "LostItem-Worm-5"
+      ]
     },
     {
       "key": "CapJackDungeonMap",
