@@ -24,7 +24,7 @@ function escapeHtml(value) {
 function toggleMenu() { document.getElementById('main-nav').classList.toggle('open'); }
 function setActiveView(view) {
     wiki.currentView = view;
-    document.querySelectorAll('.menu-item[data-view]').forEach(item => item.classList.toggle('active', item.dataset.view === view));
+    document.querySelectorAll('.menu-item[data-view]').forEach(item => item.classList.toggle('active', item.dataset.view === (view === 'SpecialEvents' || view === 'Missions' ? 'Quests' : view)));
     if (window.innerWidth <= 768) document.getElementById('main-nav').classList.remove('open');
 }
 function ui(key, fallback = '') { return wiki.ui[key] || fallback; }
