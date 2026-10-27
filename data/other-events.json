@@ -1,5 +1,5 @@
 {
-  "source": "Isekaimania SpecialEvents and Quest sheets; preliminary Other Events classification",
+  "source": "Isekaimania SpecialEvents and Quest sheets; entryCondition preserves original condition expression including | and ||; requirements and outcomes are source action tokens; options represent alternative paths, not cumulative rewards.",
   "localization": "data/special-event-localisation.json",
   "groups": [
     {
@@ -18,7 +18,8 @@
       "outcomes": [
         "GainItem-Boat-1",
         "LostItem-Worm-5"
-      ]
+      ],
+      "entryCondition": "HaveItem-Boat-0"
     },
     {
       "key": "CapJackDungeonMap",
@@ -29,7 +30,15 @@
         }
       ],
       "quests": [],
-      "interactionType": "itemExchange"
+      "interactionType": "itemExchange",
+      "entryCondition": "HaveItem-Pirates Hideout Map-0||MapHasArea-46",
+      "requirements": [
+        "HaveItem-Water Stone-2"
+      ],
+      "outcomes": [
+        "GainItem-Pirates Hideout Map-1",
+        "LostItem-Water Stone-2"
+      ]
     },
     {
       "key": "CapJackArenaToken",
@@ -40,7 +49,15 @@
         }
       ],
       "quests": [],
-      "interactionType": "purchase"
+      "interactionType": "purchase",
+      "entryCondition": "HaveItem-Pirate Ship Token-0|MapHasArea-45",
+      "requirements": [
+        "CoinAbove-5000"
+      ],
+      "outcomes": [
+        "GainItem-Pirate Ship Token-1",
+        "LoseCoin-5000"
+      ]
     },
     {
       "key": "LearnHeal",
@@ -58,7 +75,11 @@
           "completeCondition": null
         }
       ],
-      "interactionType": "skillTraining"
+      "interactionType": "skillTraining",
+      "entryCondition": "LevelBelow-15|CompletedQuest-QuestLearnHeal1-0|HaveActiveSkill-Bandage-0",
+      "outcomes": [
+        "CompleteQuest-QuestLearnHeal1"
+      ]
     },
     {
       "key": "LearnGuard",
@@ -76,7 +97,11 @@
           "completeCondition": null
         }
       ],
-      "interactionType": "skillTraining"
+      "interactionType": "skillTraining",
+      "entryCondition": "LevelBelow-15|CompletedQuest-QuestLearnGuard1-0|HaveActiveSkill-Guard-0",
+      "outcomes": [
+        "CompleteQuest-QuestLearnGuard1"
+      ]
     },
     {
       "key": "ChoiceOfSurvival",
@@ -87,7 +112,28 @@
         }
       ],
       "quests": [],
-      "interactionType": "itemExchange"
+      "interactionType": "itemExchange",
+      "entryCondition": "HaveItem-Cold Pouch-0|HaveItem-Hot Pouch-0",
+      "options": [
+        {
+          "requirements": [
+            "HaveItem-Leather-3"
+          ],
+          "outcomes": [
+            "GainItem-Hot Pouch-1",
+            "LostItem-Leather-3"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Twigs-5"
+          ],
+          "outcomes": [
+            "GainItem-Cold Pouch-1",
+            "LostItem-Twigs-5"
+          ]
+        }
+      ]
     },
     {
       "key": "ElementSubstances",
@@ -98,7 +144,85 @@
         }
       ],
       "quests": [],
-      "interactionType": "itemExchange"
+      "interactionType": "itemExchange",
+      "entryCondition": "EncounteredBefore-817-0|EncounteredBefore-809-0|EncounteredBefore-810-0|EncounteredBefore-811-0|EncounteredBefore-812-0|EncounteredBefore-813-0|EncounteredBefore-814-0|EncounteredBefore-815-0|EncounteredBefore-816-0",
+      "requirements": [
+        "HaveItem-Slime Fluid-5"
+      ],
+      "options": [
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Fire Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Wind Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Nature Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Thunder Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Water Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Earth Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Light Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        },
+        {
+          "requirements": [
+            "HaveItem-Slime Fluid-5"
+          ],
+          "outcomes": [
+            "GainItem-Dark Substance-1",
+            "LostItem-Slime Fluid-5"
+          ]
+        }
+      ]
     },
     {
       "key": "GetSilverIngot",
@@ -109,7 +233,17 @@
         }
       ],
       "quests": [],
-      "interactionType": "itemExchange"
+      "interactionType": "itemExchange",
+      "entryCondition": "HaveItem-Silver Ingot-0|HaveItem-Grappling Rope-0|EncounteredBefore-821-0",
+      "requirements": [
+        "HaveItem-Wood-4",
+        "HaveItem-Leather-4"
+      ],
+      "outcomes": [
+        "GainItem-Silver Ingot-3",
+        "LostItem-Wood-4",
+        "LostItem-Leather-4"
+      ]
     },
     {
       "key": "TheClimbersLostLine",
@@ -120,7 +254,22 @@
         }
       ],
       "quests": [],
-      "interactionType": "battle"
+      "interactionType": "battle",
+      "entryCondition": "HaveItem-Grappling Rope-0|EncounteredBefore-991-0",
+      "options": [
+        {
+          "action": "FightTeam-3 Wind Gazer",
+          "resolveCondition": "EventBattleOutcome-988-1",
+          "outcomes": [
+            "GainEXP-500",
+            "GainItem-Grappling Rope-1"
+          ]
+        },
+        {
+          "resolveCondition": "EventBattleOutcome-988-0",
+          "outcomes": []
+        }
+      ]
     },
     {
       "key": "CommonHouseSalvagedTravelGear",
@@ -131,7 +280,15 @@
         }
       ],
       "quests": [],
-      "interactionType": "itemExchange"
+      "interactionType": "itemExchange",
+      "entryCondition": "EncounteredBefore-1157-0",
+      "requirements": [
+        "HaveItem-Flour-5"
+      ],
+      "outcomes": [
+        "LostItem-Flour-5",
+        "GainItem-Leather-4"
+      ]
     }
   ]
 }
