@@ -5,16 +5,8 @@ const questsPreviousView = loadView;
 window.removeEventListener('hashchange', questsPreviousRoute);
 
 function renderQuestsList() {
-    const events = (wiki.specialEventGroups || []).map(group => {
-        const name = specialEventText(group.key) || group.key.replace(/([a-z])([A-Z])/g, '$1 $2');
-        const stages = specialEventStageOrder(group).filter(stage => !stage.display || stage.display.show !== false).length;
-        return '<article class="card entity-list-card main-quest-list-card quest-catalogue-card" data-search="' + escapeHtml(name.toLowerCase()) + '" data-key="' + escapeHtml(group.key) + '" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>' + escapeHtml(name) + '</h3><p>' + stages + ' ' + escapeHtml(ui('stages','Stages')) + '</p></article>';
-    }).join('');
-    const guild = (wiki.missionGroups || []).map(group => {
-        const name = missionText(group.key) || missionText(group.quest?.key) || group.key.replace(/([a-z])([A-Z])/g, '$1 $2');
-        const grade = String(group.grade || '').replace(/Grade$/, '');
-        return '<article class="card entity-list-card main-quest-list-card quest-catalogue-card" data-grade="' + escapeHtml(grade) + '" data-search="' + escapeHtml((name + ' ' + grade).toLowerCase()) + '" data-key="' + escapeHtml(group.key) + '" onclick="loadMissionDetail(this.dataset.key)"><h3>' + escapeHtml(name) + '</h3><p>' + escapeHtml(ui('grade','Grade')) + ': ' + escapeHtml(grade) + '</p></article>';
-    }).join('');
+    const events=(wiki.specialEventGroups||[]).map(g=>wikiQuestCard(g,'events')).join('');
+    const guild=(wiki.missionGroups||[]).map(g=>wikiQuestCard(g,'guild')).join('');
     const sections = [
         events ? '<section class="quest-catalogue-section"><h2>' + escapeHtml(ui('events','Events')) + '</h2><div class="grid quest-catalogue-grid">' + events + '</div></section>' : '',
         guild ? '<section class="quest-catalogue-section"><h2>' + escapeHtml(ui('guildQuests','Guild Quests')) + '</h2><div class="grid quest-catalogue-grid">' + guild + '</div></section>' : ''
