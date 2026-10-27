@@ -16,7 +16,10 @@ function specialEventText(key) {
 function wikiQuestLocations(group) {
     return (group.locations || []).map(where => {
         const places = [];
-        if (where.tileData) places.push(specialEventReference(where.tileData) || escapeHtml(where.tileData));
+        if (where.tileData) {
+            const names = String(where.tileData).split('|').map(key => specialEventReference(key)).filter(Boolean);
+            if (names.length) places.push(names.join(' · '));
+        }
         if (where.tileArea) places.push(specialEventAreaReference(where.tileArea));
         return places.filter(Boolean).join(' · ');
     }).filter((item,index,array)=>item&&array.indexOf(item)===index).join(' · ');
