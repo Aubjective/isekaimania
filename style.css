@@ -131,3 +131,10 @@ hr, .skill-group + .skill-group, .relic-passive-group, .wiki-footer { border-col
 a, .link, .game-info a, .wiki-footer a { color: var(--primary); }
 .link:hover, a:hover { color: #ffdd9e; }
 .wiki-footer, .story-separator, .travel-separator, .boost-separator { color: var(--aub-muted); }
+
+/* Unified Quests catalogue: shared card system, two clearly separated sections. */
+.quest-catalogue { display: flex; flex-direction: column; gap: 30px; }
+.quest-catalogue-section > h2 { margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--aub-line, #334477); color: var(--primary, #ffd700); }
+.quest-catalogue-section[hidden] { display: none; }
+.quest-catalogue-card { min-width: 0; }
+@media (max-width: 480px) { .quest-catalogue { gap: 24px; } }
