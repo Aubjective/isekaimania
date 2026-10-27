@@ -92,6 +92,7 @@ function specialEventReference(key) {
     }
     // A number alone has no entity type: quantities and levels must remain numbers.
     if (/^\d+$/.test(value)) return escapeHtml(value);
+    if (wiki.enemyTeamLocalisation && wiki.enemyTeamLocalisation.has(value)) return escapeHtml(enemyTeamText(value));
     if (specialEventText(value)) return escapeHtml(specialEventText(value));
     if (typeof tileDataByKey === 'function' && tileDataByKey(value)) {
         const row = wiki.tileDataLocalisation && wiki.tileDataLocalisation.get(value);
