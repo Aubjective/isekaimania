@@ -36,7 +36,22 @@ function wikiQuestObjectives(group) {
         const objective=description || String(quest.completeCondition||'').split('|').map(wikiQuestCondition).filter(Boolean).join(' · ');
         if (objective&&!values.includes(objective)) values.push(objective);
     }
-    return values.join(' · ');
+    if (!values.length && group.eventConditions?.length) {
+        const seen = new Set();
+        for (const branch of group.eventConditions) {
+            const text = branch.split('|').map(token => {
+                const match = token.match(/^HaveItem-(.+)-([01])$/);
+                if (match) {
+                    const item = specialEventReference(match[1]) || escapeHtml(match[1]);
+                    return match[2] === '0' ? 'Without ' + item : 'Have ' + item;
+                }
+                if (token.startsWith('LevelBelow-')) return 'Below level ' + escapeHtml(token.slice('LevelBelow-'.length));
+                return wikiQuestCondition(token);
+            }).filter(Boolean).join(' · ');
+            if (text && !seen.has(text)) { seen.add(text); values.push(text); }
+        }
+    }
+    return values.join(' OR ');
 }
 function wikiQuestCard(group,kind) {
     const isGuild=kind==='guild';
