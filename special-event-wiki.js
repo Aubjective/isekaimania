@@ -11,6 +11,56 @@ function specialEventText(key) {
     const row = wiki.specialEventLocalisation[key] || {};
     return row[wiki.locale] || row.en || '';
 }
+
+// Shared simple quest presentation. Source: live Quest and SpecialEvents location fields.
+function wikiQuestLocations(group) {
+    return (group.locations || []).map(where => {
+        const places = [];
+        if (where.tileData) places.push(specialEventReference(where.tileData) || escapeHtml(where.tileData));
+        if (where.tileArea) places.push(specialEventAreaReference(where.tileArea));
+        return places.filter(Boolean).join(' · ');
+    }).filter((item,index,array)=>item&&array.indexOf(item)===index).join(' · ');
+}
+function wikiQuestCondition(token) {
+    const fields=String(token||'').split('-'),type=fields.shift();
+    if (!type || type==='EncounteredBefore') return '';
+    // Raw condition fields are entity,quantity; several localization templates expect quantity,entity.
+    const reverse=['HaveItem','HaveEquipment','DefeatMonster','DefeatTeam','DefeatDungeonArena','HaveMonster'];
+    const args=reverse.includes(type)&&fields.length===2?[fields[1],fields[0]]:fields;
+    return specialEventLocalizedTemplate(type,args);
+}
+function wikiQuestObjectives(group) {
+    const values=[];
+    for (const quest of group.quests || []) {
+        const description=quest.descriptionKey ? specialEventLocalizedTemplate(quest.descriptionKey,quest.descriptionVariables) : '';
+        const objective=description || String(quest.completeCondition||'').split('|').map(wikiQuestCondition).filter(Boolean).join(' · ');
+        if (objective&&!values.includes(objective)) values.push(objective);
+    }
+    return values.join(' · ');
+}
+function wikiQuestCard(group,kind) {
+    const isGuild=kind==='guild';
+    const name=(isGuild?missionText(group.key):specialEventText(group.key)) ||
+        (group.quests?.[0] ? (isGuild?missionText(group.quests[0].key):specialEventText(group.quests[0].key)) : '') ||
+        group.key.replace(/([a-z])([A-Z])/g,'$1 $2');
+    const where=wikiQuestLocations(group);
+    const objective=wikiQuestObjectives(group);
+    const href=isGuild?'missions':'specialevents';
+    const body=(where?'<p><strong>'+escapeHtml(ui('where','Where'))+':</strong> '+where+'</p>':'')+
+        (objective?'<p><strong>'+escapeHtml(ui('objective','Objective'))+':</strong> '+objective+'</p>':'');
+    return '<article class="card entity-list-card quest-catalogue-card" data-search="'+escapeHtml((name+' '+(group.grade||'')).toLowerCase())+'" data-key="'+escapeHtml(group.key)+'" onclick="window.location.hash=routeHash(\''+href+'\',this.dataset.key)"><h3>'+escapeHtml(name)+'</h3>'+body+'</article>';
+}
+function wikiQuestDetail(group,kind) {
+    const isGuild=kind==='guild';
+    const name=(isGuild?missionText(group.key):specialEventText(group.key)) || (group.quests?.[0]?(isGuild?missionText(group.quests[0].key):specialEventText(group.quests[0].key)):'') || group.key.replace(/([a-z])([A-Z])/g,'$1 $2');
+    const where=wikiQuestLocations(group);
+    const objective=wikiQuestObjectives(group);
+    const rows=[];
+    if(where)rows.push(infoRow(ui('where','Where'),where));
+    if(objective)rows.push(infoRow(ui('objective','Objective'),objective));
+    return '<div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(name)+'</h2></div><section class="card detail-section">'+rows.join('')+'</section>';
+}
+
 function specialEventGroup(key) { return wiki.specialEventGroups.find(group => group.key === key); }
 // Only return references backed by a localized source or a known numeric area.
 // Missing entries are omitted instead of exposing internal identifiers.
@@ -190,15 +240,12 @@ function specialEventSummary(group) {
     if (objectives.length) lines.push('<p><strong>' + escapeHtml(ui('objective','Objective')) + ':</strong> ' + objectives.join(' · ') + '</p>');
     return '<section class="card detail-section special-event-summary">' + lines.join('') + '</section>';
 }
-function renderSpecialEventList() {
-    const cards=wiki.specialEventGroups.map(g=>'<article class="card entity-list-card main-quest-list-card" data-key="'+escapeHtml(g.key)+'" data-search="'+escapeHtml((specialEventText(g.key)||g.key).toLowerCase())+'" onclick="loadSpecialEventDetail(this.dataset.key)"><h3>'+escapeHtml(specialEventText(g.key)||g.key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h3><p>'+specialEventStageOrder(g).filter(stage=>!stage.display||stage.display.show!==false).length+' '+escapeHtml(ui('stages','Stages'))+'</p></article>').join('');
-    return '<div class="header-card"><h1>'+escapeHtml(ui('specialEvents','Special Events'))+'</h1><p>'+wiki.specialEventGroups.length+' '+escapeHtml(ui('entries','entries'))+'</p><input type="text" id="searchInput" class="search-input" placeholder="'+escapeHtml(ui('search','Search...'))+'"></div><div class="grid">'+cards+'</div>';
-}
-function loadSpecialEventDetail(key,fromRoute=false,questKey='') {
+function renderSpecialEventList(){return '<div class="header-card"><h1>'+escapeHtml(ui('events','Events'))+'</h1></div><div class="grid">'+wiki.specialEventGroups.map(g=>wikiQuestCard(g,'events')).join('')+'</div>';}
+function loadSpecialEventDetail(key,fromRoute=false) {
     const group=specialEventGroup(key);if(!group)return;
     if(!fromRoute&&navigateHash('specialevents',key))return;
     setActiveView('SpecialEvents');
-    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'SpecialEvents\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack"><div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(specialEventText(key)||key.replace(/([a-z])([A-Z])/g,'$1 $2'))+'</h2><p>'+specialEventStageOrder(group).filter(stage=>!stage.display||stage.display.show!==false).length+' '+escapeHtml(ui('stages','Stages'))+'</p></div>'+specialEventSummary(group)+'</div>';
+    document.getElementById('content').innerHTML='<button class="back-btn" onclick="loadView(\'Quests\')">← '+escapeHtml(ui('back','Back'))+'</button><div class="detail-stack">'+wikiQuestDetail(group,'events')+'</div>';
     window.scrollTo(0,0);
 }
 function specialEventRoute() {
@@ -222,7 +269,7 @@ loadView=function(view,fromRoute=false){
 };
 window.addEventListener('hashchange',handleHashRoute);
 const specialEventPromise=(async()=>{
-    const [stageData,localisation,misc]=await Promise.all([loadJson('data/special-event-stages.json',{groups:[]}),loadJson('data/special-event-localisation.json',{}),loadJson('data/special-event-misc.json',{})]);
+    const [stageData,localisation,misc]=await Promise.all([loadJson('data/event-quests.json',{groups:[]}),loadJson('data/special-event-localisation.json',{}),loadJson('data/special-event-misc.json',{})]);
     wiki.specialEventLocalisation=localisation;
     wiki.specialEventMisc=misc;
     wiki.specialEventGroups=stageData.groups || [];
