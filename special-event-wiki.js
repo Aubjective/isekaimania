@@ -295,7 +295,12 @@ const specialEventPromise=(async()=>{
     const [stageData,localisation,misc]=await Promise.all([loadJson('data/event-quests.json',{groups:[]}),loadJson('data/special-event-localisation.json',{}),loadJson('data/special-event-misc.json',{})]);
     wiki.specialEventLocalisation=localisation;
     wiki.specialEventMisc=misc;
-    wiki.specialEventGroups=stageData.groups || [];
+    // Keep unlocalized source records in JSON for future corrections, but do not publish them.
+    wiki.specialEventGroups=(stageData.groups || []).filter(group => {
+        const localizedTitle = wiki.specialEventLocalisation[group.key]?.en;
+        const localizedQuestTitle = (group.quests || []).some(quest => wiki.specialEventLocalisation[quest.key]?.en);
+        return Boolean(localizedTitle || localizedQuestTitle);
+    });
     await Promise.allSettled([typeof mainQuestPromise!=='undefined'?mainQuestPromise:Promise.resolve(),typeof tileDataPromise!=='undefined'?tileDataPromise:Promise.resolve(),typeof tileAreaDataPromise!=='undefined'?tileAreaDataPromise:Promise.resolve(),typeof monsterDataPromise!=='undefined'?monsterDataPromise:Promise.resolve(),typeof itemDataPromise!=='undefined'?itemDataPromise:Promise.resolve(),typeof equipmentDataPromise!=='undefined'?equipmentDataPromise:Promise.resolve()]);
     wiki.specialEventsReady=true;
     if(wiki.ready&&window.location.hash.toLowerCase().startsWith('#/specialevents'))handleHashRoute();
