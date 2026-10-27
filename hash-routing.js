@@ -14,8 +14,9 @@
         ['tiles', 'TileData'],
         ['tileareas', 'TileAreas'],
         ['mainquests', 'MainQuests'],
-        ['specialevents', 'SpecialEvents'],
-        ['missions', 'Missions'],
+        ['quests', 'Quests'],
+        ['specialevents', 'Quests'],
+        ['missions', 'Quests'],
         ['enemyteams', 'Monsters']
     ]);
 
