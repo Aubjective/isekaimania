@@ -106,7 +106,7 @@ function mainQuestGroupBasicInfo(group) {
 }
 function renderMainQuestList() {
     const cards = wiki.mainQuestGroups.map(g => '<article class="card entity-list-card main-quest-list-card" data-search="' + escapeHtml(mainQuestName(g.key).toLowerCase()) + '" onclick="loadMainQuestDetail(this.dataset.key)" data-key="' + escapeHtml(g.key) + '">' + mainQuestGroupSprite(g) + '<h3>' + escapeHtml(mainQuestName(g.key) || ui('mainQuests','Main Quests')) + '</h3><p>' + escapeHtml(g.questCount) + ' ' + escapeHtml(ui('quests','Quests')) + '</p></article>').join('');
-    return '<div class="header-card"><h1>' + escapeHtml(ui('mainQuests','Main Quests')) + '</h1><p>' + wiki.mainQuestGroups.length + ' ' + escapeHtml(ui('entries','entries')) + '</p><input type="text" id="searchInput" class="search-input" placeholder="' + escapeHtml(ui('search','Search...')) + '"></div><div class="grid">' + cards + '</div>';
+    return '<div class="header-card"><h1>' + escapeHtml(ui('adventureMap','Adventure Map')) + '</h1><p>' + wiki.mainQuestGroups.length + ' ' + escapeHtml(ui('entries','entries')) + '</p><input type="text" id="searchInput" class="search-input" placeholder="' + escapeHtml(ui('search','Search...')) + '"></div><div class="grid">' + cards + '</div>';
 }
 function loadMainQuestDetail(key, fromRoute=false, questKey='') {
     const group = mainQuestGroup(key);
