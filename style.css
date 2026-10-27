@@ -138,3 +138,8 @@ a, .link, .game-info a, .wiki-footer a { color: var(--primary); }
 .quest-catalogue-section[hidden] { display: none; }
 .quest-catalogue-card { min-width: 0; }
 @media (max-width: 480px) { .quest-catalogue { gap: 24px; } }
+
+/* Simple events / guild quests cards share the standard catalogue grid. */
+.quest-catalogue-card { min-height: 0; }
+.quest-catalogue-card p { line-height: 1.55; overflow-wrap: anywhere; }
+.quest-catalogue-card p strong { color: var(--primary, #e9c48a); }
