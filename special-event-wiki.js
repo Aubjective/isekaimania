@@ -51,7 +51,7 @@ function wikiQuestObjectives(group) {
             if (text && !seen.has(text)) { seen.add(text); values.push(text); }
         }
     }
-    return values.join(' OR ');
+    return values.join(group.eventConditions?.length && !(group.quests || []).length ? ' OR ' : ' · ');
 }
 function wikiQuestCard(group,kind) {
     const isGuild=kind==='guild';
