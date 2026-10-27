@@ -36,6 +36,13 @@ function wikiQuestObjectives(group) {
         const objective=description || String(quest.completeCondition||'').split('|').map(wikiQuestCondition).filter(Boolean).join(' · ');
         if (objective&&!values.includes(objective)) values.push(objective);
     }
+    if (!values.length && group.objectiveConditions?.length) {
+        values.push(group.objectiveConditions.map(token => {
+            const item = token.match(/^HaveItem-(.+)-1$/);
+            if (item) return specialEventLocalizedTemplate('HaveItem', ['1', item[1]]);
+            return wikiQuestCondition(token);
+        }).filter(Boolean).join(' · '));
+    }
     if (!values.length && group.eventConditions?.length) {
         const seen = new Set();
         for (const branch of group.eventConditions) {
