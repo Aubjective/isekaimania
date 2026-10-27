@@ -7,11 +7,13 @@ window.removeEventListener('hashchange', questsPreviousRoute);
 function renderQuestsList() {
     const events=(wiki.specialEventGroups||[]).map(g=>wikiQuestCard(g,'events')).join('');
     const guild=(wiki.missionGroups||[]).map(g=>wikiQuestCard(g,'guild')).join('');
+    const other=(wiki.otherEventGroups||[]).map(otherEventCard).join('');
     const sections = [
         events ? '<section class="quest-catalogue-section"><h2>' + escapeHtml(ui('events','Events')) + '</h2><div class="grid quest-catalogue-grid">' + events + '</div></section>' : '',
+        other ? '<section class="quest-catalogue-section"><h2>' + escapeHtml(otherLabel('section')) + '</h2><div class="grid quest-catalogue-grid">' + other + '</div></section>' : '',
         guild ? '<section class="quest-catalogue-section"><h2>' + escapeHtml(ui('guildQuests','Guild Quests')) + '</h2><div class="grid quest-catalogue-grid">' + guild + '</div></section>' : ''
     ].filter(Boolean).join('');
-    const total = (wiki.specialEventGroups || []).length + (wiki.missionGroups || []).length;
+    const total = (wiki.specialEventGroups || []).length + (wiki.missionGroups || []).length + (wiki.otherEventGroups || []).length;
     return '<div class="header-card"><h1>' + escapeHtml(ui('quests','Quests')) + '</h1><p>' + total + ' ' + escapeHtml(ui('entries','entries')) + '</p><input type="text" id="searchInput" class="search-input" placeholder="' + escapeHtml(ui('search','Search...')) + '"></div><div class="quest-catalogue">' + sections + '</div>';
 }
 function questsCatalogueSearch() {
@@ -49,7 +51,7 @@ loadView = function(view, fromRoute = false) {
         return questsPreviousView(view, fromRoute);
     if (!fromRoute && navigateHash('quests')) return;
     setActiveView('Quests');
-    const ready = wiki.specialEventsReady && wiki.missionsReady;
+    const ready = wiki.specialEventsReady && wiki.missionsReady && wiki.otherEventsReady;
     document.getElementById('content').innerHTML = ready
         ? renderQuestsList()
         : '<h2>' + escapeHtml(ui('loading','Loading...')) + '</h2>';
@@ -57,7 +59,7 @@ loadView = function(view, fromRoute = false) {
     window.scrollTo(0,0);
 };
 window.addEventListener('hashchange', handleHashRoute);
-Promise.allSettled([specialEventPromise, missionPromise]).then(() => {
+Promise.allSettled([specialEventPromise, missionPromise, otherEventPromise]).then(() => {
     if (wiki.ready && ['quests', 'specialevents', 'missions'].includes(window.location.hash.replace(/^#\/?/, '').split('/')[0].toLowerCase()))
         handleHashRoute();
 });
