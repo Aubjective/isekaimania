@@ -5832,10 +5832,10 @@
     "ja": "静かな城"
   },
   "MainQuestBaronMabonEnterTheFortressDescription": {
-    "en": "Go to {0} (Area {1}) and speak with {2}. Help him hold off the garrison patrols and learn what is drawing the soldiers toward the castle.",
-    "zh": "前往区域{1}的{0}与{2}会合，协助他挡住要塞巡逻队，并查明是什么力量把士兵引向城堡。",
-    "zh-Hant": "前往區域{1}的{0}與{2}會合，協助他擋住要塞巡邏隊，並查明是什麼力量把士兵引向城堡。",
-    "ja": "エリア{1}の{0}へ向かい、{2}と話す。彼と共に守備隊の巡回兵を食い止め、兵士たちを城へ引き寄せているものを突き止める。",
+    "en": "Go to {0} (Area {1}) and speak with {2}. Help him fight off the out-of-control soldiers, investigate their strange movements, and check the military horn in the castle storeroom.",
+    "zh": "前往区域{1}的{0}与{2}交谈，协助他击退失控的士兵，调查士兵异常的行动，并检查城堡库房里的军用号角。",
+    "zh-Hant": "前往區域{1}的{0}與{2}交談，協助他擊退失控的士兵，調查士兵異常的行動，並檢查城堡庫房裡的軍用號角。",
+    "ja": "エリア{1}の{0}へ向かい、{2}と話す。彼と共に暴走した兵士たちを撃退し、不審な動きを調査して、城の倉庫にある軍用の角笛を確認する。",
     "ru": "Отправляйтесь к объекту {0} (область {1}) и поговорите с {2}. Помогите ему сдержать патруль гарнизона и выясните, что тянет солдат к замку."
   },
   "MainQuestBaronMabonDisableTheRelay": {
@@ -5851,30 +5851,30 @@
     "ja": "エリア{2}の{1}へ向かい、修理工の{0}を見つけて話そう。その後、{3}を1つ用意し、エリア{2}の{1}に戻って彼に渡そう。"
   },
   "MainQuestBaronMabonRecoverTheMilitaryHorn": {
-    "en": "Old Garrison Dungeon",
-    "zh": "旧驻军地下城",
-    "zh-Hant": "舊駐軍地下城",
-    "ja": "旧守備隊地下施設"
+    "en": "Path to the Old Garrison Dungeon",
+    "zh": "通往旧驻军地下城",
+    "zh-Hant": "通往舊駐軍地下城",
+    "ja": "旧守備隊地下施設への道"
   },
   "MainQuestBaronMabonRecoverTheMilitaryHornDescription": {
-    "en": "At {0} (Area {1}), inspect the old quartermaster record with {2} and obtain {3}. Enter {4} (Area {5}) and defeat {6}.",
-    "zh": "在区域{1}的{0}与{2}检查旧军需记录并取得{3}。随后进入区域{5}的{4}，击败{6}。",
-    "zh-Hant": "在區域{1}的{0}與{2}檢查舊軍需記錄並取得{3}。隨後進入區域{5}的{4}，擊敗{6}。",
-    "ja": "エリア{1}の{0}で{2}と共に旧兵站記録を調べ、{3}を手に入れる。その後、エリア{5}の{4}に入り、{6}を倒す。",
+    "en": "At {0} (Area {1}), inspect the old quartermaster's records with {2} and obtain {3}.",
+    "zh": "在区域{1}的{0}与{2}一起检查旧军需官的记录，并取得{3}。",
+    "zh-Hant": "在區域{1}的{0}與{2}一起檢查舊軍需官的紀錄，並取得{3}。",
+    "ja": "エリア{1}の{0}で{2}と共に旧兵站係の記録を調べ、{3}を入手する。",
     "ru": "В {0} (область {1}) изучите старые записи интенданта вместе с {2} и получите {3}. {3}атем войдите в {4} (область {5}) и победите {6}."
   },
   "MainQuestBaronMabonReportToVillageMessenger": {
-    "en": "Report to the Village Messenger",
-    "zh": "向村庄信使汇报",
-    "zh-Hant": "向村莊信使匯報",
-    "ja": "村の伝令に報告する",
+    "en": "Former Comrades, Final Confrontation",
+    "zh": "昔日战友，最终对决",
+    "zh-Hant": "昔日戰友，最終對決",
+    "ja": "かつての戦友、最後の対決",
     "ru": "Доложить деревенскому гонцу"
   },
   "MainQuestBaronMabonReportToVillageMessengerDescription": {
-    "en": "Return to {0} in area {1} and speak with {2}.",
-    "zh": "返回区域{1}的{0}，与{2}对话。",
-    "zh-Hant": "返回區域{1}的{0}，與{2}對話。",
-    "ja": "エリア{1}の{0}に戻り、{2}と話す。",
+    "en": "Enter {0} (Area {1}) and defeat {2}. Then return to {3} (Area {4}) and report to {5}.",
+    "zh": "进入区域{1}的{0}，击败{2}。随后返回区域{4}的{3}，向{5}汇报。",
+    "zh-Hant": "進入區域{1}的{0}，擊敗{2}。隨後返回區域{4}的{3}，向{5}匯報。",
+    "ja": "エリア{1}の{0}に入り、{2}を倒す。その後、エリア{4}の{3}に戻り、{5}に報告する。",
     "ru": "Вернитесь в {0} (область {1}) и поговорите с {2}."
   }
 }
