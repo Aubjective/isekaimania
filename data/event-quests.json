@@ -32,15 +32,14 @@
       "key": "TheGreatHunt",
       "locations": [
         {
-          "tileData": "CastleHero",
-          "tileArea": null
+          "tileData": null,
+          "tileArea": "57"
         }
       ],
       "quests": [],
-      "eventConditions": [
-        "MapHasArea-57|LevelBelow-30|HaveItem-Hunting License-0",
-        "MapHasArea-57|LevelAbove-30|HaveItem-Hunting License-0",
-        "MapHasArea-57|LevelBelow-30|HaveItem-Hunting License-1"
+      "objectiveConditions": [
+        "LevelAbove-30",
+        "HaveItem-Hunting License-1"
       ]
     },
     {
