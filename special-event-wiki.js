@@ -65,8 +65,8 @@ function wikiQuestObjectives(group) {
 }
 function wikiQuestCard(group,kind) {
     const isGuild=kind==='guild';
-    const name=(isGuild?missionText(group.key):specialEventText(group.key)) ||
-        (group.quests?.[0] ? (isGuild?missionText(group.quests[0].key):specialEventText(group.quests[0].key)) : '') ||
+    const name=(group.quests?.[0] ? (isGuild?missionText(group.quests[0].key):specialEventText(group.quests[0].key)) : '') ||
+        (isGuild?missionText(group.key):specialEventText(group.key)) ||
         group.key.replace(/([a-z])([A-Z])/g,'$1 $2');
     const where=wikiQuestLocations(group);
     const objective=wikiQuestObjectives(group);
@@ -77,7 +77,7 @@ function wikiQuestCard(group,kind) {
 }
 function wikiQuestDetail(group,kind) {
     const isGuild=kind==='guild';
-    const name=(isGuild?missionText(group.key):specialEventText(group.key)) || (group.quests?.[0]?(isGuild?missionText(group.quests[0].key):specialEventText(group.quests[0].key)):'') || group.key.replace(/([a-z])([A-Z])/g,'$1 $2');
+    const name=(group.quests?.[0]?(isGuild?missionText(group.quests[0].key):specialEventText(group.quests[0].key)):'') || (isGuild?missionText(group.key):specialEventText(group.key)) || group.key.replace(/([a-z])([A-Z])/g,'$1 $2');
     const where=wikiQuestLocations(group);
     const objective=wikiQuestObjectives(group);
     const rows=[];
