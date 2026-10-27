@@ -297,56 +297,6 @@
       ]
     },
     {
-      "key": "WhereIsCastle",
-      "locations": [
-        {
-          "tileData": "GoblinMountain",
-          "tileArea": "53"
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "MysteriousOneEye",
-      "locations": [
-        {
-          "tileData": "EarthDesertLandNormal",
-          "tileArea": "25"
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TheVampWarning",
-      "locations": [
-        {
-          "tileData": "DarkForestDeadNormal",
-          "tileArea": "42"
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TheThunderForest",
-      "locations": [
-        {
-          "tileData": "ThunderForestShortNormal",
-          "tileArea": "30"
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "GetBoat",
-      "locations": [
-        {
-          "tileData": "BeginnerTownHero",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
       "key": "GetShip",
       "locations": [
         {
@@ -419,26 +369,6 @@
       ]
     },
     {
-      "key": "CapJackDungeonMap",
-      "locations": [
-        {
-          "tileData": "BeginnerTownHero",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "CapJackArenaToken",
-      "locations": [
-        {
-          "tileData": "AventoraFreeport",
-          "tileArea": "46"
-        }
-      ],
-      "quests": []
-    },
-    {
       "key": "OrcsRavagedVillage",
       "locations": [
         {
@@ -469,40 +399,6 @@
           "descriptionKey": null,
           "descriptionVariables": null,
           "completeCondition": "HaveEquipment-Silver Dagger-1"
-        }
-      ]
-    },
-    {
-      "key": "LearnHeal",
-      "locations": [
-        {
-          "tileData": "SlimeLandB",
-          "tileArea": null
-        }
-      ],
-      "quests": [
-        {
-          "key": "QuestLearnHeal1",
-          "descriptionKey": null,
-          "descriptionVariables": null,
-          "completeCondition": null
-        }
-      ]
-    },
-    {
-      "key": "LearnGuard",
-      "locations": [
-        {
-          "tileData": "KingdomLandB",
-          "tileArea": null
-        }
-      ],
-      "quests": [
-        {
-          "key": "QuestLearnGuard1",
-          "descriptionKey": null,
-          "descriptionVariables": null,
-          "completeCondition": null
         }
       ]
     },
@@ -595,16 +491,6 @@
       ]
     },
     {
-      "key": "ChoiceOfSurvival",
-      "locations": [
-        {
-          "tileData": "CommonHouse",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
       "key": "BeginnerCharmPowder",
       "locations": [
         {
@@ -620,26 +506,6 @@
           "completeCondition": "CoinAbove-1000|HaveItem-Shell Fragments-2"
         }
       ]
-    },
-    {
-      "key": "ElementSubstances",
-      "locations": [
-        {
-          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "GetSilverIngot",
-      "locations": [
-        {
-          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
-          "tileArea": null
-        }
-      ],
-      "quests": []
     },
     {
       "key": "HelpMermaid",
@@ -693,16 +559,6 @@
       ]
     },
     {
-      "key": "TheClimbersLostLine",
-      "locations": [
-        {
-          "tileData": "CastleHero",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
       "key": "DryadPineGroveIncident",
       "locations": [
         {
@@ -732,96 +588,6 @@
           "completeCondition": "DefeatTeam-Dryad Princess-1|EncounteredBefore-1152-1"
         }
       ]
-    },
-    {
-      "key": "CommonHouseSalvagedTravelGear",
-      "locations": [
-        {
-          "tileData": "CommonHouse",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TooBrightToStudy",
-      "locations": [
-        {
-          "tileData": "LightMountainWhiteNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "PoisonInThePuddle",
-      "locations": [
-        {
-          "tileData": "EarthSeashoreNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "WaterproofingFailure",
-      "locations": [
-        {
-          "tileData": "ThunderSeashoreNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TheGlowingWreckage",
-      "locations": [
-        {
-          "tileData": "LightSeashorePinkNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TracksUnderTheSnow",
-      "locations": [
-        {
-          "tileData": "WaterSnowLandNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TheSmokingCrate",
-      "locations": [
-        {
-          "tileData": "FireSeashoreNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TheAbandonedHerbBasket",
-      "locations": [
-        {
-          "tileData": "NatureGrassLandCNormal",
-          "tileArea": null
-        }
-      ],
-      "quests": []
-    },
-    {
-      "key": "TheEmptyHuntingCamp",
-      "locations": [
-        {
-          "tileData": "GoblinDarkLand",
-          "tileArea": null
-        }
-      ],
-      "quests": []
     }
   ]
 }
