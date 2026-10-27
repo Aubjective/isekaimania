@@ -41,6 +41,8 @@ function mainQuestTokens(value) {
             const reference = token.trim().slice('EncounteredBefore-'.length);
             return escapeHtml(ui('previouslyEncountered', 'Previously encountered')) + ': ' + mainQuestReference(reference);
         }
+        // GameOver-1 is the end-of-quest flag, not a Tile Area ID.
+        if (/^GameOver(?:-\d+)?$/i.test(token.trim())) return escapeHtml(ui('questEnd', 'The End'));
         const parts = token.split('-'), action = parts.shift();
         const templates = wiki.mainQuestLocalisation[action] || {};
         const template = templates[wiki.locale] || templates.en || '';
