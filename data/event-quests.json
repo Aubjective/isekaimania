@@ -1,0 +1,823 @@
+{
+  "source": "Live Isekaimania Quest and SpecialEvents sheet",
+  "groups": [
+    {
+      "key": "LostAdventurer",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        },
+        {
+          "tileData": "KingdomLandB",
+          "tileArea": "11"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLostAdventurer1",
+          "descriptionKey": "QuestLostAdventurer1Description",
+          "descriptionVariables": "KingdomLandB-11",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestLostAdventurer2",
+          "descriptionKey": "ReturnToAndReportTo",
+          "descriptionVariables": "Castle-10-Mary",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "TheGreatHunt",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "LostPet",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        },
+        {
+          "tileData": "SlimeLandB",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLostPet1",
+          "descriptionKey": "QuestLostPet1Description",
+          "descriptionVariables": "49-SlimeLandB",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestLostPet2",
+          "descriptionKey": "QuestLostPet2Description",
+          "descriptionVariables": "BeginnerTownHero-68",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "LetterErrand",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        },
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        },
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLetterErrand1",
+          "descriptionKey": "RetriveItemAtIn",
+          "descriptionVariables": "Letter-Castle-34",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestLetterErrand2",
+          "descriptionKey": "DeliverSomethingToAtWhere",
+          "descriptionVariables": "Mary Letter-Mary-BeginnerTownHero-8",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "EquipmentMaterial",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestEquipmentMaterial1",
+          "descriptionKey": "CollectItemAndGiveTo",
+          "descriptionVariables": "3-Fire Stone-Blacksmith-Castle-34",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "WildMonster",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "15"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestWildMonster1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-15-5"
+        }
+      ]
+    },
+    {
+      "key": "HelpingTheNun",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        },
+        {
+          "tileData": "CastleHero",
+          "tileArea": "37"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestHelpingTheNun1",
+          "descriptionKey": "DeliverSomethingTo",
+          "descriptionVariables": "High Nun Necklace-Castle",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "SlimeWave",
+      "locations": [
+        {
+          "tileData": "KingdomSlimeLand",
+          "tileArea": "11"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeWave1",
+          "descriptionKey": "DefeatAmountMonsterAndReportToAtArea",
+          "descriptionVariables": "11-KingdomSlimeLand-Slime-OldVillager-5",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "BringAliceToTown",
+      "locations": [
+        {
+          "tileData": "KingdomLandA",
+          "tileArea": "12"
+        },
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestBringAliceToTown1",
+          "descriptionKey": "BringWhoToWhereIn",
+          "descriptionVariables": "Alice-CastleHero-10",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "TheGemstonesQuest",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "59"
+        },
+        {
+          "tileData": "GemstoneCavern",
+          "tileArea": "56"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTheGemstonesQuest1",
+          "descriptionKey": "QuestTheGemstonesQuest1Description",
+          "descriptionVariables": "TheGems-56-WeaponMerchant-Castle-10",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "WhatIs",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        },
+        {
+          "tileData": "KingdomForest",
+          "tileArea": "9"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestWhatIs1",
+          "descriptionKey": "InvestigateAndReportAtArea",
+          "descriptionVariables": "KingdomForest-9-Guard-Castle-10",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "Fortune",
+      "locations": [
+        {
+          "tileData": "FireBurningLandNormal",
+          "tileArea": "18"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFortuneLuck",
+          "descriptionKey": "HaveItem",
+          "descriptionVariables": "3-Fire Stone",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestFortuneExp",
+          "descriptionKey": "DefeatTeamAt",
+          "descriptionVariables": "1-Fire Lion-FireBurningLandNormal",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "VampireIncidents",
+      "locations": [
+        {
+          "tileData": "DarkForestDeadNormal",
+          "tileArea": "42"
+        },
+        {
+          "tileData": "DarkDarkLandNormal",
+          "tileArea": "42"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestVampire1",
+          "descriptionKey": "DefeatTeamAtArea",
+          "descriptionVariables": "1-Bloodthirsters-42",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "UndeadIncidents",
+      "locations": [
+        {
+          "tileData": "DarkMountainDarkNormal",
+          "tileArea": "61"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestUndeadIncidents1",
+          "descriptionKey": "DefeatTeamAndReportToAtArea",
+          "descriptionVariables": "61-DarkMountainDarkNormal-WalkingDead-OldVillager",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "WhereIsCastle",
+      "locations": [
+        {
+          "tileData": "GoblinMountain",
+          "tileArea": "53"
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "MysteriousOneEye",
+      "locations": [
+        {
+          "tileData": "EarthDesertLandNormal",
+          "tileArea": "25"
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TheVampWarning",
+      "locations": [
+        {
+          "tileData": "DarkForestDeadNormal",
+          "tileArea": "42"
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TheThunderForest",
+      "locations": [
+        {
+          "tileData": "ThunderForestShortNormal",
+          "tileArea": "30"
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "GetBoat",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "GetShip",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGetShip1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Gold Ingot-3|HaveItem-Boat-1"
+        }
+      ]
+    },
+    {
+      "key": "SalamanderNest",
+      "locations": [
+        {
+          "tileData": "SalamanderNest",
+          "tileArea": "19"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSalamanderNest1",
+          "descriptionKey": "QuestSalamanderNest1Description",
+          "descriptionVariables": "Fire Lion-FireBurningLandNormal",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "RingOfMermaid",
+      "locations": [
+        {
+          "tileData": "SlimeDeepSea",
+          "tileArea": "50"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRingOfMermaid1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatTeam-DeepSeaWardens-1"
+        }
+      ]
+    },
+    {
+      "key": "VampireManorKey",
+      "locations": [
+        {
+          "tileData": "KingdomLandA",
+          "tileArea": "10"
+        },
+        {
+          "tileData": "BanditsGrassLandB",
+          "tileArea": "12"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestVampireManorKey1",
+          "descriptionKey": "DefeatAndRetrieveAtArea",
+          "descriptionVariables": "BanditsGrassLandB-12-Thin Bandit-Vampire Manor Key",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "CapJackDungeonMap",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "CapJackArenaToken",
+      "locations": [
+        {
+          "tileData": "AventoraFreeport",
+          "tileArea": "46"
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "OrcsRavagedVillage",
+      "locations": [
+        {
+          "tileData": "OrcsRavagedVillage",
+          "tileArea": "66"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestOrcCaveLeaderGuard1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Oyster-3"
+        }
+      ]
+    },
+    {
+      "key": "OrcsHuntingGroundGuard",
+      "locations": [
+        {
+          "tileData": "OrcsHuntingGround",
+          "tileArea": "57"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestOrcsHuntingGroundGuard1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveEquipment-Silver Dagger-1"
+        }
+      ]
+    },
+    {
+      "key": "LearnHeal",
+      "locations": [
+        {
+          "tileData": "SlimeLandB",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLearnHeal1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "LearnGuard",
+      "locations": [
+        {
+          "tileData": "KingdomLandB",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestLearnGuard1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "StrangeFootprints",
+      "locations": [
+        {
+          "tileData": "SlimeSeashore",
+          "tileArea": "50"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestStrangeFootprints1",
+          "descriptionKey": "QuestStrangeFootprintsDescription1",
+          "descriptionVariables": "SlimeSeashore-50",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestStrangeFootprints2",
+          "descriptionKey": "QuestStrangeFootprintsDescription2",
+          "descriptionVariables": "SlimeSeashore-50",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "EscortMerchant",
+      "locations": [
+        {
+          "tileData": null,
+          "tileArea": "52"
+        },
+        {
+          "tileData": null,
+          "tileArea": "10"
+        },
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestEscortMerchant1",
+          "descriptionKey": "QuestEscortMerchantDescription1",
+          "descriptionVariables": "52",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestEscortMerchant2",
+          "descriptionKey": "QuestEscortMerchantDescription2",
+          "descriptionVariables": "10",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "BrokenSignpost",
+      "locations": [
+        {
+          "tileData": null,
+          "tileArea": "67"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestBrokenSignpost1",
+          "descriptionKey": "QuestBrokenSignpostDescription1",
+          "descriptionVariables": "67-5-Wood-2-Iron Ingot",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "LightForTheForest",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindAnOilLamp",
+          "descriptionKey": "QuestFindAnOilLampDescription",
+          "descriptionVariables": "Oil Lamp-Herbward Lantern-2 <sprite name=Silver>-BeginnerTownHero",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "ChoiceOfSurvival",
+      "locations": [
+        {
+          "tileData": "CommonHouse",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "BeginnerCharmPowder",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCharmPowder",
+          "descriptionKey": "QuestCharmPowderDescription",
+          "descriptionVariables": "Charm Powder",
+          "completeCondition": "CoinAbove-1000|HaveItem-Shell Fragments-2"
+        }
+      ]
+    },
+    {
+      "key": "ElementSubstances",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "GetSilverIngot",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "HelpMermaid",
+      "locations": [
+        {
+          "tileData": "Sea",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestHelpMermaid",
+          "descriptionKey": "QuestHelpMermaidDescription",
+          "descriptionVariables": "Jellyfish-4",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "SnowCastleRestlessNight",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSnowCastleRestlessNight",
+          "descriptionKey": "QuestSnowCastleRestlessNightDescription",
+          "descriptionVariables": "SnowCastleHero-Ice Lion",
+          "completeCondition": null
+        }
+      ]
+    },
+    {
+      "key": "RoadsideCampDelayedDeparture",
+      "locations": [
+        {
+          "tileData": "RoadsideCamp",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRoadsideCampDelayedDeparture",
+          "descriptionKey": "QuestRoadsideCampDelayedDepartureDescription",
+          "descriptionVariables": "RoadsideCamp-Kingdom Lancer",
+          "completeCondition": "HaveMonster-Kingdom Lancer-1|EncounteredBefore-903-1"
+        }
+      ]
+    },
+    {
+      "key": "TheClimbersLostLine",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "DryadPineGroveIncident",
+      "locations": [
+        {
+          "tileData": "RoadsideCamp",
+          "tileArea": "21"
+        },
+        {
+          "tileData": "NatureSeashoreGreenNormal",
+          "tileArea": "21"
+        },
+        {
+          "tileData": "DryadPineGroveDungeon",
+          "tileArea": "78"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestDryadPineGroveTheLivingCut",
+          "descriptionKey": "QuestDryadPineGroveTheLivingCutDescription",
+          "descriptionVariables": "21",
+          "completeCondition": null
+        },
+        {
+          "key": "QuestDryadPineGroveTheRestlessGrove",
+          "descriptionKey": "QuestDryadPineGroveTheRestlessGroveDescription",
+          "descriptionVariables": "Living Pineheart-DryadPineGroveDungeon-78",
+          "completeCondition": "DefeatTeam-Dryad Princess-1|EncounteredBefore-1152-1"
+        }
+      ]
+    },
+    {
+      "key": "CommonHouseSalvagedTravelGear",
+      "locations": [
+        {
+          "tileData": "CommonHouse",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TooBrightToStudy",
+      "locations": [
+        {
+          "tileData": "LightMountainWhiteNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "PoisonInThePuddle",
+      "locations": [
+        {
+          "tileData": "EarthSeashoreNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "WaterproofingFailure",
+      "locations": [
+        {
+          "tileData": "ThunderSeashoreNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TheGlowingWreckage",
+      "locations": [
+        {
+          "tileData": "LightSeashorePinkNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TracksUnderTheSnow",
+      "locations": [
+        {
+          "tileData": "WaterSnowLandNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TheSmokingCrate",
+      "locations": [
+        {
+          "tileData": "FireSeashoreNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TheAbandonedHerbBasket",
+      "locations": [
+        {
+          "tileData": "NatureGrassLandCNormal",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    },
+    {
+      "key": "TheEmptyHuntingCamp",
+      "locations": [
+        {
+          "tileData": "GoblinDarkLand",
+          "tileArea": null
+        }
+      ],
+      "quests": []
+    }
+  ]
+}
