@@ -46,8 +46,8 @@ function wikiQuestCard(group,kind) {
     const where=wikiQuestLocations(group);
     const objective=wikiQuestObjectives(group);
     const href=isGuild?'missions':'specialevents';
-    const body=(where?'<p><strong>'+escapeHtml(ui('where','Where'))+':</strong> '+where+'</p>':'')+
-        (objective?'<p><strong>'+escapeHtml(ui('objective','Objective'))+':</strong> '+objective+'</p>':'');
+    const body='<p><strong>'+escapeHtml(ui('where','Where'))+':</strong> '+(where || escapeHtml(ui('none','None')))+'</p>'+
+        '<p><strong>'+escapeHtml(ui('objective','Objective'))+':</strong> '+(objective || escapeHtml(ui('noObjective','Not specified in source')))+'</p>';
     return '<article class="card entity-list-card quest-catalogue-card" data-search="'+escapeHtml((name+' '+(group.grade||'')).toLowerCase())+'" data-key="'+escapeHtml(group.key)+'" onclick="window.location.hash=routeHash(\''+href+'\',this.dataset.key)"><h3>'+escapeHtml(name)+'</h3>'+body+'</article>';
 }
 function wikiQuestDetail(group,kind) {
@@ -56,8 +56,8 @@ function wikiQuestDetail(group,kind) {
     const where=wikiQuestLocations(group);
     const objective=wikiQuestObjectives(group);
     const rows=[];
-    if(where)rows.push(infoRow(ui('where','Where'),where));
-    if(objective)rows.push(infoRow(ui('objective','Objective'),objective));
+    rows.push(infoRow(ui('where','Where'),where || escapeHtml(ui('none','None'))));
+    rows.push(infoRow(ui('objective','Objective'),objective || escapeHtml(ui('noObjective','Not specified in source'))));
     return '<div class="card detail-title-card main-quest-title-card"><h2>'+escapeHtml(name)+'</h2></div><section class="card detail-section">'+rows.join('')+'</section>';
 }
 
