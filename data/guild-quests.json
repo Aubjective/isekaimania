@@ -1,0 +1,3659 @@
+{
+  "source": "Live Isekaimania Quest and SpecialEvents sheet",
+  "groups": [
+    {
+      "key": "InvestigateKingdomSeashore",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestInvestigateKingdomSeashore1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "EngagedTileData-KingdomSeashore-1"
+        }
+      ]
+    },
+    {
+      "key": "CatchCrabs",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCatchCrabs",
+          "descriptionKey": "QuestCatchCrabsDescription",
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Crab-3"
+        }
+      ]
+    },
+    {
+      "key": "MonsterHunter",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMonsterHunter1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-10-5"
+        }
+      ]
+    },
+    {
+      "key": "MaterialGatheringWood",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMaterialGatheringWood",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Wood-3"
+        }
+      ]
+    },
+    {
+      "key": "CourierRun",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCourierRun1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "EngagedTileData-BeginnerTownHero-1"
+        }
+      ]
+    },
+    {
+      "key": "PestControl",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestPestControl1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatMonster-Slime-5"
+        }
+      ]
+    },
+    {
+      "key": "InvestigateTheRuins",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": "29"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestInvestigateTheRuins1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "EnteredTileArea-48-1"
+        }
+      ]
+    },
+    {
+      "key": "CollectBlood",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestINeedBlood1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Blood-5"
+        }
+      ]
+    },
+    {
+      "key": "GoldenSkel",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGoldenSkel1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Golden Skeleton-1"
+        }
+      ]
+    },
+    {
+      "key": "FishingRod",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFishingrod1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Fishing Rod-1"
+        }
+      ]
+    },
+    {
+      "key": "FindFireStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindFireStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Fire Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindBreezeStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindBreezeStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Breeze Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindLeafStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindLeafStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Leaf Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindThunderStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindThunderStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Thunder Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindWaterStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindWaterStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Water Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindTerraStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindTerraStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Terra Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindDawnStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindDawnStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Dawn Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "FindDuskStone",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFindDuskStone1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Dusk Stone-2"
+        }
+      ]
+    },
+    {
+      "key": "INeedSlimeFluid",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "15"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestINeedSlimeFluid1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Slime Fluid-5"
+        }
+      ]
+    },
+    {
+      "key": "MaterialGatheringEgg",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": "29"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMaterialGatheringEgg",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Egg-3"
+        }
+      ]
+    },
+    {
+      "key": "MaterialGatheringPearl",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "AventoraFreeport",
+          "tileArea": "46"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMaterialGatheringPearl",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Pearl-2"
+        }
+      ]
+    },
+    {
+      "key": "GuildPatrolArea1",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestPatrolDutyArea1",
+          "descriptionKey": "QuestPatrolDutyDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "DefeatAreaMonster-1-5"
+        }
+      ]
+    },
+    {
+      "key": "MonsterSuppressionArea1",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMonsterSuppressionArea1",
+          "descriptionKey": "QuestMonsterSuppressionDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "DefeatAreaMonster-1-7"
+        }
+      ]
+    },
+    {
+      "key": "RoadClearanceArea1",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRoadClearanceArea1",
+          "descriptionKey": "QuestRoadClearanceDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "DefeatAreaMonster-1-3"
+        }
+      ]
+    },
+    {
+      "key": "ConstructionMaterialsArea1",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestConstructionMaterialsArea1",
+          "descriptionKey": "QuestConstructionMaterialsDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "HaveItem-Stones-5"
+        }
+      ]
+    },
+    {
+      "key": "SeaMonsterExterminationArea1",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSeaMonsterExterminationArea1",
+          "descriptionKey": "QuestMonsterExterminationDescription",
+          "descriptionVariables": "1-KingdomSeashore-Sea Crab",
+          "completeCondition": "DefeatMonster-Sea Crab-2"
+        }
+      ]
+    },
+    {
+      "key": "EmergencySupplies",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGuildSupplies",
+          "descriptionKey": "QuestGuildSuppliesDescription",
+          "descriptionVariables": "8",
+          "completeCondition": "HaveItem-Slime Fluid-4"
+        }
+      ]
+    },
+    {
+      "key": "ClearTheRoad",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestClearTheRoad1",
+          "descriptionKey": "QuestClearTheRoadDescription1",
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-8-5"
+        }
+      ]
+    },
+    {
+      "key": "HoneyCollectionArea8",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestHoneyCollectionArea8",
+          "descriptionKey": "QuestHoneyCollectionDescription",
+          "descriptionVariables": "8-3",
+          "completeCondition": "HaveItem-Honey-3"
+        }
+      ]
+    },
+    {
+      "key": "MonsterSuppressionArea8",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMonsterSuppressionArea8",
+          "descriptionKey": "QuestMonsterSuppressionDescription",
+          "descriptionVariables": "8",
+          "completeCondition": "DefeatAreaMonster-8-7"
+        }
+      ]
+    },
+    {
+      "key": "SlimeInfestation",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestStopTheSlimes",
+          "descriptionKey": "QuestStopTheSlimesDescription",
+          "descriptionVariables": "Slime-8",
+          "completeCondition": "DefeatMonster-Slime-5"
+        }
+      ]
+    },
+    {
+      "key": "MerchantTroubleArea68",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMerchantTroubleArea68",
+          "descriptionKey": "QuestMerchantTroubleDescription",
+          "descriptionVariables": "68",
+          "completeCondition": "DefeatAreaMonster-68-5"
+        }
+      ]
+    },
+    {
+      "key": "SlimeResearchArea68EGrade",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeResearchArea68EGrade",
+          "descriptionKey": "QuestSlimeResearchDescription",
+          "descriptionVariables": "68-3",
+          "completeCondition": "HaveItem-Slime Fluid-3"
+        }
+      ]
+    },
+    {
+      "key": "ArrowMaterials",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestArrowMaterials",
+          "descriptionKey": "QuestArrowMaterialsDescription",
+          "descriptionVariables": "68-2",
+          "completeCondition": "HaveItem-Feather-2"
+        }
+      ]
+    },
+    {
+      "key": "ElementalDisturbance",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalDisturbance",
+          "descriptionKey": "QuestElementalDisturbanceDescription",
+          "descriptionVariables": "69",
+          "completeCondition": "DefeatAreaMonster-69-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalBalance",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalBalance",
+          "descriptionKey": "QuestElementalBalanceDescription",
+          "descriptionVariables": "69",
+          "completeCondition": "DefeatAreaMonster-69-7"
+        }
+      ]
+    },
+    {
+      "key": "ConstructionMaterialsArea69",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestConstructionMaterialsArea69",
+          "descriptionKey": "QuestConstructionMaterialsDescription",
+          "descriptionVariables": "69",
+          "completeCondition": "HaveItem-Twigs-4"
+        }
+      ]
+    },
+    {
+      "key": "ElementalResearch",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalResearch",
+          "descriptionKey": "QuestElementalResearchDescription",
+          "descriptionVariables": "69-3",
+          "completeCondition": "HaveItem-Slime Fluid-3"
+        }
+      ]
+    },
+    {
+      "key": "HoneyCollectionArea69",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestHoneyCollectionArea69",
+          "descriptionKey": "QuestHoneyCollectionDescription",
+          "descriptionVariables": "69-3",
+          "completeCondition": "HaveItem-Honey-3"
+        }
+      ]
+    },
+    {
+      "key": "GuildPatrolArea11",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestPatrolDutyArea11",
+          "descriptionKey": "QuestPatrolDutyDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "DefeatAreaMonster-11-5"
+        }
+      ]
+    },
+    {
+      "key": "MonsterSuppressionArea11",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMonsterSuppressionArea11",
+          "descriptionKey": "QuestMonsterSuppressionDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "DefeatAreaMonster-11-7"
+        }
+      ]
+    },
+    {
+      "key": "ConstructionMaterialsArea11",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestConstructionMaterialsArea11",
+          "descriptionKey": "QuestConstructionMaterialsDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "HaveItem-Wood-3"
+        }
+      ]
+    },
+    {
+      "key": "RoadClearanceArea11",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRoadClearanceArea11",
+          "descriptionKey": "QuestRoadClearanceDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "DefeatAreaMonster-11-3"
+        }
+      ]
+    },
+    {
+      "key": "SeaMonsterExterminationArea11",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSeaMonsterExterminationArea11",
+          "descriptionKey": "QuestMonsterExterminationDescription",
+          "descriptionVariables": "11-KingdomSeashore-Starfishes",
+          "completeCondition": "DefeatMonster-Starfishes-2"
+        }
+      ]
+    },
+    {
+      "key": "GuildPatrolArea13",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestPatrolDutyArea13",
+          "descriptionKey": "QuestPatrolDutyDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "DefeatAreaMonster-13-5"
+        }
+      ]
+    },
+    {
+      "key": "MonsterSuppressionArea13",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMonsterSuppressionArea13",
+          "descriptionKey": "QuestMonsterSuppressionDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "DefeatAreaMonster-13-7"
+        }
+      ]
+    },
+    {
+      "key": "RoadClearanceArea13",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRoadClearanceArea13",
+          "descriptionKey": "QuestRoadClearanceDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "DefeatAreaMonster-13-3"
+        }
+      ]
+    },
+    {
+      "key": "ConstructionMaterialsArea13",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestConstructionMaterialsArea13",
+          "descriptionKey": "QuestConstructionMaterialsDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "HaveItem-Wood-3"
+        }
+      ]
+    },
+    {
+      "key": "SeaMonsterExterminationArea13",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSeaMonsterExterminationArea13",
+          "descriptionKey": "QuestMonsterExterminationDescription",
+          "descriptionVariables": "13-KingdomSeashore-Sea Crab",
+          "completeCondition": "DefeatMonster-Sea Crab-2"
+        }
+      ]
+    },
+    {
+      "key": "SupplyLineArea1",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSupplyLineArea1",
+          "descriptionKey": "QuestSupplyLineDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "DefeatAreaMonster-1-10"
+        }
+      ]
+    },
+    {
+      "key": "RescueMissionArea1",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero|CastleHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRescueMissionArea1",
+          "descriptionKey": "QuestRescueMissionDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "DefeatMonster-Kingdom Lancer-5"
+        }
+      ]
+    },
+    {
+      "key": "BreadSuppliesArea1",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestBreadSuppliesArea1",
+          "descriptionKey": "QuestFoodSuppliesDescription",
+          "descriptionVariables": "1",
+          "completeCondition": "HaveItem-Apple-4"
+        }
+      ]
+    },
+    {
+      "key": "CleanWaterArea1",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCleanWaterArea1",
+          "descriptionKey": "QuestCleanWaterDescription",
+          "descriptionVariables": "1-Drinking Water",
+          "completeCondition": "HaveItem-Drinking Water-8"
+        }
+      ]
+    },
+    {
+      "key": "AdvancedSlimeResearchArea8",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeResearchArea8DGrade",
+          "descriptionKey": "QuestAdvancedSlimeResearchDescription",
+          "descriptionVariables": "8-Slime Fluid",
+          "completeCondition": "HaveItem-Slime Fluid-7"
+        }
+      ]
+    },
+    {
+      "key": "SlimeOutbreakArea8",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeOutbreakArea8",
+          "descriptionKey": "QuestSlimeOutbreakDescription",
+          "descriptionVariables": "8",
+          "completeCondition": "DefeatAreaMonster-8-10"
+        }
+      ]
+    },
+    {
+      "key": "AlchemySuppliesArea8DGrade",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestAlchemySuppliesArea8DGrade",
+          "descriptionKey": "QuestAlchemySuppliesDescription",
+          "descriptionVariables": "8-Small Glass Vial",
+          "completeCondition": "HaveItem-Small Glass Vial-4"
+        }
+      ]
+    },
+    {
+      "key": "MimicSlimeControl",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestMimicSlimeControl",
+          "descriptionKey": "QuestSlimeControlDescription",
+          "descriptionVariables": "8-Mimic Slime-SlimeLandA",
+          "completeCondition": "DefeatMonster-Mimic Slime-5"
+        }
+      ]
+    },
+    {
+      "key": "SupplyLineArea11",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSupplyLineArea11",
+          "descriptionKey": "QuestSupplyLineDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "DefeatAreaMonster-11-10"
+        }
+      ]
+    },
+    {
+      "key": "RescueMissionArea11",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRescueMissionArea11",
+          "descriptionKey": "QuestRescueMissionDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "DefeatMonster-Kingdom Gunner-5"
+        }
+      ]
+    },
+    {
+      "key": "AppleSuppliesArea11",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestAppleSuppliesArea11",
+          "descriptionKey": "QuestFoodSuppliesDescription",
+          "descriptionVariables": "11",
+          "completeCondition": "HaveItem-Apple-4"
+        }
+      ]
+    },
+    {
+      "key": "CleanWaterArea11",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCleanWaterArea11",
+          "descriptionKey": "QuestCleanWaterDescription",
+          "descriptionVariables": "11-Drinking Water",
+          "completeCondition": "HaveItem-Drinking Water-8"
+        }
+      ]
+    },
+    {
+      "key": "SupplyLineArea13",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSupplyLineArea13",
+          "descriptionKey": "QuestSupplyLineDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "DefeatAreaMonster-13-10"
+        }
+      ]
+    },
+    {
+      "key": "RescueMissionArea13",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRescueMissionArea13",
+          "descriptionKey": "QuestRescueMissionDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "DefeatMonster-Kingdom Gunner-5"
+        }
+      ]
+    },
+    {
+      "key": "FishSuppliesArea13",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFishSuppliesArea13",
+          "descriptionKey": "QuestFoodSuppliesDescription",
+          "descriptionVariables": "13",
+          "completeCondition": "HaveItem-Fish-4"
+        }
+      ]
+    },
+    {
+      "key": "CleanWaterArea13",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCleanWaterArea13",
+          "descriptionKey": "QuestCleanWaterDescription",
+          "descriptionVariables": "13-Drinking Water",
+          "completeCondition": "HaveItem-Drinking Water-8"
+        }
+      ]
+    },
+    {
+      "key": "AdvancedSlimeResearchArea68",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeResearchArea68DGrade",
+          "descriptionKey": "QuestAdvancedSlimeResearchDescription",
+          "descriptionVariables": "68-Slime Fluid",
+          "completeCondition": "HaveItem-Slime Fluid-7"
+        }
+      ]
+    },
+    {
+      "key": "SlimeOutbreakArea68",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeOutbreakArea68",
+          "descriptionKey": "QuestSlimeOutbreakDescription",
+          "descriptionVariables": "68",
+          "completeCondition": "DefeatAreaMonster-68-10"
+        }
+      ]
+    },
+    {
+      "key": "WaterSlimeControl",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestWaterSlimeControl",
+          "descriptionKey": "QuestSlimeControlDescription",
+          "descriptionVariables": "68-Water Slime-SlimeSeashore",
+          "completeCondition": "DefeatMonster-Water Slime-5"
+        }
+      ]
+    },
+    {
+      "key": "AlchemySuppliesArea68DGrade",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestAlchemySuppliesArea68DGrade",
+          "descriptionKey": "QuestAlchemySuppliesDescription",
+          "descriptionVariables": "68-Small Glass Vial",
+          "completeCondition": "HaveItem-Small Glass Vial-4"
+        }
+      ]
+    },
+    {
+      "key": "ElementalOutbreakArea69DGrade",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalOutbreakArea69DGrade",
+          "descriptionKey": "QuestElementalOutbreakDescription",
+          "descriptionVariables": "69",
+          "completeCondition": "DefeatAreaMonster-69-10"
+        }
+      ]
+    },
+    {
+      "key": "FireSlimeControl",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFireSlimeControl",
+          "descriptionKey": "QuestSlimeControlDescription",
+          "descriptionVariables": "69-Fire Slime-ElementalGrassLandA",
+          "completeCondition": "DefeatMonster-Fire Slime-5"
+        }
+      ]
+    },
+    {
+      "key": "HerbalCollectionArea69",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestHerbalCollectionArea69",
+          "descriptionKey": "QuestHerbalCollectionDescription",
+          "descriptionVariables": "69-Herb",
+          "completeCondition": "HaveItem-Herb-4"
+        }
+      ]
+    },
+    {
+      "key": "ForestResourcesArea69",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestResourcesArea69",
+          "descriptionKey": "QuestForestResourcesDescription",
+          "descriptionVariables": "69-Wood",
+          "completeCondition": "HaveItem-Wood-6"
+        }
+      ]
+    },
+    {
+      "key": "DefeatTheMantisSyndicate",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestDefeatTheMantisSyndicate",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatTeam-Cyclone Mantis-1"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightFire",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightFire1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-18-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightWind",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightWind1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-36-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightNature",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightNature1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-41-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightThunder",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightThunder1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-30-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightWater",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightWater1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-15-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightEarth",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightEarth1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-25-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightLight",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightLight1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-38-5"
+        }
+      ]
+    },
+    {
+      "key": "ElementalFightDark",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalFightDark1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-43-5"
+        }
+      ]
+    },
+    {
+      "key": "TheCursedForest",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "37"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTheCursedForest1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-42-3"
+        }
+      ]
+    },
+    {
+      "key": "SuspiciousShadow",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": "29"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSuspiciousShadow1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatAreaMonster-29-3"
+        }
+      ]
+    },
+    {
+      "key": "DestroyTheTribe",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "37"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestDestroyTheTribe1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "DefeatDungeonArena-GoblinCamp-1"
+        }
+      ]
+    },
+    {
+      "key": "UrgentNeedForIronIngot",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestUrgentNeedForIronIngot1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Iron Ingot-3"
+        }
+      ]
+    },
+    {
+      "key": "UrgentNeedForCopperIngot",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestUrgentNeedForCopperIngot1",
+          "descriptionKey": null,
+          "descriptionVariables": null,
+          "completeCondition": "HaveItem-Copper Ingot-2"
+        }
+      ]
+    },
+    {
+      "key": "KingdomThreatArea1",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestKingdomThreatArea1",
+          "descriptionKey": "QuestKingdomThreatAreaDescription",
+          "descriptionVariables": "1-15",
+          "completeCondition": "DefeatAreaMonster-1-15"
+        }
+      ]
+    },
+    {
+      "key": "ForestSecurityArea1",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestSecurityArea1",
+          "descriptionKey": "QuestForestSecurityDescription",
+          "descriptionVariables": "1-7-KingdomForest-Kingdom Axe Wielder",
+          "completeCondition": "DefeatMonster-Kingdom Axe Wielder-7"
+        }
+      ]
+    },
+    {
+      "key": "SilkCollectionArea1",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "1"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSilkCollectionArea1",
+          "descriptionKey": "QuestSilkCollectionDescription",
+          "descriptionVariables": "1-Silk",
+          "completeCondition": "HaveItem-Silk-8"
+        }
+      ]
+    },
+    {
+      "key": "ForestSecurityArea8",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestSecurityArea8",
+          "descriptionKey": "QuestForestSecurityDescription",
+          "descriptionVariables": "8-7-SmallwoodForest-Rabbit Archer",
+          "completeCondition": "DefeatMonster-Rabbit Archer-7"
+        }
+      ]
+    },
+    {
+      "key": "FarmSuppliesArea8",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFarmSuppliesArea8",
+          "descriptionKey": "QuestFarmSuppliesDescription",
+          "descriptionVariables": "8-Meat",
+          "completeCondition": "HaveItem-Meat-8"
+        }
+      ]
+    },
+    {
+      "key": "SlimeNestArea8",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "8"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeNestArea8",
+          "descriptionKey": "QuestSlimeRareEncounterDescription",
+          "descriptionVariables": "8-3",
+          "completeCondition": "DefeatRareEncounterMonster-8-3"
+        }
+      ]
+    },
+    {
+      "key": "KingdomThreatArea11",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestKingdomThreatArea11",
+          "descriptionKey": "QuestKingdomThreatAreaDescription",
+          "descriptionVariables": "11-15",
+          "completeCondition": "DefeatAreaMonster-11-15"
+        }
+      ]
+    },
+    {
+      "key": "ForestSecurityArea11",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestSecurityArea11",
+          "descriptionKey": "QuestForestSecurityDescription",
+          "descriptionVariables": "11-7-BeachForestTropical-Peaceful Monkey",
+          "completeCondition": "DefeatMonster-Peaceful Monkey-7"
+        }
+      ]
+    },
+    {
+      "key": "FarmSuppliesArea11",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFarmSuppliesArea11",
+          "descriptionKey": "QuestFarmSuppliesDescription",
+          "descriptionVariables": "11-Banana",
+          "completeCondition": "HaveItem-Banana-6"
+        }
+      ]
+    },
+    {
+      "key": "KingdomThreatArea13",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestKingdomThreatArea13",
+          "descriptionKey": "QuestKingdomThreatAreaDescription",
+          "descriptionVariables": "13-15",
+          "completeCondition": "DefeatAreaMonster-13-15"
+        }
+      ]
+    },
+    {
+      "key": "ForestSecurityArea13",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestSecurityArea13",
+          "descriptionKey": "QuestForestSecurityDescription",
+          "descriptionVariables": "13-7-BeachForestTropical-Peaceful Monkey",
+          "completeCondition": "DefeatMonster-Peaceful Monkey-7"
+        }
+      ]
+    },
+    {
+      "key": "FarmSuppliesArea13",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "13"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFarmSuppliesArea13",
+          "descriptionKey": "QuestFarmSuppliesDescription",
+          "descriptionVariables": "13-Banana",
+          "completeCondition": "HaveItem-Banana-6"
+        }
+      ]
+    },
+    {
+      "key": "ForestSecurityArea68",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestSecurityArea68",
+          "descriptionKey": "QuestForestSecurityDescription",
+          "descriptionVariables": "68-7-Slime Forest-Nature Slimera",
+          "completeCondition": "DefeatMonster-Nature Slimera-7"
+        }
+      ]
+    },
+    {
+      "key": "SilkCollectionArea68",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSilkCollectionArea68",
+          "descriptionKey": "QuestSilkCollectionDescription",
+          "descriptionVariables": "68-Silk",
+          "completeCondition": "HaveItem-Silk-8"
+        }
+      ]
+    },
+    {
+      "key": "SlimeNestArea68",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "68"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSlimeNestArea68",
+          "descriptionKey": "QuestSlimeRareEncounterDescription",
+          "descriptionVariables": "68-3",
+          "completeCondition": "DefeatRareEncounterMonster-68-3"
+        }
+      ]
+    },
+    {
+      "key": "ForestSecurityArea69",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestForestSecurityArea69",
+          "descriptionKey": "QuestForestSecurityDescription",
+          "descriptionVariables": "69-7-ElementalForest-Light Slimera",
+          "completeCondition": "DefeatMonster-Light Slimera-7"
+        }
+      ]
+    },
+    {
+      "key": "FarmSuppliesArea69",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestFarmSuppliesArea69",
+          "descriptionKey": "QuestFarmSuppliesDescription",
+          "descriptionVariables": "69-Apple",
+          "completeCondition": "HaveItem-Apple-6"
+        }
+      ]
+    },
+    {
+      "key": "ElementalSurgeArea69",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "BeginnerTownHero",
+          "tileArea": "69"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestElementalSurgeArea69",
+          "descriptionKey": "QuestElementalSurgeDescription",
+          "descriptionVariables": "69-3",
+          "completeCondition": "DefeatRareEncounterMonster-69-3"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea10CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea10CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "10-15",
+          "completeCondition": "DefeatAreaMonster-10-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea10CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea10CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "10-Kingdom Swordsman",
+          "completeCondition": "DefeatMonster-Kingdom Swordsman-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea10CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "10"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea10CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "10-Bread",
+          "completeCondition": "HaveItem-Bread-6"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea15CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "15"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea15CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "15-15",
+          "completeCondition": "DefeatAreaMonster-15-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea15CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "15"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea15CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "15-Ice Elemental",
+          "completeCondition": "DefeatMonster-Ice Elemental-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea15CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "15"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea15CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "15-Water Stone",
+          "completeCondition": "HaveItem-Water Stone-6"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea18CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleMilitaryHero",
+          "tileArea": "18"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea18CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "18-15",
+          "completeCondition": "DefeatAreaMonster-18-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea18CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleMilitaryHero",
+          "tileArea": "18"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea18CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "18-Fire Elemental",
+          "completeCondition": "DefeatMonster-Fire Elemental-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea18CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleMilitaryHero",
+          "tileArea": "18"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea18CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "18-Fire Stone",
+          "completeCondition": "HaveItem-Fire Stone-6"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea29CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": "29"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea29CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "29-15",
+          "completeCondition": "DefeatAreaMonster-29-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea29CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": "29"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea29CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "29-Nature Elemental",
+          "completeCondition": "DefeatMonster-Nature Elemental-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea29CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "JapanCastleHero",
+          "tileArea": "29"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea29CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "29-Leaf Stone",
+          "completeCondition": "HaveItem-Leaf Stone-6"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea34CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea34CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "34-15",
+          "completeCondition": "DefeatAreaMonster-34-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea34CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea34CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "34-Desert Sand Snake",
+          "completeCondition": "DefeatMonster-Desert Sand Snake-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea34CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "DesertCastleHero",
+          "tileArea": "34"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea34CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "34-Terra Stone",
+          "completeCondition": "HaveItem-Terra Stone-6"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea37CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "37"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea37CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "37-15",
+          "completeCondition": "DefeatAreaMonster-37-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea37CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "37"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea37CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "37-Forest Spider",
+          "completeCondition": "DefeatMonster-Forest Spider-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea37CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero",
+          "tileArea": "37"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea37CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "37-Leaf Stone",
+          "completeCondition": "HaveItem-Leaf Stone-6"
+        }
+      ]
+    },
+    {
+      "key": "CastleThreatArea59CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "59"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleThreatArea59CGrade",
+          "descriptionKey": "QuestCastleThreatAreaDescription",
+          "descriptionVariables": "59-15",
+          "completeCondition": "DefeatAreaMonster-59-15"
+        }
+      ]
+    },
+    {
+      "key": "CastleGuardArea59CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "59"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleGuardArea59CGrade",
+          "descriptionKey": "QuestCastleGuardDescription",
+          "descriptionVariables": "59-Ice Kindred",
+          "completeCondition": "DefeatMonster-Ice Kindred-7"
+        }
+      ]
+    },
+    {
+      "key": "CastleProvisionsArea59CGrade",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "SnowCastleHero",
+          "tileArea": "59"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCastleProvisionsArea59CGrade",
+          "descriptionKey": "QuestCastleProvisionsDescription",
+          "descriptionVariables": "59-Water Stone",
+          "completeCondition": "HaveItem-Water Stone-6"
+        }
+      ]
+    },
+    {
+      "key": "GemwatchLeylinePatrol",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "GemwatchTown",
+          "tileArea": "55"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGemwatchLeylinePatrol",
+          "descriptionKey": "QuestGemwatchLeylinePatrolDescription",
+          "descriptionVariables": "55",
+          "completeCondition": "DefeatAreaMonster-55-5"
+        }
+      ]
+    },
+    {
+      "key": "GemwatchStoneSamples",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "GemwatchTown",
+          "tileArea": "55"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGemwatchStoneSamples",
+          "descriptionKey": "QuestGemwatchStoneSamplesDescription",
+          "descriptionVariables": "GemwatchTown",
+          "completeCondition": "HaveItem-Stones-5"
+        }
+      ]
+    },
+    {
+      "key": "GemwatchSilverVeinSurvey",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "GemwatchTown",
+          "tileArea": "55"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGemwatchSilverVeinSurvey",
+          "descriptionKey": "QuestGemwatchSilverVeinSurveyDescription",
+          "descriptionVariables": "ElementalMountain-55",
+          "completeCondition": "HaveItem-Silver Ore-3"
+        }
+      ]
+    },
+    {
+      "key": "WinterRefugeTrailCheck",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "WinterRefuge",
+          "tileArea": "16"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestWinterRefugeFreshTracks",
+          "descriptionKey": "QuestWinterRefugeFreshTracksDescription",
+          "descriptionVariables": "16-5",
+          "completeCondition": "DefeatAreaMonster-16-5"
+        }
+      ]
+    },
+    {
+      "key": "CinderTowerLowerPathCheck",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CinderTower",
+          "tileArea": "20"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCinderTowerLowerPathEmbers",
+          "descriptionKey": "QuestCinderTowerLowerPathEmbersDescription",
+          "descriptionVariables": "20-Fire Elemental-3",
+          "completeCondition": "DefeatMonster-Fire Elemental-3"
+        }
+      ]
+    },
+    {
+      "key": "RootHavenWeavingRequest",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "RootHaven",
+          "tileArea": "23"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRootHavenWeavingFibers",
+          "descriptionKey": "QuestRootHavenWeavingFibersDescription",
+          "descriptionVariables": "23-Plant Fiber-3",
+          "completeCondition": "HaveItem-Plant Fiber-3"
+        }
+      ]
+    },
+    {
+      "key": "SandholdSmallRepairRequest",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "Sandhold",
+          "tileArea": "26"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSandholdLooseShells",
+          "descriptionKey": "QuestSandholdLooseShellsDescription",
+          "descriptionVariables": "26-Shell Fragments-2",
+          "completeCondition": "HaveItem-Shell Fragments-2"
+        }
+      ]
+    },
+    {
+      "key": "StormwatchPylonSafetyCheck",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "StormwatchPost",
+          "tileArea": "31"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestStormwatchFirstPylonBees",
+          "descriptionKey": "QuestStormwatchFirstPylonBeesDescription",
+          "descriptionVariables": "31-Lightning Bee-3",
+          "completeCondition": "DefeatMonster-Lightning Bee-3"
+        }
+      ]
+    },
+    {
+      "key": "BreezewatchSignpostSafetyCheck",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "Breezewatch",
+          "tileArea": "35"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestBreezewatchSignpostBunnies",
+          "descriptionKey": "QuestBreezewatchSignpostBunniesDescription",
+          "descriptionVariables": "35-Wind Bunny-4",
+          "completeCondition": "DefeatMonster-Wind Bunny-4"
+        }
+      ]
+    },
+    {
+      "key": "WinterRefugeSupplyRouteSweep",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "WinterRefuge",
+          "tileArea": "16"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestWinterRefugeSnowfieldPatrol",
+          "descriptionKey": "QuestWinterRefugeSnowfieldPatrolDescription",
+          "descriptionVariables": "16-7",
+          "completeCondition": "DefeatAreaMonster-16-7"
+        }
+      ]
+    },
+    {
+      "key": "CinderTowerEmberlineWatch",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CinderTower",
+          "tileArea": "20"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCinderTowerFireElementalControl",
+          "descriptionKey": "QuestCinderTowerFireElementalControlDescription",
+          "descriptionVariables": "20-Fire Elemental-5",
+          "completeCondition": "DefeatMonster-Fire Elemental-5"
+        }
+      ]
+    },
+    {
+      "key": "RootHavenShelterReinforcement",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "RootHaven",
+          "tileArea": "23"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRootHavenForestFiber",
+          "descriptionKey": "QuestRootHavenForestFiberDescription",
+          "descriptionVariables": "23-Plant Fiber-5",
+          "completeCondition": "HaveItem-Plant Fiber-5"
+        }
+      ]
+    },
+    {
+      "key": "SandholdWallRepairOrder",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "Sandhold",
+          "tileArea": "26"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSandholdDesertFragments",
+          "descriptionKey": "QuestSandholdDesertFragmentsDescription",
+          "descriptionVariables": "26-Shell Fragments-4",
+          "completeCondition": "HaveItem-Shell Fragments-4"
+        }
+      ]
+    },
+    {
+      "key": "StormwatchRelayPestOrder",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "StormwatchPost",
+          "tileArea": "31"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestStormwatchLightningBeeControl",
+          "descriptionKey": "QuestStormwatchLightningBeeControlDescription",
+          "descriptionVariables": "31-Lightning Bee-5",
+          "completeCondition": "DefeatMonster-Lightning Bee-5"
+        }
+      ]
+    },
+    {
+      "key": "BreezewatchHighroadClearing",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "Breezewatch",
+          "tileArea": "35"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestBreezewatchWindBunnyControl",
+          "descriptionKey": "QuestBreezewatchWindBunnyControlDescription",
+          "descriptionVariables": "35-Wind Bunny-5",
+          "completeCondition": "DefeatMonster-Wind Bunny-5"
+        }
+      ]
+    },
+    {
+      "key": "WinterRefugeWhiteoutThreat",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "WinterRefuge",
+          "tileArea": "16"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestWinterRefugeFrozenPredators",
+          "descriptionKey": "QuestWinterRefugeFrozenPredatorsDescription",
+          "descriptionVariables": "16-3",
+          "completeCondition": "DefeatRareEncounterMonster-16-3"
+        }
+      ]
+    },
+    {
+      "key": "CinderTowerAshfangAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CinderTower",
+          "tileArea": "20"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestCinderTowerHellhoundHunt",
+          "descriptionKey": "QuestCinderTowerHellhoundHuntDescription",
+          "descriptionVariables": "20-3",
+          "completeCondition": "DefeatRareEncounterMonster-20-3"
+        }
+      ]
+    },
+    {
+      "key": "RootHavenOldwoodAwakening",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "RootHaven",
+          "tileArea": "23"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRootHavenAncientGuardians",
+          "descriptionKey": "QuestRootHavenAncientGuardiansDescription",
+          "descriptionVariables": "23-3",
+          "completeCondition": "DefeatRareEncounterMonster-23-3"
+        }
+      ]
+    },
+    {
+      "key": "SandholdDuneStalkerAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "Sandhold",
+          "tileArea": "26"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestSandholdBuriedPredators",
+          "descriptionKey": "QuestSandholdBuriedPredatorsDescription",
+          "descriptionVariables": "26-3",
+          "completeCondition": "DefeatRareEncounterMonster-26-3"
+        }
+      ]
+    },
+    {
+      "key": "StormwatchChargedBeastAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "StormwatchPost",
+          "tileArea": "31"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestStormwatchChargedPredators",
+          "descriptionKey": "QuestStormwatchChargedPredatorsDescription",
+          "descriptionVariables": "31-3",
+          "completeCondition": "DefeatRareEncounterMonster-31-3"
+        }
+      ]
+    },
+    {
+      "key": "BreezewatchHighwindThreat",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "Breezewatch",
+          "tileArea": "35"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestBreezewatchSkyPredators",
+          "descriptionKey": "QuestBreezewatchSkyPredatorsDescription",
+          "descriptionVariables": "35-3",
+          "completeCondition": "DefeatRareEncounterMonster-35-3"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampCoastalWatch",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampShorelinePatrol",
+          "descriptionKey": "QuestGelgroveCampShorelinePatrolDescription",
+          "descriptionVariables": "Slime-5",
+          "completeCondition": "DefeatMonster-Slime-5"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampSupplyStock",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampFluidReserve",
+          "descriptionKey": "QuestGelgroveCampFluidReserveDescription",
+          "descriptionVariables": "Slime Fluid-5",
+          "completeCondition": "HaveItem-Slime Fluid-5"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampOuterSeaWarning",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "47"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampDeepwaterSharks",
+          "descriptionKey": "QuestGelgroveCampDeepwaterSharksDescription",
+          "descriptionVariables": "47-Shark-3-2",
+          "completeCondition": "DefeatMonster-Shark-3"
+        }
+      ]
+    },
+    {
+      "key": "RaidersRestShoreWatch",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "RaidersRest",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRaidersRestGoblinLookouts",
+          "descriptionKey": "QuestRaidersRestGoblinLookoutsDescription",
+          "descriptionVariables": "Goblin Grunt-5",
+          "completeCondition": "DefeatMonster-Goblin Grunt-5"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestDawnsideWatch",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "38"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestLightPatrol",
+          "descriptionKey": "QuestTwilightRestLightPatrolDescription",
+          "descriptionVariables": "38-5",
+          "completeCondition": "DefeatAreaMonster-38-5"
+        }
+      ]
+    },
+    {
+      "key": "RaidersRestCoastalDefense",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "RaidersRest",
+          "tileArea": "64"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRaidersRestOrcBeachRaid",
+          "descriptionKey": "QuestRaidersRestOrcBeachRaidDescription",
+          "descriptionVariables": "64-Orc Warrior-4",
+          "completeCondition": "DefeatMonster-Orc Warrior-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestNightRouteWatch",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "44"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestDarkenedRoads",
+          "descriptionKey": "QuestTwilightRestDarkenedRoadsDescription",
+          "descriptionVariables": "44-7",
+          "completeCondition": "DefeatAreaMonster-44-7"
+        }
+      ]
+    },
+    {
+      "key": "AventoraFreeportDockSecurity",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "AventoraFreeport",
+          "tileArea": "46"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestAventoraFreeportDocksideBandits",
+          "descriptionKey": "QuestAventoraFreeportDocksideBanditsDescription",
+          "descriptionVariables": "46-Pirate Bandit-5",
+          "completeCondition": "DefeatMonster-Pirate Bandit-5"
+        }
+      ]
+    },
+    {
+      "key": "RaidersRestGoblinWarbandAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "RaidersRest",
+          "tileArea": "53"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRaidersRestNightRaiders",
+          "descriptionKey": "QuestRaidersRestNightRaidersDescription",
+          "descriptionVariables": "53-3",
+          "completeCondition": "DefeatRareEncounterMonster-53-3"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestDeepShadowAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "44"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestMidnightThreats",
+          "descriptionKey": "QuestTwilightRestMidnightThreatsDescription",
+          "descriptionVariables": "44-3-2",
+          "completeCondition": "DefeatRareEncounterMonster-44-3"
+        }
+      ]
+    },
+    {
+      "key": "AventoraFreeportHighridgeWarning",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "AventoraFreeport",
+          "tileArea": "46"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestAventoraFreeportMountainBlades",
+          "descriptionKey": "QuestAventoraFreeportMountainBladesDescription",
+          "descriptionVariables": "46-Pirate Magic Scimitar-3-3",
+          "completeCondition": "DefeatMonster-Pirate Magic Scimitar-3"
+        }
+      ]
+    },
+    {
+      "key": "AventoraFreeportRouteSafety",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "AventoraFreeport",
+          "tileArea": "46"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestAventoraFreeportApproachPatrol",
+          "descriptionKey": "QuestAventoraFreeportApproachPatrolDescription",
+          "descriptionVariables": "46-4",
+          "completeCondition": "DefeatAreaMonster-46-4"
+        }
+      ]
+    },
+    {
+      "key": "GemwatchArcaneCavernClearance",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "GemwatchTown",
+          "tileArea": "55"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGemwatchArcaneCavernClearance",
+          "descriptionKey": "QuestGemwatchArcaneCavernClearanceDescription",
+          "descriptionVariables": "ArcaneCavern-55",
+          "completeCondition": "DefeatRareEncounterMonster-55-3"
+        }
+      ]
+    },
+    {
+      "key": "RootHavenSurveyEquipmentRecovery",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "RootHaven",
+          "tileArea": "23"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRootHavenSurveyRouteRecovery",
+          "descriptionKey": "QuestRootHavenSurveyRouteRecoveryDescription",
+          "descriptionVariables": "23-Nature Lion-2",
+          "completeCondition": "DefeatMonster-Nature Lion-2"
+        }
+      ]
+    },
+    {
+      "key": "GeneralDriftingSeaHorseWatch",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralDriftingSeaHorses",
+          "descriptionKey": "QuestGeneralDriftingSeaHorsesDescription",
+          "descriptionVariables": "Sea Horse-5",
+          "completeCondition": "DefeatMonster-Sea Horse-5"
+        }
+      ]
+    },
+    {
+      "key": "GeneralTangledRigging",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralPelicansCaughtInRigging",
+          "descriptionKey": "QuestGeneralPelicansCaughtInRiggingDescription",
+          "descriptionVariables": "Sea Pelican-4",
+          "completeCondition": "DefeatMonster-Sea Pelican-4"
+        }
+      ]
+    },
+    {
+      "key": "GeneralParalyzedFishingNets",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralJellyfishInTheNets",
+          "descriptionKey": "QuestGeneralJellyfishInTheNetsDescription",
+          "descriptionVariables": "Jellyfish-4",
+          "completeCondition": "DefeatMonster-Jellyfish-4"
+        }
+      ]
+    },
+    {
+      "key": "GeneralNightFishingEmergency",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralNightNetEmergency",
+          "descriptionKey": "QuestGeneralNightNetEmergencyDescription",
+          "descriptionVariables": "Octopus-4",
+          "completeCondition": "DefeatMonster-Octopus-4"
+        }
+      ]
+    },
+    {
+      "key": "GeneralToxicShippingLane",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralPoisonedShippingLane",
+          "descriptionKey": "QuestGeneralPoisonedShippingLaneDescription",
+          "descriptionVariables": "Jellyfish-4-Octopus-3",
+          "completeCondition": "DefeatMonster-Jellyfish-4|DefeatMonster-Octopus-3"
+        }
+      ]
+    },
+    {
+      "key": "GeneralEmergencyProvisionOrder",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralEmergencyCoastalProvisions",
+          "descriptionKey": "QuestGeneralEmergencyCoastalProvisionsDescription",
+          "descriptionVariables": "Fish-5-Crab-5-Oyster-3",
+          "completeCondition": "HaveItem-Fish-5|HaveItem-Crab-5|HaveItem-Oyster-3"
+        }
+      ]
+    },
+    {
+      "key": "GeneralBlockedDockingRoute",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralFishBlockingTheDocks",
+          "descriptionKey": "QuestGeneralFishBlockingTheDocksDescription",
+          "descriptionVariables": "Sea Fish-5",
+          "completeCondition": "DefeatMonster-Sea Fish-5"
+        }
+      ]
+    },
+    {
+      "key": "GeneralCrabSupplyOrder",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralCrabDelivery",
+          "descriptionKey": "QuestGeneralCrabDeliveryDescription",
+          "descriptionVariables": "Crab-4",
+          "completeCondition": "HaveItem-Crab-4"
+        }
+      ]
+    },
+    {
+      "key": "GeneralOysterBedRecovery",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralDisturbedOysterBeds",
+          "descriptionKey": "QuestGeneralDisturbedOysterBedsDescription",
+          "descriptionVariables": "Sea Horse-3-Oyster-3",
+          "completeCondition": "DefeatMonster-Sea Horse-3|HaveItem-Oyster-3"
+        }
+      ]
+    },
+    {
+      "key": "GeneralRaidedFishingGrounds",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralPelicanFishingRaid",
+          "descriptionKey": "QuestGeneralPelicanFishingRaidDescription",
+          "descriptionVariables": "Sea Pelican-3-Fish-4",
+          "completeCondition": "DefeatMonster-Sea Pelican-3|HaveItem-Fish-4"
+        }
+      ]
+    },
+    {
+      "key": "GeneralVenomousCrabTraps",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralContaminatedCrabTraps",
+          "descriptionKey": "QuestGeneralContaminatedCrabTrapsDescription",
+          "descriptionVariables": "Jellyfish-3-Crab-3",
+          "completeCondition": "DefeatMonster-Jellyfish-3|HaveItem-Crab-3"
+        }
+      ]
+    },
+    {
+      "key": "GeneralNightOysterRecovery",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "CastleHero|CastleMilitaryHero|DesertCastleHero|JapanCastleHero|SnowCastleHero",
+          "tileArea": null
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGeneralOctopusOysterRaid",
+          "descriptionKey": "QuestGeneralOctopusOysterRaidDescription",
+          "descriptionVariables": "Octopus-2-Oyster-3",
+          "completeCondition": "DefeatMonster-Octopus-2|HaveItem-Oyster-3"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40UnstableRoadlights",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40LightElementals",
+          "descriptionKey": "QuestTwilightRestArea40LightElementalsDescription",
+          "descriptionVariables": "Light Elemental-4",
+          "completeCondition": "DefeatMonster-Light Elemental-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40RadiantInterference",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40OrbAngelInterference",
+          "descriptionKey": "QuestTwilightRestArea40OrbAngelInterferenceDescription",
+          "descriptionVariables": "Orb Angel-4",
+          "completeCondition": "DefeatMonster-Orb Angel-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40GuardianAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40RareGuardians",
+          "descriptionKey": "QuestTwilightRestArea40RareGuardiansDescription",
+          "descriptionVariables": "40-2",
+          "completeCondition": "DefeatRareEncounterMonster-40-2"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41FadingLanterns",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41DarkElementals",
+          "descriptionKey": "QuestTwilightRestArea41DarkElementalsDescription",
+          "descriptionVariables": "Dark Elemental-4",
+          "completeCondition": "DefeatMonster-Dark Elemental-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41CorruptedRoads",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41DarkSlimeraControl",
+          "descriptionKey": "QuestTwilightRestArea41DarkSlimeraControlDescription",
+          "descriptionVariables": "Dark Slimera-4",
+          "completeCondition": "DefeatMonster-Dark Slimera-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41TwilightGuardianAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41RareGuardians",
+          "descriptionKey": "QuestTwilightRestArea41RareGuardiansDescription",
+          "descriptionVariables": "41-2",
+          "completeCondition": "DefeatRareEncounterMonster-41-2"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49RareThreatAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49RareThreats",
+          "descriptionKey": "QuestGelgroveCampArea49RareThreatsDescription",
+          "descriptionVariables": "49-2",
+          "completeCondition": "DefeatRareEncounterMonster-49-2"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40CoastalSupplyCatch",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40CoastalCatch",
+          "descriptionKey": "QuestTwilightRestArea40CoastalCatchDescription",
+          "descriptionVariables": "Fish-4",
+          "completeCondition": "HaveItem-Fish-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40DawnStoneSurvey",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40DawnSamples",
+          "descriptionKey": "QuestTwilightRestArea40DawnSamplesDescription",
+          "descriptionVariables": "Dawn Stone-3",
+          "completeCondition": "HaveItem-Dawn Stone-3"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40RestlessLights",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40LightSpiritPatrol",
+          "descriptionKey": "QuestTwilightRestArea40LightSpiritPatrolDescription",
+          "descriptionVariables": "Light Spirit-5",
+          "completeCondition": "DefeatMonster-Light Spirit-5"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40HighlandFiberReserve",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40FiberReserve",
+          "descriptionKey": "QuestTwilightRestArea40FiberReserveDescription",
+          "descriptionVariables": "Plant Fiber-5",
+          "completeCondition": "HaveItem-Plant Fiber-5"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40RadiantPredators",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40HaloWolfHunt",
+          "descriptionKey": "QuestTwilightRestArea40HaloWolfHuntDescription",
+          "descriptionVariables": "Halo Wolf-4",
+          "completeCondition": "DefeatMonster-Halo Wolf-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea40RadiantReserve",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "40"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea40RadiantEssence",
+          "descriptionKey": "QuestTwilightRestArea40RadiantEssenceDescription",
+          "descriptionVariables": "Radiant Essence-5",
+          "completeCondition": "HaveItem-Radiant Essence-5"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41BlindingCrossroads",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41LightElementals",
+          "descriptionKey": "QuestTwilightRestArea41LightElementalsDescription",
+          "descriptionVariables": "Light Elemental-4",
+          "completeCondition": "DefeatMonster-Light Elemental-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41CoastalProvisions",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41SeaProvisions",
+          "descriptionKey": "QuestTwilightRestArea41SeaProvisionsDescription",
+          "descriptionVariables": "Fish-4",
+          "completeCondition": "HaveItem-Fish-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41MountainBatWatch",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41DevilBatWatch",
+          "descriptionKey": "QuestTwilightRestArea41DevilBatWatchDescription",
+          "descriptionVariables": "Devil Bat-5",
+          "completeCondition": "DefeatMonster-Devil Bat-5"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41BalancedStoneSurvey",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41TwilightStoneSurvey",
+          "descriptionKey": "QuestTwilightRestArea41TwilightStoneSurveyDescription",
+          "descriptionVariables": "Dawn Stone-3-Dusk Stone-3",
+          "completeCondition": "HaveItem-Dawn Stone-3|HaveItem-Dusk Stone-3"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41MountainScholars",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41ScholarAngelBlockade",
+          "descriptionKey": "QuestTwilightRestArea41ScholarAngelBlockadeDescription",
+          "descriptionVariables": "Scholar Angel-3",
+          "completeCondition": "DefeatMonster-Scholar Angel-3"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea41HeavyWings",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "41"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea41AvianElephants",
+          "descriptionKey": "QuestTwilightRestArea41AvianElephantsDescription",
+          "descriptionVariables": "Avian Elephant-3",
+          "completeCondition": "DefeatMonster-Avian Elephant-3"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49TidepoolClearance",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49StarfishClearance",
+          "descriptionKey": "QuestGelgroveCampArea49StarfishClearanceDescription",
+          "descriptionVariables": "Starfishes-4",
+          "completeCondition": "DefeatMonster-Starfishes-4"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49CampCrabOrder",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49CrabDelivery",
+          "descriptionKey": "QuestGelgroveCampArea49CrabDeliveryDescription",
+          "descriptionVariables": "Crab-4",
+          "completeCondition": "HaveItem-Crab-4"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49FloodedPath",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49WaterSlimera",
+          "descriptionKey": "QuestGelgroveCampArea49WaterSlimeraDescription",
+          "descriptionVariables": "Water Slimera-4",
+          "completeCondition": "DefeatMonster-Water Slimera-4"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49RaidedFishingGround",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49PelicanRaid",
+          "descriptionKey": "QuestGelgroveCampArea49PelicanRaidDescription",
+          "descriptionVariables": "Sea Pelican-3-Fish-4",
+          "completeCondition": "DefeatMonster-Sea Pelican-3|HaveItem-Fish-4"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49ForestProvisionRaid",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49MonkeyRaiders",
+          "descriptionKey": "QuestGelgroveCampArea49MonkeyRaidersDescription",
+          "descriptionVariables": "Peaceful Monkey-4",
+          "completeCondition": "DefeatMonster-Peaceful Monkey-4"
+        }
+      ]
+    },
+    {
+      "key": "GelgroveCampArea49UnstableSlimes",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "GelgroveCamp",
+          "tileArea": "49"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestGelgroveCampArea49ArcaneMimics",
+          "descriptionKey": "QuestGelgroveCampArea49ArcaneMimicsDescription",
+          "descriptionVariables": "Mimic Slime-4-Arcane Slime-4",
+          "completeCondition": "DefeatMonster-Mimic Slime-4|DefeatMonster-Arcane Slime-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea38RadiantInterference",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "38"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea38OrbAngelInterference",
+          "descriptionKey": "QuestTwilightRestArea38OrbAngelInterferenceDescription",
+          "descriptionVariables": "Orb Angel-4",
+          "completeCondition": "DefeatMonster-Orb Angel-4"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea38GuardianAlert",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "38"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea38RareGuardians",
+          "descriptionKey": "QuestTwilightRestArea38RareGuardiansDescription",
+          "descriptionVariables": "38-2",
+          "completeCondition": "DefeatRareEncounterMonster-38-2"
+        }
+      ]
+    },
+    {
+      "key": "TwilightRestArea44FadingLanterns",
+      "grade": "EGrade",
+      "locations": [
+        {
+          "tileData": "TwilightRest",
+          "tileArea": "44"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestTwilightRestArea44DarkElementals",
+          "descriptionKey": "QuestTwilightRestArea44DarkElementalsDescription",
+          "descriptionVariables": "Dark Elemental-4",
+          "completeCondition": "DefeatMonster-Dark Elemental-4"
+        }
+      ]
+    },
+    {
+      "key": "RaidersRestArea53RoadsideRaiderAlert",
+      "grade": "DGrade",
+      "locations": [
+        {
+          "tileData": "RaidersRest",
+          "tileArea": "53"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRaidersRestArea53GoblinRaiders",
+          "descriptionKey": "QuestRaidersRestArea53GoblinRaidersDescription",
+          "descriptionVariables": "Goblin Raider-4",
+          "completeCondition": "DefeatMonster-Goblin Raider-4"
+        }
+      ]
+    },
+    {
+      "key": "RaidersRestArea64TurtleGolemWarning",
+      "grade": "CGrade",
+      "locations": [
+        {
+          "tileData": "RaidersRest",
+          "tileArea": "64"
+        }
+      ],
+      "quests": [
+        {
+          "key": "QuestRaidersRestArea64CoastalTremors",
+          "descriptionKey": "QuestRaidersRestArea64CoastalTremorsDescription",
+          "descriptionVariables": "64-1",
+          "completeCondition": "DefeatRareEncounterMonster-64-1"
+        }
+      ]
+    }
+  ]
+}
