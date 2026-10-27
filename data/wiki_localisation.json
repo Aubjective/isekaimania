@@ -148,7 +148,9 @@
       "adventureMap": "Adventure Map",
       "events": "Events",
       "guildQuests": "Guild Quests",
-      "allGrades": "All Grades"
+      "allGrades": "All Grades",
+      "where": "Where",
+      "noObjective": "No localized objective available"
     },
     "home": {
       "title": "Isekaimania - Overworld RPG",
