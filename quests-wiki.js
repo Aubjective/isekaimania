@@ -14,8 +14,8 @@ function renderQuestsList() {
         guild ? '<section id="quest-guild" class="quest-catalogue-section"><h2>' + escapeHtml(ui('guildQuests','Guild Quests')) + '</h2><div class="grid quest-catalogue-grid">' + guild + '</div></section>' : ''
     ].filter(Boolean).join('');
     const total = (wiki.specialEventGroups || []).length + (wiki.missionGroups || []).length + (wiki.otherEventGroups || []).length;
-    const jump='<nav class="quest-section-jumps" aria-label="Quest sections">'+[['quest-events',ui('events','Events'),(wiki.specialEventGroups||[]).length],['quest-other',otherLabel('section'),(wiki.otherEventGroups||[]).length],['quest-guild',ui('guildQuests','Guild Quests'),(wiki.missionGroups||[]).length]].map(([id,label,count])=>'<a href="#'+id+'" onclick="document.getElementById(\''+id+'\').scrollIntoView({behavior:\'smooth\'});return false">'+escapeHtml(label)+' ('+count+')</a>').join('')+'</nav>';
-    return '<div class="header-card"><h1>' + escapeHtml(ui('quests','Quests')) + '</h1><p>' + total + ' ' + escapeHtml(ui('entries','entries')) + '</p>'+jump+'<input type="text" id="searchInput" class="search-input" placeholder="' + escapeHtml(ui('search','Search...')) + '"></div><div class="quest-catalogue">' + sections + '</div>';
+
+    return '<div class="header-card"><h1>' + escapeHtml(ui('quests','Quests')) + '</h1><p>' + total + ' ' + escapeHtml(ui('entries','entries')) + '</p>' + '<input type="text" id="searchInput" class="search-input" placeholder="' + escapeHtml(ui('search','Search...')) + '"></div><div class="quest-catalogue">' + sections + '</div>';
 }
 function questsCatalogueSearch() {
     const search = document.getElementById('searchInput');
