@@ -54,7 +54,7 @@
     "latestSourceGameVersionObserved": "1.2.0",
     "lastAuditedGameVersion": null,
     "lastSyncedGameVersion": null,
-    "lastAuditDate": "2026-10-20",
+    "lastAuditDate": "2026-11-02",
     "lastSyncDate": "2026-10-20"
   },
   "trackedCategories": [
@@ -214,46 +214,51 @@
       "status": "partial",
       "summary": "Compared the live gameplay Sheets' numeric ID sets against wiki records for Monsters (291), Active Skills (374), Passive Skills (134), Items (194), Equipment (125), Chests (81), Tile Data (145), Tile Areas (83 unique IDs), Characters (10), and Jobs (51). Category counts match. Exact ID-set comparison confirms Equipment, Chests, Tile Data, Tile Areas, Characters and Jobs; these key/name fields also match except the explicitly approved Chest 77 HeartwoodCache exception.",
       "notes": "This is not a full field-by-field audit of every gameplay record. Some categories' ID sets were only count-checked here. Mechanics documentation and delivery remain ongoing, separately from source-data checkpoints."
+    },
+    {
+      "date": "2026-11-02",
+      "wikiVersion": "1.0",
+      "type": "source_version_review",
+      "status": "partial",
+      "summary": "Reviewed live game Ver Log through 1.2.0. Confirmed Character Sheet now has eleven numbered characters while wiki contains ten: Cindy Becker (ID 11) is missing. Existing Characters 1–10 retain matching names.",
+      "notes": "Do not mark 1.2.0 data synchronized until Cindy Becker's gameplay fields and localization are imported and verified. Tidal Jet change also requires field comparison. Unfinished mechanic/description work is separately tracked and not considered a source-data discrepancy."
     }
   ],
   "publicStatus": {
-    "asOf": "2026-10-20",
-    "summary": "Core gameplay synchronization substantially completed; final detailed verification remains.",
+    "asOf": "2026-11-02",
+    "summary": "Latest live Sheets Ver Log remains 1.2.0. Source comparison found newly confirmed character Cindy Becker (ID 11) missing from the wiki; the 1.2.0 data set is not yet fully synchronized.",
     "ongoing": [
-      "Final detailed source-field comparisons",
-      "Published wiki navigation and data-loading verification",
-      "Mechanics explanations and delivery/presentation refinements"
+      "Sync Character ID 11 Cindy Becker with source fields, sprite and localization",
+      "Verify 1.2.0 Tidal Jet gameplay data and related source changes against the wiki",
+      "Remaining source field checks and published wiki verification; skill descriptions and mechanics documentation tracked separately"
     ],
     "sheetsVersion": "1.2.0",
     "updated": [
-      "Current core gameplay record coverage checked against live Sheets",
-      "Main Quests, named Special Events and Missions synchronized",
-      "Monster skills, equipment crafting and selected tile encounters, loot and chests validated",
-      "Gameplay-facing translations updated"
+      "Checked live 1.2.0 Ver Log, including the completed Halloween character addition",
+      "Confirmed existing ten wiki Characters match the first ten live Sheet character names"
     ],
     "excluded": [
-      "NPC and player dialogues and dialogue options",
-      "Universal and generic system Special Events",
-      "Unconfirmed drafts and unsupported additions"
+      "Dialogues and universal/system Special Events",
+      "Blank-ID drafts and unfinished or unconfirmed content",
+      "Low-priority unfinished storage companion and statue/shrine items are not counted as completed source changes"
     ],
-    "editorialNote": "Twelve approved named events remain included; approved chest naming retained."
+    "editorialNote": "Twelve approved named events remain included; approved chest naming retained.",
+    "lastReviewed": "2026-11-02"
   },
   "publicSections": {
     "updated": [
-      "Current core gameplay record coverage checked against live Sheets",
-      "Main Quests, named Special Events and Missions synchronized",
-      "Monster skills, equipment crafting and selected tile encounters, loot and chests validated",
-      "Gameplay-facing translations updated"
+      "Checked live 1.2.0 Ver Log, including the completed Halloween character addition",
+      "Confirmed existing ten wiki Characters match the first ten live Sheet character names"
     ],
     "ongoing": [
-      "Final detailed source-field comparisons",
-      "Published wiki navigation and data-loading verification",
-      "Mechanics explanations and delivery/presentation refinements"
+      "Sync Character ID 11 Cindy Becker with source fields, sprite and localization",
+      "Verify 1.2.0 Tidal Jet gameplay data and related source changes against the wiki",
+      "Remaining source field checks and published wiki verification; skill descriptions and mechanics documentation tracked separately"
     ],
     "excluded": [
-      "NPC and player dialogues and dialogue options",
-      "Universal and generic system Special Events",
-      "Unconfirmed drafts and unsupported additions"
+      "Dialogues and universal/system Special Events",
+      "Blank-ID drafts and unfinished or unconfirmed content",
+      "Low-priority unfinished storage companion and statue/shrine items are not counted as completed source changes"
     ]
   },
   "maintenance": {
