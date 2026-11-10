@@ -19,7 +19,7 @@ The wiki documents player-useful, confirmed **gameplay data** from the live Isek
 
 ## IMPORTANT DISTINCTIONS
 - **No quest attached** does *not* by itself imply that an event is universal. Some named events have zero quests but are still meaningful and should remain eligible.
-- Named Special Events should remain even when their gameplay objective is derived from event conditions rather than a Quest entry.
+- Named Special Events with useful objectives must remain in the **source JSON** even when they have no Quest entry. **Public display is a separate eligibility decision**: source retention does not imply that an unlocalized event should be shown on the Wiki.
 - Only claim translations have been verified for the **displayed gameplay text** actually checked; dialogue translations are expressly out of scope.
 - An untranslated internal identifier should not be fabricated into a display name. Mark it pending and check the source.
 - Do not assume every `SpecialEvents` Sheet row should appear in the wiki. Group and filter by gameplay relevance.
@@ -37,7 +37,7 @@ The wiki documents player-useful, confirmed **gameplay data** from the live Isek
 Excluded dialogue and universal event rows are **out of scope**, not missing or pending localization work. Only report gaps in included gameplay content and its displayed localization.
 
 ## APPROVED NAMED EVENT EXCEPTIONS (2026-10-20)
-Keep all twelve named single-stage events even when they have zero attached quests or no exact source title translation: `WhereIsCastle`, `MysteriousOneEye`, `TheVampWarning`, `TheThunderForest`, `TooBrightToStudy`, `PoisonInThePuddle`, `WaterproofingFailure`, `TheGlowingWreckage`, `TracksUnderTheSnow`, `TheSmokingCrate`, `TheAbandonedHerbBasket`, `TheEmptyHuntingCamp`. They are **included**; missing localization is not a reason to hide or delete them. Never invent translated titles. Universal/system events and all dialogues remain excluded.
+Keep the source JSON records for all twelve named single-stage events even when they have zero attached quests or no exact source title translation: `WhereIsCastle`, `MysteriousOneEye`, `TheVampWarning`, `TheThunderForest`, `TooBrightToStudy`, `PoisonInThePuddle`, `WaterproofingFailure`, `TheGlowingWreckage`, `TracksUnderTheSnow`, `TheSmokingCrate`, `TheAbandonedHerbBasket`, `TheEmptyHuntingCamp`. They are **retained as named gameplay event source records**, not universal handlers. **As decided 2026-10-27, all twelve are deliberately filtered out of the public Quests display until their localization is verified**; do not delete their JSON records. Never invent translated titles. Universal/system events and all dialogues remain excluded.
 
 ## ONGOING WORK VS RELEASE READINESS
 - **Mechanics documentation** is an ongoing, evolving wiki workstream as gameplay systems change or are confirmed. Do not treat unfinished optional mechanics explanations as a blocker to calling the currently scoped, verified data snapshot up to date.
@@ -62,17 +62,17 @@ Keep all twelve named single-stage events even when they have zero attached ques
 - **Hold from publication** new quest/event content with no reliable gameplay description/objective or no sufficiently interpretable confirmed completion condition. Check official localization and source conditions before making a player-facing claim. **Never write a plausible-sounding objective, outcome, condition, translation or reward.**
 - A record's presence in Sheets, having a numeric ID, or having a newly released game version does **not** by itself authorize publication. Classify by gameplay relevance, confirmed available fields, previous explicit exception decisions and release status.
 - An event with **zero attached quests is not automatically universal or excluded**. Some named, gameplay-relevant encounters carry objectives in SpecialEvents conditions. Apply the 12 explicit inclusions below.
-- **Do not silently remove or hide previously approved content** because a later automated audit labels its localization incomplete. Re-check the recorded exception and the previous Wiki display behavior.
+- **Do not delete previously approved source records or change earlier publication decisions** because a later automated audit labels localization incomplete. The 12 named events are source-retained but intentionally not publicly displayed; restore public display only after official localization is verified.
 - Skill descriptions, mechanics explanations, optional documentation and delivery refinements are **ongoing workstreams**. Track them separately; they must not inflate the count of verified gameplay-data discrepancies or automatically block an otherwise scoped sync.
 - Historical game bug fixes or UI-only version-log changes need not create new Wiki gameplay rows. For version claims distinguish a **completed game release**, a **source-data change**, an **included Wiki change**, and an **unverified/pending record**.
 
-### 3. Explicit retained exceptions — do not exclude
+### 3. Twelve retained source exceptions — deliberately excluded from public display
 
-As approved on **2026-10-20**, retain these **12 named single-stage Special Events** even with zero attached quests and/or an unresolved exact group-title localization. They are not universal handlers:
+As approved on **2026-10-20**, retain these **12 named single-stage Special Events** even with zero attached quests and/or an unresolved exact group-title localization. They are not universal handlers, but their public titles were not verified:
 
 `WhereIsCastle`, `MysteriousOneEye`, `TheVampWarning`, `TheThunderForest`, `TooBrightToStudy`, `PoisonInThePuddle`, `WaterproofingFailure`, `TheGlowingWreckage`, `TracksUnderTheSnow`, `TheSmokingCrate`, `TheAbandonedHerbBasket`, `TheEmptyHuntingCamp`.
 
-The private **Isekaimania Wiki** Google Sheet, tab **Sheets Check**, contains 12 entries dated **2026-10-28 00:34:28 MYT**, one per event, marked **Open** for **Localization mapping**. “Public Title Visible? Yes” means the current Wiki has a key fallback, **not** that the official title is missing from the game. Find the official localization from the source; do not invent it. **These are privately tracked editorial discrepancies and must not be listed as newly missing content in the public Wiki Version Log.**
+On **2026-10-27**, we explicitly filtered these **12 events from the public Quests catalogue** (51 total named event groups in JSON → **39 displayed**), while retaining all 51 source groups and all **203 Guild Quest** groups. The existing Wiki code `special-event-wiki.js` confirms public filtering by a localized group or quest title. Do **not** conflate data retention with public inclusion. The private **Isekaimania Wiki** Google Sheet, tab **Sheets Check**, contains 12 entries dated **2026-10-28 00:34:28 MYT**, one per event, marked **Open** for **Localization mapping**. “Public Title Visible? Yes” in those earlier audit rows describes the original key-fallback state at inspection, **before the public filtering change**, not current authorized visibility. Find the official localization from the source; do not invent it. These are privately tracked editorial discrepancies, not newly missing gameplay records and **not public Wiki Version Log items**.
 
 Private discrepancy tracker: https://docs.google.com/spreadsheets/d/1QM8kPcSzP-7z6vE5M2AqIbDrcnH9IFvx4H6GOWenTG4
 
@@ -88,7 +88,7 @@ Private discrepancy tracker: https://docs.google.com/spreadsheets/d/1QM8kPcSzP-7
 
 1. **Read** `WIKI_CONTENT_SCOPE.md`, `data/version_log.json`, and the private **Isekaimania Wiki → Sheets Check** tracker **before** assessing missing items.
 2. Read the live **Ver Log** with **completion/status/date** columns; a version bump alone does not mean every neighboring draft is released.
-3. Classify each changed source record as **already covered**, **in-scope confirmed and missing/changed**, **explicitly excluded**, **held for source description/condition/localization**, or **unfinished/unconfirmed**. Keep explicitly retained exception events in their approved category.
+3. Classify each changed source record as **already covered**, **in-scope confirmed and missing/changed**, **explicitly excluded**, **source-retained but public-display withheld**, **held for source description/condition/localization**, or **unfinished/unconfirmed**. Keep the 12 named events in the source-retained/public-hidden category unless their localization is verified.
 4. **Adventure Map**: check new `MainQuest...` group/quest IDs against `data/main-quest-groups.json` and its linked files. **Quests**: check non-main player-useful groups and actual completion/objective quality against the appropriate event/mission JSON, excluding universal handlers. Do not report the raw numeric difference `all Quest Sheet rows minus all Wiki quest rows` as missing.
 5. For any included change, validate IDs, source fields, displayed/localized objectives, completion conditions, requirements, rewards and references **before** editing the corresponding real Wiki data. Do not create invented values or unnecessary helper layers.
 6. Record uncertain/untranslated content in **Sheets Check** with source, date, issue and follow-up; keep such items out of new public missing-count claims. Do not duplicate already Open tracker entries.
@@ -99,3 +99,16 @@ Private discrepancy tracker: https://docs.google.com/spreadsheets/d/1QM8kPcSzP-7
 A preliminary 1.2.2 comparison listed **Quest IDs 325–360** as “missing” by raw numeric range. **That conclusion was premature and is withdrawn as a blanket claim.** The range includes non-main quests (e.g., Old Garrison) plus distinct `MainQuest...` records which must be assessed under **Adventure Map**. Each record requires inclusion/exclusion and description/condition checking first. Also do not equate a pending design log row with completed release content.
 
 This note records audit policy, **not** a verified synchronization of 1.2.1/1.2.2 Wiki content.
+
+## INCREMENTAL AUDIT RULE — 2026-11-10
+
+**Do not redo the full Sheets comparison or ask for scope decisions every time.** Read the permanent checkpoint file `data/wiki_audit_checkpoint.json` **first**, then `data/version_log.json`, this scope document and the private `Sheets Check` tracker. Preserve previously verified categories and known exceptions; work from the last verified or reviewed source snapshot.
+
+- The prior full baseline is the **2026-10-20** targeted/core gameplay audit, with an additional **2026-11-02** source review of 1.2.0. Do **not** treat 2026-11-02 as full 1.2.0 data parity. Read the exact category/field-level checkpoints and pending notes rather than relying on version numbers alone.
+- From the last checkpoint, read newer **Ver Log** entries (including **status and completion date**), then inspect only affected gameplay categories/IDs and their linked data. If the source changed without a Ver Log entry, compare the affected category's IDs/fields and explicitly state the limited coverage.
+- Any new item must be classified as **synced**, **confirmed change requiring sync**, **known source-retained/public-hidden**, **excluded by policy**, **pending clarification**, or **ongoing documentation**. Do not report intentionally excluded rows or 12 pre-existing title mappings as brand-new differences.
+- Record confirmed deltas and before/after values in the private audit checkpoint or log; only promote `lastAuditedGameVersion` or `lastSyncedGameVersion` on actual verified matching coverage. Record which categories were checked, by ID and field, and which were not.
+- Maintain old IDs/decisions, including the **Chest 77** naming exception. If source IDs are reassigned, flag conflicts explicitly instead of overwriting a Wiki record on the strength of a title/count comparison.
+- **Public Wiki Version Log**: updated/ongoing/excluded concise high-level status; **private audit records**: exact source rows, differences, outstanding localization, excluded records, and prior decisions.
+
+This incremental procedure is a standing instruction for future Isekaimania audit sessions; it does not imply that gameplay data itself was updated on 2026-11-10.
