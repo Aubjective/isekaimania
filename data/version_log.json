@@ -48,13 +48,15 @@
       "delivery": "Ongoing navigation, UI and publishing improvements; actual broken display remains an issue."
     },
     "publicDisplay": "Present Wiki Version, Sheets Version and human-readable Updated / Ongoing / Excluded sections; no technical identifiers.",
-    "incrementalSync": "Wiki and Sheets versions are tracked independently."
+    "incrementalSync": "Wiki and Sheets versions are tracked independently.",
+    "auditCheckpointDocument": "data/wiki_audit_checkpoint.json",
+    "eventPublicationDecision": "Of 51 retained event source groups, 12 with unverified titles were excluded from public Quests on 2026-10-27 (39 displayed); issues are privately logged in Sheets Check. Zero attached quests alone does not make a group universal."
   },
   "checkpoints": {
-    "latestSourceGameVersionObserved": "1.2.0",
+    "latestSourceGameVersionObserved": "1.2.2",
     "lastAuditedGameVersion": null,
     "lastSyncedGameVersion": null,
-    "lastAuditDate": "2026-11-02",
+    "lastAuditDate": "2026-11-10",
     "lastSyncDate": "2026-10-20"
   },
   "trackedCategories": [
@@ -222,43 +224,52 @@
       "status": "partial",
       "summary": "Reviewed live game Ver Log through 1.2.0. Confirmed Character Sheet now has eleven numbered characters while wiki contains ten: Cindy Becker (ID 11) is missing. Existing Characters 1–10 retain matching names.",
       "notes": "Do not mark 1.2.0 data synchronized until Cindy Becker's gameplay fields and localization are imported and verified. Tidal Jet change also requires field comparison. Unfinished mechanic/description work is separately tracked and not considered a source-data discrepancy."
+    },
+    {
+      "date": "2026-11-10",
+      "wikiVersion": "1.0",
+      "type": "incremental_source_observation",
+      "status": "partial",
+      "sourceVersion": "1.2.2",
+      "summary": "Read Ver Log since prior 1.2.0 review; 1.2.1 and 1.2.2 completed updates observed. Established new persisted audit checkpoint and corrected source-retained/public-hidden event policy. No Isekaimania Wiki gameplay data synced in this review.",
+      "notes": "See data/wiki_audit_checkpoint.json. Quest IDs 325–360 are not blanket missing records; 12 unresolved event localizations are private and intentionally withheld. Preserve lastAuditedGameVersion and lastSyncedGameVersion as null pending actual parity checks."
     }
   ],
   "publicStatus": {
-    "asOf": "2026-11-02",
-    "summary": "Latest live Sheets Ver Log remains 1.2.0. Source comparison found newly confirmed character Cindy Becker (ID 11) missing from the wiki; the 1.2.0 data set is not yet fully synchronized.",
+    "asOf": "2026-11-10",
+    "summary": "Live Sheets 1.2.2 observed; 1.2.1–1.2.2 source changes identified but NOT fully synchronized. Wiki source-data verification remains scoped; skill/mechanics work is tracked separately.",
     "ongoing": [
-      "Sync Character ID 11 Cindy Becker with source fields, sprite and localization",
-      "Verify 1.2.0 Tidal Jet gameplay data and related source changes against the wiki",
-      "Remaining source field checks and published wiki verification; skill descriptions and mechanics documentation tracked separately"
+      "Verify source 1.2.1–1.2.2 additions in characters, jobs, items, equipment, chests and relevant quest groups against the established Wiki scope.",
+      "Resolve Character Cindy Becker (ID 11) and Job ID 51 source-vs-Wiki conflict before data import.",
+      "Skill descriptions, mechanics and delivery remain separately ongoing."
     ],
-    "sheetsVersion": "1.2.0",
+    "sheetsVersion": "1.2.2",
     "updated": [
-      "Checked live 1.2.0 Ver Log, including the completed Halloween character addition",
-      "Confirmed existing ten wiki Characters match the first ten live Sheet character names"
+      "Reviewed completed Ver Log rows through 1.2.2 against the last recorded 1.2.0 review; no gameplay JSON synchronization was claimed.",
+      "Reconciled prior quest/event publication decisions and linked a permanent incremental audit checkpoint."
     ],
     "excluded": [
-      "Dialogues and universal/system Special Events",
-      "Blank-ID drafts and unfinished or unconfirmed content",
-      "Low-priority unfinished storage companion and statue/shrine items are not counted as completed source changes"
+      "Universal/system events, dialogue transcripts, blank-ID drafts and unverified objectives/conditions.",
+      "Twelve named event groups remain retained in source JSON but withheld from public Quests until official localization is confirmed; tracked privately.",
+      "Pending or unfinished source features are not considered released Wiki content."
     ],
     "editorialNote": "Twelve approved named events remain included; approved chest naming retained.",
-    "lastReviewed": "2026-11-02"
+    "lastReviewed": "2026-11-10"
   },
   "publicSections": {
     "updated": [
-      "Checked live 1.2.0 Ver Log, including the completed Halloween character addition",
-      "Confirmed existing ten wiki Characters match the first ten live Sheet character names"
+      "Reviewed completed Ver Log rows through 1.2.2 against the last recorded 1.2.0 review; no gameplay JSON synchronization was claimed.",
+      "Reconciled prior quest/event publication decisions and linked a permanent incremental audit checkpoint."
     ],
     "ongoing": [
-      "Sync Character ID 11 Cindy Becker with source fields, sprite and localization",
-      "Verify 1.2.0 Tidal Jet gameplay data and related source changes against the wiki",
-      "Remaining source field checks and published wiki verification; skill descriptions and mechanics documentation tracked separately"
+      "Verify source 1.2.1–1.2.2 additions in characters, jobs, items, equipment, chests and relevant quest groups against the established Wiki scope.",
+      "Resolve Character Cindy Becker (ID 11) and Job ID 51 source-vs-Wiki conflict before data import.",
+      "Skill descriptions, mechanics and delivery remain separately ongoing."
     ],
     "excluded": [
-      "Dialogues and universal/system Special Events",
-      "Blank-ID drafts and unfinished or unconfirmed content",
-      "Low-priority unfinished storage companion and statue/shrine items are not counted as completed source changes"
+      "Universal/system events, dialogue transcripts, blank-ID drafts and unverified objectives/conditions.",
+      "Twelve named event groups remain retained in source JSON but withheld from public Quests until official localization is confirmed; tracked privately.",
+      "Pending or unfinished source features are not considered released Wiki content."
     ]
   },
   "maintenance": {
