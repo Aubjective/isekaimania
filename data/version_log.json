@@ -233,6 +233,14 @@
       "sourceVersion": "1.2.2",
       "summary": "Read Ver Log since prior 1.2.0 review; 1.2.1 and 1.2.2 completed updates observed. Established new persisted audit checkpoint and corrected source-retained/public-hidden event policy. No Isekaimania Wiki gameplay data synced in this review.",
       "notes": "See data/wiki_audit_checkpoint.json. Quest IDs 325–360 are not blanket missing records; 12 unresolved event localizations are private and intentionally withheld. Preserve lastAuditedGameVersion and lastSyncedGameVersion as null pending actual parity checks."
+    },
+    {
+      "date": "2026-11-10",
+      "wikiVersion": "1.0",
+      "type": "internal_audit_ledger_enrichment",
+      "status": "documentation-only",
+      "summary": "Expanded repository version_log.json with historical verification counts, category baselines, distinction between source records/JSON retention/public visibility, explicit exclusions, and an incremental audit continuation protocol.",
+      "notes": "No Wiki gameplay JSON synchronized. Public UI remains summarized via publicStatus/publicSections; lastAuditedGameVersion and lastSyncedGameVersion remain null."
     }
   ],
   "publicStatus": {
@@ -253,7 +261,7 @@
       "Twelve named event groups remain retained in source JSON but withheld from public Quests until official localization is confirmed; tracked privately.",
       "Pending or unfinished source features are not considered released Wiki content."
     ],
-    "editorialNote": "Twelve approved named events remain included; approved chest naming retained.",
+    "editorialNote": "Internal audit ledger preserves 12 source-retained but publicly hidden named events, universal exclusions, Adventure Map/Main Quest distinction, and Chest 77 naming exception.",
     "lastReviewed": "2026-11-10"
   },
   "publicSections": {
@@ -275,11 +283,11 @@
   "maintenance": {
     "purpose": "Incremental future wiki updates without unnecessary full database re-audits",
     "updateProcedure": [
-      "Read confirmed new game release and changed source records",
-      "Apply only documented in-scope additions and field changes by exact source identifiers",
-      "Check dependent references, relevant localized display text and publication",
-      "Add structured entry for each meaningful source change; preserve original audit history",
-      "Update public Updated/Ongoing/Excluded sections, observed Sheets version and only verified checkpoints"
+      "Read internalAudit and last checkpoint first, including prior verified counts, UI visibility exceptions, and unresolved discrepancies.",
+      "Compare completed changes since the last observed game version; then continue unsynced candidates even if game Ver Log has not changed.",
+      "For each category record source ID/key, fields checked, Wiki ID/key, source record count, JSON-retained count, public-visible count, date, and decision.",
+      "Keep full technical audit history in entries/internalAudit and publicStatus/publicSections as a concise player-readable summary.",
+      "Only advance lastAuditedGameVersion and lastSyncedGameVersion when appropriate parity is actually verified."
     ],
     "changeRecordFields": [
       "version",
@@ -293,6 +301,399 @@
       "notes"
     ],
     "displayPolicy": "Internal source IDs, canonical keys, diff payloads and technical filenames remain in machine-readable records, not on public Version Log page.",
-    "lastScopeReview": "2026-10-20"
+    "lastScopeReview": "2026-11-10"
+  },
+  "internalAudit": {
+    "schemaVersion": 1,
+    "visibility": "Repository-only technical ledger. Never dump directly into the public Wiki Version Log. publicStatus/publicSections control the public summary.",
+    "lastUpdated": "2026-11-10",
+    "purpose": "Give future maintainers a precise historical baseline and decision log so audits resume only from new source changes rather than recalculating every Sheet row or reopening exclusions.",
+    "sourceOfTruth": {
+      "database": "https://docs.google.com/spreadsheets/d/1ZbQ6oPdS_x3lrI9RcIQ-Wf3Mm8KulFDtMqCAI01D4uI",
+      "localization": "https://docs.google.com/spreadsheets/d/1en85nN7NUlleTyOzHP11YC6TEj9GMm4urSUfq7gcbpQ",
+      "discrepancyTracker": "https://docs.google.com/spreadsheets/d/1QM8kPcSzP-7z6vE5M2AqIbDrcnH9IFvx4H6GOWenTG4",
+      "scope": "WIKI_CONTENT_SCOPE.md",
+      "checkpoint": "data/wiki_audit_checkpoint.json",
+      "baselineBranch": "wiki-baseline-0.0"
+    },
+    "historicalVerifiedWork": [
+      {
+        "date": "2026-10-20",
+        "scope": "Main Quests / Adventure Map",
+        "wikiPath": "data/main-quest-groups.json",
+        "wikiGroupCount": 15,
+        "wikiQuestCount": 83,
+        "verification": "All 83 Main Quests compared to live Quest source over recorded fields and matched after Baron Mabon correction. Specific to Oct 20 snapshot, not a current 1.2.2 parity guarantee.",
+        "example": {
+          "group": "MainQuestBaronMabonTheSilentSignal",
+          "ids": [
+            319,
+            320,
+            321,
+            322,
+            323,
+            324
+          ],
+          "correction": "corrected five stages to six source quests"
+        },
+        "status": "verified-at-date"
+      },
+      {
+        "date": "2026-10-20",
+        "scope": "Named Special Event + Mission quest source parity",
+        "wikiSources": [
+          "data/event-quests.json",
+          "data/guild-quests.json"
+        ],
+        "verifiedQuestCount": 240,
+        "comparedFields": 16,
+        "verification": "All 240 in-scope referenced quest records existed in the 324-numbered-record source snapshot and matched on 16 gameplay fields. Does not certify all Quest Sheet rows or release scope.",
+        "status": "verified-at-date"
+      },
+      {
+        "date": "2026-10-20",
+        "scope": "Major source ID/category audit",
+        "sourceTotals": {
+          "Monsters": 291,
+          "ActiveSkills": 374,
+          "PassiveSkills": 134,
+          "Items": 194,
+          "Equipments": 125,
+          "Chests": 81,
+          "TileData": 145,
+          "TileAreasUniqueIds": 83,
+          "Characters": 10,
+          "Jobs": 51
+        },
+        "strictIdSetVerified": [
+          "Equipments",
+          "Chests",
+          "TileData",
+          "TileAreas",
+          "Characters",
+          "Jobs"
+        ],
+        "countOnlyOrPartial": [
+          "Monsters",
+          "ActiveSkills",
+          "PassiveSkills",
+          "Items"
+        ],
+        "verification": "Recorded figures are an Oct 20 historical source snapshot. Do NOT mistake raw count parity for complete field parity.",
+        "status": "scoped-and-partial"
+      },
+      {
+        "date": "2026-10-20",
+        "scope": "Monsters and item/gear references",
+        "checked": {
+          "monsterLootIds": "1–100",
+          "monsterPassiveReferences": 514,
+          "monsterActiveReferences": 702,
+          "monsters": 291,
+          "equipmentRecipes": 125,
+          "recipeReferences": 259,
+          "recipeItemReferences": 227,
+          "recipeEquipmentReferences": 32,
+          "tileChestReferences": "145 Tile Data chest lists against 81 chest records"
+        },
+        "verification": "Scoped reference checks recorded in earlier entries; other linking/display fields remained partial.",
+        "status": "scoped-and-partial"
+      },
+      {
+        "date": "2026-10-27",
+        "scope": "Special Event public catalogue",
+        "totalRetainedSourceGroups": 51,
+        "intentionallyHiddenForUnverifiedTitle": 12,
+        "publicGroupsAtDecision": 39,
+        "guildQuestGroupsRetained": 203,
+        "verification": "The twelve named groups remain in data JSON, but current special-event-wiki.js only displays groups with verified localized group/quest title. Hidden does not mean deleted or universal.",
+        "status": "intentional-public-filter"
+      },
+      {
+        "date": "2026-10-28",
+        "scope": "Private unresolved official title mappings",
+        "trackerTab": "Sheets Check",
+        "records": 12,
+        "trackerState": "Open",
+        "verification": "Private editorial work. No new public missing-data finding for these pre-existing exceptions.",
+        "status": "held"
+      },
+      {
+        "date": "2026-11-02",
+        "scope": "Game source 1.2.0 observation",
+        "verification": "Character 11 Cindy Becker exists in live Sheet but not in Wiki's ten records. Tidal Jet source field comparison separately pending. 1.2.0 not fully synced.",
+        "status": "review-only"
+      },
+      {
+        "date": "2026-11-10",
+        "scope": "Game source 1.2.2 observation",
+        "verification": "Completed 1.2.1 and 1.2.2 Ver Log changes observed; missing/changed candidate categories identified. Wiki gameplay JSON not synced in this audit.",
+        "status": "review-only"
+      }
+    ],
+    "wikiDataBaseline": {
+      "asOf": "2026-10-20",
+      "nature": "Previously audited source-backed Wiki baseline; not asserted current complete parity.",
+      "categories": {
+        "Characters": {
+          "records": 10,
+          "idRange": "1–10",
+          "sourceParityAtBaseline": "matching ten IDs/names"
+        },
+        "Jobs": {
+          "records": 51,
+          "idRange": "1–51",
+          "sourceParityAtBaseline": "matching ID/key set, before later changes"
+        },
+        "Monsters": {
+          "records": 291,
+          "sourceParityAtBaseline": "counts checked; full field parity not established"
+        },
+        "ActiveSkills": {
+          "records": 374,
+          "sourceParityAtBaseline": "count checked; detailed descriptions/mechanics ongoing"
+        },
+        "PassiveSkills": {
+          "records": 134,
+          "sourceParityAtBaseline": "count checked; detailed descriptions/mechanics ongoing"
+        },
+        "Items": {
+          "records": 194,
+          "idRange": "1–194",
+          "sourceParityAtBaseline": "count/reference checks, full field parity not established"
+        },
+        "Equipments": {
+          "records": 125,
+          "idRange": "1–125",
+          "sourceParityAtBaseline": "ID/key set checked"
+        },
+        "Chests": {
+          "records": 81,
+          "idRange": "1–81",
+          "sourceParityAtBaseline": "ID/key set checked; ID77 naming exception"
+        },
+        "TileData": {
+          "records": 145,
+          "sourceParityAtBaseline": "ID/key checked; targeted loot/team fixes"
+        },
+        "TileAreas": {
+          "uniqueIds": 83,
+          "sourceParityAtBaseline": "ID/key checked"
+        },
+        "MainQuests": {
+          "wikiSection": "Adventure Map",
+          "groups": 15,
+          "quests": 83,
+          "sourceParityAtBaseline": "all displayed quest records checked in scope"
+        },
+        "SpecialEvents": {
+          "sourceGroupsAtPublicFilterDecision": 51,
+          "publicGroupsAtDecision": 39,
+          "hiddenNamedSourceGroups": 12,
+          "note": "Do not equate this count with data/event-quests.json, which is a different quest-group projection; observe actual UI filter."
+        },
+        "Missions": {
+          "guildGroups": 203,
+          "sourceParityAtBaseline": "240 combined in-scope event/mission quest records matched fields on Oct 20"
+        }
+      }
+    },
+    "questAndEventPolicy": {
+      "adventureMap": {
+        "wikiRoute": "MainQuests",
+        "sourcePrefix": "MainQuest",
+        "rule": "Main Quests are Adventure Map only; not counted missing from Quests catalogue.",
+        "dataFile": "data/main-quest-groups.json"
+      },
+      "quests": {
+        "rule": "Present eligible named Special Events, Missions and Guild Quests only; verify useful objective, completion condition, description, location, reward, and release status.",
+        "sourceFiles": [
+          "data/event-quests.json",
+          "data/guild-quests.json"
+        ],
+        "mustNotUse": "all Quest Sheet rows minus displayed Wiki rows"
+      },
+      "universalSystemEvents": {
+        "publication": "excluded",
+        "sourceRecordPolicy": "not necessarily remove from Sheets; do not list as Wiki gaps",
+        "examples": [
+          "GeneralEnd",
+          "UniversalSellMaterial"
+        ]
+      },
+      "dialogues": {
+        "publication": "excluded",
+        "includes": [
+          "NPC conversations",
+          "player dialogue",
+          "dialogue options"
+        ],
+        "recordPolicy": "May remain as raw structured source fields but not displayed/transcribed."
+      },
+      "unresolvedDescriptionOrCondition": {
+        "publication": "withheld-until-verified",
+        "rule": "Do not invent objectives, completion conditions, rewards, stage explanations, group-title translations."
+      },
+      "twelveNamedEvents": {
+        "retention": "retained in source JSON",
+        "publicVisibility": "intentionally hidden until verified localization",
+        "privateTracker": "Isekaimania Wiki → Sheets Check",
+        "keys": [
+          "WhereIsCastle",
+          "MysteriousOneEye",
+          "TheVampWarning",
+          "TheThunderForest",
+          "TooBrightToStudy",
+          "PoisonInThePuddle",
+          "WaterproofingFailure",
+          "TheGlowingWreckage",
+          "TracksUnderTheSnow",
+          "TheSmokingCrate",
+          "TheAbandonedHerbBasket",
+          "TheEmptyHuntingCamp"
+        ],
+        "rule": "Not universal; do not delete or automatically publish. Never report as newly missing source records."
+      },
+      "drafts": {
+        "publication": "excluded",
+        "includes": [
+          "blank-ID drafts",
+          "unconfirmed, stopped or untested designs"
+        ]
+      },
+      "approvedExceptions": [
+        {
+          "category": "Chests",
+          "id": 77,
+          "wikiKey": "HeartwoodCache",
+          "sheetKey": "DryadPineGroveCache",
+          "rule": "Keep approved Wiki name instead of overwriting from Sheet."
+        }
+      ]
+    },
+    "latestSourceObservation": {
+      "observedAt": "2026-11-10",
+      "gameVersion": "1.2.2",
+      "lastVerifiedSyncedGameVersion": null,
+      "lastFullyAuditedGameVersion": null,
+      "completedReleaseChanges": [
+        {
+          "version": "1.2.1",
+          "completed": "2026-10-31",
+          "summary": [
+            "Cindy Becker character",
+            "New battle background"
+          ]
+        },
+        {
+          "version": "1.2.2",
+          "completed": "2026-11-03",
+          "summary": [
+            "Skeleton Captain unlimited recruitment fix",
+            "Alarm Tower merchant items",
+            "Special Events and Adventure Quests in Areas 80 and 81",
+            "Jobs Event / Mystery Cards and newly listed jobs"
+          ]
+        }
+      ],
+      "sourceDeltaCandidates": [
+        {
+          "category": "Characters",
+          "sourceIds": [
+            11
+          ],
+          "wikiIdsAbsent": [
+            11
+          ],
+          "label": "Cindy Becker",
+          "next": "Import verified source character fields and localization"
+        },
+        {
+          "category": "Jobs",
+          "sourceIds": [
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          "conflict": "Wiki ID51 Corsair; Sheet ID51 Royal Knight",
+          "next": "Resolve source ID reassignment before writing; compare 52–55 gameplay fields. Blank-ID Trap Master is a draft."
+        },
+        {
+          "category": "Items",
+          "sourceIds": [
+            195,
+            196
+          ],
+          "next": "Verify ID-backed source release state, relationships and localization"
+        },
+        {
+          "category": "Equipments",
+          "sourceIds": [
+            126,
+            127,
+            128
+          ],
+          "next": "Verify published status and all relevant fields"
+        },
+        {
+          "category": "Chests",
+          "sourceIds": [
+            82,
+            83,
+            84
+          ],
+          "next": "Verify release status, loot and references"
+        },
+        {
+          "category": "Quests",
+          "sourceIds": "325–348",
+          "next": "Screen each group against Quests include/exclude rules, objective/condition clarity and public localization. Not automatically missing."
+        },
+        {
+          "category": "MainQuests",
+          "sourceIds": "349–360",
+          "next": "Screen separately under Adventure Map. Do not count as missing Quests-tab content."
+        }
+      ],
+      "notCompleted": [
+        {
+          "name": "Old Garrison War Chest / one-time dungeon rewards",
+          "sourceStatus": "Pending",
+          "rule": "Do not publish as completed"
+        }
+      ],
+      "notReleaseBlockers": [
+        "Skill descriptions",
+        "Mechanics explanations",
+        "Ongoing presentation refinements"
+      ]
+    },
+    "continuationProtocol": [
+      "1. Read data/version_log.json internalAudit, WIKI_CONTENT_SCOPE.md and the private Sheets Check tracker; also consult data/wiki_audit_checkpoint.json before proposing changes.",
+      "2. Identify latest completed Ver Log changes strictly AFTER last observed source version/date; for already identified unsynced candidates continue from sourceDeltaCandidates. Source versions are not sync versions.",
+      "3. Compare only affected source IDs and relevant linked records against existing Wiki JSON; recognize deliberate source-retained/public-hidden or policy-excluded records.",
+      "4. Classify each affected record as verified synced, verified missing/changed, source-retained-public-hidden, excluded, pending description/condition/localization, or unfinished.",
+      "5. Update the actual category data only after validating fields, localization, conditions, rewards and cross-references. Preserve approved exceptions and IDs.",
+      "6. Append a dated detailed entry under entries and update internalAudit category records, deltas, and verified checkpoints. Do not overwrite prior review history.",
+      "7. Keep publicStatus/publicSections concise; never display sensitive internal mapping lists or an inflated missing count. Promote full-sync/version markers only after corresponding checks."
+    ],
+    "recordTemplate": {
+      "date": "YYYY-MM-DD",
+      "category": "Characters|Jobs|Quests|etc",
+      "sourceVersion": "X.Y.Z",
+      "sourceSheet": "Sheet tab",
+      "sourceIds": [],
+      "wikiIds": [],
+      "decision": "synced|source-retained-public-hidden|excluded|pending|incomplete",
+      "fieldChecks": [],
+      "linkedChecks": [],
+      "localizationCheck": "not-checked|verified|pending",
+      "sourceRecordCount": null,
+      "wikiJsonCount": null,
+      "wikiPublicCount": null,
+      "notes": "No invented data; audit limitations explicit"
+    }
   }
 }
