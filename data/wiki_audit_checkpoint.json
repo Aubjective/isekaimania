@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "purpose": "Persistent private-style audit index for incremental Sheets-to-Wiki reviews. Never equate source recorded, JSON retained, wiki displayed and source parity.",
+  "lastPolicyReview": "2026-11-10",
+  "authoritativeFiles": [
+    "WIKI_CONTENT_SCOPE.md",
+    "data/version_log.json",
+    "Isekaimania Wiki / Sheets Check (private)"
+  ],
+  "sourceSheets": {
+    "database": "https://docs.google.com/spreadsheets/d/1ZbQ6oPdS_x3lrI9RcIQ-Wf3Mm8KulFDtMqCAI01D4uI",
+    "localization": "https://docs.google.com/spreadsheets/d/1en85nN7NUlleTyOzHP11YC6TEj9GMm4urSUfq7gcbpQ",
+    "privateDiscrepancyTracker": "https://docs.google.com/spreadsheets/d/1QM8kPcSzP-7z6vE5M2AqIbDrcnH9IFvx4H6GOWenTG4"
+  },
+  "chronology": [
+    {
+      "date": "2026-10-20",
+      "kind": "targeted-data-sync-and-audit",
+      "coverage": "10 characters, 51 jobs, 194 items, 125 equipment, 81 chests, core tiles, 83 Main Quests in 15 groups, 240 non-main quest records matched in compared 16 fields; other areas remain partial.",
+      "fullVersionParity": false
+    },
+    {
+      "date": "2026-10-27",
+      "kind": "wiki-presentation-and-scope",
+      "coverage": "Adventure Map and Quests presentation refined; 51 event groups retained in source, 12 unlocalized titles filtered from public display leaving 39; 203 guild groups retained. Other Events added with no public dialogue transcript.",
+      "fullVersionParity": false
+    },
+    {
+      "date": "2026-10-28",
+      "kind": "private-discrepancy-tracking",
+      "coverage": "12 unresolved official title mappings logged in Sheets Check; no public version log entries for private unresolved issues.",
+      "fullVersionParity": false
+    },
+    {
+      "date": "2026-11-02",
+      "kind": "version-review",
+      "coverage": "Ver Log through 1.2.0 reviewed; Cindy Becker source ID11 missing, Tidal Jet field comparison outstanding.",
+      "fullVersionParity": false
+    },
+    {
+      "date": "2026-11-10",
+      "kind": "incremental-observation-only",
+      "coverage": "Ver Log source now 1.2.2, changes found; gameplay data not synchronized in this policy review.",
+      "fullVersionParity": false
+    }
+  ],
+  "sourceCheckpoint": {
+    "latestSourceVersionObserved": "1.2.2",
+    "lastScopedReviewDate": "2026-11-10",
+    "lastCategoryAuditBaselineDate": "2026-10-20",
+    "lastSourceReviewBeforeToday": "2026-11-02",
+    "lastFullyAuditedGameVersion": null,
+    "lastFullySyncedGameVersion": null,
+    "doNotPromoteOnPolicyEdits": true
+  },
+  "sections": {
+    "adventureMap": {
+      "route": "MainQuests",
+      "sourceKinds": [
+        "MainQuest"
+      ],
+      "policy": "Main Quests are Adventure Map only, never counted as missing from Quests tab",
+      "lastVerified": "2026-10-20",
+      "verifiedScope": "15 groups, 83 quests compared in source fields",
+      "newSourceCandidateIds": "349-360",
+      "newSourceStatus": "not yet audited for publication or synchronised"
+    },
+    "quests": {
+      "sourceKinds": [
+        "Named Special Events",
+        "Missions",
+        "Guild Quests"
+      ],
+      "policy": "Do not force all Quest or SpecialEvents sheet rows into Wiki; require meaningful supported descriptions/conditions; exclude universals and dialogue; keep source without public display where needed",
+      "sourceEventGroupCountAtOct27": 51,
+      "publicEventGroupCountAtOct27": 39,
+      "guildGroupCountAtOct27": 203,
+      "privateUnlocalizedGroupCount": 12,
+      "privateUnlocalizedStatus": "source-retained-public-hidden",
+      "newSourceCandidateIds": "325-348",
+      "newSourceStatus": "requires group-level inclusion classification; raw range is not a confirmed missing count"
+    },
+    "ongoing": {
+      "description": "Skills, mechanics, delivery and optional descriptions remain separate workstreams; not release data parity claims."
+    }
+  },
+  "explicitExceptions": {
+    "chest77": {
+      "wikiKey": "HeartwoodCache",
+      "sheetKey": "DryadPineGroveCache",
+      "rule": "Preserve Wiki name by explicit prior decision"
+    },
+    "twelveNamedEvents": {
+      "rule": "Retain in source JSON but exclude from PUBLIC event catalogue until official localization is verified; not universal events; private Sheets Check only",
+      "keys": [
+        "WhereIsCastle",
+        "MysteriousOneEye",
+        "TheVampWarning",
+        "TheThunderForest",
+        "TooBrightToStudy",
+        "PoisonInThePuddle",
+        "WaterproofingFailure",
+        "TheGlowingWreckage",
+        "TracksUnderTheSnow",
+        "TheSmokingCrate",
+        "TheAbandonedHerbBasket",
+        "TheEmptyHuntingCamp"
+      ]
+    },
+    "excludedAlways": [
+      "Universal/generic/system event handlers",
+      "NPC/player dialogue text and dialogue options",
+      "Blank-ID drafts",
+      "Unverified descriptions and completion conditions",
+      "Unfinished/untested content"
+    ]
+  },
+  "newlyObservedNotSynced": [
+    {
+      "version": "1.2.1",
+      "type": "character",
+      "id": 11,
+      "key": "Cindy Becker",
+      "state": "confirmed source addition; missing from Wiki",
+      "sourceLogCompletion": "2026-10-31"
+    },
+    {
+      "version": "1.2.1",
+      "type": "visual",
+      "key": "New battle background",
+      "state": "completed game-only release note; not necessarily Wiki gameplay JSON"
+    },
+    {
+      "version": "1.2.2",
+      "type": "jobs",
+      "sourceIds": [
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "state": "Source new/changed compared to Wiki: ID51 key conflict (Wiki Corsair; source Royal Knight); others absent; investigate before writing."
+    },
+    {
+      "version": "1.2.2",
+      "type": "quests",
+      "sourceIds": "325-360",
+      "state": "Unclassified candidate differences; do not count whole range missing. Separate 325-348 under Quests screening, 349-360 under Adventure Map screening."
+    },
+    {
+      "version": "1.2.2",
+      "type": "items",
+      "sourceIds": [
+        195,
+        196
+      ],
+      "state": "Source ID present; verify publication and cross-references"
+    },
+    {
+      "version": "1.2.2",
+      "type": "equipment",
+      "sourceIds": [
+        126,
+        127,
+        128
+      ],
+      "state": "Source IDs present; verify publication and cross-references"
+    },
+    {
+      "version": "1.2.2",
+      "type": "chests",
+      "sourceIds": [
+        82,
+        83,
+        84
+      ],
+      "state": "Source IDs present; verify publication and cross-references"
+    },
+    {
+      "version": "1.2.2",
+      "type": "areas",
+      "key": "Alarm Tower / Common House",
+      "state": "Verify associated source event/quest and merchant changes, do not infer every quest published"
+    },
+    {
+      "version": "1.2.2",
+      "type": "pending-design",
+      "key": "Epic Old Garrison War Chest",
+      "state": "Ver Log pending, not a completed release"
+    }
+  ],
+  "nextAuditProcedure": [
+    "Read this checkpoint, the scope policy, the full version log and Sheets Check before querying source.",
+    "Determine newest completed game Ver Log rows since prior observed version; do not reclassify old excluded rows.",
+    "Inspect changed IDs/fields and content release readiness only in affected categories; classify source-retained/public-hidden separately.",
+    "Update corresponding Wiki data only when source fields and references are verified; record precise changes and reviewed scope.",
+    "Update checkpoint and public version log without claiming full parity until the required scoped field checks pass."
+  ],
+  "caution": "2026-11-10 observation is not an accomplished game-data sync; avoid conflating last observed source version with last synced source version."
+}
